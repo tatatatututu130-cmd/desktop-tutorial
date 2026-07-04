@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Homepage</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #2563eb;
+    --accent-soft: #dbeafe;
+    --border: #e5e5e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --surface: #1e1e1e;
+      --text: #f0f0f0;
+      --muted: #a0a0a0;
+      --accent: #60a5fa;
+      --accent-soft: #1e3a5f;
+      --border: #2e2e2e;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  .logo { font-weight: 700; font-size: 1.1rem; }
+  nav ul { display: flex; gap: 1.5rem; list-style: none; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+  nav a:hover { color: var(--accent); }
+
+  .hero { padding: 6rem 0 5rem; text-align: center; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: 0.02em; }
+  .hero p { margin-top: 1rem; color: var(--muted); font-size: 1.1rem; }
+  .hero .cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .hero .cta:hover { opacity: 0.85; transform: translateY(-2px); }
+
+  section { padding: 4rem 0; border-top: 1px solid var(--border); }
+  section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  section h2::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 1.4em;
+    background: var(--accent);
+    border-radius: 3px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .card p { color: var(--muted); font-size: 0.95rem; }
+  .card .tag {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.15rem 0.75rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .about-text { color: var(--muted); max-width: 640px; }
+
+  .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .contact-list a { color: var(--accent); text-decoration: none; }
+  .contact-list a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">My Homepage</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero container">
+    <h1>ようこそ、私のホームページへ</h1>
+    <p>ここにあなたのキャッチコピーや自己紹介の一文を書きましょう。</p>
+    <a class="cta" href="#about">詳しく見る</a>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="about-text">
+        ここに自己紹介を書きます。名前、経歴、好きなこと、いま取り組んでいることなど、
+        自由に編集してください。このページは index.html を書き換えるだけで更新できます。
+      </p>
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="container">
+      <h2>Works</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>プロジェクト 1</h3>
+          <p>ここにプロジェクトや作品の説明を書きます。</p>
+          <span class="tag">Web</span>
+        </div>
+        <div class="card">
+          <h3>プロジェクト 2</h3>
+          <p>ここにプロジェクトや作品の説明を書きます。</p>
+          <span class="tag">Design</span>
+        </div>
+        <div class="card">
+          <h3>プロジェクト 3</h3>
+          <p>ここにプロジェクトや作品の説明を書きます。</p>
+          <span class="tag">Hobby</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>📧 Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+        <li>🐙 GitHub: <a href="https://github.com/tatatatututu130-cmd" target="_blank" rel="noopener">@tatatatututu130-cmd</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    &copy; 2026 My Homepage. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
