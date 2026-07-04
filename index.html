@@ -3,41 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Homepage</title>
+<title>空縁 -そらえん- | 空とご縁を結ぶ、癒しの空間</title>
+<meta name="description" content="空縁（そらえん）は、空を眺めながらゆったりとした時間を過ごせる和の空間。お茶と甘味、そして人と人とのご縁を大切にしています。">
 <style>
   :root {
-    --bg: #f7f7f5;
+    --bg: #faf8f4;
     --surface: #ffffff;
-    --text: #1a1a1a;
-    --muted: #6b6b6b;
-    --accent: #2563eb;
-    --accent-soft: #dbeafe;
-    --border: #e5e5e0;
+    --ink: #2b2b2b;
+    --muted: #7a736a;
+    --accent: #4a6fa5;      /* 空色がかった藍 */
+    --accent-deep: #2f4a73;
+    --gold: #b39a5f;
+    --border: #e8e2d8;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #121212;
-      --surface: #1e1e1e;
-      --text: #f0f0f0;
-      --muted: #a0a0a0;
-      --accent: #60a5fa;
-      --accent-soft: #1e3a5f;
-      --border: #2e2e2e;
+      --bg: #171512;
+      --surface: #211e1a;
+      --ink: #ece7de;
+      --muted: #a89f92;
+      --accent: #8fb0dd;
+      --accent-deep: #b8cfee;
+      --gold: #cbb078;
+      --border: #353028;
     }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
     background: var(--bg);
-    color: var(--text);
-    line-height: 1.8;
+    color: var(--ink);
+    line-height: 2;
+    letter-spacing: 0.06em;
   }
-  .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+  .container { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
 
+  /* ヘッダー */
   header {
     position: sticky;
     top: 0;
-    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     z-index: 10;
@@ -46,84 +52,149 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 0.9rem 0;
   }
-  .logo { font-weight: 700; font-size: 1.1rem; }
-  nav ul { display: flex; gap: 1.5rem; list-style: none; }
-  nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+  .logo { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.3em; }
+  .logo small { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.15em; margin-left: 0.5em; }
+  nav ul { display: flex; gap: 1.4rem; list-style: none; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
   nav a:hover { color: var(--accent); }
 
-  .hero { padding: 6rem 0 5rem; text-align: center; }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: 0.02em; }
-  .hero p { margin-top: 1rem; color: var(--muted); font-size: 1.1rem; }
+  /* ヒーロー */
+  .hero {
+    position: relative;
+    padding: 7rem 1.5rem 6rem;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent),
+      var(--bg);
+    overflow: hidden;
+  }
+  .hero .en { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.4em; text-transform: uppercase; }
+  .hero h1 {
+    font-size: clamp(2.4rem, 7vw, 3.8rem);
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    margin: 1rem 0 0.5rem;
+    padding-left: 0.35em; /* 字間ぶんの視覚補正 */
+  }
+  .hero .yomi { color: var(--muted); font-size: 0.95rem; letter-spacing: 0.3em; }
+  .hero .lead {
+    margin-top: 2.5rem;
+    font-size: 1.05rem;
+    color: var(--muted);
+  }
   .hero .cta {
     display: inline-block;
-    margin-top: 2rem;
-    padding: 0.75rem 2rem;
-    background: var(--accent);
-    color: #fff;
-    border-radius: 999px;
+    margin-top: 2.5rem;
+    padding: 0.8rem 3rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 2px;
     text-decoration: none;
-    font-weight: 600;
-    transition: opacity 0.2s, transform 0.2s;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    transition: background 0.25s, color 0.25s;
   }
-  .hero .cta:hover { opacity: 0.85; transform: translateY(-2px); }
+  .hero .cta:hover { background: var(--accent); color: var(--bg); }
 
-  section { padding: 4rem 0; border-top: 1px solid var(--border); }
-  section h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  section h2::before {
-    content: "";
+  /* セクション共通 */
+  section { padding: 4.5rem 0; }
+  section + section { border-top: 1px solid var(--border); }
+  .sec-title { text-align: center; margin-bottom: 2.5rem; }
+  .sec-title .en {
     display: block;
-    width: 6px;
-    height: 1.4em;
-    background: var(--accent);
-    border-radius: 3px;
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .sec-title h2 { font-size: 1.7rem; font-weight: 600; letter-spacing: 0.25em; }
+
+  /* コンセプト */
+  .concept p { max-width: 620px; margin: 0 auto 1.5rem; text-align: center; color: var(--muted); }
+  .concept .kotoba {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--ink);
+    margin: 2.5rem auto;
+    letter-spacing: 0.2em;
   }
 
-  .cards {
+  /* お品書き */
+  .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.25rem;
   }
-  .card {
+  .menu-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 4px;
+    padding: 1.8rem 1.5rem;
+    transition: transform 0.25s, box-shadow 0.25s;
   }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-  .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  .card p { color: var(--muted); font-size: 0.95rem; }
-  .card .tag {
+  .menu-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.07); }
+  .menu-card .icon { font-size: 1.8rem; }
+  .menu-card h3 {
+    font-size: 1.1rem;
+    margin: 0.6rem 0 0.4rem;
+    letter-spacing: 0.15em;
+  }
+  .menu-card .price { color: var(--accent-deep); font-size: 0.95rem; }
+  .menu-card p { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.9; }
+
+  /* お知らせ */
+  .news-list { list-style: none; max-width: 640px; margin: 0 auto; }
+  .news-list li {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px dashed var(--border);
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+  .news-list time { color: var(--gold); white-space: nowrap; font-size: 0.85rem; }
+
+  /* 店舗情報 */
+  .info-table {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .info-table th, .info-table td {
+    padding: 0.9rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  .info-table th { width: 8em; color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+  /* お問い合わせ */
+  .contact-box { text-align: center; }
+  .contact-box p { color: var(--muted); margin-bottom: 1.5rem; }
+  .contact-box a.mail {
     display: inline-block;
-    margin-top: 0.75rem;
-    padding: 0.15rem 0.75rem;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    padding: 0.8rem 3rem;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    border-radius: 2px;
+    letter-spacing: 0.15em;
+    transition: opacity 0.2s;
   }
-
-  .about-text { color: var(--muted); max-width: 640px; }
-
-  .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-  .contact-list a { color: var(--accent); text-decoration: none; }
-  .contact-list a:hover { text-decoration: underline; }
+  .contact-box a.mail:hover { opacity: 0.85; }
 
   footer {
     border-top: 1px solid var(--border);
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     text-align: center;
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
   }
 </style>
 </head>
@@ -132,70 +203,142 @@
 <header>
   <div class="container">
     <nav>
-      <div class="logo">My Homepage</div>
+      <div class="logo">空縁<small>-そらえん-</small></div>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#concept">想い</a></li>
+        <li><a href="#menu">お品書き</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#info">店舗案内</a></li>
+        <li><a href="#contact">ご予約</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="hero container">
-    <h1>ようこそ、私のホームページへ</h1>
-    <p>ここにあなたのキャッチコピーや自己紹介の一文を書きましょう。</p>
-    <a class="cta" href="#about">詳しく見る</a>
+  <div class="hero">
+    <p class="en">Sora-En</p>
+    <h1>空縁</h1>
+    <p class="yomi">— そらえん —</p>
+    <p class="lead">
+      空を見上げるひとときが、あたらしいご縁を結ぶ。<br>
+      お茶と甘味とともに、心ほどける時間をお過ごしください。
+    </p>
+    <a class="cta" href="#contact">ご予約はこちら</a>
   </div>
 
-  <section id="about">
+  <section id="concept" class="concept">
     <div class="container">
-      <h2>About</h2>
-      <p class="about-text">
-        ここに自己紹介を書きます。名前、経歴、好きなこと、いま取り組んでいることなど、
-        自由に編集してください。このページは index.html を書き換えるだけで更新できます。
+      <div class="sec-title">
+        <span class="en">Concept</span>
+        <h2>空縁の想い</h2>
+      </div>
+      <p class="kotoba">「 空のように広く、縁のようにあたたかく 」</p>
+      <p>
+        空縁（そらえん）は、大きな窓から空を望む小さな茶房です。
+        季節のうつろいを映す空の下で、丁寧に淹れたお茶と手づくりの甘味を
+        お楽しみいただけます。
+      </p>
+      <p>
+        ふと立ち寄った方どうしが言葉を交わし、あたらしいご縁が生まれる——
+        そんな「人と人、人と空をつなぐ場所」でありたいと願っています。
       </p>
     </div>
   </section>
 
-  <section id="works">
+  <section id="menu">
     <div class="container">
-      <h2>Works</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>プロジェクト 1</h3>
-          <p>ここにプロジェクトや作品の説明を書きます。</p>
-          <span class="tag">Web</span>
+      <div class="sec-title">
+        <span class="en">Menu</span>
+        <h2>お品書き</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <span class="icon">🍵</span>
+          <h3>空縁の抹茶セット</h3>
+          <p class="price">980円（税込）</p>
+          <p>京都宇治の抹茶を一服ずつ点ててご提供。季節の上生菓子とともに。</p>
         </div>
-        <div class="card">
-          <h3>プロジェクト 2</h3>
-          <p>ここにプロジェクトや作品の説明を書きます。</p>
-          <span class="tag">Design</span>
+        <div class="menu-card">
+          <span class="icon">🌸</span>
+          <h3>季節の甘味膳</h3>
+          <p class="price">1,200円（税込）</p>
+          <p>春は桜あんみつ、夏は空色の琥珀糖、秋は栗ぜんざい、冬はいちご大福。</p>
         </div>
-        <div class="card">
-          <h3>プロジェクト 3</h3>
-          <p>ここにプロジェクトや作品の説明を書きます。</p>
-          <span class="tag">Hobby</span>
+        <div class="menu-card">
+          <span class="icon">☁️</span>
+          <h3>そらいろクリームソーダ</h3>
+          <p class="price">750円（税込）</p>
+          <p>空と雲をうつした当店いちばんの人気メニュー。写真映えも◎。</p>
+        </div>
+        <div class="menu-card">
+          <span class="icon">🍡</span>
+          <h3>縁むすび団子</h3>
+          <p class="price">550円（税込）</p>
+          <p>三色の団子を一串に。大切な方との「ご縁」を結ぶ縁起物です。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="news">
     <div class="container">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li>📧 Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-        <li>🐙 GitHub: <a href="https://github.com/tatatatututu130-cmd" target="_blank" rel="noopener">@tatatatututu130-cmd</a></li>
+      <div class="sec-title">
+        <span class="en">News</span>
+        <h2>お知らせ</h2>
+      </div>
+      <ul class="news-list">
+        <li>
+          <time datetime="2026-07-01">2026.07.01</time>
+          <span>夏の限定メニュー「天の川パフェ」を7月7日より提供いたします。</span>
+        </li>
+        <li>
+          <time datetime="2026-06-15">2026.06.15</time>
+          <span>ホームページを公開しました。今後ともよろしくお願いいたします。</span>
+        </li>
+        <li>
+          <time datetime="2026-06-01">2026.06.01</time>
+          <span>毎月第一日曜日に「空を眺めるお茶会」を開催しています。ご予約承り中。</span>
+        </li>
       </ul>
+    </div>
+  </section>
+
+  <section id="info">
+    <div class="container">
+      <div class="sec-title">
+        <span class="en">Information</span>
+        <h2>店舗案内</h2>
+      </div>
+      <table class="info-table">
+        <tr><th>店名</th><td>茶房 空縁（そらえん）</td></tr>
+        <tr><th>住所</th><td>〒000-0000 東京都○○区空町1-2-3 そらビル 3F</td></tr>
+        <tr><th>アクセス</th><td>○○線「空町駅」東口より徒歩3分</td></tr>
+        <tr><th>営業時間</th><td>11:00 〜 18:00（ラストオーダー 17:30）</td></tr>
+        <tr><th>定休日</th><td>毎週水曜日・年末年始</td></tr>
+        <tr><th>お席</th><td>カウンター4席・テーブル12席（全席空が見えます）</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-box">
+      <div class="sec-title">
+        <span class="en">Reservation</span>
+        <h2>ご予約・お問い合わせ</h2>
+      </div>
+      <p>
+        お席のご予約、お茶会へのご参加はメールにて承っております。<br>
+        二日以内にご返信いたします。
+      </p>
+      <a class="mail" href="mailto:info@example.com">メールで問い合わせる</a>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="container">
-    &copy; 2026 My Homepage. All rights reserved.
+    &copy; 2026 茶房 空縁 -そらえん-
   </div>
 </footer>
 
