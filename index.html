@@ -3,29 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>空縁 -そらえん- | 空とご縁を結ぶ、癒しの空間</title>
-<meta name="description" content="空縁（そらえん）は、空を眺めながらゆったりとした時間を過ごせる和の空間。お茶と甘味、そして人と人とのご縁を大切にしています。">
+<title>結婚相談所 空縁 -そらえん- | 空のように広く、縁のようにあたたかく</title>
+<meta name="description" content="結婚相談所 空縁（そらえん）は、専任仲人がお相手探しから成婚まで丁寧に寄り添う結婚相談所です。無料相談受付中。">
 <style>
   :root {
-    --bg: #faf8f4;
+    --bg: #fbf9f6;
     --surface: #ffffff;
-    --ink: #2b2b2b;
-    --muted: #7a736a;
-    --accent: #4a6fa5;      /* 空色がかった藍 */
-    --accent-deep: #2f4a73;
+    --ink: #33302c;
+    --muted: #7d766c;
+    --accent: #b3577a;        /* 縁を結ぶ紅色 */
+    --accent-deep: #93415f;
+    --sky: #4a6fa5;           /* 空色の藍 */
     --gold: #b39a5f;
-    --border: #e8e2d8;
+    --soft: #f7edf1;
+    --border: #eae4da;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #171512;
-      --surface: #211e1a;
-      --ink: #ece7de;
+      --bg: #191612;
+      --surface: #221e19;
+      --ink: #ede8df;
       --muted: #a89f92;
-      --accent: #8fb0dd;
-      --accent-deep: #b8cfee;
+      --accent: #d98aa8;
+      --accent-deep: #e3a5bd;
+      --sky: #8fb0dd;
       --gold: #cbb078;
-      --border: #353028;
+      --soft: #2d2126;
+      --border: #37312a;
     }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,9 +39,9 @@
     background: var(--bg);
     color: var(--ink);
     line-height: 2;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
   }
-  .container { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 1.5rem; }
 
   /* ヘッダー */
   header {
@@ -53,50 +57,62 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.9rem 0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
-  .logo { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.3em; }
-  .logo small { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.15em; margin-left: 0.5em; }
-  nav ul { display: flex; gap: 1.4rem; list-style: none; flex-wrap: wrap; }
-  nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .logo { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.25em; }
+  .logo small { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; margin-left: 0.5em; }
+  nav ul { display: flex; gap: 1.3rem; list-style: none; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
   nav a:hover { color: var(--accent); }
+  nav a.nav-cta {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 0.2rem 1rem;
+  }
+  nav a.nav-cta:hover { background: var(--accent); color: var(--bg); }
 
   /* ヒーロー */
   .hero {
     position: relative;
-    padding: 7rem 1.5rem 6rem;
+    padding: 6.5rem 1.5rem 5.5rem;
     text-align: center;
     background:
-      radial-gradient(ellipse 80% 60% at 50% -10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent),
+      radial-gradient(ellipse 85% 65% at 50% -10%, color-mix(in srgb, var(--sky) 16%, transparent), transparent),
+      radial-gradient(ellipse 60% 45% at 85% 100%, color-mix(in srgb, var(--accent) 10%, transparent), transparent),
       var(--bg);
-    overflow: hidden;
   }
-  .hero .en { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.4em; text-transform: uppercase; }
+  .hero .en { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.4em; text-transform: uppercase; }
   .hero h1 {
-    font-size: clamp(2.4rem, 7vw, 3.8rem);
+    font-size: clamp(2.2rem, 6.5vw, 3.4rem);
     font-weight: 600;
-    letter-spacing: 0.35em;
-    margin: 1rem 0 0.5rem;
-    padding-left: 0.35em; /* 字間ぶんの視覚補正 */
+    letter-spacing: 0.3em;
+    margin: 0.8rem 0 0.3rem;
+    padding-left: 0.3em;
   }
-  .hero .yomi { color: var(--muted); font-size: 0.95rem; letter-spacing: 0.3em; }
-  .hero .lead {
-    margin-top: 2.5rem;
-    font-size: 1.05rem;
-    color: var(--muted);
+  .hero .yomi { color: var(--muted); font-size: 0.92rem; letter-spacing: 0.3em; }
+  .hero .catch {
+    margin-top: 2.2rem;
+    font-size: clamp(1.05rem, 3vw, 1.3rem);
+    letter-spacing: 0.15em;
   }
+  .hero .lead { margin-top: 1rem; color: var(--muted); font-size: 0.98rem; }
   .hero .cta {
     display: inline-block;
-    margin-top: 2.5rem;
-    padding: 0.8rem 3rem;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    border-radius: 2px;
+    margin-top: 2.4rem;
+    padding: 0.9rem 3.2rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
     letter-spacing: 0.2em;
-    transition: background 0.25s, color 0.25s;
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+    transition: transform 0.2s, opacity 0.2s;
   }
-  .hero .cta:hover { background: var(--accent); color: var(--bg); }
+  .hero .cta:hover { transform: translateY(-2px); opacity: 0.9; }
+  .hero .cta-note { margin-top: 0.8rem; font-size: 0.8rem; color: var(--muted); }
 
   /* セクション共通 */
   section { padding: 4.5rem 0; }
@@ -105,65 +121,146 @@
   .sec-title .en {
     display: block;
     color: var(--gold);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
   }
-  .sec-title h2 { font-size: 1.7rem; font-weight: 600; letter-spacing: 0.25em; }
+  .sec-title h2 { font-size: 1.65rem; font-weight: 600; letter-spacing: 0.2em; }
 
   /* コンセプト */
-  .concept p { max-width: 620px; margin: 0 auto 1.5rem; text-align: center; color: var(--muted); }
-  .concept .kotoba {
-    text-align: center;
-    font-size: 1.25rem;
-    color: var(--ink);
-    margin: 2.5rem auto;
-    letter-spacing: 0.2em;
-  }
+  .concept p { max-width: 640px; margin: 0 auto 1.4rem; text-align: center; color: var(--muted); }
+  .concept .kotoba { text-align: center; font-size: 1.2rem; color: var(--ink); margin: 2rem auto; letter-spacing: 0.18em; }
 
-  /* お品書き */
-  .menu-grid {
+  /* 選ばれる理由 */
+  .reasons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.25rem;
   }
-  .menu-card {
+  .reason {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 1.8rem 1.5rem;
-    transition: transform 0.25s, box-shadow 0.25s;
+    text-align: center;
   }
-  .menu-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.07); }
-  .menu-card .icon { font-size: 1.8rem; }
-  .menu-card h3 {
-    font-size: 1.1rem;
-    margin: 0.6rem 0 0.4rem;
-    letter-spacing: 0.15em;
-  }
-  .menu-card .price { color: var(--accent-deep); font-size: 0.95rem; }
-  .menu-card p { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.9; }
+  .reason .num { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.3em; }
+  .reason .icon { font-size: 2rem; display: block; margin: 0.4rem 0; }
+  .reason h3 { font-size: 1.05rem; letter-spacing: 0.12em; margin-bottom: 0.5rem; }
+  .reason p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; text-align: left; }
 
-  /* お知らせ */
-  .news-list { list-style: none; max-width: 640px; margin: 0 auto; }
-  .news-list li {
+  /* 流れ */
+  .flow { max-width: 640px; margin: 0 auto; list-style: none; counter-reset: step; }
+  .flow li {
+    position: relative;
+    padding: 0 0 2.2rem 3.6rem;
+    counter-increment: step;
+  }
+  .flow li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0.2em;
+    width: 2.4rem; height: 2.4rem;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--accent-deep);
+    border: 1px solid var(--accent);
     display: flex;
-    gap: 1.5rem;
-    padding: 1rem 0.5rem;
-    border-bottom: 1px dashed var(--border);
-    font-size: 0.95rem;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
   }
-  .news-list time { color: var(--gold); white-space: nowrap; font-size: 0.85rem; }
+  .flow li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 1.2rem; top: 2.8rem; bottom: 0.2rem;
+    width: 1px;
+    background: var(--border);
+  }
+  .flow h3 { font-size: 1.05rem; letter-spacing: 0.12em; }
+  .flow p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; }
 
-  /* 店舗情報 */
+  /* 料金プラン */
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+  .plan {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .plan.featured { border: 2px solid var(--accent); position: relative; }
+  .plan.featured .badge {
+    position: absolute;
+    top: -0.9rem; left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    padding: 0.15rem 1.2rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .plan h3 { font-size: 1.1rem; letter-spacing: 0.15em; }
+  .plan .price { font-size: 1.7rem; color: var(--accent-deep); margin: 0.6rem 0 0.2rem; }
+  .plan .price small { font-size: 0.8rem; color: var(--muted); }
+  .plan .setup { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
+  .plan ul { list-style: none; text-align: left; font-size: 0.88rem; color: var(--muted); margin-top: auto; }
+  .plan ul li { padding: 0.45rem 0; border-top: 1px dashed var(--border); }
+  .plan ul li::before { content: "◦ "; color: var(--accent); }
+  .plans-note { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 1.5rem; }
+
+  /* 成婚者の声 */
+  .voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .voice {
+    background: var(--soft);
+    border-radius: 6px;
+    padding: 1.8rem 1.5rem;
+    font-size: 0.92rem;
+  }
+  .voice p { color: var(--ink); line-height: 2; }
+  .voice .who { margin-top: 1rem; color: var(--muted); font-size: 0.82rem; text-align: right; }
+
+  /* FAQ */
+  .faq { max-width: 680px; margin: 0 auto; }
+  .faq details {
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 0.3rem;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-size: 0.98rem;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 0;
+    list-style: none;
+    display: flex;
+    gap: 0.8em;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::before { content: "Q."; color: var(--accent); font-weight: 600; }
+  .faq details p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 0.3rem 0 0.8rem 2em;
+    line-height: 1.9;
+  }
+
+  /* 概要 */
   .info-table {
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 0.93rem;
   }
   .info-table th, .info-table td {
     padding: 0.9rem 0.5rem;
@@ -171,22 +268,25 @@
     text-align: left;
     vertical-align: top;
   }
-  .info-table th { width: 8em; color: var(--muted); font-weight: 600; white-space: nowrap; }
+  .info-table th { width: 9em; color: var(--muted); font-weight: 600; white-space: nowrap; }
 
   /* お問い合わせ */
   .contact-box { text-align: center; }
-  .contact-box p { color: var(--muted); margin-bottom: 1.5rem; }
+  .contact-box p { color: var(--muted); margin-bottom: 1.6rem; }
   .contact-box a.mail {
     display: inline-block;
-    padding: 0.8rem 3rem;
+    padding: 0.9rem 3.2rem;
     background: var(--accent);
-    color: var(--bg);
+    color: #fff;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 999px;
     letter-spacing: 0.15em;
-    transition: opacity 0.2s;
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+    transition: transform 0.2s, opacity 0.2s;
   }
-  .contact-box a.mail:hover { opacity: 0.85; }
+  .contact-box a.mail:hover { transform: translateY(-2px); opacity: 0.9; }
+  .contact-box .tel { margin-top: 1.4rem; font-size: 1.05rem; letter-spacing: 0.1em; }
+  .contact-box .tel strong { font-size: 1.4rem; color: var(--ink); }
 
   footer {
     border-top: 1px solid var(--border);
@@ -194,7 +294,7 @@
     text-align: center;
     color: var(--muted);
     font-size: 0.8rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
   }
 </style>
 </head>
@@ -203,13 +303,14 @@
 <header>
   <div class="container">
     <nav>
-      <div class="logo">空縁<small>-そらえん-</small></div>
+      <div class="logo">結婚相談所 空縁<small>-そらえん-</small></div>
       <ul>
         <li><a href="#concept">想い</a></li>
-        <li><a href="#menu">お品書き</a></li>
-        <li><a href="#news">お知らせ</a></li>
-        <li><a href="#info">店舗案内</a></li>
-        <li><a href="#contact">ご予約</a></li>
+        <li><a href="#reasons">選ばれる理由</a></li>
+        <li><a href="#flow">ご成婚までの流れ</a></li>
+        <li><a href="#plans">料金プラン</a></li>
+        <li><a href="#faq">よくあるご質問</a></li>
+        <li><a class="nav-cta" href="#contact">無料相談</a></li>
       </ul>
     </nav>
   </div>
@@ -217,14 +318,16 @@
 
 <main>
   <div class="hero">
-    <p class="en">Sora-En</p>
+    <p class="en">Marriage Agency Sora-En</p>
     <h1>空縁</h1>
-    <p class="yomi">— そらえん —</p>
+    <p class="yomi">— 結婚相談所 そらえん —</p>
+    <p class="catch">空のように広く、縁のようにあたたかく。</p>
     <p class="lead">
-      空を見上げるひとときが、あたらしいご縁を結ぶ。<br>
-      お茶と甘味とともに、心ほどける時間をお過ごしください。
+      専任の仲人が、お相手探しからご成婚まで<br>
+      あなたの婚活に最後まで寄り添います。
     </p>
-    <a class="cta" href="#contact">ご予約はこちら</a>
+    <a class="cta" href="#contact">無料相談を予約する</a>
+    <p class="cta-note">ご入会を無理におすすめすることは一切ありません</p>
   </div>
 
   <section id="concept" class="concept">
@@ -233,90 +336,196 @@
         <span class="en">Concept</span>
         <h2>空縁の想い</h2>
       </div>
-      <p class="kotoba">「 空のように広く、縁のようにあたたかく 」</p>
+      <p class="kotoba">「 一人ひとりのご縁を、丁寧に結ぶ 」</p>
       <p>
-        空縁（そらえん）は、大きな窓から空を望む小さな茶房です。
-        季節のうつろいを映す空の下で、丁寧に淹れたお茶と手づくりの甘味を
-        お楽しみいただけます。
+        空縁（そらえん）は、大手にはできない「顔の見える婚活サポート」を大切にする、
+        小さな結婚相談所です。担当仲人がお一人おひとりとじっくり向き合い、
+        プロフィール作りからお見合いの調整、交際中のお悩み相談まで伴走します。
       </p>
       <p>
-        ふと立ち寄った方どうしが言葉を交わし、あたらしいご縁が生まれる——
-        そんな「人と人、人と空をつなぐ場所」でありたいと願っています。
+        婚活は、時に不安になったり、落ち込んだりするもの。
+        そんなとき、いつでも頼れる存在でありたい——それが空縁の願いです。
       </p>
     </div>
   </section>
 
-  <section id="menu">
+  <section id="reasons">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Menu</span>
-        <h2>お品書き</h2>
+        <span class="en">Reasons</span>
+        <h2>空縁が選ばれる理由</h2>
       </div>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <span class="icon">🍵</span>
-          <h3>空縁の抹茶セット</h3>
-          <p class="price">980円（税込）</p>
-          <p>京都宇治の抹茶を一服ずつ点ててご提供。季節の上生菓子とともに。</p>
+      <div class="reasons">
+        <div class="reason">
+          <span class="num">Reason 01</span>
+          <span class="icon">🤝</span>
+          <h3>専任仲人の伴走型サポート</h3>
+          <p>ご入会からご成婚まで同じ仲人が担当。あなたの人柄や希望を深く理解したうえで、お相手をご紹介します。</p>
         </div>
-        <div class="menu-card">
-          <span class="icon">🌸</span>
-          <h3>季節の甘味膳</h3>
-          <p class="price">1,200円（税込）</p>
-          <p>春は桜あんみつ、夏は空色の琥珀糖、秋は栗ぜんざい、冬はいちご大福。</p>
+        <div class="reason">
+          <span class="num">Reason 02</span>
+          <span class="icon">🔍</span>
+          <h3>豊富な出会いのネットワーク</h3>
+          <p>結婚相談所連盟に加盟しており、全国約9万名の会員データベースからお相手をお探しいただけます。</p>
         </div>
-        <div class="menu-card">
-          <span class="icon">☁️</span>
-          <h3>そらいろクリームソーダ</h3>
-          <p class="price">750円（税込）</p>
-          <p>空と雲をうつした当店いちばんの人気メニュー。写真映えも◎。</p>
+        <div class="reason">
+          <span class="num">Reason 03</span>
+          <span class="icon">💬</span>
+          <h3>いつでも相談できる安心感</h3>
+          <p>お見合い後の振り返りや交際中の不安など、LINE・メールでいつでもご相談OK。返信は原則24時間以内です。</p>
         </div>
-        <div class="menu-card">
-          <span class="icon">🍡</span>
-          <h3>縁むすび団子</h3>
-          <p class="price">550円（税込）</p>
-          <p>三色の団子を一串に。大切な方との「ご縁」を結ぶ縁起物です。</p>
+        <div class="reason">
+          <span class="num">Reason 04</span>
+          <span class="icon">💰</span>
+          <h3>わかりやすい料金体系</h3>
+          <p>料金はすべてホームページに明示。ご成婚時以外の追加費用はいただきません。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="news">
+  <section id="flow">
     <div class="container">
       <div class="sec-title">
-        <span class="en">News</span>
-        <h2>お知らせ</h2>
+        <span class="en">Flow</span>
+        <h2>ご成婚までの流れ</h2>
       </div>
-      <ul class="news-list">
+      <ol class="flow">
         <li>
-          <time datetime="2026-07-01">2026.07.01</time>
-          <span>夏の限定メニュー「天の川パフェ」を7月7日より提供いたします。</span>
+          <h3>無料相談</h3>
+          <p>まずはお気軽にご相談ください。婚活の不安やご希望をお伺いし、サービス内容と料金をご説明します（オンライン可）。</p>
         </li>
         <li>
-          <time datetime="2026-06-15">2026.06.15</time>
-          <span>ホームページを公開しました。今後ともよろしくお願いいたします。</span>
+          <h3>ご入会・プロフィール作成</h3>
+          <p>必要書類（独身証明書など）をご準備いただき、仲人と一緒にあなたの魅力が伝わるプロフィールを作ります。</p>
         </li>
         <li>
-          <time datetime="2026-06-01">2026.06.01</time>
-          <span>毎月第一日曜日に「空を眺めるお茶会」を開催しています。ご予約承り中。</span>
+          <h3>お相手探し・お見合い</h3>
+          <p>データベース検索と仲人からのご紹介でお相手を探し、お見合いを組みます。日程調整はすべて空縁にお任せください。</p>
         </li>
-      </ul>
+        <li>
+          <h3>交際</h3>
+          <p>お互いに「また会いたい」と思えたら交際スタート。デートの相談や気持ちの整理も仲人がサポートします。</p>
+        </li>
+        <li>
+          <h3>ご成婚</h3>
+          <p>おふたりの気持ちが固まったらご成婚退会。プロポーズの演出や、ご両家へのご挨拶のご相談も承ります。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="container">
+      <div class="sec-title">
+        <span class="en">Price</span>
+        <h2>料金プラン</h2>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>ライト</h3>
+          <p class="price">9,800円<small> / 月（税込）</small></p>
+          <p class="setup">入会金 33,000円／成婚料 110,000円</p>
+          <ul>
+            <li>会員データベース検索（申込 月10名まで）</li>
+            <li>お見合い調整</li>
+            <li>メール相談</li>
+          </ul>
+        </div>
+        <div class="plan featured">
+          <span class="badge">いちばん人気</span>
+          <h3>スタンダード</h3>
+          <p class="price">15,800円<small> / 月（税込）</small></p>
+          <p class="setup">入会金 55,000円／成婚料 165,000円</p>
+          <ul>
+            <li>会員データベース検索（申込 月30名まで）</li>
+            <li>仲人からのご紹介 月2名</li>
+            <li>お見合い調整・同席（初回）</li>
+            <li>LINE・メール相談 無制限</li>
+            <li>定期面談（月1回）</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>プレミアム</h3>
+          <p class="price">25,800円<small> / 月（税込）</small></p>
+          <p class="setup">入会金 88,000円／成婚料 220,000円</p>
+          <ul>
+            <li>スタンダードの全内容</li>
+            <li>仲人からのご紹介 月4名</li>
+            <li>プロによるプロフィール撮影</li>
+            <li>ファッション・デート同行アドバイス</li>
+            <li>定期面談（月2回）</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plans-note">※ 表示はすべて税込です。中途解約時の違約金はありません。詳細は無料相談にてご説明します。</p>
+    </div>
+  </section>
+
+  <section id="voices">
+    <div class="container">
+      <div class="sec-title">
+        <span class="en">Voices</span>
+        <h2>ご成婚者の声</h2>
+      </div>
+      <div class="voices">
+        <div class="voice">
+          <p>「仕事が忙しく出会いがないまま30代後半に。半ばあきらめていましたが、仲人さんが私以上に私の幸せを考えてくれて、活動10ヶ月で成婚できました。」</p>
+          <p class="who">30代後半・女性（活動期間10ヶ月）</p>
+        </div>
+        <div class="voice">
+          <p>「お見合いのたびに丁寧なフィードバックをもらえたのが大きかったです。自分では気づけない癖を直せて、3人目のお見合い相手と結婚しました。」</p>
+          <p class="who">40代前半・男性（活動期間8ヶ月）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="sec-title">
+        <span class="en">FAQ</span>
+        <h2>よくあるご質問</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>入会に必要なものはありますか？</summary>
+          <p>独身証明書・住民票・本人確認書類・収入証明（男性および希望者）・最終学歴証明書（短大卒以上の方）をご用意いただきます。取得方法もご案内しますのでご安心ください。</p>
+        </details>
+        <details>
+          <summary>仕事が忙しくても活動できますか？</summary>
+          <p>はい。お相手検索はスマホから24時間可能で、面談やご相談はオンラインでも承っています。お見合いの日程調整はすべて空縁が代行します。</p>
+        </details>
+        <details>
+          <summary>途中で退会できますか？違約金はかかりますか？</summary>
+          <p>いつでも退会いただけます。違約金はなく、月会費は退会月までのお支払いのみです。</p>
+        </details>
+        <details>
+          <summary>どのくらいの期間で成婚できますか？</summary>
+          <p>個人差はありますが、1年以内のご成婚を目標にサポートしています。当所の成婚者の平均活動期間は約11ヶ月です。</p>
+        </details>
+        <details>
+          <summary>無料相談に行くと入会をすすめられませんか？</summary>
+          <p>無理な勧誘は一切いたしません。婚活の進め方のご相談だけでも歓迎です。他社サービスとの比較のご質問にも正直にお答えします。</p>
+        </details>
+      </div>
     </div>
   </section>
 
   <section id="info">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Information</span>
-        <h2>店舗案内</h2>
+        <span class="en">About</span>
+        <h2>相談所概要</h2>
       </div>
       <table class="info-table">
-        <tr><th>店名</th><td>茶房 空縁（そらえん）</td></tr>
-        <tr><th>住所</th><td>〒000-0000 東京都○○区空町1-2-3 そらビル 3F</td></tr>
+        <tr><th>名称</th><td>結婚相談所 空縁（そらえん）</td></tr>
+        <tr><th>代表</th><td>空縁 花子</td></tr>
+        <tr><th>所在地</th><td>〒000-0000 東京都○○区空町1-2-3 そらビル 3F</td></tr>
         <tr><th>アクセス</th><td>○○線「空町駅」東口より徒歩3分</td></tr>
-        <tr><th>営業時間</th><td>11:00 〜 18:00（ラストオーダー 17:30）</td></tr>
-        <tr><th>定休日</th><td>毎週水曜日・年末年始</td></tr>
-        <tr><th>お席</th><td>カウンター4席・テーブル12席（全席空が見えます）</td></tr>
+        <tr><th>営業時間</th><td>10:00 〜 19:00（面談は完全予約制・オンライン可）</td></tr>
+        <tr><th>定休日</th><td>毎週水曜日</td></tr>
+        <tr><th>加盟連盟</th><td>○○結婚相談所連盟（会員数 約9万名）</td></tr>
       </table>
     </div>
   </section>
@@ -324,21 +533,22 @@
   <section id="contact">
     <div class="container contact-box">
       <div class="sec-title">
-        <span class="en">Reservation</span>
-        <h2>ご予約・お問い合わせ</h2>
+        <span class="en">Contact</span>
+        <h2>無料相談のご予約</h2>
       </div>
       <p>
-        お席のご予約、お茶会へのご参加はメールにて承っております。<br>
-        二日以内にご返信いたします。
+        「まず話だけ聞いてみたい」も大歓迎です。<br>
+        メールまたはお電話にてお気軽にご連絡ください。オンライン相談も承ります。
       </p>
-      <a class="mail" href="mailto:info@example.com">メールで問い合わせる</a>
+      <a class="mail" href="mailto:info@example.com">メールで無料相談を予約する</a>
+      <p class="tel">お電話でのご予約：<strong>00-0000-0000</strong>（10:00〜19:00 水曜定休）</p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="container">
-    &copy; 2026 茶房 空縁 -そらえん-
+    &copy; 2026 結婚相談所 空縁 -そらえん-
   </div>
 </footer>
 
