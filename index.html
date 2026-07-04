@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>結婚相談所 空縁 -そらえん- | 空のように広く、縁のようにあたたかく</title>
 <meta name="description" content="結婚相談所 空縁（そらえん）は、専任仲人がお相手探しから成婚まで丁寧に寄り添う結婚相談所です。無料相談受付中。">
+<meta property="og:title" content="結婚相談所 空縁 -そらえん-">
+<meta property="og:description" content="空のように広く、縁のようにあたたかく。専任仲人が成婚まで寄り添う結婚相談所です。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💞</text></svg>">
 <style>
   :root {
     --bg: #fbf9f6;
@@ -296,6 +300,16 @@
     font-size: 0.8rem;
     letter-spacing: 0.12em;
   }
+
+  /* スクロール時のふわっと表示 */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+  }
 </style>
 </head>
 <body>
@@ -551,6 +565,20 @@
     &copy; 2026 結婚相談所 空縁 -そらえん-
   </div>
 </footer>
+
+<script>
+  const sections = document.querySelectorAll("main section");
+  sections.forEach(s => s.classList.add("fade-in"));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(s => observer.observe(s));
+</script>
 
 </body>
 </html>
