@@ -3,171 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>結婚相談所ふう | 婚活の「ストレス」から設計した結婚相談所</title>
-<meta name="description" content="婚活は、がんばるほど疲れていく。業界を知り尽くしたカウンセラーが、お断り代行・日程調整・振り返り面談まで丸ごと引き受ける、ストレスフリー設計の結婚相談所です。">
+<title>結婚相談所ふう | 4人に1人は婚活サービスで結婚する時代。がんばらない婚活、はじめよう</title>
+<meta name="description" content="いま、結婚した人の4人に1人は婚活サービスでの出会い。初めての婚活も大歓迎。お断り代行・日程調整おまかせの「がんばらない婚活」で、ふうと息をつきながら結婚に近づく相談所です。">
 <style>
   :root{
-    --green:#2f5d50;
-    --green-dark:#22453c;
-    --green-light:#e8f0ec;
-    --cream:#faf7f1;
+    --coral:#ff7a59;
+    --coral-dark:#f05a36;
+    --teal:#1f8a7d;
+    --teal-dark:#166b61;
+    --teal-light:#e3f4f1;
+    --sun:#ffd766;
+    --sun-light:#fff3d1;
+    --cream:#fffaf3;
     --white:#ffffff;
-    --ink:#33322e;
-    --ink-soft:#6b6a63;
-    --apricot:#e8996a;
-    --apricot-dark:#d97f4a;
-    --line:#e5e0d6;
-    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    --ink:#3a3630;
+    --ink-soft:#77716a;
+    --line:#f0e6d8;
+    --serif:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic",sans-serif;
     --sans:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;}
-  img{max-width:100%;}
   a{color:inherit;text-decoration:none;}
   ul{list-style:none;}
   .inner{max-width:1080px;margin:0 auto;padding:0 24px;}
-  section{padding:96px 0;}
-  .sec-label{display:block;font-size:13px;letter-spacing:.25em;color:var(--apricot-dark);font-weight:700;margin-bottom:14px;text-transform:uppercase;}
-  .sec-title{font-family:var(--serif);font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.5;margin-bottom:22px;}
-  .sec-lead{color:var(--ink-soft);max-width:680px;margin-bottom:48px;}
-  .btn{display:inline-block;padding:16px 40px;border-radius:999px;font-weight:700;letter-spacing:.06em;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;font-size:15px;}
-  .btn-primary{background:var(--apricot);color:#fff;box-shadow:0 8px 24px rgba(217,127,74,.35);}
-  .btn-primary:hover{background:var(--apricot-dark);transform:translateY(-2px);}
-  .btn-ghost{background:transparent;color:var(--green);border:1.5px solid var(--green);}
-  .btn-ghost:hover{background:var(--green);color:#fff;}
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+  section{padding:92px 0;}
+  .sec-label{display:inline-block;background:var(--sun);color:var(--ink);font-size:13px;letter-spacing:.12em;font-weight:800;margin-bottom:16px;border-radius:999px;padding:6px 18px;}
+  .sec-title{font-size:clamp(25px,4vw,36px);font-weight:800;line-height:1.55;margin-bottom:20px;letter-spacing:.02em;}
+  .sec-title .marker{background:linear-gradient(transparent 62%,var(--sun) 62%);}
+  .sec-lead{color:var(--ink-soft);max-width:700px;margin-bottom:46px;font-size:15.5px;}
+  .btn{display:inline-block;padding:17px 42px;border-radius:999px;font-weight:800;letter-spacing:.05em;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;font-size:15.5px;}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 26px rgba(240,90,54,.35);}
+  .btn-primary:hover{background:var(--coral-dark);transform:translateY(-3px) scale(1.02);}
+  .btn-ghost{background:#fff;color:var(--teal);border:2px solid var(--teal);}
+  .btn-ghost:hover{background:var(--teal);color:#fff;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
   .reveal.on{opacity:1;transform:none;}
 
   /* ===== header ===== */
-  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,250,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .head-inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px;}
-  .logo{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--green);letter-spacing:.08em;}
-  .logo small{font-size:11px;color:var(--ink-soft);display:block;letter-spacing:.15em;font-family:var(--sans);font-weight:400;line-height:1;}
-  nav ul{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600;}
-  nav a:hover{color:var(--apricot-dark);}
-  .nav-cta{background:var(--green);color:#fff !important;padding:10px 22px;border-radius:999px;}
-  .nav-cta:hover{background:var(--green-dark);}
-  .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--green);cursor:pointer;}
+  .logo{font-size:22px;font-weight:800;color:var(--teal);letter-spacing:.06em;}
+  .logo small{font-size:10.5px;color:var(--ink-soft);display:block;letter-spacing:.14em;font-weight:600;line-height:1;}
+  nav ul{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:700;}
+  nav a:hover{color:var(--coral);}
+  .nav-cta{background:var(--coral);color:#fff !important;padding:10px 22px;border-radius:999px;}
+  .nav-cta:hover{background:var(--coral-dark);}
+  .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--teal);cursor:pointer;}
 
-  /* ===== hero ===== */
-  .hero{padding:190px 0 110px;background:
-    radial-gradient(1200px 600px at 85% -10%,var(--green-light) 0%,transparent 60%),
-    radial-gradient(800px 500px at -10% 110%,#f6e8dc 0%,transparent 55%),
-    var(--cream);}
-  .hero-kicker{display:inline-block;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px 18px;font-size:13px;color:var(--green);font-weight:700;letter-spacing:.1em;margin-bottom:28px;}
-  .hero h1{font-family:var(--serif);font-size:clamp(32px,5.6vw,54px);font-weight:600;line-height:1.55;letter-spacing:.02em;}
-  .hero h1 em{font-style:normal;color:var(--apricot-dark);}
-  .hero p.sub{margin:28px 0 40px;font-size:clamp(15px,1.8vw,18px);color:var(--ink-soft);max-width:640px;}
-  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
-  .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:14px;}
+  /* ===== hero(構成1:驚きの事実)===== */
+  .hero{padding:175px 0 100px;background:
+    radial-gradient(900px 480px at 90% -5%,var(--sun-light) 0%,transparent 60%),
+    radial-gradient(700px 460px at -5% 105%,var(--teal-light) 0%,transparent 55%),
+    var(--cream);text-align:center;position:relative;overflow:hidden;}
+  .hero-kicker{display:inline-block;background:var(--white);border:2px solid var(--sun);border-radius:999px;padding:8px 22px;font-size:13.5px;color:var(--teal-dark);font-weight:800;letter-spacing:.08em;margin-bottom:30px;}
+  .hero .shock{font-size:clamp(15px,2vw,18px);font-weight:800;color:var(--coral-dark);letter-spacing:.15em;margin-bottom:10px;}
+  .hero h1{font-size:clamp(30px,5.4vw,52px);font-weight:800;line-height:1.55;letter-spacing:.02em;}
+  .hero h1 .big{font-size:1.5em;color:var(--coral);}
+  .hero h1 .marker{background:linear-gradient(transparent 60%,var(--sun) 60%);}
+  .hero p.sub{margin:26px auto 38px;font-size:clamp(15px,1.8vw,17.5px);color:var(--ink-soft);max-width:640px;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
+  .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:16px;}
+  .hero .src{font-size:11px;color:var(--ink-soft);opacity:.7;margin-top:6px;}
 
-  /* ===== stress stats strip ===== */
-  .strip{background:var(--green);color:#fff;padding:56px 0;}
-  .strip .inner{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center;}
-  .strip .num{font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:600;line-height:1.2;}
-  .strip .num span{font-size:.5em;}
-  .strip .cap{font-size:13.5px;opacity:.85;margin-top:8px;}
-  .strip .src{font-size:11px;opacity:.55;margin-top:4px;}
+  /* ===== fact bubbles ===== */
+  .facts{background:var(--teal);color:#fff;padding:60px 0;}
+  .facts .inner{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;}
+  .fact h3{font-size:15px;font-weight:800;background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;display:inline-block;margin-bottom:14px;}
+  .fact .num{font-size:clamp(30px,4vw,44px);font-weight:800;line-height:1.2;color:var(--sun);}
+  .fact .num span{font-size:.45em;color:#fff;}
+  .fact .cap{font-size:13.5px;opacity:.9;margin-top:8px;}
+  .fact .src{font-size:10.5px;opacity:.55;margin-top:4px;}
 
-  /* ===== stress cards ===== */
-  .stress-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .stress-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .25s,box-shadow .25s;}
-  .stress-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(51,50,46,.08);}
-  .stress-card .no{font-family:var(--serif);color:var(--apricot);font-size:14px;letter-spacing:.2em;font-weight:700;}
-  .stress-card h3{font-family:var(--serif);font-size:18.5px;margin:10px 0 12px;line-height:1.6;}
-  .stress-card p{font-size:14px;color:var(--ink-soft);}
+  /* ===== 構成2:根拠 ===== */
+  .why .talk{display:grid;gap:18px;max-width:760px;margin:0 auto 50px;}
+  .bubble{background:var(--white);border:1.5px solid var(--line);border-radius:22px;padding:24px 28px;font-size:15px;position:relative;box-shadow:0 6px 18px rgba(58,54,48,.05);}
+  .bubble.q{border-color:var(--sun);background:var(--sun-light);font-weight:800;width:fit-content;max-width:90%;}
+  .bubble.a{margin-left:auto;width:fit-content;max-width:92%;border-color:var(--teal);background:var(--teal-light);}
+  .bubble .who{display:block;font-size:11.5px;font-weight:800;letter-spacing:.1em;margin-bottom:6px;}
+  .bubble.q .who{color:var(--coral-dark);}
+  .bubble.a .who{color:var(--teal-dark);}
 
-  /* ===== insider ===== */
-  .insider{background:var(--white);}
-  .insider-box{background:var(--green-light);border-radius:20px;padding:44px 40px;margin-top:8px;}
-  .insider-box h3{font-family:var(--serif);font-size:20px;color:var(--green-dark);margin-bottom:14px;}
-  .insider-box p{font-size:15px;color:var(--ink);margin-bottom:16px;}
-  .insider-box p:last-child{margin-bottom:0;}
-  .insider-box strong{color:var(--green-dark);}
+  .compare{overflow-x:auto;border-radius:18px;border:1.5px solid var(--line);background:#fff;}
+  .compare table{width:100%;border-collapse:collapse;min-width:640px;font-size:14px;}
+  .compare th,.compare td{padding:16px 14px;text-align:center;border-bottom:1px solid var(--line);}
+  .compare thead th{background:var(--teal);color:#fff;font-size:14.5px;}
+  .compare thead th:first-child{background:#fff;}
+  .compare tbody th{background:var(--sun-light);font-weight:800;text-align:left;padding-left:20px;white-space:nowrap;}
+  .compare .good{color:var(--teal-dark);font-weight:800;}
+  .compare .bad{color:#b9552f;}
+  .compare .col-us{background:#fdf3ef;font-weight:700;}
+  .compare-note{font-size:12px;color:var(--ink-soft);margin-top:14px;}
 
-  /* ===== promise ===== */
-  .promise-list{display:grid;gap:22px;}
-  .promise{display:grid;grid-template-columns:88px 1fr;gap:26px;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:34px 32px;align-items:start;}
-  .promise .p-no{font-family:var(--serif);font-size:40px;color:var(--green);font-weight:600;line-height:1;padding-top:4px;}
-  .promise .p-no small{display:block;font-size:11px;letter-spacing:.2em;color:var(--apricot-dark);font-family:var(--sans);font-weight:700;margin-bottom:6px;}
-  .promise h3{font-family:var(--serif);font-size:21px;margin-bottom:10px;line-height:1.6;}
-  .promise p{font-size:14.5px;color:var(--ink-soft);}
+  /* ===== beginner words ===== */
+  .words{background:var(--white);}
+  .word-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .word{background:var(--cream);border:1.5px solid var(--line);border-radius:18px;padding:26px 26px;transition:transform .25s;}
+  .word:hover{transform:translateY(-4px);}
+  .word .tag{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:800;border-radius:8px;padding:3px 12px;margin-bottom:10px;letter-spacing:.08em;}
+  .word h3{font-size:18px;font-weight:800;margin-bottom:8px;}
+  .word p{font-size:13.5px;color:var(--ink-soft);}
+  .word p strong{color:var(--coral-dark);}
+
+  /* ===== promises ===== */
+  .promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .promise{background:var(--white);border:1.5px solid var(--line);border-radius:20px;padding:32px 26px;text-align:center;transition:transform .25s,box-shadow .25s;}
+  .promise:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(58,54,48,.09);}
+  .promise .icon{width:64px;height:64px;border-radius:50%;background:var(--sun-light);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 16px;}
+  .promise h3{font-size:17.5px;font-weight:800;margin-bottom:10px;line-height:1.6;}
+  .promise p{font-size:13.5px;color:var(--ink-soft);text-align:left;}
 
   /* ===== flow ===== */
-  .flow{background:var(--white);}
+  .flow{background:var(--teal-light);}
   .flow-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:step;}
-  .step{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 18px;position:relative;}
-  .step::before{counter-increment:step;content:"STEP " counter(step);font-size:11px;letter-spacing:.2em;color:var(--apricot-dark);font-weight:700;}
-  .step h4{font-family:var(--serif);font-size:16px;margin:8px 0 8px;}
+  .step{background:#fff;border-radius:16px;padding:26px 18px;position:relative;border:1.5px solid transparent;}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:16px;width:34px;height:34px;border-radius:50%;background:var(--coral);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 4px 10px rgba(240,90,54,.3);}
+  .step h4{font-size:15.5px;font-weight:800;margin:10px 0 8px;}
   .step p{font-size:12.5px;color:var(--ink-soft);line-height:1.8;}
-  .step .relief{display:inline-block;margin-top:10px;font-size:11px;background:var(--green-light);color:var(--green-dark);border-radius:999px;padding:3px 10px;font-weight:700;}
+  .step .relief{display:inline-block;margin-top:10px;font-size:11px;background:var(--sun-light);color:var(--ink);border-radius:999px;padding:3px 10px;font-weight:800;}
 
   /* ===== plans ===== */
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;}
-  .plan{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:36px 30px;display:flex;flex-direction:column;position:relative;}
-  .plan.featured{border:2px solid var(--green);box-shadow:0 18px 44px rgba(47,93,80,.14);}
-  .plan .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:5px 18px;letter-spacing:.1em;white-space:nowrap;}
-  .plan h3{font-family:var(--serif);font-size:20px;color:var(--green-dark);}
+  .plan{background:var(--white);border:1.5px solid var(--line);border-radius:20px;padding:36px 30px;display:flex;flex-direction:column;position:relative;}
+  .plan.featured{border:2.5px solid var(--coral);box-shadow:0 18px 44px rgba(240,90,54,.15);}
+  .plan .badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--coral);color:#fff;font-size:12px;font-weight:800;border-radius:999px;padding:5px 18px;letter-spacing:.08em;white-space:nowrap;}
+  .plan h3{font-size:20px;font-weight:800;color:var(--teal-dark);}
   .plan .for{font-size:12.5px;color:var(--ink-soft);margin:6px 0 20px;min-height:3em;}
-  .plan .price{font-family:var(--serif);font-size:34px;font-weight:600;line-height:1;}
-  .plan .price span{font-size:14px;font-family:var(--sans);color:var(--ink-soft);font-weight:400;}
+  .plan .price{font-size:34px;font-weight:800;line-height:1;}
+  .plan .price span{font-size:14px;color:var(--ink-soft);font-weight:500;}
   .plan ul{margin:22px 0 26px;flex:1;}
   .plan li{font-size:13.5px;padding:9px 0 9px 26px;border-bottom:1px dashed var(--line);position:relative;}
-  .plan li::before{content:"✓";position:absolute;left:2px;color:var(--apricot-dark);font-weight:700;}
+  .plan li::before{content:"✓";position:absolute;left:2px;color:var(--coral);font-weight:800;}
   .plan .btn{text-align:center;}
   .price-note{font-size:12px;color:var(--ink-soft);margin-top:20px;}
 
   /* ===== voice ===== */
   .voice{background:var(--white);}
   .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .voice-card{background:var(--cream);border-radius:16px;padding:30px 26px;border:1px solid var(--line);}
-  .voice-card .who{font-size:12.5px;color:var(--apricot-dark);font-weight:700;letter-spacing:.05em;}
-  .voice-card h3{font-family:var(--serif);font-size:17px;margin:8px 0 12px;line-height:1.7;}
+  .voice-card{background:var(--cream);border-radius:18px;padding:30px 26px;border:1.5px solid var(--line);}
+  .voice-card .who{font-size:12.5px;color:var(--coral-dark);font-weight:800;letter-spacing:.04em;}
+  .voice-card h3{font-size:16.5px;font-weight:800;margin:8px 0 12px;line-height:1.7;}
   .voice-card p{font-size:13.5px;color:var(--ink-soft);}
 
   /* ===== faq ===== */
-  .faq-item{background:var(--white);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;}
-  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:15.5px;font-weight:700;padding:22px 56px 22px 24px;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
-  .faq-q::before{content:"Q.";color:var(--apricot-dark);font-family:var(--serif);margin-right:10px;}
-  .faq-q::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--green);transition:transform .3s;}
+  .faq-item{background:var(--white);border:1.5px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden;}
+  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:15.5px;font-weight:800;padding:22px 56px 22px 24px;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
+  .faq-q::before{content:"Q";color:#fff;background:var(--teal);border-radius:8px;padding:1px 9px;margin-right:12px;font-size:13px;}
+  .faq-q::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--coral);transition:transform .3s;}
   .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
   .faq-a div{padding:0 24px 24px;font-size:14px;color:var(--ink-soft);}
-  .faq-a div::before{content:"A.";color:var(--green);font-family:var(--serif);font-weight:700;margin-right:10px;}
+  .faq-a div::before{content:"A";color:#fff;background:var(--coral);border-radius:8px;padding:1px 9px;margin-right:12px;font-size:13px;font-weight:800;}
 
-  /* ===== cta ===== */
-  .cta{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;text-align:center;}
+  /* ===== 構成3:CTA ===== */
+  .cta{background:linear-gradient(135deg,var(--coral) 0%,#e8543d 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
+  .cta::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,215,102,.18);top:-120px;right:-90px;}
+  .cta::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1);bottom:-100px;left:-70px;}
+  .cta .inner{position:relative;z-index:1;}
+  .cta .sec-label{background:#fff;color:var(--coral-dark);}
   .cta .sec-title{color:#fff;}
-  .cta p{opacity:.88;max-width:620px;margin:0 auto 40px;font-size:15px;}
-  .cta .btn-primary{box-shadow:0 10px 30px rgba(0,0,0,.25);}
-  .cta .hero-note{color:rgba(255,255,255,.65);}
+  .cta p{opacity:.94;max-width:640px;margin:0 auto 38px;font-size:15.5px;}
+  .cta .btn-primary{background:#fff;color:var(--coral-dark);box-shadow:0 12px 30px rgba(0,0,0,.22);font-size:17px;padding:19px 52px;}
+  .cta .btn-primary:hover{background:var(--sun-light);}
+  .cta .hero-note{color:rgba(255,255,255,.8);}
 
   /* ===== footer ===== */
-  footer{background:var(--ink);color:#c9c7c0;padding:60px 0 30px;font-size:13px;}
+  footer{background:var(--ink);color:#cfcac2;padding:60px 0 30px;font-size:13px;}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px;}
   footer .logo{color:#fff;margin-bottom:14px;}
   footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.08em;}
   footer li{margin-bottom:9px;}
   footer a:hover{color:#fff;}
-  .copyright{border-top:1px solid #4a4944;padding-top:24px;text-align:center;font-size:12px;color:#8b8a83;}
+  .copyright{border-top:1px solid #55504a;padding-top:24px;text-align:center;font-size:12px;color:#96918a;}
 
   /* ===== responsive ===== */
   @media(max-width:900px){
-    .stress-grid,.plans,.voice-grid{grid-template-columns:1fr 1fr;}
+    .promise-grid,.plans,.voice-grid{grid-template-columns:1fr 1fr;}
     .flow-steps{grid-template-columns:1fr 1fr;}
-    .strip .inner{grid-template-columns:1fr;gap:26px;}
+    .facts .inner{grid-template-columns:1fr;gap:30px;}
     .foot-grid{grid-template-columns:1fr 1fr;}
   }
   @media(max-width:640px){
-    section{padding:68px 0;}
-    .hero{padding:140px 0 80px;}
+    section{padding:64px 0;}
+    .hero{padding:130px 0 76px;}
     nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);}
     nav.open ul{display:flex;}
     .menu-btn{display:block;}
-    .stress-grid,.plans,.voice-grid,.flow-steps,.foot-grid{grid-template-columns:1fr;}
-    .promise{grid-template-columns:1fr;gap:10px;}
+    .promise-grid,.plans,.voice-grid,.flow-steps,.foot-grid,.word-grid{grid-template-columns:1fr;}
     .plan.featured{order:-1;}
+    .bubble.a,.bubble.q{max-width:100%;}
   }
 </style>
 </head>
@@ -175,203 +200,215 @@
 
 <header>
   <div class="head-inner">
-    <a href="#top" class="logo">結婚相談所 ふう<small>STRESS-FREE MARRIAGE AGENCY</small></a>
+    <a href="#top" class="logo">結婚相談所 ふう<small>ふうと息をつける婚活を。</small></a>
     <nav id="nav">
       <ul>
-        <li><a href="#stress">婚活ストレスの正体</a></li>
-        <li><a href="#promise">選ばれる理由</a></li>
-        <li><a href="#flow">ご成婚まで</a></li>
+        <li><a href="#why">なぜ今、婚活?</a></li>
+        <li><a href="#words">はじめてさん向け解説</a></li>
+        <li><a href="#promise">ラクできる理由</a></li>
         <li><a href="#plans">料金</a></li>
         <li><a href="#faq">よくある質問</a></li>
-        <li><a href="#contact" class="nav-cta">無料相談</a></li>
+        <li><a href="#contact" class="nav-cta">無料相談はこちら</a></li>
       </ul>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="メニュー">☰</button>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- ===== 構成1:冒頭 = 婚活に関する驚きの事実 =====
+     ※統計数値はサンプルです。リクルートブライダル総研「婚活実態調査」等、最新の出典に基づく数値へ差し替えてください。 -->
 <section class="hero" id="top">
   <div class="inner">
-    <span class="hero-kicker">がんばらせない結婚相談所</span>
-    <h1>婚活は、がんばるほど<br>疲れていく。<br>だから私たちは、<em>「ストレス」</em>から<br>設計しました。</h1>
-    <p class="sub">断る気まずさも、断られる痛みも、終わらない日程調整も。婚活のストレスの正体を業界の内側から知り尽くしたカウンセラーが、あなたの代わりに引き受けます。あなたに残すのは「人と出会う楽しさ」だけ。</p>
+    <span class="hero-kicker">\ はじめての婚活、大かんげい /</span>
+    <p class="shock">── えっ、知ってました? ──</p>
+    <h1>いま結婚する人の<br><span class="big">4人に1人</span>は、<br><span class="marker">婚活サービスでの出会い。</span></h1>
+    <p class="sub">「婚活って、なんだか必死っぽい…」は、もう昔のイメージ。恋愛と同じくらい"ふつうの出会い方"になった今こそ、まじめに人生を考えるあなたの番です。がんばらなくていい婚活、のぞいてみませんか?</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">無料ストレス診断カウンセリングを予約する</a>
-      <a href="#stress" class="btn btn-ghost">まずは読んでみる</a>
+      <a href="#contact" class="btn btn-primary">無料相談をのぞいてみる(勧誘ゼロ)</a>
+      <a href="#why" class="btn btn-ghost">まずは根拠を見る</a>
     </div>
-    <p class="hero-note">※オンライン対応・所要約60分・入会を勧誘するための面談ではありません</p>
+    <p class="hero-note">オンラインOK・約60分・手ぶらでどうぞ</p>
+    <p class="src">※「4人に1人」はサンプル表記です。最新の公的調査・業界調査の数値に差し替えてご利用ください。</p>
   </div>
 </section>
 
-<!-- ===== STATS STRIP =====
-     ※数値はサンプルです。自社調査・公的統計など根拠のある数値に差し替えてください。 -->
-<section class="strip">
+<!-- ===== 驚きの事実、つづき =====
+     ※数値はすべてサンプル。実データに差し替えてください。 -->
+<section class="facts">
   <div class="inner">
-    <div class="reveal">
-      <div class="num">10<span>人中</span>9<span>人</span></div>
-      <div class="cap">「婚活に疲れた経験がある」と回答</div>
-      <div class="src">※当サロン無料相談ヒアリングより(サンプル値)</div>
+    <div class="fact reveal">
+      <h3>驚きの事実 その2</h3>
+      <div class="num">約<span> </span>1<span>年</span></div>
+      <p class="cap">相談所で結婚した人の平均活動期間。<br>「何年もかかる」は思い込みでした。</p>
+      <p class="src">※サンプル値。自社実績に差し替え</p>
     </div>
-    <div class="reveal">
-      <div class="num">第<span> </span>1<span>位</span></div>
-      <div class="cap">婚活をやめた理由は「精神的な疲れ」</div>
-      <div class="src">※当サロン無料相談ヒアリングより(サンプル値)</div>
+    <div class="fact reveal">
+      <h3>驚きの事実 その3</h3>
+      <div class="num">100<span>%</span></div>
+      <p class="cap">当サロン会員の「独身証明書」提出率。<br>既婚者・遊び目的は、ここにはいません。</p>
+      <p class="src">※相談所は証明書の提出が入会条件です</p>
     </div>
-    <div class="reveal">
-      <div class="num">0<span>件</span></div>
-      <div class="cap">当サロンで会員様ご自身が「お断り連絡」をした件数</div>
-      <div class="src">※お断りは100%カウンセラーが代行します</div>
+    <div class="fact reveal">
+      <h3>驚きの事実 その4</h3>
+      <div class="num">0<span>通</span></div>
+      <p class="cap">あなたが送る「お断りメッセージ」の数。<br>気まずい連絡は、ぜんぶ私たちが代行します。</p>
+      <p class="src">※当サロンのサービス設計です</p>
     </div>
   </div>
 </section>
 
-<!-- ===== STRESS ===== -->
-<section id="stress">
+<!-- ===== 構成2:中間 = 根拠をやさしく解説 ===== -->
+<section class="why" id="why">
   <div class="inner">
-    <span class="sec-label">Why so tired?</span>
-    <h2 class="sec-title">あなたが疲れているのは、<br>あなたのせいではありません。</h2>
-    <p class="sec-lead">アプリでも、パーティーでも、大手相談所でも──婚活の現場には、構造的に人を消耗させる「6つのストレス」が組み込まれています。私たちはこれを一つずつ潰すことから始めました。</p>
-    <div class="stress-grid">
-      <div class="stress-card reveal">
-        <span class="no">STRESS 01</span>
-        <h3>断る・断られるストレス</h3>
-        <p>お断りの連絡ほど心をすり減らすものはありません。そして断られた理由が分からないまま、自信だけが削られていく。婚活離脱の最大の原因です。</p>
-      </div>
-      <div class="stress-card reveal">
-        <span class="no">STRESS 02</span>
-        <h3>終わりのない日程調整</h3>
-        <p>複数の相手と同時進行するメッセージ、日程調整、お店選び。仕事より疲れる「第二の業務」になった時点で、婚活は続きません。</p>
-      </div>
-      <div class="stress-card reveal">
-        <span class="no">STRESS 03</span>
-        <h3>「何が悪いのか分からない」迷子ストレス</h3>
-        <p>頑張っているのに結果が出ない。でも誰もフィードバックをくれない。改善点が見えない努力は、ただの消耗です。</p>
-      </div>
-      <div class="stress-card reveal">
-        <span class="no">STRESS 04</span>
-        <h3>プロフィール盛り疲れ</h3>
-        <p>写真を撮り直し、自己PRを書き直し、「選ばれる自分」を演じ続ける。素の自分で会えないから、交際が始まっても疲れが続きます。</p>
-      </div>
-      <div class="stress-card reveal">
-        <span class="no">STRESS 05</span>
-        <h3>比較と競争のストレス</h3>
-        <p>無限にスワイプされ、スペックで並べられ、常に「もっと良い人」と比較される。マッチングアプリの構造そのものが消耗を生みます。</p>
-      </div>
-      <div class="stress-card reveal">
-        <span class="no">STRESS 06</span>
-        <h3>周囲からのプレッシャー</h3>
-        <p>親、友人、職場。「まだなの?」の一言が積もっていく。焦りで判断を誤る前に、伴走者が必要です。</p>
-      </div>
+    <span class="sec-label">なぜそう言えるの?</span>
+    <h2 class="sec-title">「4人に1人」のワケを、<br><span class="marker">婚活がはじめての人にも</span>わかるように。</h2>
+    <p class="sec-lead">むずかしい話はナシ。会話形式でサクッと解説します。</p>
+
+    <div class="talk">
+      <div class="bubble q reveal"><span class="who">はじめてさん</span>本当にそんなに多いの?周りで聞いたことないけど…</div>
+      <div class="bubble a reveal"><span class="who">カウンセラー</span>それ、当然なんです。婚活サービスで結婚した人の多くは、わざわざ公言しないから。でも調査では、職場や学校での出会いを、婚活サービス経由がぐんぐん追い上げています。「言わないだけで、みんな使ってる」が実態です。</div>
+      <div class="bubble q reveal"><span class="who">はじめてさん</span>じゃあアプリでよくない?相談所って高そうだし…</div>
+      <div class="bubble a reveal"><span class="who">カウンセラー</span>「とにかく出会いの数がほしい」ならアプリもアリ。でも<strong>「まじめに人生を考えたい」なら話は別</strong>。アプリは相手の本気度がわからず、連絡が突然途切れる"ごめんね疲れ"がつきもの。相談所は独身証明書を出した本気の人だけ。しかも面倒ごとはプロが巻き取るので、実はいちばん消耗しない方法なんです。</div>
+      <div class="bubble q reveal"><span class="who">はじめてさん</span>恋愛経験ほぼゼロでも、浮かない…?</div>
+      <div class="bubble a reveal"><span class="who">カウンセラー</span>むしろ主役です!相談所に来る方の多くが「出会いがなかっただけ」のまじめな人。何を話すか、何を着るかまで一緒に作戦を立てるので、経験値は関係ありません。</div>
     </div>
+
+    <h3 style="font-size:20px;font-weight:800;margin-bottom:18px;">ひと目でわかる、3つの婚活の違い</h3>
+    <div class="compare reveal">
+      <table>
+        <thead>
+          <tr><th></th><th>マッチングアプリ</th><th>婚活パーティー</th><th class="col-us">結婚相談所(当サロン)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>相手の本気度</th><td class="bad">バラバラ(遊び目的も)</td><td>その日次第</td><td class="col-us good">◎ 全員が独身証明書を提出</td></tr>
+          <tr><th>疲れやすさ</th><td class="bad">△ 無限スワイプ&既読スルー</td><td class="bad">△ 短時間で総当たり</td><td class="col-us good">◎ 面倒ごとはプロが代行</td></tr>
+          <tr><th>相談できる人</th><td class="bad">いない</td><td class="bad">いない</td><td class="col-us good">◎ 専任カウンセラーが伴走</td></tr>
+          <tr><th>お断りの連絡</th><td class="bad">自分で(または自然消滅)</td><td>自分で</td><td class="col-us good">◎ 100%こちらが代行</td></tr>
+          <tr><th>結婚までの平均</th><td>運しだい</td><td>運しだい</td><td class="col-us good">◎ 約1年(サンプル値)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">※比較は一般的な傾向をわかりやすく示したものです。</p>
   </div>
 </section>
 
-<!-- ===== INSIDER ===== -->
-<section class="insider">
+<!-- ===== はじめてさん向け:用語をやさしく ===== -->
+<section class="words" id="words">
   <div class="inner">
-    <span class="sec-label">From the inside</span>
-    <h2 class="sec-title">業界の内側にいたから、<br>正直にお話しできることがあります。</h2>
-    <div class="insider-box reveal">
-      <h3>婚活サービスは「疲れさせたほうが儲かる」構造になりがちです。</h3>
-      <p>アプリは、会員が長く滞在しスワイプし続けるほど収益が上がります。月会費型のサービスは、活動が長引くほど売上が増えます。つまり多くの婚活サービスにとって、<strong>あなたが早く結婚することは、必ずしも利益ではない</strong>のです。</p>
-      <p>私たちは報酬設計を逆にしました。<strong>成婚してはじめて成果報酬をいただく成婚料型</strong>。あなたが最短で、すり減らずに結婚することが、そのまま私たちの利益になります。だから「休みましょう」「その人はやめておきましょう」と、あなたの側に立って言えるのです。</p>
+    <span class="sec-label">はじめてさん専用</span>
+    <h2 class="sec-title">婚活ワード、<span class="marker">ぜんぶ日本語に翻訳</span>しました。</h2>
+    <p class="sec-lead">知らない言葉があるだけで、一歩目は重くなるもの。これだけ知っていれば大丈夫です。</p>
+    <div class="word-grid">
+      <div class="word reveal">
+        <span class="tag">用語その1</span>
+        <h3>「お見合い」とは?</h3>
+        <p>かしこまった儀式ではなく、<strong>カフェで1時間お茶するだけ</strong>。日程もお店もこちらで手配するので、あなたは当日行くだけです。</p>
+      </div>
+      <div class="word reveal">
+        <span class="tag">用語その2</span>
+        <h3>「仮交際」とは?</h3>
+        <p>「もう少し話してみたいな」の期間。<strong>複数の人と同時進行してOK</strong>なお試し期間です(ルール上ちゃんと認められています)。</p>
+      </div>
+      <div class="word reveal">
+        <span class="tag">用語その3</span>
+        <h3>「真剣交際」とは?</h3>
+        <p>「この人だ」と思ったら一対一のお付き合いへ。ここからは<strong>結婚を前提に、カウンセラーと作戦会議をしながら</strong>進みます。</p>
+      </div>
+      <div class="word reveal">
+        <span class="tag">用語その4</span>
+        <h3>「成婚料」とは?</h3>
+        <p><strong>結婚が決まったときだけ</strong>お支払いいただく成功報酬。決まらなければ0円。だから私たちは、あなたを最短で幸せにするほど嬉しいのです。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROMISE ===== -->
+<!-- ===== ラクできる理由(ストレス解消の設計)===== -->
 <section id="promise">
   <div class="inner">
-    <span class="sec-label">Our promise</span>
-    <h2 class="sec-title">ストレスの数だけ、仕組みで答える。<br>5つのストレスフリー設計</h2>
-    <div class="promise-list">
+    <span class="sec-label">がんばらなくていい理由</span>
+    <h2 class="sec-title">婚活の「めんどう」と「ドキドキしすぎ」は、<br><span class="marker">ぜんぶ、こっちで引き受けます。</span></h2>
+    <p class="sec-lead">婚活が疲れる原因は、あなたの性格ではなく「仕組み」。だから仕組みで解決しました。</p>
+    <div class="promise-grid">
       <div class="promise reveal">
-        <div class="p-no"><small>PROMISE</small>01</div>
-        <div>
-          <h3>お断りは、100%こちらが代行します</h3>
-          <p>お断りの連絡も、お断りされた際の理由の確認も、すべて担当カウンセラーが間に入ります。あなたが気まずい文面に悩む夜は、もうありません。断られた理由は「次に活きる形」に翻訳してお伝えします。</p>
-        </div>
+        <div class="icon">💌</div>
+        <h3>お断り、ぜんぶ代行</h3>
+        <p>気まずいお断り連絡は100%カウンセラーが担当。断られたときも、理由を「次に活きるヒント」に変換してお伝えします。凹みっぱなしにさせません。</p>
       </div>
       <div class="promise reveal">
-        <div class="p-no"><small>PROMISE</small>02</div>
-        <div>
-          <h3>日程調整・お店の予約まで、丸ごとお任せ</h3>
-          <p>お見合いの日程調整、場所のセッティング、リマインドまで運営が行います。あなたがすることは「当日、行くだけ」。婚活を第二の業務にしません。</p>
-        </div>
+        <div class="icon">📅</div>
+        <h3>日程調整も、お店選びも不要</h3>
+        <p>お見合いのセッティングは丸ごとおまかせ。仕事が忙しくても、婚活が「第二の仕事」になりません。あなたは当日、行くだけ。</p>
       </div>
       <div class="promise reveal">
-        <div class="p-no"><small>PROMISE</small>03</div>
-        <div>
-          <h3>毎月の「振り返り面談」で、迷子にしない</h3>
-          <p>うまくいかない時こそ、原因をデータと対話で言語化します。「何が悪いのか分からない」まま活動を続けさせることはありません。頑張る方向を、プロが毎月チューニングします。</p>
-        </div>
+        <div class="icon">🧭</div>
+        <h3>毎月の作戦会議で迷子ゼロ</h3>
+        <p>「何が悪いのかわからない」を放置しません。月1回の振り返りで、うまくいった点・変える点をプロと一緒に整理。次の一手がいつも明確です。</p>
       </div>
       <div class="promise reveal">
-        <div class="p-no"><small>PROMISE</small>04</div>
-        <div>
-          <h3>「休む」も戦略。休会はいつでも、気兼ねなく</h3>
-          <p>疲れた状態で会う人を、人は好きになれません。休会は月単位でいつでも可能、休会中の月会費はかかりません。回復まで含めて設計するのが、本当の婚活サポートだと考えています。</p>
-        </div>
+        <div class="icon">☕</div>
+        <h3>疲れたら、堂々と休憩OK</h3>
+        <p>休会はいつでも気軽に、休会中の月会費は0円。元気なあなたで会うほうが、ぜったいにうまくいく。休むのも立派な作戦です。</p>
       </div>
       <div class="promise reveal">
-        <div class="p-no"><small>PROMISE</small>05</div>
-        <div>
-          <h3>料金は、最初にすべて見せます</h3>
-          <p>入会金・月会費・成婚料以外の追加費用は一切ありません。オプション商法も、高額な写真撮影の抱き合わせもなし。「あとから請求されるかも」という不安も、立派なストレスだからです。</p>
-        </div>
+        <div class="icon">💰</div>
+        <h3>料金は最初に全部見せる</h3>
+        <p>入会金・月会費・成婚料、以上!あとから追加請求もオプション営業もありません。「いくらかかるの…?」の不安ごと解消します。</p>
+      </div>
+      <div class="promise reveal">
+        <div class="icon">🔰</div>
+        <h3>はじめてでも、手ぶらでOK</h3>
+        <p>プロフィール文はプロが一緒に作成、写真は提携スタジオへご案内。服装や会話の練習までサポート。準備ゼロから始められます。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FLOW ===== -->
+<!-- ===== 流れ ===== -->
 <section class="flow" id="flow">
   <div class="inner">
-    <span class="sec-label">Road to marriage</span>
-    <h2 class="sec-title">ご成婚までの流れ</h2>
-    <p class="sec-lead">各ステップに「ストレスを取り除く仕掛け」を用意しています。</p>
+    <span class="sec-label">かんたん5ステップ</span>
+    <h2 class="sec-title">結婚までの道のりは、<span class="marker">たったこれだけ。</span></h2>
     <div class="flow-steps">
       <div class="step reveal">
-        <h4>無料ストレス診断</h4>
-        <p>これまでの婚活の「何に疲れたか」からヒアリング。あなたの婚活ストレスタイプを診断します。</p>
-        <span class="relief">勧誘は一切なし</span>
+        <h4>無料相談</h4>
+        <p>まずはおしゃべりから。あなたの理想と不安を整理します。入会するかは帰ってから決めてOK。</p>
+        <span class="relief">勧誘ゼロ宣言</span>
       </div>
       <div class="step reveal">
-        <h4>ご入会・プロフィール作成</h4>
-        <p>「盛る」のではなく「伝わる」プロフィールをプロが一緒に作成。写真撮影も提携スタジオでスムーズに。</p>
-        <span class="relief">自己PRの丸投げOK</span>
+        <h4>プロフィール作成</h4>
+        <p>あなたの魅力をプロが言語化。写真撮影も段取りします。「盛る」より「伝わる」が合言葉。</p>
+        <span class="relief">丸投げOK</span>
       </div>
       <div class="step reveal">
         <h4>お見合い</h4>
-        <p>お相手のご紹介と、あなたからの検索の両輪で。日程・場所の調整はすべて運営が行います。</p>
+        <p>気になる人とカフェで1時間。紹介と検索の両方から出会えます。調整はすべておまかせ。</p>
         <span class="relief">当日行くだけ</span>
       </div>
       <div class="step reveal">
         <h4>交際</h4>
-        <p>交際中の不安や迷いは、いつでもカウンセラーに。お断りの際の連絡も代行します。</p>
-        <span class="relief">お断り100%代行</span>
+        <p>デートの相談も、不安の吐き出しも、いつでもカウンセラーへ。合わなければお断りも代行。</p>
+        <span class="relief">ひとりにしない</span>
       </div>
       <div class="step reveal">
-        <h4>ご成婚</h4>
-        <p>プロポーズの相談から、ご両家への挨拶の段取りまで。最後の一歩こそ、丁寧に伴走します。</p>
-        <span class="relief">成婚後の相談も可</span>
+        <h4>ご成婚!</h4>
+        <p>プロポーズの演出からご両家挨拶の段取りまで、最後の最後まで一緒に。おめでとうございます!</p>
+        <span class="relief">卒業後の相談もOK</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PLANS =====
-     ※料金はサンプルです。実際の料金体系に差し替えてください。 -->
+<!-- ===== 料金 ===== ※金額はサンプルです。実際の料金に差し替えてください。 -->
 <section id="plans">
   <div class="inner">
-    <span class="sec-label">Price</span>
-    <h2 class="sec-title">料金プラン</h2>
-    <p class="sec-lead">ここに記載の金額がすべてです。追加費用・オプション料金は一切ありません。</p>
+    <span class="sec-label">料金プラン</span>
+    <h2 class="sec-title">ここに書いてある金額が、<span class="marker">ぜんぶです。</span></h2>
+    <p class="sec-lead">追加費用・オプション料金は一切ナシ。安心して見比べてください。</p>
     <div class="plans">
       <div class="plan reveal">
         <h3>ライト</h3>
-        <p class="for">自分のペースで進めたい方に。サポートは必要な時だけ。</p>
+        <p class="for">自分のペースで進めたい方に。サポートは必要なときだけ。</p>
         <div class="price">9,800<span>円/月(税込)</span></div>
         <ul>
           <li>お相手検索・お申込み 月10名</li>
@@ -383,14 +420,14 @@
         <a href="#contact" class="btn btn-ghost">このプランで相談する</a>
       </div>
       <div class="plan featured reveal">
-        <span class="badge">いちばん選ばれています</span>
+        <span class="badge">🌟 いちばん人気</span>
         <h3>スタンダード</h3>
-        <p class="for">「もう疲れたくない」方に。毎月の振り返り面談で迷子にさせません。</p>
+        <p class="for">はじめての婚活ならコレ。毎月の作戦会議で迷子にさせません。</p>
         <div class="price">15,800<span>円/月(税込)</span></div>
         <ul>
           <li>ライトの全サービス</li>
           <li>カウンセラーからのご紹介 月2名</li>
-          <li>毎月の振り返り面談(60分)</li>
+          <li>毎月の作戦会議(60分)</li>
           <li>プロフィール・写真の作成サポート</li>
           <li>チャット相談(毎日)</li>
           <li>入会金 55,000円/成婚料 165,000円</li>
@@ -399,7 +436,7 @@
       </div>
       <div class="plan reveal">
         <h3>フルサポート</h3>
-        <p class="for">多忙な方・婚活ブランクが長い方に。考えることを最小限に。</p>
+        <p class="for">多忙な方・じっくり伴走してほしい方に。考えることを最小限に。</p>
         <div class="price">24,800<span>円/月(税込)</span></div>
         <ul>
           <li>スタンダードの全サービス</li>
@@ -412,31 +449,30 @@
         <a href="#contact" class="btn btn-ghost">このプランで相談する</a>
       </div>
     </div>
-    <p class="price-note">※休会中の月会費は無料です。※ご成婚に至らず退会される場合、成婚料は一切かかりません。</p>
+    <p class="price-note">※休会中の月会費は0円。※ご成婚に至らず退会される場合、成婚料はかかりません。違約金もありません。</p>
   </div>
 </section>
 
-<!-- ===== VOICE =====
-     ※以下はサンプル原稿です。実際の会員様の声(掲載許諾済み)に差し替えてください。 -->
+<!-- ===== 声 ===== ※サンプル原稿です。掲載許諾済みの実際の声に差し替えてください。 -->
 <section class="voice">
   <div class="inner">
-    <span class="sec-label">Voice</span>
-    <h2 class="sec-title">「疲れなかった」という、いちばんの褒め言葉。</h2>
+    <span class="sec-label">先輩たちの声</span>
+    <h2 class="sec-title">「もっと早く来ればよかった」が、<span class="marker">いちばん多い感想です。</span></h2>
     <div class="voice-grid">
       <div class="voice-card reveal">
-        <span class="who">30代前半・女性(活動8ヶ月でご成婚)</span>
-        <h3>「お断りを代わりにしてもらえるだけで、こんなに楽なんだと驚きました」</h3>
-        <p>アプリ時代は、お断りの文面を考えるだけで週末が憂鬱でした。ここでは「合わなかった」とカウンセラーさんに伝えるだけ。心が削られない婚活は初めてでした。</p>
+        <span class="who">30代前半・女性(婚活はじめて/活動8ヶ月でご成婚)</span>
+        <h3>「初回の無料相談が、ただただ楽しかった」</h3>
+        <p>勧誘されると身構えて行ったら、私の人生の話を60分ずっと聞いてくれて。「婚活って楽しみながらやっていいんだ」と初めて思えました。</p>
       </div>
       <div class="voice-card reveal">
-        <span class="who">30代後半・男性(活動11ヶ月でご成婚)</span>
-        <h3>「『今月は休みましょう』と言われた時、この相談所は信じられると思った」</h3>
-        <p>疲れが顔に出ていたようで、カウンセラーから休会を提案されました。売上を考えたら普通は言わない言葉ですよね。回復後の2ヶ月で、妻と出会えました。</p>
+        <span class="who">30代後半・男性(恋愛経験ほぼなし/活動11ヶ月でご成婚)</span>
+        <h3>「会話の練習までしてくれるとは思わなかった」</h3>
+        <p>デート前に話題の整理、服のアドバイスまで。ゲームの攻略本を持って挑む感覚で、緊張がワクワクに変わりました。</p>
       </div>
       <div class="voice-card reveal">
-        <span class="who">40代前半・女性(活動1年2ヶ月でご成婚)</span>
-        <h3>「振り返り面談で、初めて『直すべき点』を教えてもらえました」</h3>
-        <p>5年間、何が悪いのか分からないまま婚活していました。毎月の面談で一つずつ言語化してもらい、霧が晴れるようでした。もっと早く来ればよかった。</p>
+        <span class="who">40代前半・女性(アプリ疲れから乗り換え/活動1年2ヶ月でご成婚)</span>
+        <h3>「お断り代行、発明だと思う」</h3>
+        <p>アプリ時代は断る文面を考えるだけで週末が憂鬱でした。ここでは「合わなかった」と伝えるだけ。心が削られない婚活は初めてでした。</p>
       </div>
     </div>
   </div>
@@ -445,61 +481,60 @@
 <!-- ===== FAQ ===== -->
 <section id="faq">
   <div class="inner">
-    <span class="sec-label">FAQ</span>
-    <h2 class="sec-title">よくある質問</h2>
+    <span class="sec-label">よくある質問</span>
+    <h2 class="sec-title">はじめてさんの「聞きにくいこと」、<span class="marker">先に答えます。</span></h2>
     <div class="faq-item">
-      <button class="faq-q">無料相談に行くと、入会を勧誘されませんか?</button>
-      <div class="faq-a"><div>されません。無料相談は「あなたの婚活ストレスの原因を診断する場」であって、営業の場ではありません。当サロンが合わないと判断した場合は、他のサービスをお勧めすることもあります。その場で入会を決めていただく必要は一切ありません。</div></div>
+      <button class="faq-q">婚活が完全に初めてです。何から始めればいいかもわかりません。</button>
+      <div class="faq-a"><div>大歓迎です!当サロンの会員の多くが「初めての婚活」からのスタート。無料相談で理想と不安を整理するところから、一歩ずつ一緒に進めます。事前準備は何もいりません。手ぶらでどうぞ。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">婚活にもう疲れ切っていて、始める気力すらありません。それでも大丈夫ですか?</button>
-      <div class="faq-a"><div>その状態の方にこそ来ていただきたい相談所です。まずは「何に疲れたのか」を一緒に整理するところから始めます。すぐに活動を始めず、準備だけして時期を待つという選択も可能です。</div></div>
+      <button class="faq-q">無料相談に行ったら、入会をしつこく勧められませんか?</button>
+      <div class="faq-a"><div>勧めません。「勧誘ゼロ宣言」を掲げており、その場で入会を決めていただく必要は一切ありません。合わないと感じたら、そのまま帰ってOK。他のサービスが合いそうな方には、正直にそうお伝えします。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">本当にお断りの連絡を全部してもらえるのですか?</button>
-      <div class="faq-a"><div>はい、100%代行します。お見合い後も、交際中も、お断りの意思をカウンセラーにお伝えいただくだけで、お相手側の相談所を通じて丁寧にお伝えします。お相手から直接連絡が来ることもありません。</div></div>
+      <button class="faq-q">恋愛経験がほとんどなくても、大丈夫ですか?</button>
+      <div class="faq-a"><div>まったく問題ありません。むしろ「出会いがなかっただけ」のまじめな方こそ、相談所がいちばん向いています。会話の話題づくりから服装まで、カウンセラーが一緒に作戦を立てます。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">仕事が忙しく、平日は動けません。</button>
-      <div class="faq-a"><div>面談・ご相談はオンライン対応、夜間・土日も承っています。日程調整やお店の手配はすべて運営が行うため、会員様の実働は「お見合い当日に行くこと」だけです。多忙な方ほど仕組みの恩恵を実感いただいています。</div></div>
+      <button class="faq-q">仕事が忙しくて、時間が取れるか不安です。</button>
+      <div class="faq-a"><div>日程調整・お店の手配はすべて運営が行うので、あなたの実働は「お見合い当日に行くこと」だけ。面談・相談はオンライン・夜間・土日OK。忙しい方ほど仕組みのラクさを実感いただいています。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">途中でやめた場合、成婚料はかかりますか?</button>
-      <div class="faq-a"><div>かかりません。成婚料はご成婚(婚約)に至った場合のみの成果報酬です。また退会時の違約金等もありません。「やめられないかも」という不安なく始めていただけます。</div></div>
+      <button class="faq-q">途中でやめたら、お金はかかりますか?</button>
+      <div class="faq-a"><div>成婚料は結婚が決まったときだけの成功報酬なので、かかりません。退会時の違約金もなし。疲れたときは休会も自由(休会中の月会費0円)なので、「やめられないかも」の心配なく始められます。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">記載されている料金以外に、かかる費用はありますか?</button>
-      <div class="faq-a"><div>ありません。入会金・月会費・成婚料がすべてです。お見合い時のご自身の飲食代・交通費を除き、オプション費用や追加請求は一切発生しません。</div></div>
+      <button class="faq-q">本当に、書いてある料金だけですか?</button>
+      <div class="faq-a"><div>はい。入会金・月会費・成婚料がすべてです。お見合い時のご自身の飲食代・交通費を除き、オプション費用や追加請求は一切ありません。「あとから請求されるかも」という不安も、ストレスのうちですから。</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- ===== 構成3:最後 = 行動を促す ===== -->
 <section class="cta" id="contact">
   <div class="inner">
-    <span class="sec-label" style="color:#f0c9a8;">Free counseling</span>
-    <h2 class="sec-title">がんばる前に、一度だけ<br>「疲れない作戦会議」をしませんか。</h2>
-    <p>無料ストレス診断カウンセリング(約60分・オンライン可)では、あなたのこれまでの婚活を棚卸しし、「何がストレスだったのか」「次はどう設計すべきか」を言語化してお渡しします。入会しなくても、この60分だけで持ち帰れるものがあるはずです。</p>
-    <a href="mailto:info@example.com?subject=無料ストレス診断カウンセリング希望" class="btn btn-primary">無料カウンセリングを予約する</a>
-    <p class="hero-note">※ご予約はメール・お電話・LINEで承ります ※無理な勧誘は一切ありません</p>
+    <span class="sec-label">最初の一歩は、話すだけ</span>
+    <h2 class="sec-title">4人に1人の時代。<br>次の「1人」は、あなたかもしれません。</h2>
+    <p>やることは、60分の無料相談を予約するだけ。入会しなくても、あなた専用の「婚活作戦メモ」を持ち帰れます。まじめに人生を考え始めたその気持ちが、いちばんのチャンスです。1年後のあなたのために、今日、5分だけ動いてみませんか?</p>
+    <a href="mailto:info@example.com?subject=無料相談の予約希望" class="btn btn-primary">🌸 無料相談を予約する(所要5分)</a>
+    <p class="hero-note">オンラインOK/夜間・土日OK/勧誘ゼロ宣言/手ぶらでどうぞ</p>
   </div>
 </section>
 
-<!-- ===== FOOTER =====
-     ※所在地・連絡先・登録番号などはダミーです。実情報に差し替えてください。 -->
+<!-- ===== footer ===== ※所在地・連絡先はダミーです。実情報に差し替えてください。 -->
 <footer>
   <div class="inner">
     <div class="foot-grid">
       <div>
         <div class="logo">結婚相談所 ふう</div>
-        <p>「ふう」と息をつけるような婚活を。<br>ストレスから設計した、がんばらせない結婚相談所です。</p>
+        <p>「ふう」と息をつけるような婚活を。<br>はじめてさん大歓迎、がんばらせない結婚相談所です。</p>
       </div>
       <div>
         <h4>メニュー</h4>
         <ul>
-          <li><a href="#stress">婚活ストレスの正体</a></li>
-          <li><a href="#promise">選ばれる理由</a></li>
-          <li><a href="#flow">ご成婚までの流れ</a></li>
+          <li><a href="#why">なぜ今、婚活?</a></li>
+          <li><a href="#words">はじめてさん向け解説</a></li>
+          <li><a href="#promise">ラクできる理由</a></li>
           <li><a href="#plans">料金プラン</a></li>
           <li><a href="#faq">よくある質問</a></li>
         </ul>
