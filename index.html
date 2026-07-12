@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>結婚相談所ふう | 婚活の「ストレス」から設計した結婚相談所</title>
+<meta name="description" content="婚活は、がんばるほど疲れていく。業界を知り尽くしたカウンセラーが、お断り代行・日程調整・振り返り面談まで丸ごと引き受ける、ストレスフリー設計の結婚相談所です。">
+<style>
+  :root{
+    --green:#2f5d50;
+    --green-dark:#22453c;
+    --green-light:#e8f0ec;
+    --cream:#faf7f1;
+    --white:#ffffff;
+    --ink:#33322e;
+    --ink-soft:#6b6a63;
+    --apricot:#e8996a;
+    --apricot-dark:#d97f4a;
+    --line:#e5e0d6;
+    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .inner{max-width:1080px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  .sec-label{display:block;font-size:13px;letter-spacing:.25em;color:var(--apricot-dark);font-weight:700;margin-bottom:14px;text-transform:uppercase;}
+  .sec-title{font-family:var(--serif);font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.5;margin-bottom:22px;}
+  .sec-lead{color:var(--ink-soft);max-width:680px;margin-bottom:48px;}
+  .btn{display:inline-block;padding:16px 40px;border-radius:999px;font-weight:700;letter-spacing:.06em;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;font-size:15px;}
+  .btn-primary{background:var(--apricot);color:#fff;box-shadow:0 8px 24px rgba(217,127,74,.35);}
+  .btn-primary:hover{background:var(--apricot-dark);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--green);border:1.5px solid var(--green);}
+  .btn-ghost:hover{background:var(--green);color:#fff;}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.on{opacity:1;transform:none;}
+
+  /* ===== header ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .head-inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .logo{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--green);letter-spacing:.08em;}
+  .logo small{font-size:11px;color:var(--ink-soft);display:block;letter-spacing:.15em;font-family:var(--sans);font-weight:400;line-height:1;}
+  nav ul{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--apricot-dark);}
+  .nav-cta{background:var(--green);color:#fff !important;padding:10px 22px;border-radius:999px;}
+  .nav-cta:hover{background:var(--green-dark);}
+  .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--green);cursor:pointer;}
+
+  /* ===== hero ===== */
+  .hero{padding:190px 0 110px;background:
+    radial-gradient(1200px 600px at 85% -10%,var(--green-light) 0%,transparent 60%),
+    radial-gradient(800px 500px at -10% 110%,#f6e8dc 0%,transparent 55%),
+    var(--cream);}
+  .hero-kicker{display:inline-block;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px 18px;font-size:13px;color:var(--green);font-weight:700;letter-spacing:.1em;margin-bottom:28px;}
+  .hero h1{font-family:var(--serif);font-size:clamp(32px,5.6vw,54px);font-weight:600;line-height:1.55;letter-spacing:.02em;}
+  .hero h1 em{font-style:normal;color:var(--apricot-dark);}
+  .hero p.sub{margin:28px 0 40px;font-size:clamp(15px,1.8vw,18px);color:var(--ink-soft);max-width:640px;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:14px;}
+
+  /* ===== stress stats strip ===== */
+  .strip{background:var(--green);color:#fff;padding:56px 0;}
+  .strip .inner{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center;}
+  .strip .num{font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:600;line-height:1.2;}
+  .strip .num span{font-size:.5em;}
+  .strip .cap{font-size:13.5px;opacity:.85;margin-top:8px;}
+  .strip .src{font-size:11px;opacity:.55;margin-top:4px;}
+
+  /* ===== stress cards ===== */
+  .stress-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .stress-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .25s,box-shadow .25s;}
+  .stress-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(51,50,46,.08);}
+  .stress-card .no{font-family:var(--serif);color:var(--apricot);font-size:14px;letter-spacing:.2em;font-weight:700;}
+  .stress-card h3{font-family:var(--serif);font-size:18.5px;margin:10px 0 12px;line-height:1.6;}
+  .stress-card p{font-size:14px;color:var(--ink-soft);}
+
+  /* ===== insider ===== */
+  .insider{background:var(--white);}
+  .insider-box{background:var(--green-light);border-radius:20px;padding:44px 40px;margin-top:8px;}
+  .insider-box h3{font-family:var(--serif);font-size:20px;color:var(--green-dark);margin-bottom:14px;}
+  .insider-box p{font-size:15px;color:var(--ink);margin-bottom:16px;}
+  .insider-box p:last-child{margin-bottom:0;}
+  .insider-box strong{color:var(--green-dark);}
+
+  /* ===== promise ===== */
+  .promise-list{display:grid;gap:22px;}
+  .promise{display:grid;grid-template-columns:88px 1fr;gap:26px;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:34px 32px;align-items:start;}
+  .promise .p-no{font-family:var(--serif);font-size:40px;color:var(--green);font-weight:600;line-height:1;padding-top:4px;}
+  .promise .p-no small{display:block;font-size:11px;letter-spacing:.2em;color:var(--apricot-dark);font-family:var(--sans);font-weight:700;margin-bottom:6px;}
+  .promise h3{font-family:var(--serif);font-size:21px;margin-bottom:10px;line-height:1.6;}
+  .promise p{font-size:14.5px;color:var(--ink-soft);}
+
+  /* ===== flow ===== */
+  .flow{background:var(--white);}
+  .flow-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:step;}
+  .step{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 18px;position:relative;}
+  .step::before{counter-increment:step;content:"STEP " counter(step);font-size:11px;letter-spacing:.2em;color:var(--apricot-dark);font-weight:700;}
+  .step h4{font-family:var(--serif);font-size:16px;margin:8px 0 8px;}
+  .step p{font-size:12.5px;color:var(--ink-soft);line-height:1.8;}
+  .step .relief{display:inline-block;margin-top:10px;font-size:11px;background:var(--green-light);color:var(--green-dark);border-radius:999px;padding:3px 10px;font-weight:700;}
+
+  /* ===== plans ===== */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;}
+  .plan{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:36px 30px;display:flex;flex-direction:column;position:relative;}
+  .plan.featured{border:2px solid var(--green);box-shadow:0 18px 44px rgba(47,93,80,.14);}
+  .plan .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:5px 18px;letter-spacing:.1em;white-space:nowrap;}
+  .plan h3{font-family:var(--serif);font-size:20px;color:var(--green-dark);}
+  .plan .for{font-size:12.5px;color:var(--ink-soft);margin:6px 0 20px;min-height:3em;}
+  .plan .price{font-family:var(--serif);font-size:34px;font-weight:600;line-height:1;}
+  .plan .price span{font-size:14px;font-family:var(--sans);color:var(--ink-soft);font-weight:400;}
+  .plan ul{margin:22px 0 26px;flex:1;}
+  .plan li{font-size:13.5px;padding:9px 0 9px 26px;border-bottom:1px dashed var(--line);position:relative;}
+  .plan li::before{content:"✓";position:absolute;left:2px;color:var(--apricot-dark);font-weight:700;}
+  .plan .btn{text-align:center;}
+  .price-note{font-size:12px;color:var(--ink-soft);margin-top:20px;}
+
+  /* ===== voice ===== */
+  .voice{background:var(--white);}
+  .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .voice-card{background:var(--cream);border-radius:16px;padding:30px 26px;border:1px solid var(--line);}
+  .voice-card .who{font-size:12.5px;color:var(--apricot-dark);font-weight:700;letter-spacing:.05em;}
+  .voice-card h3{font-family:var(--serif);font-size:17px;margin:8px 0 12px;line-height:1.7;}
+  .voice-card p{font-size:13.5px;color:var(--ink-soft);}
+
+  /* ===== faq ===== */
+  .faq-item{background:var(--white);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;}
+  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:15.5px;font-weight:700;padding:22px 56px 22px 24px;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
+  .faq-q::before{content:"Q.";color:var(--apricot-dark);font-family:var(--serif);margin-right:10px;}
+  .faq-q::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--green);transition:transform .3s;}
+  .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .faq-a div{padding:0 24px 24px;font-size:14px;color:var(--ink-soft);}
+  .faq-a div::before{content:"A.";color:var(--green);font-family:var(--serif);font-weight:700;margin-right:10px;}
+
+  /* ===== cta ===== */
+  .cta{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;text-align:center;}
+  .cta .sec-title{color:#fff;}
+  .cta p{opacity:.88;max-width:620px;margin:0 auto 40px;font-size:15px;}
+  .cta .btn-primary{box-shadow:0 10px 30px rgba(0,0,0,.25);}
+  .cta .hero-note{color:rgba(255,255,255,.65);}
+
+  /* ===== footer ===== */
+  footer{background:var(--ink);color:#c9c7c0;padding:60px 0 30px;font-size:13px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  footer .logo{color:#fff;margin-bottom:14px;}
+  footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.08em;}
+  footer li{margin-bottom:9px;}
+  footer a:hover{color:#fff;}
+  .copyright{border-top:1px solid #4a4944;padding-top:24px;text-align:center;font-size:12px;color:#8b8a83;}
+
+  /* ===== responsive ===== */
+  @media(max-width:900px){
+    .stress-grid,.plans,.voice-grid{grid-template-columns:1fr 1fr;}
+    .flow-steps{grid-template-columns:1fr 1fr;}
+    .strip .inner{grid-template-columns:1fr;gap:26px;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:640px){
+    section{padding:68px 0;}
+    .hero{padding:140px 0 80px;}
+    nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);}
+    nav.open ul{display:flex;}
+    .menu-btn{display:block;}
+    .stress-grid,.plans,.voice-grid,.flow-steps,.foot-grid{grid-template-columns:1fr;}
+    .promise{grid-template-columns:1fr;gap:10px;}
+    .plan.featured{order:-1;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-inner">
+    <a href="#top" class="logo">結婚相談所 ふう<small>STRESS-FREE MARRIAGE AGENCY</small></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#stress">婚活ストレスの正体</a></li>
+        <li><a href="#promise">選ばれる理由</a></li>
+        <li><a href="#flow">ご成婚まで</a></li>
+        <li><a href="#plans">料金</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact" class="nav-cta">無料相談</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="メニュー">☰</button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="inner">
+    <span class="hero-kicker">がんばらせない結婚相談所</span>
+    <h1>婚活は、がんばるほど<br>疲れていく。<br>だから私たちは、<em>「ストレス」</em>から<br>設計しました。</h1>
+    <p class="sub">断る気まずさも、断られる痛みも、終わらない日程調整も。婚活のストレスの正体を業界の内側から知り尽くしたカウンセラーが、あなたの代わりに引き受けます。あなたに残すのは「人と出会う楽しさ」だけ。</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">無料ストレス診断カウンセリングを予約する</a>
+      <a href="#stress" class="btn btn-ghost">まずは読んでみる</a>
+    </div>
+    <p class="hero-note">※オンライン対応・所要約60分・入会を勧誘するための面談ではありません</p>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP =====
+     ※数値はサンプルです。自社調査・公的統計など根拠のある数値に差し替えてください。 -->
+<section class="strip">
+  <div class="inner">
+    <div class="reveal">
+      <div class="num">10<span>人中</span>9<span>人</span></div>
+      <div class="cap">「婚活に疲れた経験がある」と回答</div>
+      <div class="src">※当サロン無料相談ヒアリングより(サンプル値)</div>
+    </div>
+    <div class="reveal">
+      <div class="num">第<span> </span>1<span>位</span></div>
+      <div class="cap">婚活をやめた理由は「精神的な疲れ」</div>
+      <div class="src">※当サロン無料相談ヒアリングより(サンプル値)</div>
+    </div>
+    <div class="reveal">
+      <div class="num">0<span>件</span></div>
+      <div class="cap">当サロンで会員様ご自身が「お断り連絡」をした件数</div>
+      <div class="src">※お断りは100%カウンセラーが代行します</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRESS ===== -->
+<section id="stress">
+  <div class="inner">
+    <span class="sec-label">Why so tired?</span>
+    <h2 class="sec-title">あなたが疲れているのは、<br>あなたのせいではありません。</h2>
+    <p class="sec-lead">アプリでも、パーティーでも、大手相談所でも──婚活の現場には、構造的に人を消耗させる「6つのストレス」が組み込まれています。私たちはこれを一つずつ潰すことから始めました。</p>
+    <div class="stress-grid">
+      <div class="stress-card reveal">
+        <span class="no">STRESS 01</span>
+        <h3>断る・断られるストレス</h3>
+        <p>お断りの連絡ほど心をすり減らすものはありません。そして断られた理由が分からないまま、自信だけが削られていく。婚活離脱の最大の原因です。</p>
+      </div>
+      <div class="stress-card reveal">
+        <span class="no">STRESS 02</span>
+        <h3>終わりのない日程調整</h3>
+        <p>複数の相手と同時進行するメッセージ、日程調整、お店選び。仕事より疲れる「第二の業務」になった時点で、婚活は続きません。</p>
+      </div>
+      <div class="stress-card reveal">
+        <span class="no">STRESS 03</span>
+        <h3>「何が悪いのか分からない」迷子ストレス</h3>
+        <p>頑張っているのに結果が出ない。でも誰もフィードバックをくれない。改善点が見えない努力は、ただの消耗です。</p>
+      </div>
+      <div class="stress-card reveal">
+        <span class="no">STRESS 04</span>
+        <h3>プロフィール盛り疲れ</h3>
+        <p>写真を撮り直し、自己PRを書き直し、「選ばれる自分」を演じ続ける。素の自分で会えないから、交際が始まっても疲れが続きます。</p>
+      </div>
+      <div class="stress-card reveal">
+        <span class="no">STRESS 05</span>
+        <h3>比較と競争のストレス</h3>
+        <p>無限にスワイプされ、スペックで並べられ、常に「もっと良い人」と比較される。マッチングアプリの構造そのものが消耗を生みます。</p>
+      </div>
+      <div class="stress-card reveal">
+        <span class="no">STRESS 06</span>
+        <h3>周囲からのプレッシャー</h3>
+        <p>親、友人、職場。「まだなの?」の一言が積もっていく。焦りで判断を誤る前に、伴走者が必要です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSIDER ===== -->
+<section class="insider">
+  <div class="inner">
+    <span class="sec-label">From the inside</span>
+    <h2 class="sec-title">業界の内側にいたから、<br>正直にお話しできることがあります。</h2>
+    <div class="insider-box reveal">
+      <h3>婚活サービスは「疲れさせたほうが儲かる」構造になりがちです。</h3>
+      <p>アプリは、会員が長く滞在しスワイプし続けるほど収益が上がります。月会費型のサービスは、活動が長引くほど売上が増えます。つまり多くの婚活サービスにとって、<strong>あなたが早く結婚することは、必ずしも利益ではない</strong>のです。</p>
+      <p>私たちは報酬設計を逆にしました。<strong>成婚してはじめて成果報酬をいただく成婚料型</strong>。あなたが最短で、すり減らずに結婚することが、そのまま私たちの利益になります。だから「休みましょう」「その人はやめておきましょう」と、あなたの側に立って言えるのです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMISE ===== -->
+<section id="promise">
+  <div class="inner">
+    <span class="sec-label">Our promise</span>
+    <h2 class="sec-title">ストレスの数だけ、仕組みで答える。<br>5つのストレスフリー設計</h2>
+    <div class="promise-list">
+      <div class="promise reveal">
+        <div class="p-no"><small>PROMISE</small>01</div>
+        <div>
+          <h3>お断りは、100%こちらが代行します</h3>
+          <p>お断りの連絡も、お断りされた際の理由の確認も、すべて担当カウンセラーが間に入ります。あなたが気まずい文面に悩む夜は、もうありません。断られた理由は「次に活きる形」に翻訳してお伝えします。</p>
+        </div>
+      </div>
+      <div class="promise reveal">
+        <div class="p-no"><small>PROMISE</small>02</div>
+        <div>
+          <h3>日程調整・お店の予約まで、丸ごとお任せ</h3>
+          <p>お見合いの日程調整、場所のセッティング、リマインドまで運営が行います。あなたがすることは「当日、行くだけ」。婚活を第二の業務にしません。</p>
+        </div>
+      </div>
+      <div class="promise reveal">
+        <div class="p-no"><small>PROMISE</small>03</div>
+        <div>
+          <h3>毎月の「振り返り面談」で、迷子にしない</h3>
+          <p>うまくいかない時こそ、原因をデータと対話で言語化します。「何が悪いのか分からない」まま活動を続けさせることはありません。頑張る方向を、プロが毎月チューニングします。</p>
+        </div>
+      </div>
+      <div class="promise reveal">
+        <div class="p-no"><small>PROMISE</small>04</div>
+        <div>
+          <h3>「休む」も戦略。休会はいつでも、気兼ねなく</h3>
+          <p>疲れた状態で会う人を、人は好きになれません。休会は月単位でいつでも可能、休会中の月会費はかかりません。回復まで含めて設計するのが、本当の婚活サポートだと考えています。</p>
+        </div>
+      </div>
+      <div class="promise reveal">
+        <div class="p-no"><small>PROMISE</small>05</div>
+        <div>
+          <h3>料金は、最初にすべて見せます</h3>
+          <p>入会金・月会費・成婚料以外の追加費用は一切ありません。オプション商法も、高額な写真撮影の抱き合わせもなし。「あとから請求されるかも」という不安も、立派なストレスだからです。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="flow" id="flow">
+  <div class="inner">
+    <span class="sec-label">Road to marriage</span>
+    <h2 class="sec-title">ご成婚までの流れ</h2>
+    <p class="sec-lead">各ステップに「ストレスを取り除く仕掛け」を用意しています。</p>
+    <div class="flow-steps">
+      <div class="step reveal">
+        <h4>無料ストレス診断</h4>
+        <p>これまでの婚活の「何に疲れたか」からヒアリング。あなたの婚活ストレスタイプを診断します。</p>
+        <span class="relief">勧誘は一切なし</span>
+      </div>
+      <div class="step reveal">
+        <h4>ご入会・プロフィール作成</h4>
+        <p>「盛る」のではなく「伝わる」プロフィールをプロが一緒に作成。写真撮影も提携スタジオでスムーズに。</p>
+        <span class="relief">自己PRの丸投げOK</span>
+      </div>
+      <div class="step reveal">
+        <h4>お見合い</h4>
+        <p>お相手のご紹介と、あなたからの検索の両輪で。日程・場所の調整はすべて運営が行います。</p>
+        <span class="relief">当日行くだけ</span>
+      </div>
+      <div class="step reveal">
+        <h4>交際</h4>
+        <p>交際中の不安や迷いは、いつでもカウンセラーに。お断りの際の連絡も代行します。</p>
+        <span class="relief">お断り100%代行</span>
+      </div>
+      <div class="step reveal">
+        <h4>ご成婚</h4>
+        <p>プロポーズの相談から、ご両家への挨拶の段取りまで。最後の一歩こそ、丁寧に伴走します。</p>
+        <span class="relief">成婚後の相談も可</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANS =====
+     ※料金はサンプルです。実際の料金体系に差し替えてください。 -->
+<section id="plans">
+  <div class="inner">
+    <span class="sec-label">Price</span>
+    <h2 class="sec-title">料金プラン</h2>
+    <p class="sec-lead">ここに記載の金額がすべてです。追加費用・オプション料金は一切ありません。</p>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>ライト</h3>
+        <p class="for">自分のペースで進めたい方に。サポートは必要な時だけ。</p>
+        <div class="price">9,800<span>円/月(税込)</span></div>
+        <ul>
+          <li>お相手検索・お申込み 月10名</li>
+          <li>日程調整・お店予約の代行</li>
+          <li>お断り連絡の100%代行</li>
+          <li>チャット相談(平日)</li>
+          <li>入会金 55,000円/成婚料 165,000円</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">このプランで相談する</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="badge">いちばん選ばれています</span>
+        <h3>スタンダード</h3>
+        <p class="for">「もう疲れたくない」方に。毎月の振り返り面談で迷子にさせません。</p>
+        <div class="price">15,800<span>円/月(税込)</span></div>
+        <ul>
+          <li>ライトの全サービス</li>
+          <li>カウンセラーからのご紹介 月2名</li>
+          <li>毎月の振り返り面談(60分)</li>
+          <li>プロフィール・写真の作成サポート</li>
+          <li>チャット相談(毎日)</li>
+          <li>入会金 55,000円/成婚料 165,000円</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">このプランで相談する</a>
+      </div>
+      <div class="plan reveal">
+        <h3>フルサポート</h3>
+        <p class="for">多忙な方・婚活ブランクが長い方に。考えることを最小限に。</p>
+        <div class="price">24,800<span>円/月(税込)</span></div>
+        <ul>
+          <li>スタンダードの全サービス</li>
+          <li>カウンセラーからのご紹介 月4名</li>
+          <li>面談はいつでも回数無制限</li>
+          <li>デートプランのご提案</li>
+          <li>服装・会話のパーソナルアドバイス</li>
+          <li>入会金 55,000円/成婚料 165,000円</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">このプランで相談する</a>
+      </div>
+    </div>
+    <p class="price-note">※休会中の月会費は無料です。※ご成婚に至らず退会される場合、成婚料は一切かかりません。</p>
+  </div>
+</section>
+
+<!-- ===== VOICE =====
+     ※以下はサンプル原稿です。実際の会員様の声(掲載許諾済み)に差し替えてください。 -->
+<section class="voice">
+  <div class="inner">
+    <span class="sec-label">Voice</span>
+    <h2 class="sec-title">「疲れなかった」という、いちばんの褒め言葉。</h2>
+    <div class="voice-grid">
+      <div class="voice-card reveal">
+        <span class="who">30代前半・女性(活動8ヶ月でご成婚)</span>
+        <h3>「お断りを代わりにしてもらえるだけで、こんなに楽なんだと驚きました」</h3>
+        <p>アプリ時代は、お断りの文面を考えるだけで週末が憂鬱でした。ここでは「合わなかった」とカウンセラーさんに伝えるだけ。心が削られない婚活は初めてでした。</p>
+      </div>
+      <div class="voice-card reveal">
+        <span class="who">30代後半・男性(活動11ヶ月でご成婚)</span>
+        <h3>「『今月は休みましょう』と言われた時、この相談所は信じられると思った」</h3>
+        <p>疲れが顔に出ていたようで、カウンセラーから休会を提案されました。売上を考えたら普通は言わない言葉ですよね。回復後の2ヶ月で、妻と出会えました。</p>
+      </div>
+      <div class="voice-card reveal">
+        <span class="who">40代前半・女性(活動1年2ヶ月でご成婚)</span>
+        <h3>「振り返り面談で、初めて『直すべき点』を教えてもらえました」</h3>
+        <p>5年間、何が悪いのか分からないまま婚活していました。毎月の面談で一つずつ言語化してもらい、霧が晴れるようでした。もっと早く来ればよかった。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="inner">
+    <span class="sec-label">FAQ</span>
+    <h2 class="sec-title">よくある質問</h2>
+    <div class="faq-item">
+      <button class="faq-q">無料相談に行くと、入会を勧誘されませんか?</button>
+      <div class="faq-a"><div>されません。無料相談は「あなたの婚活ストレスの原因を診断する場」であって、営業の場ではありません。当サロンが合わないと判断した場合は、他のサービスをお勧めすることもあります。その場で入会を決めていただく必要は一切ありません。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">婚活にもう疲れ切っていて、始める気力すらありません。それでも大丈夫ですか?</button>
+      <div class="faq-a"><div>その状態の方にこそ来ていただきたい相談所です。まずは「何に疲れたのか」を一緒に整理するところから始めます。すぐに活動を始めず、準備だけして時期を待つという選択も可能です。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">本当にお断りの連絡を全部してもらえるのですか?</button>
+      <div class="faq-a"><div>はい、100%代行します。お見合い後も、交際中も、お断りの意思をカウンセラーにお伝えいただくだけで、お相手側の相談所を通じて丁寧にお伝えします。お相手から直接連絡が来ることもありません。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">仕事が忙しく、平日は動けません。</button>
+      <div class="faq-a"><div>面談・ご相談はオンライン対応、夜間・土日も承っています。日程調整やお店の手配はすべて運営が行うため、会員様の実働は「お見合い当日に行くこと」だけです。多忙な方ほど仕組みの恩恵を実感いただいています。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">途中でやめた場合、成婚料はかかりますか?</button>
+      <div class="faq-a"><div>かかりません。成婚料はご成婚(婚約)に至った場合のみの成果報酬です。また退会時の違約金等もありません。「やめられないかも」という不安なく始めていただけます。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">記載されている料金以外に、かかる費用はありますか?</button>
+      <div class="faq-a"><div>ありません。入会金・月会費・成婚料がすべてです。お見合い時のご自身の飲食代・交通費を除き、オプション費用や追加請求は一切発生しません。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <div class="inner">
+    <span class="sec-label" style="color:#f0c9a8;">Free counseling</span>
+    <h2 class="sec-title">がんばる前に、一度だけ<br>「疲れない作戦会議」をしませんか。</h2>
+    <p>無料ストレス診断カウンセリング(約60分・オンライン可)では、あなたのこれまでの婚活を棚卸しし、「何がストレスだったのか」「次はどう設計すべきか」を言語化してお渡しします。入会しなくても、この60分だけで持ち帰れるものがあるはずです。</p>
+    <a href="mailto:info@example.com?subject=無料ストレス診断カウンセリング希望" class="btn btn-primary">無料カウンセリングを予約する</a>
+    <p class="hero-note">※ご予約はメール・お電話・LINEで承ります ※無理な勧誘は一切ありません</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER =====
+     ※所在地・連絡先・登録番号などはダミーです。実情報に差し替えてください。 -->
+<footer>
+  <div class="inner">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">結婚相談所 ふう</div>
+        <p>「ふう」と息をつけるような婚活を。<br>ストレスから設計した、がんばらせない結婚相談所です。</p>
+      </div>
+      <div>
+        <h4>メニュー</h4>
+        <ul>
+          <li><a href="#stress">婚活ストレスの正体</a></li>
+          <li><a href="#promise">選ばれる理由</a></li>
+          <li><a href="#flow">ご成婚までの流れ</a></li>
+          <li><a href="#plans">料金プラン</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <ul>
+          <li>〒000-0000 東京都○○区○○ 0-0-0</li>
+          <li>TEL:00-0000-0000(10:00〜19:00)</li>
+          <li>MAIL:info@example.com</li>
+          <li>営業時間:10:00〜21:00(水曜定休)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 結婚相談所 ふう All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // モバイルメニュー
+  const nav = document.getElementById('nav');
+  document.getElementById('menuBtn').addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  // FAQアコーディオン
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const ans = item.querySelector('.faq-a');
+      const isOpen = item.classList.toggle('open');
+      ans.style.maxHeight = isOpen ? ans.scrollHeight + 'px' : 0;
+    });
+  });
+
+  // スクロールで要素をふわっと表示
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
