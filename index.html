@@ -3,196 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>結婚相談所ふう | 4人に1人は婚活サービスで結婚する時代。がんばらない婚活、はじめよう</title>
-<meta name="description" content="いま、結婚した人の4人に1人は婚活サービスでの出会い。初めての婚活も大歓迎。お断り代行・日程調整おまかせの「がんばらない婚活」で、ふうと息をつきながら結婚に近づく相談所です。">
+<title>結婚相談所ふう | 後悔しないために、一歩。自分の人生を大切にする婚活を</title>
+<meta name="description" content="いま、結婚するカップルの4組に1組は婚活サービスでの出会い。初めての婚活も、不安なままで大丈夫。あなたの話をまず60分、聞かせてください。お断り代行・日程調整おまかせの、がんばらせない結婚相談所です。">
 <style>
   :root{
-    --coral:#ff7a59;
-    --coral-dark:#f05a36;
-    --teal:#1f8a7d;
-    --teal-dark:#166b61;
-    --teal-light:#e3f4f1;
-    --sun:#ffd766;
-    --sun-light:#fff3d1;
-    --cream:#fffaf3;
+    --green:#33604f;
+    --green-dark:#264a3d;
+    --green-light:#eaf1ec;
+    --terra:#c07a55;
+    --terra-dark:#a9663f;
+    --gold:#e9d8ac;
+    --gold-light:#f7efdc;
+    --cream:#faf8f2;
     --white:#ffffff;
-    --ink:#3a3630;
-    --ink-soft:#77716a;
-    --line:#f0e6d8;
-    --serif:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic",sans-serif;
+    --ink:#38352f;
+    --ink-soft:#6f6a61;
+    --line:#e8e2d4;
+    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
     --sans:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:2;font-size:16px;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none;}
   ul{list-style:none;}
-  .inner{max-width:1080px;margin:0 auto;padding:0 24px;}
-  section{padding:92px 0;}
-  .sec-label{display:inline-block;background:var(--sun);color:var(--ink);font-size:13px;letter-spacing:.12em;font-weight:800;margin-bottom:16px;border-radius:999px;padding:6px 18px;}
-  .sec-title{font-size:clamp(25px,4vw,36px);font-weight:800;line-height:1.55;margin-bottom:20px;letter-spacing:.02em;}
-  .sec-title .marker{background:linear-gradient(transparent 62%,var(--sun) 62%);}
-  .sec-lead{color:var(--ink-soft);max-width:700px;margin-bottom:46px;font-size:15.5px;}
-  .btn{display:inline-block;padding:17px 42px;border-radius:999px;font-weight:800;letter-spacing:.05em;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;font-size:15.5px;}
-  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 26px rgba(240,90,54,.35);}
-  .btn-primary:hover{background:var(--coral-dark);transform:translateY(-3px) scale(1.02);}
-  .btn-ghost{background:#fff;color:var(--teal);border:2px solid var(--teal);}
-  .btn-ghost:hover{background:var(--teal);color:#fff;}
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+  .inner{max-width:1060px;margin:0 auto;padding:0 24px;}
+  section{padding:100px 0;}
+  .sec-label{display:block;font-size:12.5px;letter-spacing:.28em;color:var(--terra-dark);font-weight:700;margin-bottom:16px;}
+  .sec-title{font-family:var(--serif);font-size:clamp(25px,3.8vw,36px);font-weight:600;line-height:1.7;margin-bottom:22px;letter-spacing:.03em;}
+  .sec-title .marker{background:linear-gradient(transparent 68%,var(--gold) 68%);}
+  .sec-lead{color:var(--ink-soft);max-width:700px;margin-bottom:52px;font-size:15px;}
+  .btn{display:inline-block;padding:17px 44px;border-radius:999px;font-weight:700;letter-spacing:.08em;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;font-size:15px;}
+  .btn-primary{background:var(--terra);color:#fff;box-shadow:0 8px 22px rgba(169,102,63,.28);}
+  .btn-primary:hover{background:var(--terra-dark);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--green);border:1.5px solid var(--green);}
+  .btn-ghost:hover{background:var(--green);color:#fff;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease;}
   .reveal.on{opacity:1;transform:none;}
 
   /* ===== header ===== */
-  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,250,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  .head-inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px;}
-  .logo{font-size:22px;font-weight:800;color:var(--teal);letter-spacing:.06em;}
-  .logo small{font-size:10.5px;color:var(--ink-soft);display:block;letter-spacing:.14em;font-weight:600;line-height:1;}
-  nav ul{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:700;}
-  nav a:hover{color:var(--coral);}
-  .nav-cta{background:var(--coral);color:#fff !important;padding:10px 22px;border-radius:999px;}
-  .nav-cta:hover{background:var(--coral-dark);}
-  .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--teal);cursor:pointer;}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,242,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .head-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .logo{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--green);letter-spacing:.1em;}
+  .logo small{font-size:10.5px;color:var(--ink-soft);display:block;letter-spacing:.18em;font-family:var(--sans);font-weight:500;line-height:1.4;}
+  nav ul{display:flex;gap:26px;align-items:center;font-size:13.5px;font-weight:600;}
+  nav a:hover{color:var(--terra-dark);}
+  .nav-cta{background:var(--green);color:#fff !important;padding:10px 24px;border-radius:999px;}
+  .nav-cta:hover{background:var(--green-dark);}
+  .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--green);cursor:pointer;}
 
-  /* ===== hero(構成1:驚きの事実)===== */
-  .hero{padding:175px 0 100px;background:
-    radial-gradient(900px 480px at 90% -5%,var(--sun-light) 0%,transparent 60%),
-    radial-gradient(700px 460px at -5% 105%,var(--teal-light) 0%,transparent 55%),
-    var(--cream);text-align:center;position:relative;overflow:hidden;}
-  .hero-kicker{display:inline-block;background:var(--white);border:2px solid var(--sun);border-radius:999px;padding:8px 22px;font-size:13.5px;color:var(--teal-dark);font-weight:800;letter-spacing:.08em;margin-bottom:30px;}
-  .hero .shock{font-size:clamp(15px,2vw,18px);font-weight:800;color:var(--coral-dark);letter-spacing:.15em;margin-bottom:10px;}
-  .hero h1{font-size:clamp(30px,5.4vw,52px);font-weight:800;line-height:1.55;letter-spacing:.02em;}
-  .hero h1 .big{font-size:1.5em;color:var(--coral);}
-  .hero h1 .marker{background:linear-gradient(transparent 60%,var(--sun) 60%);}
-  .hero p.sub{margin:26px auto 38px;font-size:clamp(15px,1.8vw,17.5px);color:var(--ink-soft);max-width:640px;}
-  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
+  /* ===== hero(構成1:事実から、静かに始める)===== */
+  .hero{padding:190px 0 110px;background:
+    radial-gradient(1000px 540px at 88% -8%,var(--green-light) 0%,transparent 62%),
+    radial-gradient(760px 480px at -8% 108%,var(--gold-light) 0%,transparent 58%),
+    var(--cream);}
+  .hero-kicker{display:inline-block;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 20px;font-size:13px;color:var(--green);font-weight:700;letter-spacing:.12em;margin-bottom:34px;}
+  .hero .shock{font-family:var(--serif);font-size:clamp(14px,1.8vw,17px);color:var(--terra-dark);letter-spacing:.2em;margin-bottom:14px;}
+  .hero h1{font-family:var(--serif);font-size:clamp(29px,5vw,48px);font-weight:600;line-height:1.75;letter-spacing:.03em;}
+  .hero h1 .marker{background:linear-gradient(transparent 68%,var(--gold) 68%);}
+  .hero p.sub{margin:30px 0 42px;font-size:clamp(14.5px,1.7vw,16.5px);color:var(--ink-soft);max-width:660px;line-height:2.2;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
   .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:16px;}
-  .hero .src{font-size:11px;color:var(--ink-soft);opacity:.7;margin-top:6px;}
+  .hero .src{font-size:11px;color:var(--ink-soft);opacity:.65;margin-top:8px;}
 
-  /* ===== fact bubbles ===== */
-  .facts{background:var(--teal);color:#fff;padding:60px 0;}
-  .facts .inner{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;}
-  .fact h3{font-size:15px;font-weight:800;background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;display:inline-block;margin-bottom:14px;}
-  .fact .num{font-size:clamp(30px,4vw,44px);font-weight:800;line-height:1.2;color:var(--sun);}
-  .fact .num span{font-size:.45em;color:#fff;}
-  .fact .cap{font-size:13.5px;opacity:.9;margin-top:8px;}
-  .fact .src{font-size:10.5px;opacity:.55;margin-top:4px;}
+  /* ===== facts ===== */
+  .facts{background:var(--green);color:#fff;padding:64px 0;}
+  .facts .inner{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;text-align:center;}
+  .fact .num{font-family:var(--serif);font-size:clamp(28px,3.8vw,40px);font-weight:600;line-height:1.3;color:var(--gold);}
+  .fact .num span{font-size:.5em;color:#fff;}
+  .fact .cap{font-size:13.5px;opacity:.92;margin-top:10px;line-height:1.9;}
+  .fact .src{font-size:10.5px;opacity:.5;margin-top:6px;}
 
   /* ===== 構成2:根拠 ===== */
-  .why .talk{display:grid;gap:18px;max-width:760px;margin:0 auto 50px;}
-  .bubble{background:var(--white);border:1.5px solid var(--line);border-radius:22px;padding:24px 28px;font-size:15px;position:relative;box-shadow:0 6px 18px rgba(58,54,48,.05);}
-  .bubble.q{border-color:var(--sun);background:var(--sun-light);font-weight:800;width:fit-content;max-width:90%;}
-  .bubble.a{margin-left:auto;width:fit-content;max-width:92%;border-color:var(--teal);background:var(--teal-light);}
-  .bubble .who{display:block;font-size:11.5px;font-weight:800;letter-spacing:.1em;margin-bottom:6px;}
-  .bubble.q .who{color:var(--coral-dark);}
-  .bubble.a .who{color:var(--teal-dark);}
+  .why{background:var(--white);}
+  .why-box{max-width:760px;margin:0 auto;}
+  .why-box p{font-size:15px;color:var(--ink);margin-bottom:26px;line-height:2.2;}
+  .why-box p strong{color:var(--green-dark);background:linear-gradient(transparent 68%,var(--gold) 68%);}
+  .why-quote{border-left:3px solid var(--terra);background:var(--cream);border-radius:0 14px 14px 0;padding:26px 30px;margin:36px 0;font-family:var(--serif);font-size:16.5px;line-height:2.1;color:var(--green-dark);}
 
-  .compare{overflow-x:auto;border-radius:18px;border:1.5px solid var(--line);background:#fff;}
-  .compare table{width:100%;border-collapse:collapse;min-width:640px;font-size:14px;}
-  .compare th,.compare td{padding:16px 14px;text-align:center;border-bottom:1px solid var(--line);}
-  .compare thead th{background:var(--teal);color:#fff;font-size:14.5px;}
-  .compare thead th:first-child{background:#fff;}
-  .compare tbody th{background:var(--sun-light);font-weight:800;text-align:left;padding-left:20px;white-space:nowrap;}
-  .compare .good{color:var(--teal-dark);font-weight:800;}
-  .compare .bad{color:#b9552f;}
-  .compare .col-us{background:#fdf3ef;font-weight:700;}
-  .compare-note{font-size:12px;color:var(--ink-soft);margin-top:14px;}
+  /* ===== app vs agency(悪く言わない比較)===== */
+  .vs-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:30px;}
+  .vs-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:38px 34px;}
+  .vs-card.us{border:1.5px solid var(--green);background:linear-gradient(180deg,#fff 0%,var(--green-light) 140%);}
+  .vs-card .vs-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.15em;border-radius:999px;padding:5px 16px;margin-bottom:16px;}
+  .vs-card .vs-tag{background:var(--gold-light);color:var(--terra-dark);}
+  .vs-card.us .vs-tag{background:var(--green);color:#fff;}
+  .vs-card h3{font-family:var(--serif);font-size:20px;margin-bottom:6px;color:var(--ink);}
+  .vs-card .fit{font-size:13px;color:var(--terra-dark);font-weight:700;margin-bottom:18px;}
+  .vs-card.us .fit{color:var(--green-dark);}
+  .vs-card p{font-size:14px;color:var(--ink-soft);margin-bottom:18px;}
+  .vs-card ul{border-top:1px dashed var(--line);padding-top:18px;}
+  .vs-card li{font-size:13.5px;padding:7px 0 7px 24px;position:relative;color:var(--ink);}
+  .vs-card li::before{content:"・";position:absolute;left:4px;color:var(--terra);font-weight:700;}
+  .vs-card.us li::before{color:var(--green);}
+  .vs-note{background:var(--gold-light);border-radius:16px;padding:28px 32px;font-size:14.5px;line-height:2.1;}
+  .vs-note strong{color:var(--green-dark);}
 
-  /* ===== beginner words ===== */
-  .words{background:var(--white);}
+  /* ===== letter(カウンセラーからの手紙)===== */
+  .letter{background:
+    radial-gradient(800px 400px at 100% 0%,var(--gold-light) 0%,transparent 55%),
+    var(--cream);}
+  .letter-box{max-width:720px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:56px 52px;box-shadow:0 20px 50px rgba(56,53,47,.07);position:relative;}
+  .letter-box::before{content:"";position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:1px solid var(--gold);pointer-events:none;}
+  .letter-box h3{font-family:var(--serif);font-size:19px;color:var(--green-dark);margin-bottom:26px;line-height:1.9;}
+  .letter-box p{font-family:var(--serif);font-size:15px;line-height:2.4;margin-bottom:22px;color:var(--ink);}
+  .letter-box .sign{text-align:right;font-family:var(--serif);font-size:14px;color:var(--ink-soft);margin-top:30px;margin-bottom:0;}
+
+  /* ===== words ===== */
   .word-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-  .word{background:var(--cream);border:1.5px solid var(--line);border-radius:18px;padding:26px 26px;transition:transform .25s;}
-  .word:hover{transform:translateY(-4px);}
-  .word .tag{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:800;border-radius:8px;padding:3px 12px;margin-bottom:10px;letter-spacing:.08em;}
-  .word h3{font-size:18px;font-weight:800;margin-bottom:8px;}
+  .word{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 30px;}
+  .word .tag{display:inline-block;color:var(--terra-dark);font-size:12px;font-weight:700;letter-spacing:.2em;margin-bottom:10px;}
+  .word h3{font-family:var(--serif);font-size:18px;margin-bottom:10px;}
   .word p{font-size:13.5px;color:var(--ink-soft);}
-  .word p strong{color:var(--coral-dark);}
+  .word p strong{color:var(--green-dark);}
 
   /* ===== promises ===== */
-  .promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .promise{background:var(--white);border:1.5px solid var(--line);border-radius:20px;padding:32px 26px;text-align:center;transition:transform .25s,box-shadow .25s;}
-  .promise:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(58,54,48,.09);}
-  .promise .icon{width:64px;height:64px;border-radius:50%;background:var(--sun-light);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 16px;}
-  .promise h3{font-size:17.5px;font-weight:800;margin-bottom:10px;line-height:1.6;}
-  .promise p{font-size:13.5px;color:var(--ink-soft);text-align:left;}
+  .promise-sec{background:var(--white);}
+  .promise-list{display:grid;gap:20px;}
+  .promise{display:grid;grid-template-columns:96px 1fr;gap:28px;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:34px 34px;align-items:start;}
+  .promise .p-no{font-family:var(--serif);font-size:38px;color:var(--green);font-weight:600;line-height:1;padding-top:6px;}
+  .promise .p-no small{display:block;font-size:10.5px;letter-spacing:.25em;color:var(--terra-dark);font-family:var(--sans);font-weight:700;margin-bottom:8px;}
+  .promise h3{font-family:var(--serif);font-size:19.5px;margin-bottom:10px;line-height:1.7;}
+  .promise p{font-size:14px;color:var(--ink-soft);}
 
   /* ===== flow ===== */
-  .flow{background:var(--teal-light);}
   .flow-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:step;}
-  .step{background:#fff;border-radius:16px;padding:26px 18px;position:relative;border:1.5px solid transparent;}
-  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:16px;width:34px;height:34px;border-radius:50%;background:var(--coral);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 4px 10px rgba(240,90,54,.3);}
-  .step h4{font-size:15.5px;font-weight:800;margin:10px 0 8px;}
-  .step p{font-size:12.5px;color:var(--ink-soft);line-height:1.8;}
-  .step .relief{display:inline-block;margin-top:10px;font-size:11px;background:var(--sun-light);color:var(--ink);border-radius:999px;padding:3px 10px;font-weight:800;}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px 20px;position:relative;}
+  .step::before{counter-increment:step;content:"STEP " counter(step);font-size:11px;letter-spacing:.22em;color:var(--terra-dark);font-weight:700;}
+  .step h4{font-family:var(--serif);font-size:16px;margin:10px 0 8px;}
+  .step p{font-size:12.5px;color:var(--ink-soft);line-height:1.9;}
+  .step .relief{display:inline-block;margin-top:12px;font-size:11px;background:var(--green-light);color:var(--green-dark);border-radius:999px;padding:3px 12px;font-weight:700;}
 
   /* ===== plans ===== */
+  .plans-sec{background:var(--white);}
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;}
-  .plan{background:var(--white);border:1.5px solid var(--line);border-radius:20px;padding:36px 30px;display:flex;flex-direction:column;position:relative;}
-  .plan.featured{border:2.5px solid var(--coral);box-shadow:0 18px 44px rgba(240,90,54,.15);}
-  .plan .badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--coral);color:#fff;font-size:12px;font-weight:800;border-radius:999px;padding:5px 18px;letter-spacing:.08em;white-space:nowrap;}
-  .plan h3{font-size:20px;font-weight:800;color:var(--teal-dark);}
+  .plan{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:38px 30px;display:flex;flex-direction:column;position:relative;}
+  .plan.featured{border:1.5px solid var(--green);background:#fff;box-shadow:0 16px 40px rgba(51,96,79,.12);}
+  .plan .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:5px 20px;letter-spacing:.1em;white-space:nowrap;}
+  .plan h3{font-family:var(--serif);font-size:20px;color:var(--green-dark);}
   .plan .for{font-size:12.5px;color:var(--ink-soft);margin:6px 0 20px;min-height:3em;}
-  .plan .price{font-size:34px;font-weight:800;line-height:1;}
-  .plan .price span{font-size:14px;color:var(--ink-soft);font-weight:500;}
+  .plan .price{font-family:var(--serif);font-size:33px;font-weight:600;line-height:1;}
+  .plan .price span{font-size:13.5px;font-family:var(--sans);color:var(--ink-soft);font-weight:400;}
   .plan ul{margin:22px 0 26px;flex:1;}
   .plan li{font-size:13.5px;padding:9px 0 9px 26px;border-bottom:1px dashed var(--line);position:relative;}
-  .plan li::before{content:"✓";position:absolute;left:2px;color:var(--coral);font-weight:800;}
+  .plan li::before{content:"✓";position:absolute;left:2px;color:var(--terra-dark);font-weight:700;}
   .plan .btn{text-align:center;}
-  .price-note{font-size:12px;color:var(--ink-soft);margin-top:20px;}
+  .price-note{font-size:12px;color:var(--ink-soft);margin-top:22px;}
 
   /* ===== voice ===== */
-  .voice{background:var(--white);}
   .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .voice-card{background:var(--cream);border-radius:18px;padding:30px 26px;border:1.5px solid var(--line);}
-  .voice-card .who{font-size:12.5px;color:var(--coral-dark);font-weight:800;letter-spacing:.04em;}
-  .voice-card h3{font-size:16.5px;font-weight:800;margin:8px 0 12px;line-height:1.7;}
+  .voice-card{background:var(--white);border-radius:16px;padding:32px 28px;border:1px solid var(--line);}
+  .voice-card .who{font-size:12px;color:var(--terra-dark);font-weight:700;letter-spacing:.05em;}
+  .voice-card h3{font-family:var(--serif);font-size:16.5px;margin:10px 0 12px;line-height:1.8;}
   .voice-card p{font-size:13.5px;color:var(--ink-soft);}
 
   /* ===== faq ===== */
-  .faq-item{background:var(--white);border:1.5px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden;}
-  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:15.5px;font-weight:800;padding:22px 56px 22px 24px;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
-  .faq-q::before{content:"Q";color:#fff;background:var(--teal);border-radius:8px;padding:1px 9px;margin-right:12px;font-size:13px;}
-  .faq-q::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--coral);transition:transform .3s;}
+  .faq-sec{background:var(--white);}
+  .faq-item{background:var(--cream);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;}
+  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:15px;font-weight:700;padding:22px 56px 22px 24px;cursor:pointer;position:relative;color:var(--ink);line-height:1.8;}
+  .faq-q::before{content:"Q.";color:var(--terra-dark);font-family:var(--serif);margin-right:10px;}
+  .faq-q::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--green);transition:transform .3s;}
   .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-  .faq-a div{padding:0 24px 24px;font-size:14px;color:var(--ink-soft);}
-  .faq-a div::before{content:"A";color:#fff;background:var(--coral);border-radius:8px;padding:1px 9px;margin-right:12px;font-size:13px;font-weight:800;}
+  .faq-a div{padding:0 24px 24px;font-size:14px;color:var(--ink-soft);line-height:2.1;}
+  .faq-a div::before{content:"A.";color:var(--green);font-family:var(--serif);font-weight:700;margin-right:10px;}
 
   /* ===== 構成3:CTA ===== */
-  .cta{background:linear-gradient(135deg,var(--coral) 0%,#e8543d 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
-  .cta::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,215,102,.18);top:-120px;right:-90px;}
-  .cta::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1);bottom:-100px;left:-70px;}
-  .cta .inner{position:relative;z-index:1;}
-  .cta .sec-label{background:#fff;color:var(--coral-dark);}
+  .cta{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;text-align:center;}
+  .cta .sec-label{color:var(--gold);}
   .cta .sec-title{color:#fff;}
-  .cta p{opacity:.94;max-width:640px;margin:0 auto 38px;font-size:15.5px;}
-  .cta .btn-primary{background:#fff;color:var(--coral-dark);box-shadow:0 12px 30px rgba(0,0,0,.22);font-size:17px;padding:19px 52px;}
-  .cta .btn-primary:hover{background:var(--sun-light);}
-  .cta .hero-note{color:rgba(255,255,255,.8);}
+  .cta p{opacity:.92;max-width:660px;margin:0 auto 40px;font-size:15px;line-height:2.3;}
+  .cta .btn-primary{box-shadow:0 10px 30px rgba(0,0,0,.28);font-size:16px;padding:19px 52px;}
+  .cta .hero-note{color:rgba(255,255,255,.68);}
 
   /* ===== footer ===== */
   footer{background:var(--ink);color:#cfcac2;padding:60px 0 30px;font-size:13px;}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px;}
   footer .logo{color:#fff;margin-bottom:14px;}
-  footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.08em;}
+  footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.1em;}
   footer li{margin-bottom:9px;}
   footer a:hover{color:#fff;}
   .copyright{border-top:1px solid #55504a;padding-top:24px;text-align:center;font-size:12px;color:#96918a;}
 
   /* ===== responsive ===== */
   @media(max-width:900px){
-    .promise-grid,.plans,.voice-grid{grid-template-columns:1fr 1fr;}
+    .plans,.voice-grid{grid-template-columns:1fr 1fr;}
     .flow-steps{grid-template-columns:1fr 1fr;}
-    .facts .inner{grid-template-columns:1fr;gap:30px;}
+    .facts .inner{grid-template-columns:1fr;gap:32px;}
     .foot-grid{grid-template-columns:1fr 1fr;}
+    .vs-cards{grid-template-columns:1fr;}
   }
   @media(max-width:640px){
-    section{padding:64px 0;}
-    .hero{padding:130px 0 76px;}
-    nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);}
+    section{padding:70px 0;}
+    .hero{padding:140px 0 84px;}
+    nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);}
     nav.open ul{display:flex;}
     .menu-btn{display:block;}
-    .promise-grid,.plans,.voice-grid,.flow-steps,.foot-grid,.word-grid{grid-template-columns:1fr;}
+    .plans,.voice-grid,.flow-steps,.foot-grid,.word-grid{grid-template-columns:1fr;}
     .plan.featured{order:-1;}
-    .bubble.a,.bubble.q{max-width:100%;}
+    .promise{grid-template-columns:1fr;gap:12px;}
+    .letter-box{padding:44px 30px;}
   }
 </style>
 </head>
@@ -203,162 +213,195 @@
     <a href="#top" class="logo">結婚相談所 ふう<small>ふうと息をつける婚活を。</small></a>
     <nav id="nav">
       <ul>
-        <li><a href="#why">なぜ今、婚活?</a></li>
-        <li><a href="#words">はじめてさん向け解説</a></li>
-        <li><a href="#promise">ラクできる理由</a></li>
+        <li><a href="#why">選ばれている理由</a></li>
+        <li><a href="#vs">アプリとの違い</a></li>
+        <li><a href="#letter">私たちの想い</a></li>
         <li><a href="#plans">料金</a></li>
         <li><a href="#faq">よくある質問</a></li>
-        <li><a href="#contact" class="nav-cta">無料相談はこちら</a></li>
+        <li><a href="#contact" class="nav-cta">無料相談</a></li>
       </ul>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="メニュー">☰</button>
   </div>
 </header>
 
-<!-- ===== 構成1:冒頭 = 婚活に関する驚きの事実 =====
-     ※統計数値はサンプルです。リクルートブライダル総研「婚活実態調査」等、最新の出典に基づく数値へ差し替えてください。 -->
+<!-- ===== 構成1:冒頭 = 婚活に関する事実 =====
+     ※統計数値はサンプルです。公的調査・業界調査の最新数値に差し替えてください。 -->
 <section class="hero" id="top">
   <div class="inner">
-    <span class="hero-kicker">\ はじめての婚活、大かんげい /</span>
-    <p class="shock">── えっ、知ってました? ──</p>
-    <h1>いま結婚する人の<br><span class="big">4人に1人</span>は、<br><span class="marker">婚活サービスでの出会い。</span></h1>
-    <p class="sub">「婚活って、なんだか必死っぽい…」は、もう昔のイメージ。恋愛と同じくらい"ふつうの出会い方"になった今こそ、まじめに人生を考えるあなたの番です。がんばらなくていい婚活、のぞいてみませんか?</p>
+    <span class="hero-kicker">初めての婚活の方へ ― 不安なままで、大丈夫です</span>
+    <p class="shock">― ご存知でしたか ―</p>
+    <h1>いま、結婚するカップルの<br><span class="marker">4組に1組は、婚活サービスでの出会い</span>です。</h1>
+    <p class="sub">婚活は、特別な人がする特別なことではなくなりました。自分の人生をまじめに考える人が、自分の意思で選ぶ、あたりまえの一歩です。<br>「いつか」と思ったまま季節が過ぎていくことが、いちばんの後悔になる前に。あなたの話を、まず60分、聞かせてください。</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">無料相談をのぞいてみる(勧誘ゼロ)</a>
-      <a href="#why" class="btn btn-ghost">まずは根拠を見る</a>
+      <a href="#contact" class="btn btn-primary">無料相談を予約する</a>
+      <a href="#why" class="btn btn-ghost">この数字の理由を知る</a>
     </div>
-    <p class="hero-note">オンラインOK・約60分・手ぶらでどうぞ</p>
-    <p class="src">※「4人に1人」はサンプル表記です。最新の公的調査・業界調査の数値に差し替えてご利用ください。</p>
+    <p class="hero-note">オンライン可・約60分・入会のご案内を目的とした面談ではありません</p>
+    <p class="src">※「4組に1組」はサンプル表記です。公開時に最新の調査出典に基づく数値へ差し替えてください。</p>
   </div>
 </section>
 
-<!-- ===== 驚きの事実、つづき =====
-     ※数値はすべてサンプル。実データに差し替えてください。 -->
+<!-- ===== facts ===== ※数値はサンプル。実データに差し替えてください。 -->
 <section class="facts">
   <div class="inner">
     <div class="fact reveal">
-      <h3>驚きの事実 その2</h3>
       <div class="num">約<span> </span>1<span>年</span></div>
-      <p class="cap">相談所で結婚した人の平均活動期間。<br>「何年もかかる」は思い込みでした。</p>
-      <p class="src">※サンプル値。自社実績に差し替え</p>
+      <p class="cap">当サロンでご成婚された方の平均活動期間。<br>「何年もかかるのでは」は、思い込みかもしれません。</p>
+      <p class="src">※サンプル値。自社実績に差し替えてください</p>
     </div>
     <div class="fact reveal">
-      <h3>驚きの事実 その3</h3>
       <div class="num">100<span>%</span></div>
-      <p class="cap">当サロン会員の「独身証明書」提出率。<br>既婚者・遊び目的は、ここにはいません。</p>
-      <p class="src">※相談所は証明書の提出が入会条件です</p>
+      <p class="cap">会員全員が「独身証明書」を提出しています。<br>まじめに結婚を考える方だけが、ここにいます。</p>
+      <p class="src">※結婚相談所は証明書の提出が入会条件です</p>
     </div>
     <div class="fact reveal">
-      <h3>驚きの事実 その4</h3>
       <div class="num">0<span>通</span></div>
-      <p class="cap">あなたが送る「お断りメッセージ」の数。<br>気まずい連絡は、ぜんぶ私たちが代行します。</p>
+      <p class="cap">あなたが書く「お断りの連絡」の数。<br>心をすり減らす役目は、私たちが引き受けます。</p>
       <p class="src">※当サロンのサービス設計です</p>
     </div>
   </div>
 </section>
 
-<!-- ===== 構成2:中間 = 根拠をやさしく解説 ===== -->
+<!-- ===== 構成2:中間 = 根拠をていねいに ===== -->
 <section class="why" id="why">
   <div class="inner">
-    <span class="sec-label">なぜそう言えるの?</span>
-    <h2 class="sec-title">「4人に1人」のワケを、<br><span class="marker">婚活がはじめての人にも</span>わかるように。</h2>
-    <p class="sec-lead">むずかしい話はナシ。会話形式でサクッと解説します。</p>
-
-    <div class="talk">
-      <div class="bubble q reveal"><span class="who">はじめてさん</span>本当にそんなに多いの?周りで聞いたことないけど…</div>
-      <div class="bubble a reveal"><span class="who">カウンセラー</span>それ、当然なんです。婚活サービスで結婚した人の多くは、わざわざ公言しないから。でも調査では、職場や学校での出会いを、婚活サービス経由がぐんぐん追い上げています。「言わないだけで、みんな使ってる」が実態です。</div>
-      <div class="bubble q reveal"><span class="who">はじめてさん</span>じゃあアプリでよくない?相談所って高そうだし…</div>
-      <div class="bubble a reveal"><span class="who">カウンセラー</span>「とにかく出会いの数がほしい」ならアプリもアリ。でも<strong>「まじめに人生を考えたい」なら話は別</strong>。アプリは相手の本気度がわからず、連絡が突然途切れる"ごめんね疲れ"がつきもの。相談所は独身証明書を出した本気の人だけ。しかも面倒ごとはプロが巻き取るので、実はいちばん消耗しない方法なんです。</div>
-      <div class="bubble q reveal"><span class="who">はじめてさん</span>恋愛経験ほぼゼロでも、浮かない…?</div>
-      <div class="bubble a reveal"><span class="who">カウンセラー</span>むしろ主役です!相談所に来る方の多くが「出会いがなかっただけ」のまじめな人。何を話すか、何を着るかまで一緒に作戦を立てるので、経験値は関係ありません。</div>
+    <span class="sec-label">WHY ― この数字の理由</span>
+    <h2 class="sec-title">なぜ今、多くの人が<br>婚活サービスを選ぶのでしょうか。</h2>
+    <div class="why-box">
+      <p>理由は、とてもシンプルです。<strong>職場や友人の紹介といった「自然な出会い」が、社会の変化とともに減っている</strong>から。働き方が多様になり、職場での恋愛は気を使うものになり、休日は一人の時間も大切にしたい。それは決して悪いことではなく、現代のふつうの暮らしです。</p>
+      <p>だからこそ、出会いを「偶然」に任せるのではなく、<strong>自分の意思で出会いの場をつくる</strong>人が増えました。婚活サービスで結婚した方の多くは、それを声高には言いません。けれど統計は、静かに、確実に増え続けています。</p>
+      <div class="why-quote">結婚を望むなら、動いた人から結ばれていく。<br>それが、私たちが業界の内側で20年見てきた、たったひとつの真実です。</div>
+      <p>そしてもうひとつ。人生において後悔が残りやすいのは、「やって失敗したこと」よりも<strong>「やらないまま終わったこと」</strong>だと言われます。婚活も同じです。始めて、合わなければやめていい。でも「いつか」と思ったまま数年が過ぎることだけは、避けてほしいのです。</p>
     </div>
-
-    <h3 style="font-size:20px;font-weight:800;margin-bottom:18px;">ひと目でわかる、3つの婚活の違い</h3>
-    <div class="compare reveal">
-      <table>
-        <thead>
-          <tr><th></th><th>マッチングアプリ</th><th>婚活パーティー</th><th class="col-us">結婚相談所(当サロン)</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>相手の本気度</th><td class="bad">バラバラ(遊び目的も)</td><td>その日次第</td><td class="col-us good">◎ 全員が独身証明書を提出</td></tr>
-          <tr><th>疲れやすさ</th><td class="bad">△ 無限スワイプ&既読スルー</td><td class="bad">△ 短時間で総当たり</td><td class="col-us good">◎ 面倒ごとはプロが代行</td></tr>
-          <tr><th>相談できる人</th><td class="bad">いない</td><td class="bad">いない</td><td class="col-us good">◎ 専任カウンセラーが伴走</td></tr>
-          <tr><th>お断りの連絡</th><td class="bad">自分で(または自然消滅)</td><td>自分で</td><td class="col-us good">◎ 100%こちらが代行</td></tr>
-          <tr><th>結婚までの平均</th><td>運しだい</td><td>運しだい</td><td class="col-us good">◎ 約1年(サンプル値)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="compare-note">※比較は一般的な傾向をわかりやすく示したものです。</p>
   </div>
 </section>
 
-<!-- ===== はじめてさん向け:用語をやさしく ===== -->
-<section class="words" id="words">
+<!-- ===== アプリとの違い(どちらも尊重する比較)===== -->
+<section id="vs">
   <div class="inner">
-    <span class="sec-label">はじめてさん専用</span>
-    <h2 class="sec-title">婚活ワード、<span class="marker">ぜんぶ日本語に翻訳</span>しました。</h2>
-    <p class="sec-lead">知らない言葉があるだけで、一歩目は重くなるもの。これだけ知っていれば大丈夫です。</p>
+    <span class="sec-label">CHOICE ― 自分に合う場所を</span>
+    <h2 class="sec-title">婚活アプリと結婚相談所。<br><span class="marker">優劣ではなく、役割の違い</span>です。</h2>
+    <p class="sec-lead">アプリで素敵なご縁を結んだ方を、私たちはたくさん知っています。大切なのはどちらが上かではなく、「今のあなたの目的」に合う場所を選ぶこと。正直に整理しました。</p>
+    <div class="vs-cards">
+      <div class="vs-card reveal">
+        <span class="vs-tag">婚活アプリ</span>
+        <h3>出会いの入口を、広く気軽に</h3>
+        <p class="fit">こんな方に合っています</p>
+        <ul>
+          <li>まずは気軽に、多くの人と出会ってみたい</li>
+          <li>恋愛から自然に結婚へ進みたい</li>
+          <li>自分のペースでやり取りを進めるのが得意</li>
+          <li>費用を抑えてスタートしたい</li>
+        </ul>
+      </div>
+      <div class="vs-card us reveal">
+        <span class="vs-tag">結婚相談所</span>
+        <h3>結婚という目的地へ、伴走者と</h3>
+        <p class="fit">こんな方に合っています</p>
+        <ul>
+          <li>結婚を前提とした出会いだけに、時間を使いたい</li>
+          <li>お相手の身元(独身・年収・学歴)が確認された環境で活動したい</li>
+          <li>迷ったとき、相談できるプロにそばにいてほしい</li>
+          <li>日程調整やお断りの連絡など、消耗しやすい部分を任せたい</li>
+        </ul>
+      </div>
+    </div>
+    <div class="vs-note reveal">
+      <strong>私たちの正直な考えをお伝えします。</strong> 気軽に恋愛を楽しみたい時期なら、アプリは素晴らしい選択肢です。ただ、「そろそろ、まじめに人生を考えたい」──そう思ったあなたの貴重な時間は、結婚を同じ真剣さで考える人とだけ、使ってほしい。無料相談では、あなたのお話を伺ったうえで、アプリのほうが合いそうであれば、正直にそうお伝えしています。
+    </div>
+  </div>
+</section>
+
+<!-- ===== カウンセラーからの手紙 ===== ※署名・経歴はサンプルです。実情報に差し替えてください。 -->
+<section class="letter" id="letter">
+  <div class="inner">
+    <span class="sec-label">MESSAGE ― 私たちの想い</span>
+    <h2 class="sec-title">あなたへの、手紙。</h2>
+    <p class="sec-lead">はじめまして。まずは、これだけ読んでいただけたら嬉しいです。</p>
+    <div class="letter-box reveal">
+      <h3>「自分の人生を、大切にしたい」<br>その気持ちだけ、持ってきてください。</h3>
+      <p>このページをここまで読んでくださったあなたは、きっと今、人生をまじめに考え始めた方だと思います。そして同じくらい、不安なのだと思います。「私なんかが行っていいのか」「何を話せばいいのか」「勧誘されたらどうしよう」。</p>
+      <p>この仕事を20年続けてきて、確信していることがあります。婚活に必要なのは、恋愛の経験でも、話術でも、完璧なプロフィールでもありません。<strong>「自分の人生を大切にしたい」という気持ち</strong>、それだけです。技術や段取りは、すべて私たちが補います。</p>
+      <p>あなたが5年後、「あのとき一歩踏み出してよかった」と思えるように。もし入会に至らなくても、無料相談の60分が「自分の人生を考える、いい時間だった」と思えるように。そのつもりで、お一人おひとりと向き合っています。</p>
+      <p>不安なまま、来てください。それで大丈夫です。</p>
+      <p class="sign">結婚相談所ふう 代表カウンセラー ○○ ○○</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== はじめての方へ:用語のご案内 ===== -->
+<section id="words">
+  <div class="inner">
+    <span class="sec-label">GUIDE ― はじめての方へ</span>
+    <h2 class="sec-title">婚活の言葉を、<span class="marker">やさしくご説明します。</span></h2>
+    <p class="sec-lead">知らない言葉があるだけで、一歩目は重くなるものです。これだけ知っていれば、十分です。</p>
     <div class="word-grid">
       <div class="word reveal">
-        <span class="tag">用語その1</span>
-        <h3>「お見合い」とは?</h3>
-        <p>かしこまった儀式ではなく、<strong>カフェで1時間お茶するだけ</strong>。日程もお店もこちらで手配するので、あなたは当日行くだけです。</p>
+        <span class="tag">その一</span>
+        <h3>「お見合い」とは</h3>
+        <p>かしこまった儀式ではありません。<strong>カフェで1時間、お茶を飲みながらお話しするだけ</strong>です。日程もお店も私たちが手配しますので、あなたは当日、いらっしゃるだけで大丈夫です。</p>
       </div>
       <div class="word reveal">
-        <span class="tag">用語その2</span>
-        <h3>「仮交際」とは?</h3>
-        <p>「もう少し話してみたいな」の期間。<strong>複数の人と同時進行してOK</strong>なお試し期間です(ルール上ちゃんと認められています)。</p>
+        <span class="tag">その二</span>
+        <h3>「仮交際」とは</h3>
+        <p>「もう少しお話ししてみたい」と感じた方との期間です。この段階では<strong>複数の方と並行してお会いすることが、ルール上きちんと認められています</strong>。焦らず比べて、考えられます。</p>
       </div>
       <div class="word reveal">
-        <span class="tag">用語その3</span>
-        <h3>「真剣交際」とは?</h3>
-        <p>「この人だ」と思ったら一対一のお付き合いへ。ここからは<strong>結婚を前提に、カウンセラーと作戦会議をしながら</strong>進みます。</p>
+        <span class="tag">その三</span>
+        <h3>「真剣交際」とは</h3>
+        <p>「この方と歩みたい」と思えたら、お一人とのお付き合いへ。ここからは<strong>結婚を前提に、カウンセラーと相談しながら</strong>丁寧に進みます。迷いや不安は、いつでも打ち明けてください。</p>
       </div>
       <div class="word reveal">
-        <span class="tag">用語その4</span>
-        <h3>「成婚料」とは?</h3>
-        <p><strong>結婚が決まったときだけ</strong>お支払いいただく成功報酬。決まらなければ0円。だから私たちは、あなたを最短で幸せにするほど嬉しいのです。</p>
+        <span class="tag">その四</span>
+        <h3>「成婚料」とは</h3>
+        <p><strong>ご結婚が決まったときにだけ</strong>お支払いいただく成功報酬です。決まらなければ0円。私たちの利益とあなたの幸せが同じ方向を向くための、大切な仕組みだと考えています。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== ラクできる理由(ストレス解消の設計)===== -->
-<section id="promise">
+<!-- ===== 5つの約束 ===== -->
+<section class="promise-sec" id="promise">
   <div class="inner">
-    <span class="sec-label">がんばらなくていい理由</span>
-    <h2 class="sec-title">婚活の「めんどう」と「ドキドキしすぎ」は、<br><span class="marker">ぜんぶ、こっちで引き受けます。</span></h2>
-    <p class="sec-lead">婚活が疲れる原因は、あなたの性格ではなく「仕組み」。だから仕組みで解決しました。</p>
-    <div class="promise-grid">
+    <span class="sec-label">PROMISE ― 5つのお約束</span>
+    <h2 class="sec-title">がんばるのは、私たち。<br>あなたは<span class="marker">「人と向き合うこと」だけ</span>に。</h2>
+    <p class="sec-lead">婚活が続かない理由の多くは、性格ではなく「消耗する仕組み」にあります。だから私たちは、消耗のもとを一つずつ、仕組みで取り除きました。</p>
+    <div class="promise-list">
       <div class="promise reveal">
-        <div class="icon">💌</div>
-        <h3>お断り、ぜんぶ代行</h3>
-        <p>気まずいお断り連絡は100%カウンセラーが担当。断られたときも、理由を「次に活きるヒント」に変換してお伝えします。凹みっぱなしにさせません。</p>
+        <div class="p-no"><small>約束</small>一</div>
+        <div>
+          <h3>お断りの連絡は、すべて私たちが行います</h3>
+          <p>お断りすることも、されることも、心をすり減らすものです。お断りの連絡は100%カウンセラーが間に立ち、お断りされた際の理由は「次に活きる形」に整えてお伝えします。あなたを凹みっぱなしにはさせません。</p>
+        </div>
       </div>
       <div class="promise reveal">
-        <div class="icon">📅</div>
-        <h3>日程調整も、お店選びも不要</h3>
-        <p>お見合いのセッティングは丸ごとおまかせ。仕事が忙しくても、婚活が「第二の仕事」になりません。あなたは当日、行くだけ。</p>
+        <div class="p-no"><small>約束</small>二</div>
+        <div>
+          <h3>日程調整もお店の予約も、お任せください</h3>
+          <p>お見合いの日程調整、場所の手配、前日のご連絡まで私たちが行います。お仕事が忙しくても、婚活が「二つ目の仕事」にはなりません。あなたは当日、いらっしゃるだけです。</p>
+        </div>
       </div>
       <div class="promise reveal">
-        <div class="icon">🧭</div>
-        <h3>毎月の作戦会議で迷子ゼロ</h3>
-        <p>「何が悪いのかわからない」を放置しません。月1回の振り返りで、うまくいった点・変える点をプロと一緒に整理。次の一手がいつも明確です。</p>
+        <div class="p-no"><small>約束</small>三</div>
+        <div>
+          <h3>毎月の面談で、一人で悩ませません</h3>
+          <p>「何がいけないのか分からない」ままの努力ほど、つらいものはありません。月に一度、活動をご一緒に振り返り、良かった点と変える点を言葉にします。次の一歩が、いつも見えている状態を保ちます。</p>
+        </div>
       </div>
       <div class="promise reveal">
-        <div class="icon">☕</div>
-        <h3>疲れたら、堂々と休憩OK</h3>
-        <p>休会はいつでも気軽に、休会中の月会費は0円。元気なあなたで会うほうが、ぜったいにうまくいく。休むのも立派な作戦です。</p>
+        <div class="p-no"><small>約束</small>四</div>
+        <div>
+          <h3>お疲れのときは、休む勇気を応援します</h3>
+          <p>疲れた心のまま人と会っても、良いご縁にはつながりにくいもの。休会はいつでも月単位で可能、休会中の月会費はいただきません。休むことも、大切な作戦のひとつです。</p>
+        </div>
       </div>
       <div class="promise reveal">
-        <div class="icon">💰</div>
-        <h3>料金は最初に全部見せる</h3>
-        <p>入会金・月会費・成婚料、以上!あとから追加請求もオプション営業もありません。「いくらかかるの…?」の不安ごと解消します。</p>
-      </div>
-      <div class="promise reveal">
-        <div class="icon">🔰</div>
-        <h3>はじめてでも、手ぶらでOK</h3>
-        <p>プロフィール文はプロが一緒に作成、写真は提携スタジオへご案内。服装や会話の練習までサポート。準備ゼロから始められます。</p>
+        <div class="p-no"><small>約束</small>五</div>
+        <div>
+          <h3>費用は、最初にすべてお見せします</h3>
+          <p>入会金・月会費・成婚料。ページに記載の金額がすべてで、追加の費用は一切ありません。「あとから請求されるのでは」という不安も、婚活のストレスのうちだと考えているからです。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -367,76 +410,76 @@
 <!-- ===== 流れ ===== -->
 <section class="flow" id="flow">
   <div class="inner">
-    <span class="sec-label">かんたん5ステップ</span>
-    <h2 class="sec-title">結婚までの道のりは、<span class="marker">たったこれだけ。</span></h2>
+    <span class="sec-label">STEP ― ご成婚までの道のり</span>
+    <h2 class="sec-title">ご成婚までは、この5つの段階を<br>ご一緒に歩みます。</h2>
     <div class="flow-steps">
       <div class="step reveal">
         <h4>無料相談</h4>
-        <p>まずはおしゃべりから。あなたの理想と不安を整理します。入会するかは帰ってから決めてOK。</p>
-        <span class="relief">勧誘ゼロ宣言</span>
+        <p>まずはあなたのお話から。これまでのこと、理想、不安を一緒に整理します。入会のご判断は、お帰りになってからで結構です。</p>
+        <span class="relief">無理な勧誘はしません</span>
       </div>
       <div class="step reveal">
         <h4>プロフィール作成</h4>
-        <p>あなたの魅力をプロが言語化。写真撮影も段取りします。「盛る」より「伝わる」が合言葉。</p>
-        <span class="relief">丸投げOK</span>
+        <p>あなたの魅力を、私たちが言葉にします。写真撮影も提携スタジオへご案内。「盛る」のではなく「正直に、伝わる」ように。</p>
+        <span class="relief">お任せいただけます</span>
       </div>
       <div class="step reveal">
         <h4>お見合い</h4>
-        <p>気になる人とカフェで1時間。紹介と検索の両方から出会えます。調整はすべておまかせ。</p>
+        <p>ご紹介とご自身の検索、両方から出会えます。日程・場所の調整はすべてお任せください。当日は、お茶を飲みに行くだけ。</p>
         <span class="relief">当日行くだけ</span>
       </div>
       <div class="step reveal">
         <h4>交際</h4>
-        <p>デートの相談も、不安の吐き出しも、いつでもカウンセラーへ。合わなければお断りも代行。</p>
-        <span class="relief">ひとりにしない</span>
+        <p>不安や迷いは、いつでもカウンセラーへ。デートのご相談も、合わなかったときのお断りの連絡も、私たちがお支えします。</p>
+        <span class="relief">一人にしません</span>
       </div>
       <div class="step reveal">
-        <h4>ご成婚!</h4>
-        <p>プロポーズの演出からご両家挨拶の段取りまで、最後の最後まで一緒に。おめでとうございます!</p>
-        <span class="relief">卒業後の相談もOK</span>
+        <h4>ご成婚</h4>
+        <p>プロポーズのご相談から、ご両家へのご挨拶の段取りまで。人生の大きな節目を、最後まで丁寧にお手伝いします。</p>
+        <span class="relief">卒業後のご相談も</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== 料金 ===== ※金額はサンプルです。実際の料金に差し替えてください。 -->
-<section id="plans">
+<section class="plans-sec" id="plans">
   <div class="inner">
-    <span class="sec-label">料金プラン</span>
-    <h2 class="sec-title">ここに書いてある金額が、<span class="marker">ぜんぶです。</span></h2>
-    <p class="sec-lead">追加費用・オプション料金は一切ナシ。安心して見比べてください。</p>
+    <span class="sec-label">PRICE ― 料金のご案内</span>
+    <h2 class="sec-title">記載の金額が、すべてです。</h2>
+    <p class="sec-lead">追加費用やオプション料金は一切ありません。どうぞ安心して見比べてください。</p>
     <div class="plans">
       <div class="plan reveal">
         <h3>ライト</h3>
-        <p class="for">自分のペースで進めたい方に。サポートは必要なときだけ。</p>
+        <p class="for">ご自身のペースで進めたい方に。サポートは必要なときだけ。</p>
         <div class="price">9,800<span>円/月(税込)</span></div>
         <ul>
           <li>お相手検索・お申込み 月10名</li>
           <li>日程調整・お店予約の代行</li>
-          <li>お断り連絡の100%代行</li>
-          <li>チャット相談(平日)</li>
+          <li>お断りのご連絡の代行</li>
+          <li>チャットでのご相談(平日)</li>
           <li>入会金 55,000円/成婚料 165,000円</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">このプランで相談する</a>
       </div>
       <div class="plan featured reveal">
-        <span class="badge">🌟 いちばん人気</span>
+        <span class="badge">多く選ばれています</span>
         <h3>スタンダード</h3>
-        <p class="for">はじめての婚活ならコレ。毎月の作戦会議で迷子にさせません。</p>
+        <p class="for">初めての婚活の方に。毎月の面談で、一人で悩ませません。</p>
         <div class="price">15,800<span>円/月(税込)</span></div>
         <ul>
           <li>ライトの全サービス</li>
           <li>カウンセラーからのご紹介 月2名</li>
-          <li>毎月の作戦会議(60分)</li>
-          <li>プロフィール・写真の作成サポート</li>
-          <li>チャット相談(毎日)</li>
+          <li>毎月の振り返り面談(60分)</li>
+          <li>プロフィール・お写真の作成サポート</li>
+          <li>チャットでのご相談(毎日)</li>
           <li>入会金 55,000円/成婚料 165,000円</li>
         </ul>
         <a href="#contact" class="btn btn-primary">このプランで相談する</a>
       </div>
       <div class="plan reveal">
         <h3>フルサポート</h3>
-        <p class="for">多忙な方・じっくり伴走してほしい方に。考えることを最小限に。</p>
+        <p class="for">お忙しい方、じっくり伴走を望む方に。考える負担を最小限に。</p>
         <div class="price">24,800<span>円/月(税込)</span></div>
         <ul>
           <li>スタンダードの全サービス</li>
@@ -449,75 +492,75 @@
         <a href="#contact" class="btn btn-ghost">このプランで相談する</a>
       </div>
     </div>
-    <p class="price-note">※休会中の月会費は0円。※ご成婚に至らず退会される場合、成婚料はかかりません。違約金もありません。</p>
+    <p class="price-note">※休会中の月会費はいただきません。※ご成婚に至らず退会される場合、成婚料はかかりません。違約金もありません。</p>
   </div>
 </section>
 
 <!-- ===== 声 ===== ※サンプル原稿です。掲載許諾済みの実際の声に差し替えてください。 -->
-<section class="voice">
+<section class="voice" id="voice">
   <div class="inner">
-    <span class="sec-label">先輩たちの声</span>
-    <h2 class="sec-title">「もっと早く来ればよかった」が、<span class="marker">いちばん多い感想です。</span></h2>
+    <span class="sec-label">VOICE ― 卒業された方の声</span>
+    <h2 class="sec-title">「あのとき、一歩踏み出してよかった」</h2>
     <div class="voice-grid">
       <div class="voice-card reveal">
-        <span class="who">30代前半・女性(婚活はじめて/活動8ヶ月でご成婚)</span>
-        <h3>「初回の無料相談が、ただただ楽しかった」</h3>
-        <p>勧誘されると身構えて行ったら、私の人生の話を60分ずっと聞いてくれて。「婚活って楽しみながらやっていいんだ」と初めて思えました。</p>
+        <span class="who">30代前半・女性(初めての婚活/活動8ヶ月でご成婚)</span>
+        <h3>「無料相談で、初めて自分の人生をちゃんと考えた気がします」</h3>
+        <p>勧誘されるものと身構えて行ったのに、60分ずっと私の話を聞いてくださって。帰り道、「私は私の人生を大切にしていいんだ」と思えたことを覚えています。</p>
       </div>
       <div class="voice-card reveal">
         <span class="who">30代後半・男性(恋愛経験ほぼなし/活動11ヶ月でご成婚)</span>
-        <h3>「会話の練習までしてくれるとは思わなかった」</h3>
-        <p>デート前に話題の整理、服のアドバイスまで。ゲームの攻略本を持って挑む感覚で、緊張がワクワクに変わりました。</p>
+        <h3>「経験のなさを、一度も笑われませんでした」</h3>
+        <p>会話の話題から服装まで、毎回一緒に準備してくださいました。「経験がないのは、まじめに生きてきた証拠ですよ」と言われた日のことは、一生忘れないと思います。</p>
       </div>
       <div class="voice-card reveal">
-        <span class="who">40代前半・女性(アプリ疲れから乗り換え/活動1年2ヶ月でご成婚)</span>
-        <h3>「お断り代行、発明だと思う」</h3>
-        <p>アプリ時代は断る文面を考えるだけで週末が憂鬱でした。ここでは「合わなかった」と伝えるだけ。心が削られない婚活は初めてでした。</p>
+        <span class="who">40代前半・女性(アプリでの活動を経て/活動1年2ヶ月でご成婚)</span>
+        <h3>「『今月はお休みしましょう』の一言に救われました」</h3>
+        <p>疲れが顔に出ていたのだと思います。休むことを提案してくれる相談所があるなんて。回復してからの2ヶ月で、いまの夫と出会いました。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== FAQ ===== -->
-<section id="faq">
+<section class="faq-sec" id="faq">
   <div class="inner">
-    <span class="sec-label">よくある質問</span>
-    <h2 class="sec-title">はじめてさんの「聞きにくいこと」、<span class="marker">先に答えます。</span></h2>
+    <span class="sec-label">FAQ ― よくあるご質問</span>
+    <h2 class="sec-title">聞きにくいことこそ、先にお答えします。</h2>
     <div class="faq-item">
-      <button class="faq-q">婚活が完全に初めてです。何から始めればいいかもわかりません。</button>
-      <div class="faq-a"><div>大歓迎です!当サロンの会員の多くが「初めての婚活」からのスタート。無料相談で理想と不安を整理するところから、一歩ずつ一緒に進めます。事前準備は何もいりません。手ぶらでどうぞ。</div></div>
+      <button class="faq-q">婚活がまったく初めてです。何から始めればいいのかも分かりません。</button>
+      <div class="faq-a"><div>それがいちばん自然な始まり方です。当サロンの会員の多くが「初めての婚活」からのスタートでした。無料相談では、理想やご不安を整理するところからご一緒します。事前のご準備は何もいりません。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">無料相談に行ったら、入会をしつこく勧められませんか?</button>
-      <div class="faq-a"><div>勧めません。「勧誘ゼロ宣言」を掲げており、その場で入会を決めていただく必要は一切ありません。合わないと感じたら、そのまま帰ってOK。他のサービスが合いそうな方には、正直にそうお伝えします。</div></div>
+      <button class="faq-q">無料相談に行くと、入会を強く勧められませんか。</button>
+      <div class="faq-a"><div>ご安心ください。その場でご入会を決めていただく必要は一切なく、お帰りになってからじっくりご検討いただけます。お話を伺った結果、婚活アプリなど他の方法が合いそうな方には、正直にそうお伝えしています。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">恋愛経験がほとんどなくても、大丈夫ですか?</button>
-      <div class="faq-a"><div>まったく問題ありません。むしろ「出会いがなかっただけ」のまじめな方こそ、相談所がいちばん向いています。会話の話題づくりから服装まで、カウンセラーが一緒に作戦を立てます。</div></div>
+      <button class="faq-q">恋愛の経験がほとんどありません。それでも大丈夫でしょうか。</button>
+      <div class="faq-a"><div>大丈夫です。ご縁がなかったのは、まじめに仕事や暮らしと向き合ってこられたからだと私たちは考えています。会話の話題づくりから服装まで、カウンセラーが毎回ご一緒に準備しますので、経験の有無は問題になりません。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">仕事が忙しくて、時間が取れるか不安です。</button>
-      <div class="faq-a"><div>日程調整・お店の手配はすべて運営が行うので、あなたの実働は「お見合い当日に行くこと」だけ。面談・相談はオンライン・夜間・土日OK。忙しい方ほど仕組みのラクさを実感いただいています。</div></div>
+      <button class="faq-q">仕事が忙しく、活動の時間が取れるか不安です。</button>
+      <div class="faq-a"><div>日程調整やお店の手配はすべて私たちが行いますので、実際に動いていただくのは「お見合い当日にいらっしゃること」だけです。面談やご相談はオンライン・夜間・土日にも対応しています。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">途中でやめたら、お金はかかりますか?</button>
-      <div class="faq-a"><div>成婚料は結婚が決まったときだけの成功報酬なので、かかりません。退会時の違約金もなし。疲れたときは休会も自由(休会中の月会費0円)なので、「やめられないかも」の心配なく始められます。</div></div>
+      <button class="faq-q">途中でやめた場合、費用はかかりますか。</button>
+      <div class="faq-a"><div>成婚料はご結婚が決まったときだけの成功報酬ですので、かかりません。退会時の違約金もありません。お疲れのときは休会も可能で、休会中の月会費もいただきません。</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q">本当に、書いてある料金だけですか?</button>
-      <div class="faq-a"><div>はい。入会金・月会費・成婚料がすべてです。お見合い時のご自身の飲食代・交通費を除き、オプション費用や追加請求は一切ありません。「あとから請求されるかも」という不安も、ストレスのうちですから。</div></div>
+      <button class="faq-q">記載の料金以外に、かかる費用はありますか。</button>
+      <div class="faq-a"><div>ありません。入会金・月会費・成婚料がすべてです。お見合い時のご自身のお飲み物代・交通費を除き、オプション費用や追加のご請求は一切発生しません。</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== 構成3:最後 = 行動を促す ===== -->
+<!-- ===== 構成3:最後 = 行動を、静かに強く促す ===== -->
 <section class="cta" id="contact">
   <div class="inner">
-    <span class="sec-label">最初の一歩は、話すだけ</span>
-    <h2 class="sec-title">4人に1人の時代。<br>次の「1人」は、あなたかもしれません。</h2>
-    <p>やることは、60分の無料相談を予約するだけ。入会しなくても、あなた専用の「婚活作戦メモ」を持ち帰れます。まじめに人生を考え始めたその気持ちが、いちばんのチャンスです。1年後のあなたのために、今日、5分だけ動いてみませんか?</p>
-    <a href="mailto:info@example.com?subject=無料相談の予約希望" class="btn btn-primary">🌸 無料相談を予約する(所要5分)</a>
-    <p class="hero-note">オンラインOK/夜間・土日OK/勧誘ゼロ宣言/手ぶらでどうぞ</p>
+    <span class="sec-label">ONE STEP ― 最初の一歩</span>
+    <h2 class="sec-title">5年後のあなたが、<br>今日のあなたに感謝する一歩を。</h2>
+    <p>始めて、合わなければ、やめていいのです。けれど「いつか」と思ったまま季節が過ぎていくことだけは、どうか避けてください。あなたの人生は、あなたが大切にしなければ、誰も大切にできません。<br>まずは60分、あなたのお話を聞かせてください。入会されなくても、ご自身の人生を見つめ直す良い時間になることを、お約束します。</p>
+    <a href="mailto:info@example.com?subject=無料相談の予約希望" class="btn btn-primary">無料相談を予約する(ご予約は1分で完了)</a>
+    <p class="hero-note">オンライン可/夜間・土日対応/無理な勧誘は一切ありません/手ぶらでどうぞ</p>
   </div>
 </section>
 
@@ -527,16 +570,16 @@
     <div class="foot-grid">
       <div>
         <div class="logo">結婚相談所 ふう</div>
-        <p>「ふう」と息をつけるような婚活を。<br>はじめてさん大歓迎、がんばらせない結婚相談所です。</p>
+        <p>「ふう」と息をつけるような婚活を。<br>あなたの人生を、あなたと同じ真剣さで考える結婚相談所です。</p>
       </div>
       <div>
         <h4>メニュー</h4>
         <ul>
-          <li><a href="#why">なぜ今、婚活?</a></li>
-          <li><a href="#words">はじめてさん向け解説</a></li>
-          <li><a href="#promise">ラクできる理由</a></li>
-          <li><a href="#plans">料金プラン</a></li>
-          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#why">選ばれている理由</a></li>
+          <li><a href="#vs">アプリとの違い</a></li>
+          <li><a href="#letter">私たちの想い</a></li>
+          <li><a href="#plans">料金のご案内</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
         </ul>
       </div>
       <div>
@@ -569,7 +612,7 @@
     });
   });
 
-  // スクロールで要素をふわっと表示
+  // スクロールで要素をゆっくり表示
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
   }, { threshold: .12 });
