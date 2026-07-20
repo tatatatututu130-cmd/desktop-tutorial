@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30代・40代の結婚相談所なら 桜暦（さくらごよみ）｜仲人型・成婚までの伴走サポート</title>
+<meta name="description" content="結婚相談所 桜暦（さくらごよみ）。専任仲人がご入会からご成婚まで一貫して伴走。あなたの人生の暦に、桜の咲く日を。無料相談受付中。">
+<style>
+  :root {
+    --sakura: #f6c6cf;
+    --sakura-deep: #d9808f;
+    --sakura-dark: #a94454;
+    --ink: #3a3134;
+    --ink-soft: #6b5f63;
+    --washi: #fdf9f7;
+    --washi-warm: #faf1ee;
+    --gold: #b89b5e;
+    --line: #eaD9dc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+    color: var(--ink);
+    background: var(--washi);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; }
+  a { color: var(--sakura-dark); }
+
+  /* ===== Header ===== */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(253, 249, 247, 0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 1080px; margin: 0 auto; padding: 0.7rem 1.2rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .logo { display: flex; align-items: baseline; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+  .logo .mark { font-size: 1.7rem; font-weight: 700; letter-spacing: 0.15em; }
+  .logo .yomi { font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.25em; }
+  nav ul { display: flex; gap: 1.3rem; list-style: none; flex-wrap: wrap; }
+  nav a { text-decoration: none; font-size: 0.86rem; color: var(--ink); letter-spacing: 0.08em; }
+  nav a:hover { color: var(--sakura-dark); }
+  .header-cta {
+    background: var(--sakura-dark); color: #fff !important;
+    padding: 0.5rem 1.1rem; border-radius: 999px; font-size: 0.84rem;
+  }
+  .header-cta:hover { background: var(--sakura-deep); }
+
+  /* ===== Hero ===== */
+  .hero {
+    position: relative; overflow: hidden; text-align: center;
+    padding: 5.5rem 1.2rem 5rem;
+    background:
+      radial-gradient(ellipse 60% 50% at 15% 10%, rgba(246,198,207,0.55), transparent 70%),
+      radial-gradient(ellipse 50% 45% at 85% 85%, rgba(246,198,207,0.45), transparent 70%),
+      linear-gradient(180deg, #fff 0%, var(--washi-warm) 100%);
+  }
+  .hero .petal { position: absolute; font-size: 1.3rem; opacity: 0.5; user-select: none; }
+  .hero-catch {
+    font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+    font-weight: 700; letter-spacing: 0.14em; line-height: 1.7;
+  }
+  .hero-sub {
+    margin-top: 1.4rem; font-size: clamp(0.92rem, 2vw, 1.05rem);
+    color: var(--ink-soft); letter-spacing: 0.1em;
+  }
+  .hero-name { margin-top: 2.2rem; }
+  .hero-name .name { font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: 0.3em; font-weight: 700; }
+  .hero-name .furigana { display: block; margin-top: 0.3rem; font-size: 0.85rem; letter-spacing: 0.5em; color: var(--sakura-dark); }
+  .hero-badges { margin-top: 2.2rem; display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    background: #fff; border: 1px solid var(--sakura); border-radius: 999px;
+    padding: 0.4rem 1.1rem; font-size: 0.8rem; color: var(--sakura-dark); letter-spacing: 0.06em;
+  }
+  .hero-cta { margin-top: 2.4rem; }
+  .btn-primary {
+    display: inline-block; background: var(--sakura-dark); color: #fff; text-decoration: none;
+    padding: 1rem 3rem; border-radius: 999px; font-size: 1.05rem; letter-spacing: 0.15em;
+    box-shadow: 0 6px 18px rgba(169,68,84,0.25); transition: transform 0.15s, background 0.15s;
+  }
+  .btn-primary:hover { background: var(--sakura-deep); transform: translateY(-2px); }
+  .btn-note { margin-top: 0.7rem; font-size: 0.78rem; color: var(--ink-soft); }
+
+  /* ===== Sections ===== */
+  section { padding: 4.5rem 1.2rem; }
+  .inner { max-width: 900px; margin: 0 auto; }
+  .sec-label { text-align: center; color: var(--sakura-dark); font-size: 0.78rem; letter-spacing: 0.4em; }
+  .sec-title {
+    text-align: center; font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    letter-spacing: 0.18em; margin-top: 0.5rem; font-weight: 700;
+  }
+  .sec-title::after {
+    content: ""; display: block; width: 3rem; height: 2px;
+    background: linear-gradient(90deg, var(--sakura), var(--sakura-dark));
+    margin: 1.1rem auto 0;
+  }
+
+  /* ===== Origin (由来) ===== */
+  .origin { background: #fff; }
+  .origin-lead {
+    margin-top: 2.5rem; text-align: center; font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    letter-spacing: 0.12em; line-height: 2.3;
+  }
+  .origin-body {
+    margin: 2.5rem auto 0; max-width: 700px; font-size: 0.98rem; color: var(--ink);
+  }
+  .origin-body p + p { margin-top: 1.4rem; }
+  .origin-quote {
+    margin: 2.5rem auto 0; max-width: 700px; background: var(--washi-warm);
+    border-left: 3px solid var(--sakura-deep); padding: 1.6rem 1.8rem;
+    font-size: 0.96rem; letter-spacing: 0.05em;
+  }
+  .em { color: var(--sakura-dark); font-weight: 700; }
+
+  /* ===== Features ===== */
+  .features { background: var(--washi-warm); }
+  .feature-grid {
+    margin-top: 2.8rem; display: grid; gap: 1.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .feature-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 1.8rem 1.6rem; box-shadow: 0 4px 14px rgba(169,68,84,0.06);
+  }
+  .feature-card .num {
+    font-size: 0.75rem; color: var(--gold); letter-spacing: 0.3em;
+  }
+  .feature-card h3 { font-size: 1.08rem; margin-top: 0.4rem; letter-spacing: 0.08em; line-height: 1.6; }
+  .feature-card p { margin-top: 0.8rem; font-size: 0.88rem; color: var(--ink-soft); }
+
+  /* ===== Flow ===== */
+  .flow-list { margin-top: 2.8rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .flow-item {
+    display: flex; gap: 1.3rem; padding: 1.3rem 0; border-bottom: 1px dashed var(--line);
+    align-items: flex-start;
+  }
+  .flow-item:last-child { border-bottom: none; }
+  .flow-step {
+    flex-shrink: 0; width: 3.2rem; height: 3.2rem; border-radius: 50%;
+    background: var(--sakura-dark); color: #fff; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; font-size: 0.62rem; letter-spacing: 0.1em;
+  }
+  .flow-step b { font-size: 1.05rem; font-weight: 700; }
+  .flow-item h3 { font-size: 1.02rem; letter-spacing: 0.08em; }
+  .flow-item p { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.3rem; }
+
+  /* ===== Plans ===== */
+  .plans { background: var(--washi-warm); }
+  .plan-grid {
+    margin-top: 2.8rem; display: grid; gap: 1.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .plan-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 2rem 1.6rem; text-align: center; position: relative;
+    box-shadow: 0 4px 14px rgba(169,68,84,0.06);
+  }
+  .plan-card.recommended { border: 2px solid var(--sakura-deep); }
+  .plan-tag {
+    position: absolute; top: -0.8rem; left: 50%; transform: translateX(-50%);
+    background: var(--sakura-dark); color: #fff; font-size: 0.7rem;
+    padding: 0.2rem 1rem; border-radius: 999px; letter-spacing: 0.15em; white-space: nowrap;
+  }
+  .plan-card h3 { font-size: 1.1rem; letter-spacing: 0.15em; }
+  .plan-card .price { margin-top: 1rem; font-size: 1.5rem; color: var(--sakura-dark); font-weight: 700; }
+  .plan-card .price small { font-size: 0.75rem; color: var(--ink-soft); font-weight: 400; }
+  .plan-card ul { list-style: none; margin-top: 1.2rem; text-align: left; font-size: 0.85rem; color: var(--ink-soft); }
+  .plan-card ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; border-bottom: 1px dotted var(--line); }
+  .plan-card ul li::before { content: "❀"; position: absolute; left: 0; color: var(--sakura-deep); }
+  .plan-note { margin-top: 1.6rem; text-align: center; font-size: 0.78rem; color: var(--ink-soft); }
+
+  /* ===== FAQ ===== */
+  .faq-list { margin-top: 2.8rem; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .faq-item { background: #fff; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 1rem; overflow: hidden; }
+  .faq-item summary {
+    cursor: pointer; padding: 1.1rem 1.4rem; font-size: 0.95rem; letter-spacing: 0.05em;
+    list-style: none; position: relative; padding-right: 3rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "Q."; color: var(--sakura-dark); font-weight: 700; margin-right: 0.6rem; }
+  .faq-item summary::after {
+    content: "＋"; position: absolute; right: 1.3rem; top: 50%; transform: translateY(-50%);
+    color: var(--sakura-dark);
+  }
+  .faq-item[open] summary::after { content: "−"; }
+  .faq-item .answer { padding: 0 1.4rem 1.2rem; font-size: 0.88rem; color: var(--ink-soft); }
+  .faq-item .answer::before { content: "A."; color: var(--gold); font-weight: 700; margin-right: 0.6rem; }
+
+  /* ===== Contact ===== */
+  .contact {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 55% 60% at 80% 15%, rgba(246,198,207,0.5), transparent 70%),
+      linear-gradient(180deg, var(--washi) 0%, #fbeef0 100%);
+  }
+  .contact p.lead { margin-top: 2rem; font-size: 0.95rem; color: var(--ink-soft); }
+  .contact .btn-primary { margin-top: 2rem; }
+
+  /* ===== Footer ===== */
+  footer { background: var(--ink); color: #d9ccd0; padding: 3rem 1.2rem 2rem; text-align: center; }
+  footer .f-logo { font-size: 1.4rem; letter-spacing: 0.3em; color: #fff; }
+  footer .f-yomi { font-size: 0.7rem; letter-spacing: 0.4em; margin-top: 0.3rem; }
+  footer .f-info { margin-top: 1.4rem; font-size: 0.8rem; line-height: 2; }
+  footer .copyright { margin-top: 2rem; font-size: 0.72rem; opacity: 0.7; }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 0.9rem; }
+    section { padding: 3.2rem 1.1rem; }
+    .flow-item { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#top">
+      <span class="mark">桜暦</span>
+      <span class="yomi">さくらごよみ</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#origin">桜暦とは</a></li>
+        <li><a href="#features">選ばれる理由</a></li>
+        <li><a href="#flow">ご成婚までの流れ</a></li>
+        <li><a href="#plans">料金プラン</a></li>
+        <li><a href="#faq">よくあるご質問</a></li>
+        <li><a class="header-cta" href="#contact">無料相談</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ヒーロー -->
+  <div class="hero">
+    <span class="petal" style="top:12%; left:8%;">🌸</span>
+    <span class="petal" style="top:30%; right:10%;">🌸</span>
+    <span class="petal" style="bottom:18%; left:16%;">🌸</span>
+    <span class="petal" style="bottom:10%; right:20%;">🌸</span>
+    <h1 class="hero-catch">人生の暦に、<br>桜の咲く日を。</h1>
+    <p class="hero-sub">30代・40代のための仲人型結婚相談所</p>
+    <div class="hero-name">
+      <span class="name">桜　暦</span>
+      <span class="furigana">さ く ら ご よ み</span>
+    </div>
+    <div class="hero-badges">
+      <span class="badge">専任仲人がご成婚まで一貫サポート</span>
+      <span class="badge">短期集中・6ヶ月成婚を目標</span>
+      <span class="badge">LINE相談 365日対応</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#contact">無料相談を予約する</a>
+      <p class="btn-note">オンライン（Zoom）でのご相談も承ります</p>
+    </div>
+  </div>
+
+  <!-- 名前の由来 -->
+  <section class="origin" id="origin">
+    <div class="inner">
+      <p class="sec-label">OUR NAME</p>
+      <h2 class="sec-title">「桜暦」という名前に込めた想い</h2>
+
+      <p class="origin-lead">
+        暦は、季節を待つための知恵ではなく、<br>
+        <span class="em">季節を逃さないための知恵</span>です。
+      </p>
+
+      <div class="origin-body">
+        <p>
+          日本人は古くから、暦とともに生きてきました。二十四節気、七十二候——自然の移ろいを細やかに読み、
+          種を蒔く日、花を待つ日を見極めてきたのです。なかでも桜の開花は特別で、人々は毎年「桜前線」に心を寄せ、
+          その土地その土地の<span class="em">開花の日</span>を待ちわびてきました。
+        </p>
+        <p>
+          桜は、咲く時期を間違えません。冬のあいだ静かに力を蓄え、時が満ちれば必ず花開く。
+          けれど、開花日は場所によって、木によって、一本一本違います。
+        </p>
+        <p>
+          結婚も、まったく同じだと私たちは考えています。人生には一人ひとり固有の「暦」があり、
+          花開く日はそれぞれ違う。周りと比べて焦る必要はありません。
+          ただし——<span class="em">桜が開花の条件を整えて春を迎えるように、咲くための準備は必要です</span>。
+        </p>
+        <p>
+          「桜暦」は、あなたの人生の暦を一緒に読み、開花日を見立て、
+          その日から逆算してプロフィール作り・お見合い・ご交際・プロポーズまで専任仲人が伴走する結婚相談所です。
+          待つだけにはさせません。焦らせもしません。あなたの暦に「桜の咲く日」を書き込み、
+          満開の日まで、責任を持ってお連れします。
+        </p>
+      </div>
+
+      <div class="origin-quote">
+        暦を読む者は、春を逃さない。<br>
+        あなたの開花日を見立て、その日まで伴走する——<br>
+        それが、結婚相談所「桜暦」の仕事です。
+      </div>
+    </div>
+  </section>
+
+  <!-- 選ばれる理由 -->
+  <section class="features" id="features">
+    <div class="inner">
+      <p class="sec-label">REASON</p>
+      <h2 class="sec-title">桜暦が選ばれる理由</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <p class="num">REASON 01</p>
+          <h3>専任仲人が入会から成婚まで一貫担当</h3>
+          <p>面談からご成婚まで、担当が替わることはありません。あなたの性格・ご事情・心の機微まで把握した仲人が、個別指導塾のようにマンツーマンで伴走します。</p>
+        </div>
+        <div class="feature-card">
+          <p class="num">REASON 02</p>
+          <h3>「開花日」から逆算する婚活設計</h3>
+          <p>目標成婚日を最初に決め、そこから逆算してお見合い数・ご交際期間を設計。行き当たりばったりの婚活にせず、短期集中・6ヶ月成婚を目指します。</p>
+        </div>
+        <div class="feature-card">
+          <p class="num">REASON 03</p>
+          <h3>LINE・お電話で365日サポート</h3>
+          <p>お見合い前の不安、ご交際中の迷い、いつでもご相談ください。模擬お見合い、メッセージ添削、プロフィール写真の撮影同行まで手厚くサポートします。</p>
+        </div>
+        <div class="feature-card">
+          <p class="num">REASON 04</p>
+          <h3>大手連盟ネットワークでお相手探し</h3>
+          <p>結婚相談所連盟への加盟により、豊富な会員ネットワークの中からご紹介。データによるマッチングと、仲人の目による「見立て」の両輪でお相手を探します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ご成婚までの流れ -->
+  <section class="flow" id="flow">
+    <div class="inner">
+      <p class="sec-label">FLOW</p>
+      <h2 class="sec-title">ご入会からご成婚までの流れ</h2>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-step">STEP<b>1</b></div>
+          <div>
+            <h3>無料相談（対面・オンライン）</h3>
+            <p>まずはお話をお聞かせください。婚活の現在地と、あなたの「開花日」の見立てをお伝えします。無理な勧誘は一切いたしません。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-step">STEP<b>2</b></div>
+          <div>
+            <h3>ご入会・婚活計画づくり</h3>
+            <p>目標成婚日を一緒に決め、逆算した活動計画を作成。あなただけの「桜暦」がここから始まります。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-step">STEP<b>3</b></div>
+          <div>
+            <h3>プロフィール作成・写真撮影</h3>
+            <p>お相手に伝わるプロフィール文を仲人が一緒に作成。写真撮影には同行し、あなたの魅力が伝わる一枚を用意します。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-step">STEP<b>4</b></div>
+          <div>
+            <h3>お相手探し・お見合い</h3>
+            <p>データと仲人の見立ての両方でお相手をご紹介。お見合いの日程調整はすべてお任せください。事前の模擬お見合いも可能です。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-step">STEP<b>5</b></div>
+          <div>
+            <h3>ご交際・真剣交際</h3>
+            <p>デートの進め方、お相手の気持ちの読み方、迷ったときはいつでもLINEでご相談を。仲人がお相手の相談所とも連携し、すれ違いを防ぎます。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-step">STEP<b>6</b></div>
+          <div>
+            <h3>プロポーズ・ご成婚</h3>
+            <p>プロポーズの演出まで一緒に考えます。あなたの暦に記された「桜の咲く日」——満開の日を、私たちも一緒にお祝いします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金プラン -->
+  <section class="plans" id="plans">
+    <div class="inner">
+      <p class="sec-label">PLAN</p>
+      <h2 class="sec-title">料金プラン</h2>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h3>芽吹きプラン</h3>
+          <p class="price">月会費 ◯◯,◯◯◯円<small>（税込）</small></p>
+          <ul>
+            <li>入会金 ◯◯,◯◯◯円</li>
+            <li>お相手紹介 月◯名まで</li>
+            <li>お見合い料 ◯,◯◯◯円／回</li>
+            <li>LINE相談サポート</li>
+          </ul>
+        </div>
+        <div class="plan-card recommended">
+          <span class="plan-tag">いちばん選ばれています</span>
+          <h3>満開プラン</h3>
+          <p class="price">月会費 ◯◯,◯◯◯円<small>（税込）</small></p>
+          <ul>
+            <li>入会金 ◯◯,◯◯◯円</li>
+            <li>お相手紹介 月◯名まで</li>
+            <li>お見合い料 無料</li>
+            <li>模擬お見合い・写真撮影同行</li>
+            <li>LINE・電話 365日サポート</li>
+          </ul>
+        </div>
+        <div class="plan-card">
+          <h3>桜前線プラン<br><small style="font-size:0.7rem; color:var(--ink-soft);">（短期集中）</small></h3>
+          <p class="price">月会費 ◯◯,◯◯◯円<small>（税込）</small></p>
+          <ul>
+            <li>6ヶ月成婚を目標とした集中設計</li>
+            <li>お相手紹介 無制限</li>
+            <li>お見合い料 無料</li>
+            <li>毎月の作戦面談つき</li>
+            <li>成婚料 ◯◯◯,◯◯◯円</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plan-note">※料金は準備中のため仮表示です。詳しくは無料相談にてご案内いたします。</p>
+    </div>
+  </section>
+
+  <!-- よくあるご質問 -->
+  <section class="faq" id="faq">
+    <div class="inner">
+      <p class="sec-label">FAQ</p>
+      <h2 class="sec-title">よくあるご質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>婚活が初めてで、何から始めればいいか分かりません。</summary>
+          <p class="answer">ご安心ください。会員さまの多くが婚活初心者です。無料相談であなたの現在地を整理し、最初の一歩から専任仲人が伴走します。</p>
+        </details>
+        <details class="faq-item">
+          <summary>仕事が忙しくても活動できますか？</summary>
+          <p class="answer">はい。お見合いの日程調整はすべて仲人が代行し、ご相談はLINEで隙間時間に可能です。オンラインお見合いにも対応しています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>30代・40代からでも間に合いますか？</summary>
+          <p class="answer">桜暦は30代・40代の婚活を専門にサポートしています。開花日は人それぞれ。年齢よりも「正しい準備」が結果を分けます。逆算型の計画で短期成婚を目指しましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>無料相談に行くと、入会を勧誘されませんか？</summary>
+          <p class="answer">無理な勧誘は一切いたしません。まずはお話を伺い、あなたに合う婚活の進め方をお伝えする場です。他社サービスが合いそうな場合は率直にそうお伝えします。</p>
+        </details>
+        <details class="faq-item">
+          <summary>途中で退会・休会はできますか？</summary>
+          <p class="answer">可能です。ご事情に合わせて休会制度をご用意しています。詳細は無料相談時にご説明いたします。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="contact" id="contact">
+    <div class="inner">
+      <p class="sec-label">CONTACT</p>
+      <h2 class="sec-title">無料相談のご予約</h2>
+      <p class="lead">
+        あなたの人生の暦を、一度いっしょに読んでみませんか。<br>
+        対面・オンライン（Zoom）どちらでも承ります。<br>
+        LINE公式アカウントからのご予約・お問い合わせも可能です。
+      </p>
+      <a class="btn-primary" href="#">無料相談を予約する</a>
+      <p class="btn-note">※お問い合わせフォーム・LINE公式アカウントは準備中です</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p class="f-logo">桜暦</p>
+  <p class="f-yomi">さくらごよみ</p>
+  <p class="f-info">
+    結婚相談所 桜暦（さくらごよみ）<br>
+    所在地・営業時間・電話番号は準備中です
+  </p>
+  <p class="copyright">© 桜暦 Sakura Goyomi. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
