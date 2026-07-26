@@ -41,6 +41,13 @@
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease;}
   .reveal.on{opacity:1;transform:none;}
 
+  /* ===== 写真・動画スペース(実素材に差し替えるまでの枠) ===== */
+  .photo-slot{border:1.5px dashed var(--sun);background:var(--sun-light);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--terra-dark);font-size:12px;font-weight:700;letter-spacing:.06em;text-align:center;line-height:1.9;padding:12px;}
+  .photo-slot img,.photo-slot iframe{width:100%;height:100%;object-fit:cover;border-radius:inherit;border:none;}
+  .slot-portrait{aspect-ratio:3/4;max-width:250px;margin:0 auto 30px;}
+  .slot-card{aspect-ratio:16/10;margin-bottom:18px;}
+  .slot-video{aspect-ratio:16/9;max-width:720px;margin:44px auto 0;}
+
   /* ===== header ===== */
   header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,249,243,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .head-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
@@ -330,8 +337,8 @@
       <div class="check reveal">仕事には打ち込んできた。気づけば、結婚のことだけが手つかずになっている</div>
     </div>
     <div class="check-conc reveal">
-      <strong>ぜんぶ、私たちの得意分野です。</strong><br>
-      一般的な相談所は、経験のある方もない方も同じサポートを受けます。桜暦は違います。初めての方「だけ」を想定して、気持ちの整理から会話の練習、服装、デートの段取りまで、すべての工程に「初めて専用の型」をご用意しました。だからこそ、婚活経験者の方向けのプランは、あえてご用意していません。私たちの時間と工夫のすべてを、初めてのあなたのためだけに使うためです。
+      <strong>ぜんぶ、私の得意分野です。</strong><br>
+      一般的な相談所は、経験のある方もない方も同じサポートを受けます。桜暦は違います。初めての方「だけ」を想定して、気持ちの整理から会話の練習、服装、デートの段取りまで、すべての工程に「初めて専用の型」をご用意しました。だからこそ、婚活経験者の方向けのプランは、あえてご用意していません。代表カウンセラーである私の時間と工夫のすべてを、初めてのあなたのためだけに使うためです。
     </div>
   </div>
 </section>
@@ -343,14 +350,18 @@
     <h2 class="sec-title">小さな相談所には、<span class="marker">小さいからこその良さ</span>があります。</h2>
     <div class="mimamori-grid">
       <div class="mimamori-card reveal">
+        <!-- 写真差し替え例: <div class="photo-slot slot-card"><img src="images/soudan.jpg" alt="面談の様子"></div> -->
+        <div class="photo-slot slot-card">写真スペース<br>(面談・カウンセリングの様子)</div>
         <h3>少人数制。だから、深く伴走できます</h3>
         <p>お預かりする会員数をあえて絞っています。大手のように担当が変わることも、順番待ちで相談が流れることもありません。あなたのプロフィールも、会話の癖も、頑張りも、代表カウンセラーがすべて把握して伴走します。</p>
       </div>
       <div class="mimamori-card reveal">
+        <div class="photo-slot slot-card">写真スペース<br>(博多・天神のカフェの雰囲気)</div>
         <h3>面談は、カフェまたはオンラインで</h3>
         <p>かしこまった店舗に足を運ぶ必要はありません。博多・天神周辺のカフェで、お茶を飲みながらリラックスして。遠方の方やお忙しい方はオンラインで。「相談所に行く」という緊張ごと、なくしました。</p>
       </div>
       <div class="mimamori-card reveal">
+        <div class="photo-slot slot-card">写真スペース<br>(街並みやお見合い風景のイメージ)</div>
         <h3>男性の「初めて」、大歓迎です</h3>
         <p>仕事一筋でやってきて恋愛は後回しだった――当相談所には、そんな男性の会員様が多くいらっしゃいます。会話の練習もメッセージの添削も、男性の「何を話せばいいか分からない」に具体的にお答えします。</p>
       </div>
@@ -412,7 +423,7 @@
       <div class="support reveal">
         <span class="s-no">SUPPORT 06</span>
         <h3>面倒ごとは、お任せください</h3>
-        <p>お見合いの日程調整・セッティングは私たちが行います。お断りの際も相談所間で丁寧にお伝えするので、気まずい連絡にあなたが悩む必要はありません。あなたは当日、いらっしゃるだけ。</p>
+        <p>お見合いの日程調整・セッティングは私が行います。お断りの際も相談所間で丁寧にお伝えするので、気まずい連絡にあなたが悩む必要はありません。あなたは当日、いらっしゃるだけ。</p>
         <span class="tag">お見合い料0円</span>
       </div>
       <div class="support reveal">
@@ -439,7 +450,7 @@
       <div class="word reveal">
         <span class="tag">その一</span>
         <h3>「お見合い」とは</h3>
-        <p>かしこまった儀式ではありません。<strong>カフェで1時間、お茶を飲みながらお話しするだけ</strong>です。日程もお店も私たちが手配しますので、あなたは当日、いらっしゃるだけで大丈夫です。</p>
+        <p>かしこまった儀式ではありません。<strong>カフェで1時間、お茶を飲みながらお話しするだけ</strong>です。日程もお店も私が手配しますので、あなたは当日、いらっしゃるだけで大丈夫です。</p>
       </div>
       <div class="word reveal">
         <span class="tag">その二</span>
@@ -454,7 +465,7 @@
       <div class="word reveal">
         <span class="tag">その四</span>
         <h3>「成婚料」とは</h3>
-        <p><strong>ご結婚が決まったときにだけ</strong>お支払いいただく成功報酬です。決まらなければ0円。私たちの利益とあなたの幸せが同じ方向を向くための、大切な仕組みだと考えています。</p>
+        <p><strong>ご結婚が決まったときにだけ</strong>お支払いいただく成功報酬です。決まらなければ0円。相談所の利益とあなたの幸せが同じ方向を向くための、大切な仕組みだと考えています。</p>
       </div>
     </div>
   </div>
@@ -513,12 +524,16 @@
     <span class="sec-label">MESSAGE ― カウンセラーからの手紙</span>
     <h2 class="sec-title">初めてのあなたへの、手紙。</h2>
     <div class="letter-box reveal">
+      <!-- 写真差し替え例: <div class="photo-slot slot-portrait"><img src="images/daihyo.jpg" alt="代表カウンセラー 瀧口博子"></div> -->
+      <div class="photo-slot slot-portrait">写真スペース<br>(代表カウンセラーの<br>お写真・プロ撮影推奨)</div>
       <h3>「経験がない」は、恥ずかしいことではありません。<br>まじめに生きてきた証拠です。</h3>
       <p>はじめまして。代表カウンセラーの瀧口博子です。このページをここまで読んでくださったあなたは、きっと今、人生をまじめに考え始めた方だと思います。そして同じくらい、不安なのだと思います。「私なんかが行っていいのか」「経験がないことを笑われないか」。</p>
       <p>どうか安心してください。ご縁がなかったのは、あなたに魅力がないからではありません。仕事や家族、目の前の暮らしとまじめに向き合ってきたから、恋愛の優先順位が後ろになっただけ。<strong>婚活に必要な技術と段取りは、これから私がすべて補います。</strong>研修講師として磨いてきた対話の力は、そのためにあります。持ってきていただくのは「自分の人生を大切にしたい」という気持ち、それだけで十分です。</p>
       <p>あなたが5年後、「あのとき一歩踏み出してよかった」と思えるように。もし入会に至らなくても、気持ちの整理セッションの60分が「自分の人生を考える、いい時間だった」と思えるように。そのつもりで、お一人おひとりと向き合っています。不安なまま、来てください。それで大丈夫です。</p>
       <p class="sign">結婚相談所 桜暦(さくらごよみ) 代表カウンセラー 瀧口博子</p>
     </div>
+    <!-- 動画差し替え例: <div class="photo-slot slot-video"><iframe src="https://www.youtube.com/embed/動画ID" title="代表挨拶" allowfullscreen></iframe></div> -->
+    <div class="photo-slot slot-video reveal">動画スペース(30〜60秒の自己紹介動画がおすすめ)<br>スマホ撮影でOK。「初めての方へ、まず伝えたいこと」を一言</div>
   </div>
 </section>
 
