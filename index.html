@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>福岡の結婚相談所|初めての婚活専門</title>
-<meta name="description" content="初めての婚活「専門」の結婚相談所。経験ゼロが、ここでは標準です。無料の気持ちの整理セッションから、会話練習・プロフィール代筆まで丸ごと伴走。福岡発、オンラインで全国対応。">
+<title>福岡の結婚相談所 桜暦(さくらごよみ)|初めての婚活専門</title>
+<meta name="description" content="初めての婚活「専門」の結婚相談所 桜暦(さくらごよみ)。経験ゼロが、ここでは標準です。無料の気持ちの整理セッションから会話練習・プロフィール代筆まで伴走し、ご成婚後も見守り続けます。福岡発、オンラインで全国対応。">
 <style>
   :root{
-    --sky:#39708a;
-    --sky-dark:#2b5a71;
-    --sky-light:#e9f3f7;
-    --sun:#f2c94c;
-    --sun-light:#fdf4d7;
-    --terra:#c97e58;
-    --terra-dark:#b06840;
-    --cream:#fbf9f3;
+    --sky:#4a7fa5;
+    --sky-dark:#1f3c5c;
+    --sky-light:#e9f2f8;
+    --sun:#c9a35a;
+    --sun-light:#f6eedd;
+    --terra:#b8933f;
+    --terra-dark:#9a7930;
+    --cream:#fbfaf5;
     --white:#ffffff;
     --ink:#37342e;
     --ink-soft:#6f6a61;
@@ -53,12 +53,22 @@
   .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--sky-dark);cursor:pointer;}
 
   /* ===== hero ===== */
-  .hero{padding:180px 0 0;background:linear-gradient(180deg,#dceef5 0%,#eef6f9 34%,var(--cream) 78%);position:relative;overflow:hidden;text-align:center;}
-  .hero .sun{position:absolute;top:110px;right:8%;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#ffe9a3 0%,#ffe9a3 40%,rgba(255,233,163,0) 72%);pointer-events:none;}
-  .hero .cloud{position:absolute;background:#fff;border-radius:999px;opacity:.85;filter:blur(2px);pointer-events:none;}
-  .hero .c1{width:220px;height:54px;left:4%;top:230px;}
-  .hero .c2{width:150px;height:40px;right:14%;top:320px;opacity:.6;}
-  .hero .c3{width:300px;height:64px;left:16%;bottom:110px;opacity:.5;}
+  .hero{padding:180px 0 0;background:linear-gradient(180deg,#e3eef7 0%,#f0f6fa 34%,var(--cream) 78%);position:relative;overflow:hidden;text-align:center;}
+  .hero .sun{position:absolute;top:110px;right:8%;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#f3e3bd 0%,#f3e3bd 40%,rgba(243,227,189,0) 72%);pointer-events:none;}
+  .hero .petal{position:absolute;top:-40px;width:20px;height:20px;border-radius:65% 0 65% 0;opacity:.75;pointer-events:none;animation:petalfall linear infinite;}
+  .hero .petal.pink{background:radial-gradient(circle at 30% 30%,#f7dde2,#eec3cc);}
+  .hero .petal.gold{background:radial-gradient(circle at 30% 30%,#f0e0b8,#ddc48b);}
+  .hero .p1{left:8%;animation-duration:11s;animation-delay:0s;}
+  .hero .p2{left:24%;width:14px;height:14px;animation-duration:14s;animation-delay:3s;}
+  .hero .p3{left:58%;animation-duration:12s;animation-delay:6s;}
+  .hero .p4{left:76%;width:16px;height:16px;animation-duration:15s;animation-delay:1.5s;}
+  .hero .p5{left:90%;width:13px;height:13px;animation-duration:13s;animation-delay:8s;}
+  @keyframes petalfall{
+    0%{transform:translate(0,-5vh) rotate(0deg);}
+    50%{transform:translate(-30px,45vh) rotate(160deg);}
+    100%{transform:translate(20px,95vh) rotate(320deg);}
+  }
+  @media (prefers-reduced-motion: reduce){.hero .petal{animation:none;opacity:.3;top:30%;}}
   .hero .inner{position:relative;z-index:1;padding-bottom:110px;}
   .hero-kicker{display:inline-block;background:var(--sky-dark);color:#fff;border-radius:999px;padding:8px 24px;font-size:13px;font-weight:700;letter-spacing:.14em;margin-bottom:34px;box-shadow:0 4px 14px rgba(43,90,113,.15);}
   .hero h1{font-family:var(--serif);font-size:clamp(34px,6vw,58px);font-weight:600;line-height:1.6;letter-spacing:.05em;color:var(--sky-dark);}
@@ -151,6 +161,18 @@
   .step p{font-size:12.5px;color:var(--ink-soft);line-height:1.9;}
   .step .relief{display:inline-block;margin-top:12px;font-size:11px;background:var(--sky-light);color:var(--sky-dark);border-radius:999px;padding:3px 12px;font-weight:700;}
 
+  /* ===== mimamori(卒業後見守り)===== */
+  .mimamori{background:var(--white);}
+  .milestones{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px;}
+  .milestone{background:var(--sky-light);border-radius:14px;padding:26px 18px;text-align:center;}
+  .milestone .m-when{font-family:var(--serif);font-size:19px;color:var(--sky-dark);font-weight:600;margin-bottom:8px;}
+  .milestone p{font-size:12.5px;color:var(--ink-soft);line-height:1.9;text-align:left;}
+  .mimamori-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px;}
+  .mimamori-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:30px 26px;}
+  .mimamori-card h3{font-family:var(--serif);font-size:17.5px;color:var(--sky-dark);margin-bottom:10px;line-height:1.7;}
+  .mimamori-card p{font-size:13.5px;color:var(--ink-soft);}
+  .mimamori-note{font-size:12px;color:var(--ink-soft);}
+
   /* ===== plans ===== */
   .plans-sec{background:var(--white);}
   .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;max-width:900px;margin:0 auto;}
@@ -208,7 +230,7 @@
 
   /* ===== responsive ===== */
   @media(max-width:900px){
-    .support-grid,.voice-grid{grid-template-columns:1fr 1fr;}
+    .support-grid,.voice-grid,.milestones,.mimamori-grid{grid-template-columns:1fr 1fr;}
     .vs-cards{grid-template-columns:1fr;}
     .flow-steps{grid-template-columns:1fr 1fr;}
     .facts .grid{grid-template-columns:1fr;gap:32px;}
@@ -220,7 +242,7 @@
     nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);}
     nav.open ul{display:flex;}
     .menu-btn{display:block;}
-    .support-grid,.voice-grid,.flow-steps,.foot-grid,.word-grid,.plans{grid-template-columns:1fr;}
+    .support-grid,.voice-grid,.flow-steps,.foot-grid,.word-grid,.plans,.milestones,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:44px 30px;}
     .hero .sun{width:90px;height:90px;right:2%;top:90px;}
   }
@@ -230,12 +252,13 @@
 
 <header>
   <div class="head-inner">
-    <a href="#top" class="logo">初めての婚活、専門。<small>福岡・オンライン全国の結婚相談所</small></a>
+    <a href="#top" class="logo">結婚相談所 桜暦<small>さくらごよみ|初めての婚活「専門」・福岡</small></a>
     <nav id="nav">
       <ul>
         <li><a href="#check">こんな不安ありませんか</a></li>
         <li><a href="#support">初めて専用サポート</a></li>
         <li><a href="#vs">アプリ・大手との違い</a></li>
+        <li><a href="#mimamori">卒業後の見守り</a></li>
         <li><a href="#plans">料金</a></li>
         <li><a href="#faq">よくある質問</a></li>
         <li><a href="#contact" class="nav-cta">無料セッション</a></li>
@@ -248,13 +271,15 @@
 <!-- ===== HERO:専門店宣言 ===== -->
 <section class="hero" id="top">
   <div class="sun"></div>
-  <div class="cloud c1"></div>
-  <div class="cloud c2"></div>
-  <div class="cloud c3"></div>
+  <div class="petal pink p1"></div>
+  <div class="petal gold p2"></div>
+  <div class="petal pink p3"></div>
+  <div class="petal gold p4"></div>
+  <div class="petal pink p5"></div>
   <div class="inner">
     <span class="hero-kicker">経験ゼロが、ここでは標準です</span>
     <h1>初めての婚活、<br><span class="marker">専門。</span></h1>
-    <p class="decl">―― 婚活が初めての方「だけ」に寄り添う、専門の結婚相談所です。</p>
+    <p class="decl">後悔しない一歩を、桜暦(さくらごよみ)と。<br>―― 婚活が初めての方「だけ」に寄り添う、専門の結婚相談所です。</p>
     <p class="sub">恋愛の経験が少なくても、何から始めればいいか分からなくても、大丈夫。ここに来る方は、みんな同じところから始めています。「いつか」と思ったまま季節が過ぎていくことが、いちばんの後悔になる前に。福岡発、オンラインで全国対応の結婚相談所です。</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary">無料「気持ちの整理セッション」を予約する</a>
@@ -305,7 +330,7 @@
     </div>
     <div class="check-conc reveal">
       <strong>ぜんぶ、私たちの得意分野です。</strong><br>
-      一般的な相談所は、経験のある方もない方も同じサポートを受けます。当相談所は違います。初めての方「だけ」を想定して、気持ちの整理から会話の練習、服装、デートの段取りまで、すべての工程に「初めて専用の型」をご用意しました。だからこそ、婚活経験者の方向けのプランは、あえてご用意していません。私たちの時間と工夫のすべてを、初めてのあなたのためだけに使うためです。
+      一般的な相談所は、経験のある方もない方も同じサポートを受けます。桜暦は違います。初めての方「だけ」を想定して、気持ちの整理から会話の練習、服装、デートの段取りまで、すべての工程に「初めて専用の型」をご用意しました。だからこそ、婚活経験者の方向けのプランは、あえてご用意していません。私たちの時間と工夫のすべてを、初めてのあなたのためだけに使うためです。
     </div>
   </div>
 </section>
@@ -329,7 +354,7 @@
   <div class="inner">
     <span class="sec-label">SUPPORT ― 初めて専用の7つのサポート</span>
     <h2 class="sec-title">「初めて」に必要なものを、<br><span class="marker">ぜんぶ用意しました。</span></h2>
-    <p class="sec-lead">看板だけの「初心者歓迎」ではありません。TMS(全国結婚相談事業者連盟)の全国ネットワークによる出会いに加えて、初めての方のためだけに設計した当相談所のオリジナルサポートです。</p>
+    <p class="sec-lead">看板だけの「初心者歓迎」ではありません。TMS(全国結婚相談事業者連盟)の全国ネットワークによる出会いに加えて、初めての方のためだけに設計した桜暦のオリジナルサポートです。</p>
     <div class="support-grid">
       <div class="support reveal">
         <span class="s-no">SUPPORT 01</span>
@@ -416,7 +441,7 @@
 <section id="vs">
   <div class="inner">
     <span class="sec-label">CHOICE ― 自分に合う場所を</span>
-    <h2 class="sec-title">アプリ、大手、当相談所。<br><span class="marker">優劣ではなく、役割の違い</span>です。</h2>
+    <h2 class="sec-title">アプリ、大手、桜暦。<br><span class="marker">優劣ではなく、役割の違い</span>です。</h2>
     <p class="sec-lead">どの方法にも、そこで幸せになった方がいます。大切なのは「今のあなた」に合う場所を選ぶこと。正直に整理しました。</p>
     <div class="vs-cards">
       <div class="vs-card reveal">
@@ -442,7 +467,7 @@
         </ul>
       </div>
       <div class="vs-card us reveal">
-        <span class="vs-tag">当相談所</span>
+        <span class="vs-tag">桜暦</span>
         <h3>初めての一歩を、専門家と</h3>
         <p class="fit">こんな方に合っています</p>
         <ul>
@@ -454,7 +479,7 @@
       </div>
     </div>
     <div class="vs-note reveal">
-      <strong>私の正直な考えをお伝えします。</strong> アプリにも大手にも、それぞれ素晴らしい良さがあります。ただ、どちらも「自分で進められること」がある程度前提の場所。写真選びもメッセージも誘い方も独学・自力――それは初めての方にとって、いちばん難易度の高い戦い方です。当相談所は、その最初の一歩に専門特化した相談所です。気持ちの整理セッションでお話を伺った結果、アプリや大手のほうが合いそうな方には、正直にそうお伝えします。
+      <strong>私の正直な考えをお伝えします。</strong> アプリにも大手にも、それぞれ素晴らしい良さがあります。ただ、どちらも「自分で進められること」がある程度前提の場所。写真選びもメッセージも誘い方も独学・自力――それは初めての方にとって、いちばん難易度の高い戦い方です。桜暦は、その最初の一歩に専門特化した相談所です。気持ちの整理セッションでお話を伺った結果、アプリや大手のほうが合いそうな方には、正直にそうお伝えします。
     </div>
   </div>
 </section>
@@ -469,7 +494,7 @@
       <p>はじめまして。代表カウンセラーの瀧口博子です。このページをここまで読んでくださったあなたは、きっと今、人生をまじめに考え始めた方だと思います。そして同じくらい、不安なのだと思います。「私なんかが行っていいのか」「経験がないことを笑われないか」。</p>
       <p>どうか安心してください。ご縁がなかったのは、あなたに魅力がないからではありません。仕事や家族、目の前の暮らしとまじめに向き合ってきたから、恋愛の優先順位が後ろになっただけ。<strong>婚活に必要な技術と段取りは、これから私がすべて補います。</strong>研修講師として磨いてきた対話の力は、そのためにあります。持ってきていただくのは「自分の人生を大切にしたい」という気持ち、それだけで十分です。</p>
       <p>あなたが5年後、「あのとき一歩踏み出してよかった」と思えるように。もし入会に至らなくても、気持ちの整理セッションの60分が「自分の人生を考える、いい時間だった」と思えるように。そのつもりで、お一人おひとりと向き合っています。不安なまま、来てください。それで大丈夫です。</p>
-      <p class="sign">結婚相談所(屋号検討中) 代表カウンセラー 瀧口博子</p>
+      <p class="sign">結婚相談所 桜暦(さくらごよみ) 代表カウンセラー 瀧口博子</p>
     </div>
   </div>
 </section>
@@ -509,6 +534,48 @@
   </div>
 </section>
 
+<!-- ===== 卒業後見守り(桜暦だけの差別化)===== -->
+<section class="mimamori" id="mimamori">
+  <div class="inner">
+    <span class="sec-label">AFTER GOAL ― 桜暦だけの、卒業後見守り</span>
+    <h2 class="sec-title">成婚は、ゴールではなく<br><span class="marker">あなたの暦の、最初のページ</span>です。</h2>
+    <p class="sec-lead">多くの相談所とのお付き合いは、成婚退会の日に終わります。桜暦は違います。桜の季節が過ぎても暦が続くように、卒業後もあなたの新しい季節を見守り続けます。初めての婚活を任せてくれたあなたと、その先の人生までお付き合いさせてください。</p>
+    <div class="milestones">
+      <div class="milestone reveal">
+        <div class="m-when">1ヶ月</div>
+        <p>新生活のスタートをお祝い。環境の変化で出てきた小さな戸惑いも、お聞かせください。</p>
+      </div>
+      <div class="milestone reveal">
+        <div class="m-when">3ヶ月</div>
+        <p>暮らしが落ち着いてくる頃。ふたりの生活リズムづくりの近況をお伺いします。</p>
+      </div>
+      <div class="milestone reveal">
+        <div class="m-when">半年</div>
+        <p>節目のご機嫌伺い。パートナーとの関係で気になることがあれば、いつでもご相談を。</p>
+      </div>
+      <div class="milestone reveal">
+        <div class="m-when">1年</div>
+        <p>ご成婚1年のお祝いをお届けします。あなたの暦が、良い季節を重ねていますように。</p>
+      </div>
+    </div>
+    <div class="mimamori-grid">
+      <div class="mimamori-card reveal">
+        <h3>卒業生コミュニティ</h3>
+        <p>同じ「初めて」から歩んだ卒業生同士の、ゆるやかなつながり。結婚後の暮らしの話ができる仲間がいることは、思っている以上に心強いものです。</p>
+      </div>
+      <div class="mimamori-card reveal">
+        <h3>結婚後のご相談窓口</h3>
+        <p>ふたりの暮らしのこと、ご両家のこと。婚活中と同じように、カウンセラーがお話を伺います。卒業しても、頼っていい場所であり続けます。</p>
+      </div>
+      <div class="mimamori-card reveal">
+        <h3>ご紹介特典</h3>
+        <p>「あの人にも、この経験をしてほしい」と思える大切な方がいたら、ぜひご紹介ください。ご紹介の特典をご用意しています(詳細は面談でご案内します)。</p>
+      </div>
+    </div>
+    <p class="mimamori-note">※卒業後のご連絡は、ご希望を伺ったうえで行います。ご不要な方には一切お送りしませんので、ご安心ください。</p>
+  </div>
+</section>
+
 <!-- ===== 料金 ===== -->
 <section class="plans-sec" id="plans">
   <div class="inner">
@@ -534,7 +601,7 @@
       </div>
       <div class="plan reveal">
         <h3>スタンダードプラン</h3>
-        <p class="for">会話練習やメッセージ添削まで含めて、しっかりサポートする当相談所の基本プランです。</p>
+        <p class="for">会話練習やメッセージ添削まで含めて、しっかりサポートする桜暦の基本プランです。</p>
         <div class="price">11,000<span>円/月(税込)</span></div>
         <ul>
           <li>入会金 55,000円(初回のみ・カウンセリング込み)</li>
@@ -588,7 +655,7 @@
     <h2 class="sec-title">聞きにくいことこそ、先にお答えします。</h2>
     <div class="faq-item">
       <button class="faq-q">婚活がまったく初めてです。何から始めればいいかも分かりません。</button>
-      <div class="faq-a"><div>それがいちばん自然な始まり方です。当相談所は初めての方「専門」ですので、無料の気持ちの整理セッションで、理想やご不安を整理するところからご一緒します。事前のご準備は何もいりません。手ぶらで、不安なまま、お越しください。</div></div>
+      <div class="faq-a"><div>それがいちばん自然な始まり方です。桜暦は初めての方「専門」ですので、無料の気持ちの整理セッションで、理想やご不安を整理するところからご一緒します。事前のご準備は何もいりません。手ぶらで、不安なまま、お越しください。</div></div>
     </div>
     <div class="faq-item">
       <button class="faq-q">恋愛の経験がほとんどありません。本当に大丈夫でしょうか。</button>
@@ -600,7 +667,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-q">周りは経験豊富な人ばかりではないですか。気後れしそうです。</button>
-      <div class="faq-a"><div>当相談所の会員は「初めての婚活」の方が中心です。専門店ですので、経験の少なさで気後れする必要のない環境をお約束します。みんな、同じところから始めています。</div></div>
+      <div class="faq-a"><div>桜暦の会員は「初めての婚活」の方が中心です。専門店ですので、経験の少なさで気後れする必要のない環境をお約束します。みんな、同じところから始めています。</div></div>
     </div>
     <div class="faq-item">
       <button class="faq-q">記載の料金以外に、かかる費用はありますか。</button>
@@ -629,8 +696,8 @@
   <div class="inner">
     <div class="foot-grid">
       <div>
-        <div class="logo">初めての婚活専門の結婚相談所<!-- ※屋号決定後に差し替え --></div>
-        <p>初めての婚活「専門」。<br>経験ゼロが、ここでは標準です。<br>TMS(全国結婚相談事業者連盟)加盟</p>
+        <div class="logo">結婚相談所 桜暦(さくらごよみ)</div>
+        <p>初めての婚活「専門」。経験ゼロが、ここでは標準です。<br>桜は、出会いと始まりの花。暦は、その人に合ったペースで進む知恵。<br>あなただけの、花咲く季節をめくっていく相談所です。<br>TMS(全国結婚相談事業者連盟)加盟</p>
       </div>
       <div>
         <h4>メニュー</h4>
@@ -638,6 +705,7 @@
           <li><a href="#check">こんな不安ありませんか</a></li>
           <li><a href="#support">初めて専用サポート</a></li>
           <li><a href="#vs">アプリ・大手との違い</a></li>
+          <li><a href="#mimamori">卒業後の見守り</a></li>
           <li><a href="#plans">料金のご案内</a></li>
           <li><a href="#faq">よくあるご質問</a></li>
         </ul>
@@ -653,7 +721,7 @@
         </ul>
       </div>
     </div>
-    <p class="copyright">© 結婚相談所(屋号決定後に差し替え) All Rights Reserved.</p>
+    <p class="copyright">© 結婚相談所 桜暦 All Rights Reserved.</p>
   </div>
 </footer>
 
