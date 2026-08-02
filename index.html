@@ -73,7 +73,7 @@
   .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--sky-dark);cursor:pointer;}
 
   /* ===== hero ===== */
-  .hero{padding:170px 0 0;background:linear-gradient(180deg,#eaf6fc 0%,#fdeef3 48%,var(--cream) 84%);position:relative;overflow:hidden;text-align:center;}
+  .hero{padding:170px 0 0;background:linear-gradient(180deg,#dcf0fa 0%,#fbe3ec 55%,var(--cream) 90%);position:relative;overflow:hidden;text-align:center;}
   .hero .sun{position:absolute;top:100px;right:6%;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fbe6b0 0%,#fbe6b0 42%,rgba(251,230,176,0) 72%);pointer-events:none;}
   .hero .petal{position:absolute;top:-40px;width:20px;height:20px;border-radius:65% 0 65% 0;opacity:.85;pointer-events:none;animation:petalfall linear infinite;}
   .hero .petal.pink{background:radial-gradient(circle at 30% 30%,#ffd9e4,#f6a9be);}
@@ -91,9 +91,9 @@
   @media (prefers-reduced-motion: reduce){.hero .petal{animation:none;opacity:.3;top:30%;}}
   .hero .inner{position:relative;z-index:1;padding-bottom:96px;}
   .hero-kicker{display:inline-block;background:var(--sky-dark);color:#fff;border-radius:999px;padding:8px 22px;font-size:12.5px;font-weight:700;letter-spacing:.1em;margin-bottom:30px;box-shadow:0 4px 14px rgba(46,111,150,.2);}
-  .hero h1{font-family:var(--serif);font-size:clamp(32px,5.6vw,54px);font-weight:600;line-height:1.55;letter-spacing:.05em;color:var(--sky-dark);}
+  .hero h1{font-family:var(--serif);font-size:clamp(42px,9vw,74px);font-weight:700;line-height:1.35;letter-spacing:.03em;color:var(--sky-dark);text-wrap:balance;}
   .hero h1 .marker{background:linear-gradient(transparent 70%,var(--sun) 70%);}
-  .hero .decl{font-family:var(--serif);font-size:clamp(14.5px,1.9vw,18px);color:var(--ink);margin-top:20px;letter-spacing:.05em;line-height:2;}
+  .hero .decl{font-family:var(--serif);font-size:clamp(16px,2.2vw,20px);color:var(--sakura-dark);margin-top:24px;letter-spacing:.08em;line-height:1.9;font-weight:600;}
   .hero p.sub{margin:24px auto 36px;font-size:clamp(14.5px,1.7vw,16px);color:var(--ink-soft);max-width:660px;line-height:2.1;}
   .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
   .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:16px;}
@@ -123,8 +123,12 @@
   .check-conc strong{font-family:var(--serif);color:var(--sky-dark);font-size:16.5px;}
 
   /* ===== 心理診断(あなたの動けない理由)===== */
-  .quiz-sec{background:var(--sky-light);}
-  .quiz-box{max-width:640px;margin:0 auto;background:var(--white);border-radius:22px;padding:44px 40px;box-shadow:0 16px 40px rgba(46,111,150,.1);}
+  .quiz-sec{background:linear-gradient(135deg,var(--sky-dark) 0%,#173247 100%);color:#fff;}
+  .quiz-sec .sec-label{color:var(--sun);}
+  .quiz-sec .sec-title{color:#fff;}
+  .quiz-sec .sec-title .marker{color:var(--ink);}
+  .quiz-sec .sec-lead{color:rgba(255,255,255,.82);}
+  .quiz-box{max-width:640px;margin:0 auto;background:var(--white);border-radius:22px;padding:44px 40px;box-shadow:0 22px 50px rgba(0,0,0,.28);}
   .quiz-progress{font-size:12px;letter-spacing:.15em;color:var(--sky-dark);font-weight:700;margin-bottom:18px;text-align:center;}
   .quiz-progress .bar{height:5px;background:var(--sky-light);border-radius:999px;margin-top:8px;overflow:hidden;}
   .quiz-progress .bar-fill{height:100%;background:var(--sky-dark);border-radius:999px;transition:width .35s ease;}
@@ -278,7 +282,6 @@
     <a href="#top" class="logo">結婚相談所 桜暦<small>さくらごよみ|初めての婚活「専門」・福岡</small></a>
     <nav id="nav">
       <ul>
-        <li><a href="#problem">お悩み</a></li>
         <li><a href="#quiz">診断</a></li>
         <li><a href="#greeting">桜暦の考え方</a></li>
         <li><a href="#support">解決のしかた</a></li>
@@ -293,7 +296,7 @@
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO(短く・要点だけ) ===== -->
 <section class="hero" id="top">
   <div class="sun"></div>
   <div class="petal pink p1"></div>
@@ -302,82 +305,23 @@
   <div class="petal gold p4"></div>
   <div class="petal pink p5"></div>
   <div class="inner">
-    <span class="hero-kicker">結婚したいかどうか、まだ決めていなくても大丈夫です</span>
-    <h1>初めての婚活、<br><span class="marker">専門。</span></h1>
-    <p class="decl">後悔しない一歩を、桜暦(さくらごよみ)と。<br>―― 婚活が初めての方「だけ」に寄り添う、専門の結婚相談所です。</p>
-    <p class="sub">「結婚したいのか、まだ自分でも分からない」。そんな気持ちのままでご相談いただいて構いません。何から始めればいいか分からなくても、大丈夫。20代の方も、50代の方も、ここではみんなが同じところから始められます。福岡発、オンラインで全国対応の結婚相談所です。</p>
+    <span class="hero-kicker">福岡発・オンライン全国対応</span>
+    <h1>動けない理由を、<br><span class="marker">見つけて、なくす。</span></h1>
+    <p class="decl">後悔しない一歩を、桜暦(さくらごよみ)と。</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">無料「気持ちの整理セッション」を予約する</a>
-      <a href="#problem" class="btn btn-ghost">自分に合うか確かめる</a>
+      <a href="#quiz" class="btn btn-primary">30秒で自分のタイプを診断する</a>
+      <a href="#contact" class="btn btn-ghost">無料相談を予約する</a>
     </div>
-    <p class="hero-note">初回無料・オンラインまたはお近くのカフェで・少人数制・入会を決めていなくても大丈夫です</p>
+    <p class="hero-note">初回無料・結婚したいかどうか、まだ決めていなくても大丈夫です</p>
   </div>
 </section>
 
-<!-- ===== 季節の詩 ===== -->
-<section class="poem">
-  <div class="inner">
-    <span class="poem-mark">桜暦(さくらごよみ)</span>
-    <p class="poem-text">
-      人にはそれぞれ、自分だけの「ご縁の季節」があります。<br>
-      桜が咲く時期が一輪ずつ違うように、<br>
-      出会いにも、その人だけの最良のタイミングがあります。<br><br>
-      桜暦は、一人ひとりの歩みに寄り添い、<br>
-      人生を彩るご縁を大切に育む結婚相談所です。
-    </p>
-  </div>
-</section>
-
-<!-- ===== A(親近感)事実:あなただけじゃない ===== -->
-<section class="facts">
-  <div class="inner">
-    <h2>―― まず、知っておいてほしい事実があります ――</h2>
-    <div class="grid">
-      <div class="fact reveal">
-        <div class="num">第<span> </span>1<span>位</span></div>
-        <p class="cap">結婚した夫婦の出会いのきっかけは<br>「マッチングアプリ」が3年連続の第1位(30.4%)。<br>出会いは「待つもの」から「選ぶもの」になりました。</p>
-        <p class="src">出典:明治安田「いい夫婦の日」に関するアンケート調査(2025年)</p>
-      </div>
-      <div class="fact reveal">
-        <div class="num">2<span>人に</span>1<span>人</span></div>
-        <p class="cap">婚活サービス利用経験のある婚姻者のうち、<br>サービスを通じて結婚した人の割合(47.4%)。<br>動いた人から、結ばれています。</p>
-        <p class="src">出典:リクルートブライダル総研「婚活実態調査2024」</p>
-      </div>
-      <div class="fact reveal">
-        <div class="num">15.3<span>%</span></div>
-        <p class="cap">結婚した人のうち、婚活サービスで<br>出会って結婚した人の割合。<br>年々増え続け、過去最高になりました。</p>
-        <p class="src">出典:リクルートブライダル総研「婚活実態調査2024」(2023年婚姻者)</p>
-      </div>
-    </div>
-    <p class="conc reveal">独身でいることは、珍しいことではありません。<br>婚活を始めるのに、遅すぎる年齢もありません。<span class="gold">あなたのペースで始められる場所が、ここにあります。</span></p>
-  </div>
-</section>
-
-<!-- ===== P(問題提起)いまのモヤモヤ ===== -->
-<section id="problem">
-  <div class="inner">
-    <span class="sec-label">PROBLEM ― いまの気持ちに、心当たりは</span>
-    <h2 class="sec-title">その悩み、<span class="marker">ひとつずつ解消できます。</span></h2>
-    <p class="sec-lead">いま感じているモヤモヤと、桜暦での解消のしかたを並べてみました。当てはまるものが、ひとつでもあれば。</p>
-    <div class="check-list">
-      <div class="check reveal">結婚したいのか、したくないのか、自分でもよく分からない<span class="ans">→ 決めなくていい状態のまま、気持ちの整理からご一緒します</span></div>
-      <div class="check reveal">恋愛や結婚のことを、気軽に相談できる相手がいない<span class="ans">→ いつでも同じ担当に、何度でもご相談いただけます</span></div>
-      <div class="check reveal">何から始めればいいのか、正直まったく分からない<span class="ans">→ 無料の整理セッションで、最初の一歩から一緒に決めます</span></div>
-      <div class="check reveal">初対面の人と、何を話せばいいのか不安になる<span class="ans">→ 話題を先に用意して、練習してから本番に臨めます</span></div>
-      <div class="check reveal">デートの誘い方も、服装も、お店選びも自信がない<span class="ans">→ 段取り表とチェックリストで、迷いをなくします</span></div>
-      <div class="check reveal">アプリを入れてみたけれど、メッセージが続かなかった<span class="ans">→ やりとりは添削でサポート。面倒な調整はお任せください</span></div>
-      <div class="check reveal">相談所は「慣れた人が行く場所」な気がして、気後れする<span class="ans">→ ここは初めての方だけの相談所です</span></div>
-      <div class="check reveal">仕事には打ち込んできた。気づけば、結婚のことだけが手つかず<span class="ans">→ 手順が決まっているので、忙しくても進められます</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 心理診断:あなたの「動けない理由」 ===== -->
+<!-- ===== 心理診断:あなたの「動けない理由」(ヒーロー直後・最初の画面で完結) ===== -->
 <section class="quiz-sec" id="quiz">
   <div class="inner">
     <span class="sec-label">CHECK ― 30秒でわかる</span>
-    <h2 class="sec-title">あなたの「動けない理由」、<br><span class="marker">診断してみませんか。</span></h2>
-    <p class="sec-lead">婚活が気になっているのに一歩が出ない理由は、人によって違います。5つの質問に答えると、あなたのタイプと、桜暦での向き合い方が分かります。</p>
+    <h2 class="sec-title">あなたが婚活で立ち止まる理由には、<br><span class="marker">必ず訳があります。</span></h2>
+    <p class="sec-lead">「初めてだから」ではありません。理由は人それぞれ違います。5つの質問で、あなたのタイプと桜暦での向き合い方が分かります。</p>
     <div class="quiz-box reveal">
       <div id="quizPlay">
         <div class="quiz-progress">質問 <span id="qNum">1</span> / 5<div class="bar"><div class="bar-fill" id="qBar" style="width:20%"></div></div></div>
@@ -396,6 +340,42 @@
   </div>
 </section>
 
+<!-- ===== 事実:あなただけじゃない(短縮版) ===== -->
+<section class="facts">
+  <div class="inner">
+    <div class="grid">
+      <div class="fact reveal">
+        <div class="num">第<span> </span>1<span>位</span></div>
+        <p class="cap">結婚のきっかけは「マッチングアプリ」<br>3年連続1位(30.4%)</p>
+        <p class="src">出典:明治安田(2025年)</p>
+      </div>
+      <div class="fact reveal">
+        <div class="num">2<span>人に</span>1<span>人</span></div>
+        <p class="cap">婚活サービス利用者の47.4%が<br>ご成婚。動いた人から、結ばれています</p>
+        <p class="src">出典:リクルートブライダル総研(2024)</p>
+      </div>
+      <div class="fact reveal">
+        <div class="num">15.3<span>%</span></div>
+        <p class="cap">婚活サービス経由の結婚は<br>過去最高を更新中</p>
+        <p class="src">出典:リクルートブライダル総研(2024)</p>
+      </div>
+    </div>
+    <p class="conc reveal">独身も、迷いも、珍しいことではありません。<span class="gold">遅すぎる年齢もありません。</span></p>
+  </div>
+</section>
+
+<!-- ===== 季節の詩 ===== -->
+<section class="poem">
+  <div class="inner">
+    <span class="poem-mark">桜暦(さくらごよみ)</span>
+    <p class="poem-text">
+      人にはそれぞれ、自分だけの「ご縁の季節」があります。<br>
+      桜暦は、一人ひとりの歩みに寄り添い、<br>
+      人生を彩るご縁を大切に育む結婚相談所です。
+    </p>
+  </div>
+</section>
+
 <!-- ===== A(共感)代表ごあいさつ ===== -->
 <section class="letter" id="greeting">
   <div class="inner">
@@ -404,9 +384,9 @@
     <div class="letter-box reveal">
       <!-- イラスト差し替え例: <div class="photo-slot slot-portrait"><img src="images/daihyo-illust.png" alt="代表カウンセラーのイラスト"></div> -->
       <div class="photo-slot slot-portrait">イラストスペース<br>(似顔絵イラスト・<br>AI作成でもOK)</div>
-      <h3>恋愛が後回しになっていたのは、<br>まじめに生きてきた証拠だと思っています。</h3>
-      <p>代表カウンセラーの瀧口博子です。ご縁がなかったのは、あなたに魅力がないからではありません。仕事や家族、目の前の暮らしとまじめに向き合ってきたから、恋愛の優先順位が少し後ろになっただけ。<strong>婚活に必要な準備や段取りは、少しずつ、一緒に整えていけば大丈夫です。</strong></p>
-      <p>「結婚したいのかどうか、まだ分からない」という気持ちも、そのままお持ちください。もし入会に至らなくても、気持ちの整理セッションの60分が「自分の人生を考える、いい時間だった」と思っていただけるように。そのつもりで、お一人おひとりとお会いしています。不安なまま、お越しください。それで大丈夫です。</p>
+      <h3>動けない理由に、良い悪いはありません。<br>ただ、それぞれに合った解き方があります。</h3>
+      <p>代表カウンセラーの瀧口博子です。<strong>診断結果は、当てはまりましたか。</strong>恋愛の優先順位が少し後ろになっただけで、あなたに魅力がないわけではありません。「結婚したいかどうか、まだ分からない」という気持ちも、そのままお持ちください。</p>
+      <p>気持ちの整理セッションの60分が、入会に至らなくても「考える、いい時間だった」と思えるように。不安なまま、お越しください。それで大丈夫です。</p>
       <p class="sign">結婚相談所 桜暦(さくらごよみ) 代表カウンセラー 瀧口博子</p>
     </div>
   </div>
