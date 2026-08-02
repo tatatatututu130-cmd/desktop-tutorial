@@ -122,6 +122,24 @@
   .check-conc{max-width:680px;margin:0 auto;background:var(--sun-light);border-radius:16px;padding:28px 32px;font-size:14.5px;line-height:2.1;}
   .check-conc strong{font-family:var(--serif);color:var(--sky-dark);font-size:16.5px;}
 
+  /* ===== 心理診断(あなたの動けない理由)===== */
+  .quiz-sec{background:var(--sky-light);}
+  .quiz-box{max-width:640px;margin:0 auto;background:var(--white);border-radius:22px;padding:44px 40px;box-shadow:0 16px 40px rgba(46,111,150,.1);}
+  .quiz-progress{font-size:12px;letter-spacing:.15em;color:var(--sky-dark);font-weight:700;margin-bottom:18px;text-align:center;}
+  .quiz-progress .bar{height:5px;background:var(--sky-light);border-radius:999px;margin-top:8px;overflow:hidden;}
+  .quiz-progress .bar-fill{height:100%;background:var(--sky-dark);border-radius:999px;transition:width .35s ease;}
+  .quiz-q{font-family:var(--serif);font-size:18px;color:var(--ink);text-align:center;margin-bottom:26px;line-height:1.7;min-height:2.6em;}
+  .quiz-opts{display:grid;gap:12px;}
+  .quiz-opt{width:100%;text-align:left;background:var(--cream);border:1.5px solid var(--line);border-radius:14px;padding:16px 20px;font-size:14px;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,transform .15s;font-family:var(--sans);}
+  .quiz-opt:hover{border-color:var(--sky-dark);background:var(--sky-light);transform:translateY(-1px);}
+  .quiz-back{display:block;margin:22px auto 0;background:none;border:none;color:var(--ink-soft);font-size:12.5px;text-decoration:underline;cursor:pointer;}
+  .quiz-result{display:none;text-align:center;}
+  .quiz-result .r-tag{display:inline-block;background:var(--sky-dark);color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;border-radius:999px;padding:6px 18px;margin-bottom:16px;}
+  .quiz-result h3{font-family:var(--serif);font-size:22px;color:var(--sky-dark);margin-bottom:18px;line-height:1.6;}
+  .quiz-result p{font-size:14px;color:var(--ink-soft);line-height:2;text-align:left;margin-bottom:24px;}
+  .quiz-result .btn{margin-bottom:14px;}
+  .quiz-retry{display:block;font-size:12.5px;color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none;border:none;margin:0 auto;}
+
   /* ===== affinity greeting(A:共感)===== */
   .letter{background:linear-gradient(180deg,var(--sky-light) 0%,var(--cream) 55%);}
   .letter-box{max-width:700px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:48px 46px;box-shadow:0 20px 50px rgba(55,52,46,.06);position:relative;}
@@ -261,6 +279,7 @@
     <nav id="nav">
       <ul>
         <li><a href="#problem">お悩み</a></li>
+        <li><a href="#quiz">診断</a></li>
         <li><a href="#greeting">桜暦の考え方</a></li>
         <li><a href="#support">解決のしかた</a></li>
         <li><a href="#flow">流れ</a></li>
@@ -349,6 +368,30 @@
       <div class="check reveal">アプリを入れてみたけれど、メッセージが続かなかった<span class="ans">→ やりとりは添削でサポート。面倒な調整はお任せください</span></div>
       <div class="check reveal">相談所は「慣れた人が行く場所」な気がして、気後れする<span class="ans">→ ここは初めての方だけの相談所です</span></div>
       <div class="check reveal">仕事には打ち込んできた。気づけば、結婚のことだけが手つかず<span class="ans">→ 手順が決まっているので、忙しくても進められます</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 心理診断:あなたの「動けない理由」 ===== -->
+<section class="quiz-sec" id="quiz">
+  <div class="inner">
+    <span class="sec-label">CHECK ― 30秒でわかる</span>
+    <h2 class="sec-title">あなたの「動けない理由」、<br><span class="marker">診断してみませんか。</span></h2>
+    <p class="sec-lead">婚活が気になっているのに一歩が出ない理由は、人によって違います。5つの質問に答えると、あなたのタイプと、桜暦での向き合い方が分かります。</p>
+    <div class="quiz-box reveal">
+      <div id="quizPlay">
+        <div class="quiz-progress">質問 <span id="qNum">1</span> / 5<div class="bar"><div class="bar-fill" id="qBar" style="width:20%"></div></div></div>
+        <p class="quiz-q" id="qText"></p>
+        <div class="quiz-opts" id="qOpts"></div>
+        <button class="quiz-back" id="qBack" style="visibility:hidden;">ひとつ前の質問に戻る</button>
+      </div>
+      <div class="quiz-result" id="qResult">
+        <span class="r-tag" id="rTag"></span>
+        <h3 id="rTitle"></h3>
+        <p id="rDesc"></p>
+        <a href="#contact" class="btn btn-primary">無料「気持ちの整理セッション」を予約する</a>
+        <button class="quiz-retry" id="qRetry">もう一度、診断してみる</button>
+      </div>
     </div>
   </div>
 </section>
@@ -732,6 +775,7 @@
         <h4>メニュー</h4>
         <ul>
           <li><a href="#problem">お悩み</a></li>
+        <li><a href="#quiz">診断</a></li>
           <li><a href="#support">解決のしかた</a></li>
           <li><a href="#plans">料金のご案内</a></li>
           <li><a href="#narrowing">選ばれる理由</a></li>
@@ -768,6 +812,146 @@
       ans.style.maxHeight = isOpen ? ans.scrollHeight + 'px' : 0;
     });
   });
+
+  // 心理診断:あなたの「動けない理由」
+  (function(){
+    const questions = [
+      {
+        text: '婚活を考えるとき、まず頭に浮かぶのは?',
+        opts: [
+          ['ちゃんと準備が整ってから始めたい', 'A'],
+          ['また断られたら、と思うと気が重い', 'B'],
+          ['そもそも何から始めればいいんだろう', 'C'],
+          ['誰かに話を聞いてほしいな', 'D'],
+          ['周りに知られたらどう思われるか気になる', 'E']
+        ]
+      },
+      {
+        text: '婚活のスタートを、つい先延ばしにしがちな理由は?',
+        opts: [
+          ['もう少し自分を整えてから', 'A'],
+          ['傷つくのが怖いから', 'B'],
+          ['やることが多すぎて、整理できないから', 'C'],
+          ['相談できる相手がいないから', 'D'],
+          ['家族や友人の反応が気になるから', 'E']
+        ]
+      },
+      {
+        text: '同年代の結婚報告を見たとき、心の中でよぎるのは?',
+        opts: [
+          ['自分もちゃんと準備してから、と思う', 'A'],
+          ['素直に喜べず、少し落ち込む', 'B'],
+          ['何から始めればあんな風になれるんだろう', 'C'],
+          ['誰かとこの気持ちを話したくなる', 'D'],
+          ['周りと比べて、つい焦ってしまう', 'E']
+        ]
+      },
+      {
+        text: '無料相談に申し込むとしたら、一番の迷いは?',
+        opts: [
+          ['まだ準備ができていない気がする', 'A'],
+          ['行ってがっかりされたら嫌だ', 'B'],
+          ['何を話せばいいのか分からない', 'C'],
+          ['一人で行くのは、少し心細い', 'D'],
+          ['誰かに知られたくない', 'E']
+        ]
+      },
+      {
+        text: '婚活で、一番あったらいいなと思うサポートは?',
+        opts: [
+          ['今の自分に何が足りないかの、明確な指針', 'A'],
+          ['否定されない、安心できる場所', 'B'],
+          ['迷わず進められる、具体的な手順', 'C'],
+          ['気軽に相談できる、話し相手', 'D'],
+          ['周りに知られず、こっそり進められる環境', 'E']
+        ]
+      }
+    ];
+
+    const results = {
+      A: {
+        tag: '石橋タイプ', title: '準備が整うのを待つ、慎重派タイプ',
+        desc: '「すべてが整ってから」と考えてしまうのは、それだけ誠実に物事へ向き合ってきた証拠です。ただ、完璧なタイミングは、待っていてもなかなか訪れません。桜暦の無料「気持ちの整理セッション」で、"今、何から始めればいいか"を一緒に絞り込むところから始めてみませんか。'
+      },
+      B: {
+        tag: '臆病タイプ', title: '失敗や拒絶が、人一倍怖く感じるタイプ',
+        desc: '経験が少ないぶん、うまくいかなかったときの痛みを大きく想像してしまうのは自然なことです。桜暦では、本番の前に会話を練習できる「模擬お見合い」で、不安を小さくしてから一歩を踏み出せます。'
+      },
+      C: {
+        tag: '迷子タイプ', title: '何をすればいいか、地図が見えないタイプ',
+        desc: '立ち止まってしまうのは、能力の問題ではなく、次に何をすべきかの地図がないだけです。桜暦は、お見合いからデートの段取りまで、すべて手順書とチェックリストでお渡しします。'
+      },
+      D: {
+        tag: 'ひとりタイプ', title: '一人で抱え込みやすい、頑張り屋タイプ',
+        desc: '相談できる相手がいないと、小さな迷いのたびに一人で立ち止まることになります。桜暦はいつも同じ担当者が伴走するので、一人で判断し続ける必要はありません。'
+      },
+      E: {
+        tag: '気配りタイプ', title: '周りの目を、大切にしすぎてしまうタイプ',
+        desc: '他人の評価を気にしてしまうのは、それだけ誠実に人と向き合ってきた証拠でもあります。桜暦は少人数制で、面談もお近くのカフェやオンラインで行うので、ご自身のペースで、周りを気にせず進められます。'
+      }
+    };
+
+    let current = 0;
+    const answers = [];
+    const qText = document.getElementById('qText');
+    const qOpts = document.getElementById('qOpts');
+    const qNum = document.getElementById('qNum');
+    const qBar = document.getElementById('qBar');
+    const qBack = document.getElementById('qBack');
+    const qPlay = document.getElementById('quizPlay');
+    const qResult = document.getElementById('qResult');
+
+    function render(){
+      const q = questions[current];
+      qText.textContent = q.text;
+      qNum.textContent = current + 1;
+      qBar.style.width = ((current + 1) / questions.length * 100) + '%';
+      qBack.style.visibility = current === 0 ? 'hidden' : 'visible';
+      qOpts.innerHTML = '';
+      q.opts.forEach(([label, type]) => {
+        const b = document.createElement('button');
+        b.className = 'quiz-opt';
+        b.textContent = label;
+        b.addEventListener('click', () => {
+          answers[current] = type;
+          if (current < questions.length - 1) {
+            current++;
+            render();
+          } else {
+            showResult();
+          }
+        });
+        qOpts.appendChild(b);
+      });
+    }
+
+    function showResult(){
+      const tally = {};
+      answers.forEach(t => { tally[t] = (tally[t] || 0) + 1; });
+      let best = 'A', max = -1;
+      Object.keys(tally).forEach(k => { if (tally[k] > max) { max = tally[k]; best = k; } });
+      const r = results[best];
+      document.getElementById('rTag').textContent = r.tag;
+      document.getElementById('rTitle').textContent = r.title;
+      document.getElementById('rDesc').textContent = r.desc;
+      qPlay.style.display = 'none';
+      qResult.style.display = 'block';
+    }
+
+    qBack.addEventListener('click', () => {
+      if (current > 0) { current--; render(); }
+    });
+
+    document.getElementById('qRetry').addEventListener('click', () => {
+      current = 0;
+      answers.length = 0;
+      qResult.style.display = 'none';
+      qPlay.style.display = 'block';
+      render();
+    });
+
+    render();
+  })();
 
   // スクロールで要素をゆっくり表示
   const io = new IntersectionObserver(entries => {
