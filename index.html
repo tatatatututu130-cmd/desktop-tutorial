@@ -19,8 +19,8 @@
     --cream:#fffdfb;
     --white:#ffffff;
     --ink:#3d3a35;
-    --ink-soft:#75706a;
-    --line:#f1e7e8;
+    --ink-soft:#5c564f;
+    --line:#e6dadb;
     --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
     --sans:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
   }
@@ -156,7 +156,7 @@
   /* ===== solution:style cards ===== */
   .style-sec{background:var(--white);}
   .style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .style-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;}
+  .style-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
   .style-card h3{font-family:var(--serif);font-size:16.5px;color:var(--sky-dark);margin-bottom:8px;line-height:1.6;}
   .style-card p{font-size:13px;color:var(--ink-soft);}
 
@@ -189,6 +189,15 @@
   .common-box{background:var(--sky-light);border-radius:16px;padding:26px 30px;font-size:13.5px;line-height:2;margin-bottom:20px;}
   .common-box strong{color:var(--sky-dark);}
   .price-note{font-size:12px;color:var(--ink-soft);}
+  .price-cards{display:none;}
+  .price-card{background:var(--cream);border:1.5px solid var(--line);border-radius:18px;padding:26px 24px;margin-bottom:16px;position:relative;}
+  .price-card.reco{border:2px solid var(--sky-dark);background:#fff;box-shadow:0 12px 30px rgba(46,111,150,.14);}
+  .price-card .pc-badge{position:absolute;top:-13px;left:20px;background:var(--sky-dark);color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:4px 14px;letter-spacing:.05em;}
+  .price-card h3{font-family:var(--serif);font-size:18px;color:var(--sky-dark);margin-bottom:8px;}
+  .price-card .pc-price{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--ink);margin-bottom:14px;}
+  .price-card .pc-price span{font-size:13px;font-family:var(--sans);color:var(--ink-soft);font-weight:400;}
+  .price-card li{font-size:13px;color:var(--ink-soft);padding:6px 0;border-bottom:1px dashed var(--line);}
+  .price-card li:last-child{border-bottom:none;}
 
   /* ===== narrowing:mimamori/vs ===== */
   .mimamori{background:var(--white);}
@@ -197,7 +206,7 @@
   .milestone .m-when{font-family:var(--serif);font-size:18px;color:var(--sky-dark);font-weight:600;margin-bottom:7px;}
   .milestone p{font-size:12px;color:var(--ink-soft);line-height:1.85;text-align:left;}
   .mimamori-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px;}
-  .mimamori-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;}
+  .mimamori-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
   .mimamori-card h3{font-family:var(--serif);font-size:16.5px;color:var(--sky-dark);margin-bottom:9px;line-height:1.6;}
   .mimamori-card p{font-size:13px;color:var(--ink-soft);}
   .mimamori-note{font-size:12px;color:var(--ink-soft);}
@@ -219,7 +228,7 @@
 
   /* ===== voice ===== */
   .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .voice-card{background:var(--white);border-radius:16px;padding:28px 26px;border:1px solid var(--line);}
+  .voice-card{background:var(--white);border-radius:16px;padding:28px 26px;border:1px solid var(--line);box-shadow:0 4px 16px rgba(55,52,46,.06);}
   .voice-card .who{font-size:11.5px;color:var(--sky-dark);font-weight:700;letter-spacing:.04em;}
   .voice-card h3{font-family:var(--serif);font-size:16px;margin:9px 0 11px;line-height:1.7;}
   .voice-card p{font-size:13px;color:var(--ink-soft);}
@@ -272,6 +281,8 @@
     .style-grid,.voice-grid,.flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:38px 26px;}
     .hero .sun{width:90px;height:90px;right:2%;top:80px;}
+    .price-table-wrap{display:none;}
+    .price-cards{display:block;}
   }
 </style>
 </head>
@@ -547,6 +558,7 @@
       <strong>全プラン共通で含まれるもの</strong><br>
       気持ちの整理セッション/プロフィール代筆/会話の練習・メッセージ添削/身だしなみのご相談/婚活作戦会議(月1回)/お見合いの日程調整/TMSスクール参加
     </div>
+    <!-- PC版:比較表 -->
     <div class="price-table-wrap reveal">
       <table class="price-table">
         <thead>
@@ -561,6 +573,40 @@
           <tr><th>おすすめの方</th><td>まず半年、試してみたい方</td><td class="reco">ご自身のペースで進めたい方</td><td>腰を据えてじっくり進めたい方(年間13,200円お得)</td></tr>
         </tbody>
       </table>
+    </div>
+    <!-- スマホ版:プランごとのカード -->
+    <div class="price-cards reveal">
+      <div class="price-card">
+        <h3>おためしプラン</h3>
+        <div class="pc-price">13,200<span>円/月</span></div>
+        <ul>
+          <li>契約期間:6ヶ月</li>
+          <li>入会金:33,000円(初回のみ)</li>
+          <li>お見合い料:0円/成婚料:165,000円</li>
+          <li>おすすめ:まず半年、試してみたい方</li>
+        </ul>
+      </div>
+      <div class="price-card reco">
+        <span class="pc-badge">迷ったら、こちら</span>
+        <h3>スタンダードプラン</h3>
+        <div class="pc-price">11,000<span>円/月</span></div>
+        <ul>
+          <li>契約期間:縛りなし(いつでも可)</li>
+          <li>入会金:33,000円(初回のみ)</li>
+          <li>お見合い料:0円/成婚料:165,000円</li>
+          <li>おすすめ:ご自身のペースで進めたい方</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>じっくりプラン</h3>
+        <div class="pc-price">9,900<span>円/月</span></div>
+        <ul>
+          <li>契約期間:12ヶ月(年間13,200円お得)</li>
+          <li>入会金:33,000円(初回のみ)</li>
+          <li>お見合い料:0円/成婚料:165,000円</li>
+          <li>おすすめ:腰を据えてじっくり進めたい方</li>
+        </ul>
+      </div>
     </div>
     <p class="price-note">※成婚料はご成婚(退会)時のみの成果報酬で、ご成婚に至らず退会される場合はかかりません。※契約期間の途中でも解約できます(法律に沿った清算のみで、違約金はありません)。※休会中の月会費は0円です。※気持ちの整理セッションは初回無料、2回目以降5,000円です。</p>
   </div>
