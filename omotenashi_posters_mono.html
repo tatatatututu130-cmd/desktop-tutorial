@@ -1,0 +1,250 @@
+<title>わたしたちのおもてなし ポスター案（白黒版）</title>
+<style>
+  :root {
+    --paper: #f5f5f5;
+    --paper-panel: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #555555;
+    --accent: #444444;
+    --accent-deep: #1a1a1a;
+    --accent-soft: #dddddd;
+    --accent-softer: #eeeeee;
+    --line: #dddddd;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: #e5e5e5;
+    color: var(--ink);
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Noto Sans JP", "Meiryo", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body { padding: 32px 16px 64px; }
+
+  .toolbar {
+    max-width: 1200px; margin: 0 auto 24px;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  .toolbar h1 { font-size: 15px; font-weight: 700; color: var(--ink-soft); margin: 0; }
+  .toolbar span { font-size: 12px; color: var(--ink-soft); opacity: 0.7; }
+
+  .row {
+    max-width: 1200px; margin: 0 auto 48px;
+    display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; align-items: flex-start;
+  }
+
+  .col { width: 480px; max-width: 100%; }
+  .col h2 {
+    font-size: 14px; font-weight: 700; color: var(--accent-deep);
+    margin: 0 0 12px; letter-spacing: 0.03em;
+  }
+  .col p.note { font-size: 12px; color: var(--ink-soft); margin: 10px 0 0; line-height: 1.7; }
+
+  .poster {
+    background: var(--paper-panel);
+    width: 480px; max-width: 100%;
+    aspect-ratio: 210 / 297;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 14px 34px rgba(0,0,0,0.14);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ===== PATTERN A: photo mosaic + one line ===== */
+
+  .mosaic {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 3px;
+  }
+
+  .mosaic .tile {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mosaic .tile::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.08);
+  }
+
+  .tile.g1 { background: linear-gradient(150deg, #d0d0d0, #8a8a8a); }
+  .tile.g2 { background: linear-gradient(150deg, #bcbcbc, #707070); }
+  .tile.g3 { background: linear-gradient(150deg, #e0e0e0, #a0a0a0); }
+  .tile.g4 { background: linear-gradient(150deg, #a8a8a8, #5a5a5a); }
+  .tile.g5 { background: linear-gradient(150deg, #dcdcdc, #989898); }
+  .tile.g6 { background: linear-gradient(150deg, #c0c0c0, #747474); }
+  .tile.g7 { background: linear-gradient(150deg, #d4d4d4, #8e8e8e); }
+
+  .mosaic .tile svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }
+
+  .scrim {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 44%;
+    background: linear-gradient(to top, rgba(0,0,0,0.78) 10%, rgba(0,0,0,0.35) 65%, rgba(0,0,0,0) 100%);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 26px 26px;
+  }
+
+  .scrim .brand {
+    font-size: 11px; color: #eeeeee; letter-spacing: 0.03em; margin: 0 0 10px;
+    font-weight: 700;
+  }
+
+  .scrim .company {
+    font-size: 10px; color: rgba(255,255,255,0.72); letter-spacing: 0.15em; margin: 10px 0 0;
+    font-weight: 700;
+  }
+
+  .scrim .headline {
+    font-size: 27px; line-height: 1.4; font-weight: 900; color: #fff;
+    margin: 0; text-wrap: balance;
+  }
+
+  .scrim .subline {
+    font-size: 14px; line-height: 1.5; font-weight: 700; color: #eeeeee;
+    margin: 8px 0 0;
+  }
+
+  .top-tag {
+    position: absolute; top: 20px; left: 20px;
+    background: rgba(255,255,255,0.92);
+    color: var(--accent-deep);
+    font-size: 11px; font-weight: 700;
+    padding: 6px 12px; border-radius: 999px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== PATTERN B: 3 pillars, essentials only ===== */
+
+  .posterB { padding: 30px 26px 26px; display: flex; flex-direction: column; }
+
+  .photo-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+    height: 76px; margin-bottom: 18px; border-radius: 3px; overflow: hidden;
+  }
+  .photo-strip .tile::after { content: ""; }
+
+  .posterB .eyebrow {
+    font-size: 10px; color: var(--accent-deep); font-weight: 700;
+    letter-spacing: 0.03em; margin: 0 0 6px;
+  }
+  .posterB .title { font-size: 27px; font-weight: 900; margin: 0 0 4px; line-height: 1.25; }
+  .posterB .sub { font-size: 11.5px; color: var(--ink-soft); margin: 0 0 20px; }
+
+  .pillars3 { display: flex; flex-direction: column; gap: 14px; flex: 1; }
+
+  .pillar-row {
+    display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start;
+  }
+
+  .p-badge {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #999999, var(--accent) 70%, var(--accent-deep));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 900; font-size: 13px; flex-shrink: 0;
+  }
+
+  .p-body h3 { font-size: 14.5px; font-weight: 800; margin: 3px 0 5px; }
+  .p-body p { font-size: 11.5px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+  .p-body .key { color: var(--accent-deep); font-weight: 700; }
+  .p-body .tag {
+    display: inline-block; font-size: 9px; font-weight: 700; color: var(--accent-deep);
+    background: var(--accent-softer); padding: 1px 7px; border-radius: 999px;
+    letter-spacing: 0.03em; margin: 0 0 4px;
+  }
+
+  .posterB .foot {
+    margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);
+    font-size: 10.5px; color: var(--ink-soft); text-align: center; letter-spacing: 0.05em;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .toolbar { display: none; }
+    .row { max-width: none; gap: 0; }
+    .col { width: 210mm; page-break-after: always; }
+    .poster { width: 210mm; aspect-ratio: auto; height: 297mm; box-shadow: none; }
+  }
+
+  @media (max-width: 1030px) {
+    .row { gap: 40px; }
+  }
+</style>
+
+<div class="toolbar">
+  <h1>わたしたちのおもてなし ── ポスター案（白黒版）</h1>
+  <span>顔写真部分はプレースホルダーです</span>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h2>パターン A ── 写真＋一言だけ</h2>
+    <div class="poster">
+      <div class="mosaic">
+        <div class="tile g1"></div><div class="tile g3"></div><div class="tile g5"></div><div class="tile g2"></div><div class="tile g6"></div>
+        <div class="tile g4"></div><div class="tile g7"></div><div class="tile g1"></div><div class="tile g5"></div><div class="tile g3"></div>
+        <div class="tile g2"></div><div class="tile g6"></div><div class="tile g4"></div><div class="tile g7"></div><div class="tile g1"></div>
+        <div class="tile g5"></div><div class="tile g3"></div><div class="tile g2"></div><div class="tile g6"></div><div class="tile g4"></div>
+        <div class="tile g7"></div><div class="tile g1"></div><div class="tile g5"></div><div class="tile g3"></div><div class="tile g2"></div>
+        <div class="tile g6"></div><div class="tile g4"></div><div class="tile g7"></div><div class="tile g1"></div><div class="tile g5"></div>
+        <div class="tile g3"></div><div class="tile g2"></div><div class="tile g6"></div><div class="tile g4"></div><div class="tile g7"></div>
+      </div>
+      <div class="top-tag">わたしたちのおもてなし</div>
+      <div class="scrim">
+        <p class="brand">JR九州グループの誓いを、現場のひとつひとつの行動に。</p>
+        <p class="headline">おもてなしは、<br>会う前から始まっている。</p>
+        <p class="subline">その先に、笑顔がある。</p>
+        <p class="company">JR九州サービスサポート</p>
+      </div>
+    </div>
+    <p class="note">従業員の笑顔写真35枚を敷き詰めた背景に、一言のコピーだけを重ねる構成。新幹線清掃で世界的に評価されたテッセイは「見えない裏方」ではなく「おもてなしの演者」を自認したことで評価された。その発想を借り、「支える」ではなく「おもてなしは、お客さまに会う前からもう始まっている」という、清掃・整備を起点に置く角度にした。笑顔はその結果。技・心・5Sの説明は書かず、写真とコピーだけで伝える。掲示・SNS向き。</p>
+  </div>
+
+  <div class="col">
+    <h2>パターン B ── 3本柱の要点だけ</h2>
+    <div class="poster posterB">
+      <div class="photo-strip">
+        <div class="tile g2"></div><div class="tile g5"></div><div class="tile g4"></div><div class="tile g7"></div>
+      </div>
+      <p class="eyebrow">JR九州グループの誓いを、現場のひとつひとつの行動に。</p>
+      <p class="title">わたしたちのおもてなし</p>
+      <p class="sub">おもてなしは、会う前から始まっている。その先に、笑顔がある。</p>
+
+      <div class="pillars3">
+        <div class="pillar-row">
+          <div class="p-badge">5S</div>
+          <div class="p-body">
+            <p class="tag">会う前から</p>
+            <h3>清めるプロとして、準備をしよう</h3>
+            <p class="key">整理・整頓・清掃・清潔・しつけ</p>
+          </div>
+        </div>
+        <div class="pillar-row">
+          <div class="p-badge">心</div>
+          <div class="p-body">
+            <p class="tag">気づかいで</p>
+            <h3>気づいて、寄り添おう</h3>
+            <p class="key">気づく → 近づく → うなづく</p>
+          </div>
+        </div>
+        <div class="pillar-row">
+          <div class="p-badge">技</div>
+          <div class="p-body">
+            <p class="tag">出会えたら</p>
+            <h3>会えたら、笑顔で。</h3>
+            <p class="key">あいさつ・身だしなみ・表情・言葉づかい</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="foot">JR九州サービスサポート ── 鉄道車両・駅ビルの清掃や点検・整備も、私たちの仕事です</p>
+    </div>
+    <p class="note">一言だけでは物足りない場合の版。3本柱の名称は「技・心・5S」とし、各柱ごとに詳細な番号リストではなく必要な要点のみを1〜2行で記載。5Sは訳語をつくらずそのまま使用。「見えない／支える」という控えめな言い方をやめ、「おもてなしは会う前から始まっている」という能動的な角度に変更。3本柱も技・心・5Sの固定順ではなく「5S（会う前から）→心（気づかいで）→技（出会えたら）」という時間の流れで並べ替えた。</p>
+  </div>
+</div>
