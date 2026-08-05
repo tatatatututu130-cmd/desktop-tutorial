@@ -70,21 +70,13 @@
   .mosaic .tile {
     position: relative;
     overflow: hidden;
+    border: 1px solid #999999;
+    background: #ffffff;
   }
 
-  .mosaic .tile::after {
-    content: "";
-    position: absolute; inset: 0;
-    background: rgba(0,0,0,0.08);
+  .tile.g1, .tile.g2, .tile.g3, .tile.g4, .tile.g5, .tile.g6, .tile.g7 {
+    background: #ffffff;
   }
-
-  .tile.g1 { background: linear-gradient(150deg, #d0d0d0, #8a8a8a); }
-  .tile.g2 { background: linear-gradient(150deg, #bcbcbc, #707070); }
-  .tile.g3 { background: linear-gradient(150deg, #e0e0e0, #a0a0a0); }
-  .tile.g4 { background: linear-gradient(150deg, #a8a8a8, #5a5a5a); }
-  .tile.g5 { background: linear-gradient(150deg, #dcdcdc, #989898); }
-  .tile.g6 { background: linear-gradient(150deg, #c0c0c0, #747474); }
-  .tile.g7 { background: linear-gradient(150deg, #d4d4d4, #8e8e8e); }
 
   .mosaic .tile svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }
 
@@ -133,7 +125,10 @@
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
     height: 76px; margin-bottom: 18px; border-radius: 3px; overflow: hidden;
   }
-  .photo-strip .tile::after { content: ""; }
+  .photo-strip .tile {
+    border: 1px solid #999999;
+    background: #ffffff;
+  }
 
   .posterB .eyebrow {
     font-size: 10px; color: var(--accent-deep); font-weight: 700;
