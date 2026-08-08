@@ -97,6 +97,8 @@
   .hero p.sub{margin:24px auto 36px;font-size:clamp(14.5px,1.7vw,16px);color:var(--ink-soft);max-width:660px;line-height:2.1;}
   .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
   .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:16px;}
+  /* 太字+下線の強調表現(Cocolabbit参考) */
+  .emphasis{font-weight:800;color:var(--sakura-dark);text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:3px;text-underline-offset:4px;}
 
   /* ===== poem(季節の詩)===== */
   .poem{background:linear-gradient(135deg,var(--sakura-light) 0%,var(--sun-light) 100%);text-align:center;padding:70px 0;}
@@ -323,7 +325,7 @@
       <a href="#quiz" class="btn btn-primary">30秒で自分のタイプを診断する</a>
       <a href="#contact" class="btn btn-ghost">無料相談を予約する</a>
     </div>
-    <p class="hero-note">初回無料・結婚したいかどうか、まだ決めていなくても大丈夫です</p>
+    <p class="hero-note"><span class="emphasis">初回無料</span>・結婚したいかどうか、まだ決めていなくても大丈夫です</p>
   </div>
 </section>
 
@@ -570,7 +572,7 @@
           <tr><th>入会金</th><td colspan="3">33,000円(全プラン共通・ご入会のときに一度だけ)</td></tr>
           <tr><th>お見合い料</th><td colspan="3">0円(何度でも無料)</td></tr>
           <tr><th>成婚料</th><td colspan="3">165,000円(ご成婚が決まったときだけ)</td></tr>
-          <tr><th>おすすめの方</th><td>まず半年、試してみたい方</td><td class="reco">ご自身のペースで進めたい方</td><td>腰を据えてじっくり進めたい方(年間13,200円お得)</td></tr>
+          <tr><th>おすすめの方</th><td>まず半年、試してみたい方</td><td class="reco">ご自身のペースで進めたい方</td><td>腰を据えてじっくり進めたい方(<span class="emphasis">年間13,200円お得</span>)</td></tr>
         </tbody>
       </table>
     </div>
@@ -601,7 +603,7 @@
         <h3>じっくりプラン</h3>
         <div class="pc-price">9,900<span>円/月</span></div>
         <ul>
-          <li>契約期間:12ヶ月(年間13,200円お得)</li>
+          <li>契約期間:12ヶ月(<span class="emphasis">年間13,200円お得</span>)</li>
           <li>入会金:33,000円(初回のみ)</li>
           <li>お見合い料:0円/成婚料:165,000円</li>
           <li>おすすめ:腰を据えてじっくり進めたい方</li>
