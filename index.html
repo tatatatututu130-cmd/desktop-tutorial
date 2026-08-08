@@ -7,20 +7,20 @@
 <meta name="description" content="初めての婚活「専門」の結婚相談所 桜暦(さくらごよみ)。結婚したいかどうか、まだ決めていなくても大丈夫。無料の気持ちの整理セッションから会話やデートの準備まで一緒に。ご成婚後も見守り続けます。福岡発、オンラインで全国対応。">
 <style>
   :root{
-    --sky:#5aa8cf;
-    --sky-dark:#2e6f96;
-    --sky-light:#eaf7fc;
-    --sun:#f4c765;
-    --sun-light:#fdf6df;
-    --sakura:#f4839f;
-    --sakura-dark:#e2577c;
-    --sakura-light:#fdedf1;
-    --terra-dark:#c95573;
-    --cream:#fffdfb;
+    --sky:#3d84ab;
+    --sky-dark:#245a7d;
+    --sky-light:#eaf2f4;
+    --sun:#e0ac3f;
+    --sun-light:#fbf1dc;
+    --sakura:#d9718c;
+    --sakura-dark:#c14d6d;
+    --sakura-light:#faeaee;
+    --terra-dark:#b0693f;
+    --cream:#fdf9f4;
     --white:#ffffff;
-    --ink:#3d3a35;
-    --ink-soft:#5c564f;
-    --line:#e6dadb;
+    --ink:#332f2a;
+    --ink-soft:#59534c;
+    --line:#e6ddd6;
     --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
     --sans:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
   }
@@ -32,7 +32,7 @@
   .inner{max-width:1060px;margin:0 auto;padding:0 24px;}
   section{padding:88px 0;}
   .sec-label{display:block;font-size:12.5px;letter-spacing:.28em;color:var(--sky-dark);font-weight:700;margin-bottom:16px;}
-  .sec-title{font-family:var(--serif);font-size:clamp(24px,3.6vw,34px);font-weight:600;line-height:1.65;margin-bottom:20px;letter-spacing:.03em;}
+  .sec-title{font-family:var(--serif);font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.6;margin-bottom:20px;letter-spacing:.02em;text-wrap:balance;}
   .sec-title .marker{background:linear-gradient(transparent 68%,var(--sun) 68%);}
   .sec-lead{color:var(--ink-soft);max-width:700px;margin-bottom:44px;font-size:15px;}
   .btn{display:inline-block;padding:17px 44px;border-radius:999px;font-weight:700;letter-spacing:.08em;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;font-size:15px;}
@@ -100,13 +100,8 @@
   /* 太字+下線の強調表現(Cocolabbit参考) */
   .emphasis{font-weight:800;color:var(--sakura-dark);text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:3px;text-underline-offset:4px;}
 
-  /* ===== poem(季節の詩)===== */
-  .poem{background:linear-gradient(135deg,var(--sakura-light) 0%,var(--sun-light) 100%);text-align:center;padding:70px 0;}
-  .poem-text{font-family:var(--serif);font-size:clamp(15px,2vw,18.5px);line-height:2.3;color:var(--sky-dark);max-width:620px;margin:0 auto;letter-spacing:.03em;}
-  .poem-mark{font-family:var(--serif);font-size:20px;color:var(--sakura-dark);display:block;margin-bottom:18px;letter-spacing:.3em;}
-
   /* ===== facts(A:共感の事実)===== */
-  .facts{background:linear-gradient(135deg,#5aa8cf 0%,#2e6f96 100%);color:#fff;padding:60px 0;}
+  .facts{background:linear-gradient(135deg,var(--sky) 0%,var(--sky-dark) 100%);color:#fff;padding:60px 0;}
   .facts h2{font-family:var(--serif);text-align:center;font-size:clamp(17px,2.2vw,21px);font-weight:600;margin-bottom:40px;letter-spacing:.06em;}
   .facts .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center;}
   .fact .num{font-family:var(--serif);font-size:clamp(26px,3.6vw,38px);font-weight:600;line-height:1.3;color:var(--sun);}
@@ -155,13 +150,6 @@
   .letter-box p strong{color:var(--sky-dark);}
   .letter-box .sign{text-align:right;font-family:var(--serif);font-size:13.5px;color:var(--ink-soft);margin-top:26px;margin-bottom:0;}
 
-  /* ===== solution:style cards ===== */
-  .style-sec{background:var(--white);}
-  .style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .style-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
-  .style-card h3{font-family:var(--serif);font-size:16.5px;color:var(--sky-dark);margin-bottom:8px;line-height:1.6;}
-  .style-card p{font-size:13px;color:var(--ink-soft);}
-
   /* ===== solution:why(準備の中身)===== */
   .why{background:var(--cream);}
   .why-box{max-width:740px;margin:0 auto;}
@@ -203,10 +191,13 @@
 
   /* ===== narrowing:mimamori/vs ===== */
   .mimamori{background:var(--white);}
-  .milestones{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;}
-  .milestone{background:var(--sky-light);border-radius:14px;padding:22px 16px;text-align:center;}
-  .milestone .m-when{font-family:var(--serif);font-size:18px;color:var(--sky-dark);font-weight:600;margin-bottom:7px;}
-  .milestone p{font-size:12px;color:var(--ink-soft);line-height:1.85;text-align:left;}
+  /* 暦(こよみ)の一枚をイメージした、破り取りカレンダー風カード */
+  .milestones{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;counter-reset:leaf;}
+  .milestone{background:var(--cream);border:1px solid var(--line);border-radius:5px 5px 12px 12px;text-align:center;overflow:hidden;box-shadow:0 8px 20px rgba(51,47,42,.09);position:relative;}
+  .milestone .m-when{counter-increment:leaf;display:block;background:var(--sky-dark);color:#fff;font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.04em;padding:14px 0 16px;margin-bottom:18px;position:relative;}
+  .milestone .m-when::before{content:"leaf." counter(leaf);position:absolute;top:5px;left:0;right:0;font-family:var(--sans);font-size:8.5px;letter-spacing:.24em;color:rgba(255,255,255,.55);font-weight:700;}
+  .milestone .m-when::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:9px;background-image:radial-gradient(circle,var(--cream) 3.6px,transparent 4px);background-size:15px 9px;background-position:7.5px 0;background-repeat:repeat-x;}
+  .milestone p{font-size:12px;color:var(--ink-soft);line-height:1.85;text-align:left;padding:0 16px 20px;}
   .mimamori-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px;}
   .mimamori-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
   .mimamori-card h3{font-family:var(--serif);font-size:16.5px;color:var(--sky-dark);margin-bottom:9px;line-height:1.6;}
@@ -268,7 +259,7 @@
 
   /* ===== responsive ===== */
   @media(max-width:900px){
-    .style-grid,.voice-grid,.milestones,.mimamori-grid{grid-template-columns:1fr 1fr;}
+    .voice-grid,.milestones,.mimamori-grid{grid-template-columns:1fr 1fr;}
     .vs-cards{grid-template-columns:1fr;}
     .flow-steps{grid-template-columns:1fr 1fr;}
     .facts .grid{grid-template-columns:1fr;gap:28px;}
@@ -280,7 +271,7 @@
     nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:22px;gap:16px;border-bottom:1px solid var(--line);align-items:flex-start;}
     nav.open ul{display:flex;}
     .menu-btn{display:block;}
-    .style-grid,.voice-grid,.flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
+    .voice-grid,.flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:38px 26px;}
     .hero .sun{width:90px;height:90px;right:2%;top:80px;}
     .price-table-wrap{display:none;}
