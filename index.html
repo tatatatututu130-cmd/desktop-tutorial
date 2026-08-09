@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>福岡の結婚相談所 桜暦(さくらごよみ)|初めての婚活専門</title>
 <meta name="description" content="初めての婚活「専門」の結婚相談所 桜暦(さくらごよみ)。結婚したいかどうか、まだ決めていなくても大丈夫。無料の気持ちの整理セッションから会話やデートの準備まで一緒に。ご成婚後も見守り続けます。福岡発、オンラインで全国対応。">
+<link rel="icon" type="image/jpeg" href="images/logo-mark.jpg">
 <style>
   :root{
     --sky:#3d84ab;
@@ -67,7 +68,8 @@
   .logo{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--sky-dark);letter-spacing:.06em;}
   .logo-mark{display:flex;align-items:center;}
   .logo-img{height:40px;width:auto;display:block;}
-  footer .logo-mark{background:#fff;display:inline-flex;padding:10px 18px;border-radius:12px;}
+  .logo-img-square{height:64px;}
+  footer .logo-mark{background:#fff;display:inline-flex;padding:12px;border-radius:12px;}
   .logo small{font-size:10px;color:var(--ink-soft);display:block;letter-spacing:.1em;font-family:var(--sans);font-weight:700;line-height:1.5;}
   nav ul{display:flex;gap:18px;align-items:center;font-size:12.5px;font-weight:600;flex-wrap:wrap;}
   nav a:hover{color:var(--sky-dark);}
@@ -76,8 +78,13 @@
   .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--sky-dark);cursor:pointer;}
 
   /* ===== hero ===== */
-  .hero{padding:170px 0 0;background:linear-gradient(180deg,rgba(36,90,125,.62) 0%,rgba(193,77,109,.5) 48%,var(--cream) 92%),url('images/couple-photo.png') center 32%/cover no-repeat;position:relative;overflow:hidden;text-align:center;}
+  .hero{padding:170px 0 0;background:linear-gradient(180deg,rgba(36,90,125,.32) 0%,rgba(193,77,109,.28) 48%,var(--cream) 92%),url('images/couple-photo.png') center 32%/cover no-repeat;position:relative;overflow:hidden;text-align:center;}
   .hero .petal{position:absolute;top:-40px;width:20px;height:20px;border-radius:65% 0 65% 0;opacity:.85;pointer-events:none;animation:petalfall linear infinite;}
+  .hero-textbox{background:rgba(15,26,35,.52);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:32px;padding:48px 40px 40px;display:inline-block;max-width:720px;}
+  .hero .btn-ghost{color:#fff;border-color:#fff;}
+  .hero .btn-ghost:hover{background:#fff;color:var(--sky-dark);}
+  .hero .hero-note{color:#fff;text-shadow:0 2px 10px rgba(15,26,35,.55);}
+  .hero .hero-note .emphasis{color:var(--sun);text-decoration-color:#fff;}
   .hero .petal.pink{background:radial-gradient(circle at 30% 30%,#ffd9e4,#f6a9be);}
   .hero .petal.gold{background:radial-gradient(circle at 30% 30%,#fbecc4,#eecf8f);}
   .hero .p1{left:8%;animation-duration:11s;animation-delay:0s;}
@@ -275,9 +282,11 @@
     .menu-btn{display:block;}
     .voice-grid,.flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:38px 26px;}
+    .hero-textbox{padding:32px 22px 26px;border-radius:24px;}
     .price-table-wrap{display:none;}
     .price-cards{display:block;}
     .logo-img{height:32px;}
+    .logo-img-square{height:48px;}
   }
 </style>
 </head>
@@ -312,14 +321,16 @@
   <div class="petal gold p4"></div>
   <div class="petal pink p5"></div>
   <div class="inner">
-    <span class="hero-kicker">初めての婚活、専門。</span>
-    <h1>後悔しない一歩を、<br><span class="marker">桜暦と。</span></h1>
-    <p class="decl">動けない理由を、一緒に見つけて、なくしていく。</p>
-    <div class="hero-btns">
-      <a href="#quiz" class="btn btn-primary">30秒で自分のタイプを診断する</a>
-      <a href="#contact" class="btn btn-ghost">無料相談を予約する</a>
+    <div class="hero-textbox">
+      <span class="hero-kicker">初めての婚活、専門。</span>
+      <h1>後悔しない一歩を、<br><span class="marker">桜暦と。</span></h1>
+      <p class="decl">動けない理由を、一緒に見つけて、なくしていく。</p>
+      <div class="hero-btns">
+        <a href="#quiz" class="btn btn-primary">30秒で自分のタイプを診断する</a>
+        <a href="#contact" class="btn btn-ghost">無料相談を予約する</a>
+      </div>
     </div>
-    <p class="hero-note"><span class="emphasis">初回無料</span>・結婚したいかどうか、まだ決めていなくても大丈夫です</p>
+    <p class="hero-note" style="margin-top:22px;"><span class="emphasis">初回無料</span>・結婚したいかどうか、まだ決めていなくても大丈夫です</p>
   </div>
 </section>
 
@@ -736,7 +747,7 @@
     <div class="foot-grid">
       <div>
         <div class="logo-mark" style="margin-bottom:14px;">
-          <img src="images/logo-horizontal.jpg" alt="結婚相談所 桜暦(さくらごよみ)" class="logo-img">
+          <img src="images/logo-mark.jpg" alt="結婚相談所 桜暦(さくらごよみ)" class="logo-img logo-img-square">
         </div>
         <p>初めての婚活「専門」。何歳からでも、始められます。<br>桜は、出会いと始まりの花。暦は、その人に合ったペースで進む知恵。<br>あなただけの、花咲く季節をめくっていく相談所です。<br>TMS(全国結婚相談事業者連盟)加盟</p>
       </div>
