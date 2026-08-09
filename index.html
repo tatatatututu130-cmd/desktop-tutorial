@@ -65,12 +65,9 @@
   header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,253,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .head-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
   .logo{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--sky-dark);letter-spacing:.06em;}
-  .logo-mark{display:flex;align-items:center;gap:12px;}
-  .logo-mark svg{flex-shrink:0;height:38px;width:auto;}
-  .logo-mark .lm-text{display:flex;flex-direction:column;line-height:1.3;}
-  .logo-mark .lm-jp{font-family:var(--serif);font-size:14px;font-weight:700;color:#8a6a4e;letter-spacing:.04em;}
-  .logo-mark .lm-yomi{font-family:var(--serif);font-size:18px;font-weight:700;color:#8a6a4e;letter-spacing:.06em;}
-  footer .logo-mark .lm-jp,footer .logo-mark .lm-yomi{color:#f0e9e2;}
+  .logo-mark{display:flex;align-items:center;}
+  .logo-img{height:40px;width:auto;display:block;}
+  footer .logo-mark{background:#fff;display:inline-flex;padding:10px 18px;border-radius:12px;}
   .logo small{font-size:10px;color:var(--ink-soft);display:block;letter-spacing:.1em;font-family:var(--sans);font-weight:700;line-height:1.5;}
   nav ul{display:flex;gap:18px;align-items:center;font-size:12.5px;font-weight:600;flex-wrap:wrap;}
   nav a:hover{color:var(--sky-dark);}
@@ -79,8 +76,7 @@
   .menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--sky-dark);cursor:pointer;}
 
   /* ===== hero ===== */
-  .hero{padding:170px 0 0;background:linear-gradient(180deg,#dcf0fa 0%,#fbe3ec 55%,var(--cream) 90%);position:relative;overflow:hidden;text-align:center;}
-  .hero .sun{position:absolute;top:100px;right:6%;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fbe6b0 0%,#fbe6b0 42%,rgba(251,230,176,0) 72%);pointer-events:none;}
+  .hero{padding:170px 0 0;background:linear-gradient(180deg,rgba(36,90,125,.62) 0%,rgba(193,77,109,.5) 48%,var(--cream) 92%),url('images/couple-photo.png') center 32%/cover no-repeat;position:relative;overflow:hidden;text-align:center;}
   .hero .petal{position:absolute;top:-40px;width:20px;height:20px;border-radius:65% 0 65% 0;opacity:.85;pointer-events:none;animation:petalfall linear infinite;}
   .hero .petal.pink{background:radial-gradient(circle at 30% 30%,#ffd9e4,#f6a9be);}
   .hero .petal.gold{background:radial-gradient(circle at 30% 30%,#fbecc4,#eecf8f);}
@@ -97,9 +93,9 @@
   @media (prefers-reduced-motion: reduce){.hero .petal{animation:none;opacity:.3;top:30%;}}
   .hero .inner{position:relative;z-index:1;padding-bottom:96px;}
   .hero-kicker{display:inline-block;background:var(--sky-dark);color:#fff;border-radius:999px;padding:8px 22px;font-size:12.5px;font-weight:700;letter-spacing:.1em;margin-bottom:30px;box-shadow:0 4px 14px rgba(46,111,150,.2);}
-  .hero h1{font-family:var(--serif);font-size:clamp(42px,9vw,74px);font-weight:700;line-height:1.35;letter-spacing:.03em;color:var(--sky-dark);text-wrap:balance;}
+  .hero h1{font-family:var(--serif);font-size:clamp(42px,9vw,74px);font-weight:700;line-height:1.35;letter-spacing:.03em;color:#fff;text-wrap:balance;text-shadow:0 3px 18px rgba(20,30,40,.35);}
   .hero h1 .marker{background:linear-gradient(transparent 70%,var(--sun) 70%);}
-  .hero .decl{font-family:var(--serif);font-size:clamp(16px,2.2vw,20px);color:var(--sakura-dark);margin-top:24px;letter-spacing:.08em;line-height:1.9;font-weight:600;}
+  .hero .decl{font-family:var(--serif);font-size:clamp(16px,2.2vw,20px);color:#fff;margin-top:24px;letter-spacing:.08em;line-height:1.9;font-weight:600;text-shadow:0 2px 14px rgba(20,30,40,.4);}
   .hero p.sub{margin:24px auto 36px;font-size:clamp(14.5px,1.7vw,16px);color:var(--ink-soft);max-width:660px;line-height:2.1;}
   .hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
   .hero-note{font-size:12.5px;color:var(--ink-soft);margin-top:16px;}
@@ -279,9 +275,9 @@
     .menu-btn{display:block;}
     .voice-grid,.flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:38px 26px;}
-    .hero .sun{width:90px;height:90px;right:2%;top:80px;}
     .price-table-wrap{display:none;}
     .price-cards{display:block;}
+    .logo-img{height:32px;}
   }
 </style>
 </head>
@@ -290,27 +286,7 @@
 <header>
   <div class="head-inner">
     <a href="#top" class="logo-mark">
-      <svg viewBox="0 0 100 100" aria-hidden="true">
-        <path d="M28 6 Q40 20 31 40 Q17 31 19 13 Q21 7 28 6 Z" fill="#e2789e"/>
-        <g fill="none" stroke="#8a6a4e" stroke-width="7">
-          <circle cx="52" cy="36" r="16"/>
-          <circle cx="68" cy="52" r="16"/>
-          <circle cx="52" cy="68" r="16"/>
-          <circle cx="36" cy="52" r="16"/>
-          <circle cx="52" cy="52" r="16"/>
-        </g>
-        <g fill="none" stroke="#f0a8c0" stroke-width="3">
-          <circle cx="52" cy="36" r="16"/>
-          <circle cx="68" cy="52" r="16"/>
-          <circle cx="52" cy="68" r="16"/>
-          <circle cx="36" cy="52" r="16"/>
-          <circle cx="52" cy="52" r="16"/>
-        </g>
-      </svg>
-      <span class="lm-text">
-        <span class="lm-jp">結婚相談所 桜暦</span>
-        <span class="lm-yomi">さくらごよみ</span>
-      </span>
+      <img src="images/logo-horizontal.jpg" alt="結婚相談所 桜暦(さくらごよみ)" class="logo-img">
     </a>
     <nav id="nav">
       <ul>
@@ -330,7 +306,6 @@
 
 <!-- ===== HERO(短く・要点だけ) ===== -->
 <section class="hero" id="top">
-  <div class="sun"></div>
   <div class="petal pink p1"></div>
   <div class="petal gold p2"></div>
   <div class="petal pink p3"></div>
@@ -761,27 +736,7 @@
     <div class="foot-grid">
       <div>
         <div class="logo-mark" style="margin-bottom:14px;">
-          <svg viewBox="0 0 100 100" aria-hidden="true">
-            <path d="M28 6 Q40 20 31 40 Q17 31 19 13 Q21 7 28 6 Z" fill="#e2789e"/>
-            <g fill="none" stroke="#c9ab8e" stroke-width="7">
-              <circle cx="52" cy="36" r="16"/>
-              <circle cx="68" cy="52" r="16"/>
-              <circle cx="52" cy="68" r="16"/>
-              <circle cx="36" cy="52" r="16"/>
-              <circle cx="52" cy="52" r="16"/>
-            </g>
-            <g fill="none" stroke="#f0a8c0" stroke-width="3">
-              <circle cx="52" cy="36" r="16"/>
-              <circle cx="68" cy="52" r="16"/>
-              <circle cx="52" cy="68" r="16"/>
-              <circle cx="36" cy="52" r="16"/>
-              <circle cx="52" cy="52" r="16"/>
-            </g>
-          </svg>
-          <span class="lm-text">
-            <span class="lm-jp">結婚相談所 桜暦</span>
-            <span class="lm-yomi">さくらごよみ</span>
-          </span>
+          <img src="images/logo-horizontal.jpg" alt="結婚相談所 桜暦(さくらごよみ)" class="logo-img">
         </div>
         <p>初めての婚活「専門」。何歳からでも、始められます。<br>桜は、出会いと始まりの花。暦は、その人に合ったペースで進む知恵。<br>あなただけの、花咲く季節をめくっていく相談所です。<br>TMS(全国結婚相談事業者連盟)加盟</p>
       </div>
