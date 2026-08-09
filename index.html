@@ -65,6 +65,12 @@
   header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,253,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .head-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
   .logo{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--sky-dark);letter-spacing:.06em;}
+  .logo-mark{display:flex;align-items:center;gap:12px;}
+  .logo-mark svg{flex-shrink:0;height:38px;width:auto;}
+  .logo-mark .lm-text{display:flex;flex-direction:column;line-height:1.3;}
+  .logo-mark .lm-jp{font-family:var(--serif);font-size:14px;font-weight:700;color:#8a6a4e;letter-spacing:.04em;}
+  .logo-mark .lm-yomi{font-family:var(--serif);font-size:18px;font-weight:700;color:#8a6a4e;letter-spacing:.06em;}
+  footer .logo-mark .lm-jp,footer .logo-mark .lm-yomi{color:#f0e9e2;}
   .logo small{font-size:10px;color:var(--ink-soft);display:block;letter-spacing:.1em;font-family:var(--sans);font-weight:700;line-height:1.5;}
   nav ul{display:flex;gap:18px;align-items:center;font-size:12.5px;font-weight:600;flex-wrap:wrap;}
   nav a:hover{color:var(--sky-dark);}
@@ -283,7 +289,29 @@
 
 <header>
   <div class="head-inner">
-    <a href="#top" class="logo">結婚相談所 桜暦<small>さくらごよみ|初めての婚活「専門」・福岡</small></a>
+    <a href="#top" class="logo-mark">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M28 6 Q40 20 31 40 Q17 31 19 13 Q21 7 28 6 Z" fill="#e2789e"/>
+        <g fill="none" stroke="#8a6a4e" stroke-width="7">
+          <circle cx="52" cy="36" r="16"/>
+          <circle cx="68" cy="52" r="16"/>
+          <circle cx="52" cy="68" r="16"/>
+          <circle cx="36" cy="52" r="16"/>
+          <circle cx="52" cy="52" r="16"/>
+        </g>
+        <g fill="none" stroke="#f0a8c0" stroke-width="3">
+          <circle cx="52" cy="36" r="16"/>
+          <circle cx="68" cy="52" r="16"/>
+          <circle cx="52" cy="68" r="16"/>
+          <circle cx="36" cy="52" r="16"/>
+          <circle cx="52" cy="52" r="16"/>
+        </g>
+      </svg>
+      <span class="lm-text">
+        <span class="lm-jp">結婚相談所 桜暦</span>
+        <span class="lm-yomi">さくらごよみ</span>
+      </span>
+    </a>
     <nav id="nav">
       <ul>
         <li><a href="#quiz">診断</a></li>
@@ -732,7 +760,29 @@
   <div class="inner">
     <div class="foot-grid">
       <div>
-        <div class="logo">結婚相談所 桜暦(さくらごよみ)</div>
+        <div class="logo-mark" style="margin-bottom:14px;">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M28 6 Q40 20 31 40 Q17 31 19 13 Q21 7 28 6 Z" fill="#e2789e"/>
+            <g fill="none" stroke="#c9ab8e" stroke-width="7">
+              <circle cx="52" cy="36" r="16"/>
+              <circle cx="68" cy="52" r="16"/>
+              <circle cx="52" cy="68" r="16"/>
+              <circle cx="36" cy="52" r="16"/>
+              <circle cx="52" cy="52" r="16"/>
+            </g>
+            <g fill="none" stroke="#f0a8c0" stroke-width="3">
+              <circle cx="52" cy="36" r="16"/>
+              <circle cx="68" cy="52" r="16"/>
+              <circle cx="52" cy="68" r="16"/>
+              <circle cx="36" cy="52" r="16"/>
+              <circle cx="52" cy="52" r="16"/>
+            </g>
+          </svg>
+          <span class="lm-text">
+            <span class="lm-jp">結婚相談所 桜暦</span>
+            <span class="lm-yomi">さくらごよみ</span>
+          </span>
+        </div>
         <p>初めての婚活「専門」。何歳からでも、始められます。<br>桜は、出会いと始まりの花。暦は、その人に合ったペースで進む知恵。<br>あなただけの、花咲く季節をめくっていく相談所です。<br>TMS(全国結婚相談事業者連盟)加盟</p>
       </div>
       <div>
