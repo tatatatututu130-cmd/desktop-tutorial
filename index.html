@@ -83,9 +83,9 @@
 
   /* ===== hero:テキストと写真の非対称な見開き構成 ===== */
   .hero{background:var(--cream);position:relative;overflow:hidden;padding-top:96px;}
-  .hero-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch;gap:8px;}
-  .hero-copy{padding:100px 40px 64px 24px;display:flex;flex-direction:column;justify-content:center;text-align:left;position:relative;z-index:2;max-width:560px;}
-  .hero-photo-wrap{display:flex;align-items:flex-end;justify-content:center;padding:0 32px 64px 8px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:8px;}
+  .hero-copy{padding:100px 40px 100px max(24px, calc((100vw - 1060px) / 2 + 24px));display:flex;flex-direction:column;justify-content:center;text-align:left;position:relative;z-index:2;max-width:560px;}
+  .hero-photo-wrap{display:flex;align-items:center;justify-content:center;padding:40px 40px 40px 8px;}
   .hero-photo{position:relative;width:100%;max-width:480px;aspect-ratio:1366/768;border-radius:3px;overflow:hidden;box-shadow:0 34px 64px -22px rgba(40,34,26,.4),0 12px 26px rgba(40,34,26,.14);transform:rotate(-2deg);border:12px solid #fff;}
   .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;}
   .hero .petal{position:absolute;top:-40px;width:20px;height:20px;border-radius:65% 0 65% 0;opacity:.7;pointer-events:none;animation:petalfall linear infinite;z-index:3;}
