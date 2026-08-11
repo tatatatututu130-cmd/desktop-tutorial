@@ -188,6 +188,10 @@
   .price-table td.reco{background:var(--sky-light);font-weight:700;}
   .price-table .big{font-family:var(--serif);font-size:19px;color:var(--sky-dark);}
   .price-table .best{color:var(--sky-dark);}
+  .price-table .dual{display:block;}
+  .price-table .dual + .dual{margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);}
+  .price-table .dur{font-family:var(--sans);font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:4px;}
+  .price-table .save{font-family:var(--sans);font-size:11px;color:var(--sakura-dark);font-weight:700;margin-left:4px;}
   .price-note{font-size:12px;color:var(--ink-soft);}
   .price-cards{display:none;}
   .price-card{background:var(--cream);border:1.5px solid var(--line);border-radius:18px;padding:26px 24px;margin-bottom:16px;position:relative;box-shadow:0 4px 16px rgba(55,52,46,.06);}
@@ -561,10 +565,11 @@
           <tr><th>コース</th><th>①婚活準備コース</th><th class="reco">②婚活サポートコース</th><th>③成婚を目指す本格コース</th></tr>
         </thead>
         <tbody>
-          <tr><th>主な内容</th><td>恋愛相談・プロフィール相談・コミュニケーション相談</td><td class="reco">お見合いサポート・定期面談・LINE相談</td><td>お見合い〜成婚までの本格伴走</td></tr>
-          <tr><th>入会金/初期費用</th><td>11,000円</td><td class="reco">55,000円</td><td>88,000円〜110,000円</td></tr>
-          <tr><th>月額</th><td class="big">5,500円</td><td class="reco big best">11,000円</td><td class="big">11,000円〜16,500円</td></tr>
-          <tr><th>成婚料</th><td>なし</td><td class="reco">なし</td><td>165,000円〜220,000円</td></tr>
+          <tr><th>主な内容</th><td>恋愛相談・プロフィール相談・コミュニケーション相談<br><span class="dur">※お見合いシステム(お相手検索)は含みません</span></td><td class="reco">お見合いサポート・定期面談・LINE相談</td><td>お見合い〜成婚までの本格伴走</td></tr>
+          <tr><th>契約期間</th><td>縛りなし(いつでも解約可)</td><td class="reco">縛りなし(いつでも解約可)</td><td>6ヶ月(お試し)/12ヶ月(お得)から選択</td></tr>
+          <tr><th>入会金/初期費用</th><td>11,000円</td><td class="reco">55,000円</td><td><span class="dual">110,000円<span class="dur">6ヶ月</span></span><span class="dual">88,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
+          <tr><th>月額</th><td class="big">5,500円</td><td class="reco big best">11,000円</td><td class="big"><span class="dual">16,500円<span class="dur">6ヶ月</span></span><span class="dual">11,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
+          <tr><th>成婚料</th><td>なし</td><td class="reco">なし</td><td><span class="dual">220,000円<span class="dur">6ヶ月</span></span><span class="dual">165,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
           <tr><th>おすすめの方</th><td>結婚相談所はまだ早い、まず話すことから始めたい方</td><td class="reco">出会いの場は欲しいが、じっくり関係を築きたい方</td><td>本気で成婚を目指したい方</td></tr>
         </tbody>
       </table>
@@ -575,7 +580,8 @@
         <h3>①婚活準備コース</h3>
         <div class="pc-price">5,500<span>円/月</span></div>
         <ul>
-          <li>内容:恋愛相談・プロフィール相談・コミュニケーション相談</li>
+          <li>内容:恋愛相談・プロフィール相談・コミュニケーション相談(お見合いシステムは含みません)</li>
+          <li>契約:縛りなし(いつでも解約可)</li>
           <li>入会金:11,000円(初回のみ)</li>
           <li>成婚料:なし</li>
           <li>おすすめ:結婚相談所はまだ早い、まず話すことから始めたい方</li>
@@ -587,6 +593,7 @@
         <div class="pc-price">11,000<span>円/月</span></div>
         <ul>
           <li>内容:お見合いサポート・定期面談・LINE相談</li>
+          <li>契約:縛りなし(いつでも解約可)</li>
           <li>初期費用:55,000円(初回のみ)</li>
           <li>成婚料:なし</li>
           <li>おすすめ:出会いの場は欲しいが、じっくり関係を築きたい方</li>
@@ -597,13 +604,14 @@
         <div class="pc-price">11,000<span>〜16,500円/月</span></div>
         <ul>
           <li>内容:お見合い〜成婚までの本格伴走</li>
-          <li>初期費用:88,000円〜110,000円(初回のみ)</li>
-          <li>成婚料:165,000円〜220,000円</li>
+          <li>契約:6ヶ月(お試し)16,500円/月・初期費用110,000円</li>
+          <li>契約:12ヶ月(お得)11,000円/月・初期費用88,000円</li>
+          <li>成婚料:6ヶ月=220,000円/12ヶ月=165,000円</li>
           <li>おすすめ:本気で成婚を目指したい方</li>
         </ul>
       </div>
     </div>
-    <p class="price-note">※コースはいつでも上位コースへ切り替えできます。下位コースへは戻れません。※③の初期費用・月額は契約期間により異なります(詳細は無料相談でご案内します)。※成婚料はご成婚(退会)時のみの成果報酬で、ご成婚に至らず退会される場合はかかりません。※契約期間の途中でも解約できます(法律に沿った清算のみで、違約金はありません)。※気持ちの整理セッションは初回無料、2回目以降5,000円です。</p>
+    <p class="price-note">※コースはいつでも上位コースへ切り替えできます。下位コースへは戻れません。※③は6ヶ月からお試しいただけます。12ヶ月契約は入会金・月額・成婚料のすべてが割安になります。※成婚料はご成婚(退会)時のみの成果報酬で、ご成婚に至らず退会される場合はかかりません。※契約期間の途中でも解約できます(法律に沿った清算のみで、違約金はありません)。※気持ちの整理セッションは初回無料、2回目以降5,000円です。</p>
   </div>
 </section>
 
