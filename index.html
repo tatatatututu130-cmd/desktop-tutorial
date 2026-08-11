@@ -212,7 +212,7 @@
   .milestone .m-when::before{content:"leaf." counter(leaf);position:absolute;top:5px;left:0;right:0;font-family:var(--sans);font-size:8.5px;letter-spacing:.24em;color:rgba(255,255,255,.55);font-weight:700;}
   .milestone .m-when::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:9px;background-image:radial-gradient(circle,var(--cream) 3.6px,transparent 4px);background-size:15px 9px;background-position:7.5px 0;background-repeat:repeat-x;}
   .milestone p{font-size:12px;color:var(--ink-soft);line-height:1.85;text-align:left;padding:0 16px 20px;}
-  .mimamori-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px;}
+  .mimamori-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:22px;max-width:680px;}
   .mimamori-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
   .mimamori-card h3{font-family:var(--sans);font-weight:700;font-size:15.5px;color:var(--sky-dark);margin-bottom:9px;line-height:1.6;}
   .mimamori-card p{font-size:13px;color:var(--ink-soft);}
@@ -233,12 +233,6 @@
   .vs-note{background:var(--sun-light);border-radius:16px;padding:26px 30px;font-size:14px;line-height:2;}
   .vs-note strong{color:var(--sky-dark);}
 
-  /* ===== voice ===== */
-  .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .voice-card{background:var(--white);border-radius:16px;padding:28px 26px;border:1px solid var(--line);box-shadow:0 4px 16px rgba(55,52,46,.06);}
-  .voice-card .who{font-size:11.5px;color:var(--sky-dark);font-weight:700;letter-spacing:.04em;}
-  .voice-card h3{font-family:var(--sans);font-weight:700;font-size:15px;margin:9px 0 11px;line-height:1.7;}
-  .voice-card p{font-size:13px;color:var(--ink-soft);}
 
   /* ===== faq ===== */
   .faq-sec{background:var(--sky-light);}
@@ -273,7 +267,7 @@
 
   /* ===== responsive ===== */
   @media(max-width:900px){
-    .voice-grid,.milestones,.mimamori-grid{grid-template-columns:1fr 1fr;}
+    .milestones{grid-template-columns:1fr 1fr;}
     .vs-cards{grid-template-columns:1fr;}
     .flow-steps{grid-template-columns:1fr 1fr;}
     .facts .grid{grid-template-columns:1fr;gap:36px;}
@@ -291,7 +285,7 @@
     nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:22px;gap:16px;border-bottom:1px solid var(--line);align-items:flex-start;}
     nav.open ul{display:flex;}
     .menu-btn{display:block;}
-    .voice-grid,.flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
+    .flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:38px 26px;}
     .price-table-wrap{display:none;}
     .price-cards{display:block;}
@@ -565,7 +559,7 @@
           <tr><th>コース</th><th>①婚活準備コース</th><th class="reco">②婚活サポートコース</th><th>③成婚を目指す本格コース</th></tr>
         </thead>
         <tbody>
-          <tr><th>主な内容</th><td>恋愛相談・プロフィール相談・コミュニケーション相談<br><span class="dur">※お見合いシステム(お相手検索)は含みません</span></td><td class="reco">お見合いサポート・定期面談・LINE相談</td><td>お見合い〜成婚までの本格伴走</td></tr>
+          <tr><th>主な内容</th><td>恋愛相談・プロフィール相談・コミュニケーション相談<br><span class="dur">※お見合いシステム(お相手検索)は含みません</span></td><td class="reco">お見合いサポート・定期面談・LINE相談<br><span class="dur">※お見合いシステム(お相手検索)もご利用いただけます</span></td><td>お見合い〜成婚までの本格伴走</td></tr>
           <tr><th>契約期間</th><td>縛りなし(いつでも解約可)</td><td class="reco">縛りなし(いつでも解約可)</td><td>6ヶ月(お試し)/12ヶ月(お得)から選択</td></tr>
           <tr><th>入会金/初期費用</th><td>11,000円</td><td class="reco">55,000円</td><td><span class="dual">110,000円<span class="dur">6ヶ月</span></span><span class="dual">88,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
           <tr><th>月額</th><td class="big">5,500円</td><td class="reco big best">11,000円</td><td class="big"><span class="dual">16,500円<span class="dur">6ヶ月</span></span><span class="dual">11,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
@@ -592,7 +586,7 @@
         <h3>②婚活サポートコース</h3>
         <div class="pc-price">11,000<span>円/月</span></div>
         <ul>
-          <li>内容:お見合いサポート・定期面談・LINE相談</li>
+          <li>内容:お見合いサポート・定期面談・LINE相談(お見合いシステムも利用可)</li>
           <li>契約:縛りなし(いつでも解約可)</li>
           <li>初期費用:55,000円(初回のみ)</li>
           <li>成婚料:なし</li>
@@ -693,10 +687,6 @@
     </div>
     <div class="mimamori-grid">
       <div class="mimamori-card reveal">
-        <h3>卒業生コミュニティ</h3>
-        <p>同じ「初めて」から歩んだ卒業生同士の、ゆるやかなつながり。結婚後の暮らしの話ができる仲間がいることは、思っている以上に心強いものです。</p>
-      </div>
-      <div class="mimamori-card reveal">
         <h3>結婚後のご相談窓口</h3>
         <p>ふたりの暮らしのこと、ご両家のこと。婚活中と同じように、カウンセラーがお話を伺います。卒業しても、頼っていい場所であり続けます。</p>
       </div>
@@ -706,31 +696,6 @@
       </div>
     </div>
     <p class="mimamori-note">※卒業後のご連絡は、ご希望を伺ったうえで行います。ご不要な方には一切お送りしませんので、ご安心ください。</p>
-  </div>
-</section>
-
-<!-- ===== 声 ===== ※サンプル原稿です。実際の会員様の声(掲載許諾済み)に差し替えてください。 -->
-<section class="voice" id="voice">
-  <div class="inner">
-    <span class="sec-label">VOICE ― 会員様の声</span>
-    <h2 class="sec-title">みんな、「初めて」から始めました。</h2>
-    <div class="voice-grid">
-      <div class="voice-card reveal">
-        <span class="who">30代後半・男性(初めての婚活)</span>
-        <h3>「会話練習がなかったら、初回で心が折れていたと思います」</h3>
-        <p>3分会話のロールプレイで、声のトーンや話題の順番まで練習してから本番へ。「初めてなのは、まじめに生きてきた証拠ですよ」と言われた日のことは、忘れないと思います。</p>
-      </div>
-      <div class="voice-card reveal">
-        <span class="who">30代前半・女性(初めての婚活)</span>
-        <h3>「気持ちの整理セッションで、初めて自分の人生をちゃんと考えました」</h3>
-        <p>「結婚したいのかも分からない」と正直に話しても、そのまま受け止めてくださって。60分話したあと、私は私の人生を大切にしていいんだと思えたことを覚えています。</p>
-      </div>
-      <div class="voice-card reveal">
-        <span class="who">40代前半・男性(仕事一筋からの婚活)</span>
-        <h3>「メッセージの添削と服装相談、正直いちばん助かりました」</h3>
-        <p>毎回デート前に準備を一緒にしてもらえるので、安心して人と向き合えました。いま思えば、必要だったのは勇気ではなく段取りでした。</p>
-      </div>
-    </div>
   </div>
 </section>
 
