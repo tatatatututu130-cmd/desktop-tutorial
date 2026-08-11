@@ -7,47 +7,65 @@
 <meta name="description" content="結婚相談所 空縁（そらえん）は「結婚したいかどうか、まだわからない」という段階から相談できる結婚相談所です。無料相談受付中、無理な勧誘は一切いたしません。">
 <style>
   :root {
-    --bg: #fbf9f6;
-    --surface: #ffffff;
-    --ink: #33302c;
-    --muted: #7d766c;
-    --accent: #b3577a;        /* 縁を結ぶ紅色 */
-    --accent-deep: #93415f;
-    --sky: #4a6fa5;           /* 空色の藍 */
-    --gold: #b39a5f;
-    --soft: #f7edf1;
-    --border: #eae4da;
+    --ground: #eef1ee;
+    --surface: #fbfbf8;
+    --ink: #262320;
+    --muted: #6f6a60;
+    --thread: #b3382a;
+    --thread-soft: #b3382a4d;
+    --dusk: #3c5872;
+    --gold: #a3854f;
+    --border: #ded9cb;
+    --font-display: "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "Noto Serif JP", serif;
+    --font-body: "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", "Noto Sans JP", sans-serif;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #191612;
-      --surface: #221e19;
-      --ink: #ede8df;
-      --muted: #a89f92;
-      --accent: #d98aa8;
-      --accent-deep: #e3a5bd;
-      --sky: #8fb0dd;
-      --gold: #cbb078;
-      --soft: #2d2126;
-      --border: #37312a;
+    :root:not([data-theme="light"]) {
+      --ground: #14171a;
+      --surface: #1c2024;
+      --ink: #eae6dc;
+      --muted: #9c968a;
+      --thread: #e0685a;
+      --thread-soft: #e0685a4d;
+      --dusk: #93b5d1;
+      --gold: #c9ac72;
+      --border: #2c3136;
     }
   }
+  :root[data-theme="dark"] {
+    --ground: #14171a;
+    --surface: #1c2024;
+    --ink: #eae6dc;
+    --muted: #9c968a;
+    --thread: #e0685a;
+    --thread-soft: #e0685a4d;
+    --dusk: #93b5d1;
+    --gold: #c9ac72;
+    --border: #2c3136;
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
   body {
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
-    background: var(--bg);
+    font-family: var(--font-body);
+    background: var(--ground);
     color: var(--ink);
-    line-height: 2;
-    letter-spacing: 0.05em;
+    line-height: 1.95;
+    letter-spacing: 0.03em;
   }
-  .container { max-width: 920px; margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--thread); outline-offset: 3px; }
 
   /* ヘッダー */
-  header {
+  header.site-header {
     position: sticky;
     top: 0;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    background: color-mix(in srgb, var(--ground) 90%, transparent);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     z-index: 10;
@@ -58,331 +76,311 @@
     justify-content: space-between;
     padding: 0.9rem 0;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
-  .logo { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.25em; }
-  .logo small { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; margin-left: 0.5em; }
-  nav ul { display: flex; gap: 1.3rem; list-style: none; flex-wrap: wrap; }
-  nav a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
-  nav a:hover { color: var(--accent); }
+  .logo { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; letter-spacing: 0.2em; }
+  .logo small { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; margin-left: 0.6em; font-family: var(--font-body); }
+  nav ul { display: flex; gap: 1.3rem; list-style: none; flex-wrap: wrap; align-items: center; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+  nav a:hover { color: var(--thread); }
   nav a.nav-cta {
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    padding: 0.2rem 1rem;
+    color: var(--thread);
+    border: 1px solid var(--thread);
+    padding: 0.3rem 1.1rem 0.3rem 0.9rem;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
   }
-  nav a.nav-cta:hover { background: var(--accent); color: var(--bg); }
+  nav a.nav-cta:hover { background: var(--thread); color: var(--surface); }
 
   /* ヒーロー */
-  .hero {
-    position: relative;
-    padding: 6.5rem 1.5rem 5.5rem;
-    text-align: center;
-    background:
-      radial-gradient(ellipse 85% 65% at 50% -10%, color-mix(in srgb, var(--sky) 16%, transparent), transparent),
-      radial-gradient(ellipse 60% 45% at 85% 100%, color-mix(in srgb, var(--accent) 10%, transparent), transparent),
-      var(--bg);
+  .hero { padding: 6rem 1.5rem 5rem; text-align: center; }
+  .hero .en {
+    font-family: var(--font-display);
+    color: var(--gold);
+    font-size: 0.78rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
   }
-  .hero .en { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.4em; text-transform: uppercase; }
   .hero h1 {
-    font-size: clamp(2.2rem, 6.5vw, 3.4rem);
+    font-size: clamp(2.3rem, 6.5vw, 3.6rem);
     font-weight: 600;
-    letter-spacing: 0.3em;
-    margin: 0.8rem 0 0.3rem;
-    padding-left: 0.3em;
+    letter-spacing: 0.32em;
+    margin: 0.9rem 0 0.3rem;
+    padding-left: 0.32em;
   }
-  .hero .yomi { color: var(--muted); font-size: 0.92rem; letter-spacing: 0.3em; }
-  .hero .catch {
-    margin-top: 2.2rem;
-    font-size: clamp(1.15rem, 3.3vw, 1.5rem);
-    letter-spacing: 0.1em;
-    font-weight: 600;
+  .hero .yomi { color: var(--muted); font-size: 0.88rem; letter-spacing: 0.28em; }
+
+  .thread-gap { display: block; margin: 2rem auto; width: 220px; height: 34px; }
+  .thread-gap path { fill: none; stroke: var(--thread); stroke-width: 1.6; stroke-linecap: round; }
+  .thread-gap .left { stroke-dasharray: 130; stroke-dashoffset: 130; animation: draw 1.1s 0.2s ease-out forwards; }
+  .thread-gap .right { stroke-dasharray: 130; stroke-dashoffset: -130; animation: draw-r 1.1s 0.4s ease-out forwards; }
+  @media (prefers-reduced-motion: reduce) {
+    .thread-gap .left, .thread-gap .right { animation: none; stroke-dashoffset: 0; }
   }
-  .hero .lead { margin-top: 1rem; color: var(--muted); font-size: 0.98rem; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes draw-r { to { stroke-dashoffset: 0; } }
+
+  .hero .catch { font-size: clamp(1.15rem, 3.2vw, 1.5rem); letter-spacing: 0.08em; font-weight: 600; }
+  .hero .lead { margin-top: 1.2rem; color: var(--muted); font-size: 0.96rem; }
   .hero .cta {
     display: inline-block;
-    margin-top: 2.4rem;
-    padding: 0.9rem 3.2rem;
-    background: var(--accent);
+    margin-top: 2.3rem;
+    padding: 0.9rem 2.6rem 0.9rem 2.3rem;
+    background: var(--thread);
     color: #fff;
-    border-radius: 999px;
     text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 0.2em;
-    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+    font-size: 0.98rem;
+    letter-spacing: 0.15em;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
     transition: transform 0.2s, opacity 0.2s;
   }
   .hero .cta:hover { transform: translateY(-2px); opacity: 0.9; }
-  .hero .cta-note { margin-top: 0.8rem; font-size: 0.8rem; color: var(--muted); }
+  .hero .cta-note { margin-top: 0.9rem; font-size: 0.8rem; color: var(--muted); }
 
   /* セクション共通 */
   section { padding: 4.5rem 0; }
   section + section { border-top: 1px solid var(--border); }
-  .sec-title { text-align: center; margin-bottom: 2.5rem; }
+  .sec-title { text-align: center; margin-bottom: 2.4rem; }
   .sec-title .en {
     display: block;
+    font-family: var(--font-display);
     color: var(--gold);
-    font-size: 0.72rem;
-    letter-spacing: 0.35em;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+    font-variant-numeric: tabular-nums;
   }
-  .sec-title h2 { font-size: 1.55rem; font-weight: 600; letter-spacing: 0.15em; }
-  .sec-lead { max-width: 640px; margin: -1.4rem auto 2.5rem; text-align: center; color: var(--muted); font-size: 0.92rem; }
+  .sec-title .en .step { color: var(--muted); font-size: 0.85em; margin-left: 0.5em; }
+  .sec-title h2 { font-size: clamp(1.35rem, 3vw, 1.6rem); font-weight: 600; letter-spacing: 0.1em; max-width: 30em; margin: 0 auto; }
+  .sec-lead { max-width: 34em; margin: 1.2rem auto 0; text-align: center; color: var(--muted); font-size: 0.92rem; }
 
   /* Problem: モヤモヤチェックリスト */
-  .checklist { list-style: none; max-width: 640px; margin: 0 auto; }
+  .checklist { list-style: none; max-width: 38em; margin: 2.4rem auto 0; }
   .checklist li {
     display: flex;
-    gap: 0.9rem;
+    gap: 1rem;
     align-items: flex-start;
-    padding: 0.85rem 0.4rem;
-    border-bottom: 1px dashed var(--border);
+    padding: 0.9rem 0.4rem;
+    border-bottom: 1px solid var(--border);
     font-size: 0.95rem;
-    color: var(--ink);
   }
-  .checklist li .mark { color: var(--accent); font-size: 1rem; flex-shrink: 0; margin-top: 0.15em; }
+  .checklist li .mark {
+    width: 0.85em; height: 0.85em;
+    border: 1.5px solid var(--muted);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.4em;
+  }
 
   /* Affinity: 共感 */
-  .agitate { text-align: center; max-width: 620px; margin: 0 auto; }
+  .agitate { text-align: center; max-width: 36em; margin: 0 auto; }
   .agitate p { color: var(--muted); margin-bottom: 1.3rem; }
   .agitate .highlight {
     display: block;
+    font-family: var(--font-display);
     color: var(--ink);
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
+    font-size: 1.08rem;
+    letter-spacing: 0.1em;
     margin: 2rem 0;
   }
 
-  /* サブセクション（Offer内の流れ・料金・声） */
+  /* サブセクション（Offer内） */
   .sub-block { margin-top: 4rem; }
   .sub-block:first-of-type { margin-top: 0; }
   .sub-title { text-align: center; margin-bottom: 2.2rem; }
   .sub-title .en {
     display: block;
+    font-family: var(--font-display);
     color: var(--gold);
-    font-size: 0.68rem;
-    letter-spacing: 0.3em;
+    font-size: 0.66rem;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.35rem;
   }
-  .sub-title h3 { font-size: 1.3rem; font-weight: 600; letter-spacing: 0.15em; }
+  .sub-title h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; letter-spacing: 0.1em; }
 
-  /* 選ばれる理由 / For You カード共通 */
+  /* 理由 / For You カード */
   .reasons, .foryou-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
+    gap: 1.1rem;
   }
   .reason {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.8rem 1.5rem;
-    text-align: center;
+    border-radius: 3px;
+    padding: 1.7rem 1.4rem;
   }
-  .reason .num { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.3em; }
-  .reason .icon { font-size: 2rem; display: block; margin: 0.4rem 0; }
-  .reason h3 { font-size: 1.05rem; letter-spacing: 0.12em; margin-bottom: 0.5rem; }
-  .reason p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; text-align: left; }
+  .reason .icon { font-size: 1.6rem; display: block; margin-bottom: 0.6rem; }
+  .reason h3 { font-size: 1.02rem; letter-spacing: 0.08em; margin-bottom: 0.5rem; font-weight: 600; }
+  .reason p { color: var(--muted); font-size: 0.88rem; line-height: 1.9; }
 
   .foryou-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.3rem 1.4rem;
+    border-radius: 3px;
+    padding: 1.2rem 1.3rem;
     font-size: 0.92rem;
-    color: var(--ink);
     display: flex;
     gap: 0.8rem;
     align-items: flex-start;
   }
-  .foryou-card .mark { color: var(--accent); font-size: 1.1rem; flex-shrink: 0; }
+  .foryou-card .mark {
+    width: 0.5em; height: 0.5em;
+    border-radius: 50%;
+    background: var(--thread);
+    flex-shrink: 0;
+    margin-top: 0.6em;
+  }
 
   .scarcity {
-    max-width: 580px;
+    max-width: 36em;
     margin: 2.2rem auto 0;
     text-align: center;
-    background: var(--soft);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.2rem 1.6rem;
-    font-size: 0.88rem;
+    border-left: 3px solid var(--gold);
+    padding: 1.1rem 1.5rem;
+    font-size: 0.86rem;
     color: var(--muted);
   }
-  .scarcity strong { color: var(--accent-deep); }
+  .scarcity strong { color: var(--ink); font-variant-numeric: tabular-nums; }
 
   /* 流れ */
-  .flow { max-width: 640px; margin: 0 auto; list-style: none; counter-reset: step; }
-  .flow li {
-    position: relative;
-    padding: 0 0 2.2rem 3.6rem;
-    counter-increment: step;
-  }
+  .flow { max-width: 34em; margin: 0 auto; list-style: none; }
+  .flow li { position: relative; padding: 0 0 2.1rem 3.4rem; }
   .flow li::before {
-    content: counter(step);
+    content: attr(data-step);
+    font-variant-numeric: tabular-nums;
     position: absolute;
-    left: 0; top: 0.2em;
-    width: 2.4rem; height: 2.4rem;
-    border-radius: 50%;
-    background: var(--soft);
-    color: var(--accent-deep);
-    border: 1px solid var(--accent);
+    left: 0; top: 0.15em;
+    width: 2.3rem; height: 2.3rem;
+    border: 1px solid var(--thread);
+    color: var(--thread);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-family: var(--font-display);
+    background: var(--surface);
   }
   .flow li:not(:last-child)::after {
     content: "";
     position: absolute;
-    left: 1.2rem; top: 2.8rem; bottom: 0.2rem;
-    width: 1px;
-    background: var(--border);
+    left: 1.15rem; top: 2.6rem; bottom: 0.1rem;
+    width: 1.5px;
+    background: linear-gradient(var(--thread-soft), transparent);
   }
   .flow .step-badge {
     display: inline-block;
-    font-size: 0.72rem;
-    color: var(--accent-deep);
-    background: var(--soft);
-    border-radius: 999px;
-    padding: 0.1rem 0.7rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
+    color: var(--thread);
+    border: 1px solid var(--thread);
+    padding: 0.1rem 0.6rem;
+    margin-bottom: 0.35rem;
   }
-  .flow h3 { font-size: 1.05rem; letter-spacing: 0.12em; }
-  .flow p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; }
+  .flow h3 { font-size: 1.02rem; letter-spacing: 0.08em; margin-bottom: 0.2rem; font-weight: 600; }
+  .flow p { color: var(--muted); font-size: 0.88rem; line-height: 1.9; }
 
   /* 料金プラン */
-  .plans {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
-    align-items: stretch;
-  }
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.1rem; align-items: stretch; }
   .plan {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 2rem 1.5rem;
+    border-radius: 3px;
+    padding: 1.9rem 1.4rem;
     text-align: center;
     display: flex;
     flex-direction: column;
   }
-  .plan.featured { border: 2px solid var(--accent); position: relative; }
+  .plan.featured { border: 1.5px solid var(--thread); position: relative; }
   .plan.featured .badge {
     position: absolute;
-    top: -0.9rem; left: 50%;
+    top: -0.75rem; left: 50%;
     transform: translateX(-50%);
-    background: var(--accent);
+    background: var(--thread);
     color: #fff;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    padding: 0.15rem 1.2rem;
-    border-radius: 999px;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    padding: 0.2rem 0.9rem;
     white-space: nowrap;
   }
-  .plan h3 { font-size: 1.1rem; letter-spacing: 0.15em; }
-  .plan .price { font-size: 1.7rem; color: var(--accent-deep); margin: 0.6rem 0 0.2rem; }
-  .plan .price small { font-size: 0.8rem; color: var(--muted); }
-  .plan .setup { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
-  .plan ul { list-style: none; text-align: left; font-size: 0.88rem; color: var(--muted); margin-top: auto; }
-  .plan ul li { padding: 0.45rem 0; border-top: 1px dashed var(--border); }
-  .plan ul li::before { content: "◦ "; color: var(--accent); }
-  .plans-note { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 1.5rem; }
+  .plan h3 { font-family: var(--font-display); font-size: 1.08rem; letter-spacing: 0.1em; }
+  .plan .price { font-family: var(--font-display); font-size: 1.6rem; color: var(--ink); margin: 0.6rem 0 0.2rem; font-variant-numeric: tabular-nums; }
+  .plan .price small { font-size: 0.75rem; color: var(--muted); font-family: var(--font-body); }
+  .plan .setup { font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; font-variant-numeric: tabular-nums; }
+  .plan ul { list-style: none; text-align: left; font-size: 0.86rem; color: var(--muted); margin-top: auto; }
+  .plan ul li { padding: 0.45rem 0; border-top: 1px solid var(--border); }
 
   /* 声 */
-  .voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-  .voice {
-    background: var(--soft);
-    border-radius: 6px;
-    padding: 1.8rem 1.5rem;
-    font-size: 0.92rem;
-  }
+  .voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
+  .voice { background: var(--surface); border-left: 3px solid var(--gold); padding: 1.6rem 1.5rem; font-size: 0.9rem; }
   .voice p { color: var(--ink); line-height: 2; }
-  .voice .who { margin-top: 1rem; color: var(--muted); font-size: 0.82rem; text-align: right; }
+  .voice .who { margin-top: 1rem; color: var(--muted); font-size: 0.8rem; text-align: right; }
 
   /* FAQ */
-  .faq { max-width: 680px; margin: 0 auto; }
-  .faq details {
-    border-bottom: 1px solid var(--border);
-    padding: 0.6rem 0.3rem;
-  }
-  .faq details[open] summary { color: var(--accent-deep); }
+  .faq { max-width: 38em; margin: 0 auto; text-align: left; }
+  .faq details { border-bottom: 1px solid var(--border); padding: 0.6rem 0.3rem; }
+  .faq details[open] summary { color: var(--thread); }
   .faq summary {
     cursor: pointer;
-    font-size: 0.98rem;
-    letter-spacing: 0.08em;
+    font-size: 0.96rem;
     padding: 0.5rem 0;
     list-style: none;
     display: flex;
     gap: 0.8em;
   }
   .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::before { content: "Q."; color: var(--accent); font-weight: 600; }
-  .faq details p {
-    color: var(--muted);
-    font-size: 0.9rem;
-    padding: 0.3rem 0 0.8rem 2em;
-    line-height: 1.9;
-  }
+  .faq summary::before { content: "Q."; color: var(--thread); font-weight: 600; font-family: var(--font-display); }
+  .faq details p { color: var(--muted); font-size: 0.88rem; padding: 0.3rem 0 0.8rem 2em; line-height: 1.9; }
 
   /* 概要 */
-  .info-table {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    font-size: 0.93rem;
-  }
-  .info-table th, .info-table td {
-    padding: 0.9rem 0.5rem;
-    border-bottom: 1px solid var(--border);
-    text-align: left;
-    vertical-align: top;
-  }
-  .info-table th { width: 9em; color: var(--muted); font-weight: 600; white-space: nowrap; }
+  .info-table { width: 100%; max-width: 34em; margin: 0 auto; border-collapse: collapse; font-size: 0.9rem; }
+  .info-table th, .info-table td { padding: 0.85rem 0.5rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  .info-table th { width: 8.5em; color: var(--muted); font-weight: 600; white-space: nowrap; }
 
   /* お問い合わせ（Action） */
   .contact-box { text-align: center; }
-  .contact-box p { color: var(--muted); margin-bottom: 1.6rem; }
+  .contact-box p { color: var(--muted); margin-bottom: 1.4rem; }
+  .thread-knot { display: block; margin: 0.5rem auto 1.8rem; width: 220px; height: 34px; }
+  .thread-knot path { fill: none; stroke: var(--thread); stroke-width: 1.6; stroke-linecap: round; }
   .contact-box a.mail {
     display: inline-block;
-    padding: 0.9rem 3.2rem;
-    background: var(--accent);
+    padding: 0.9rem 2.6rem 0.9rem 2.3rem;
+    background: var(--thread);
     color: #fff;
     text-decoration: none;
-    border-radius: 999px;
-    letter-spacing: 0.15em;
-    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+    letter-spacing: 0.12em;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
     transition: transform 0.2s, opacity 0.2s;
   }
   .contact-box a.mail:hover { transform: translateY(-2px); opacity: 0.9; }
-  .contact-box .tel { margin-top: 1.4rem; font-size: 1.05rem; letter-spacing: 0.1em; }
-  .contact-box .tel strong { font-size: 1.4rem; color: var(--ink); }
+  .contact-box .tel { margin-top: 1.4rem; font-size: 1rem; }
+  .contact-box .tel strong { font-size: 1.3rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .contact-box .faq { margin-top: 2.8rem; }
   .contact-box .assurance {
     margin-top: 2.2rem;
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     color: var(--muted);
-    border-top: 1px dashed var(--border);
+    border-top: 1px solid var(--border);
     padding-top: 1.4rem;
-    max-width: 480px;
+    max-width: 30em;
     margin-left: auto;
     margin-right: auto;
   }
 
   footer {
     border-top: 1px solid var(--border);
-    padding: 2.5rem 0;
+    padding: 2.4rem 0;
     text-align: center;
     color: var(--muted);
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
   }
 </style>
 </head>
 <body>
 
-<header>
+<header class="site-header">
   <div class="container">
     <nav>
       <div class="logo">結婚相談所 空縁<small>-そらえん-</small></div>
@@ -399,10 +397,16 @@
 
 <main>
   <!-- Hero -->
-  <div class="hero">
+  <div class="hero container">
     <p class="en">Marriage Agency Sora-En</p>
     <h1>空縁</h1>
     <p class="yomi">— 結婚相談所 そらえん —</p>
+
+    <svg class="thread-gap" viewBox="0 0 220 34" aria-hidden="true">
+      <path class="left" d="M0 17 C 30 2, 55 30, 92 16" />
+      <path class="right" d="M128 18 C 165 4, 190 32, 220 17" />
+    </svg>
+
     <p class="catch">結婚したいかどうか、<br>まだわからなくていい。</p>
     <p class="lead">
       その気持ちを言葉にするところから、空縁の無料相談は始まります。<br>
@@ -416,15 +420,15 @@
   <section id="problem">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Problem</span>
+        <span class="en">Problem <span class="step">1 / 6</span></span>
         <h2>こんなモヤモヤ、抱えていませんか？</h2>
       </div>
       <ul class="checklist">
-        <li><span class="mark">◆</span>結婚したい気持ちはあるけれど、心から「したい」と思えているか自信がない</li>
-        <li><span class="mark">◆</span>周りが結婚・出産していくのを見て焦るけれど、行動には移せない</li>
-        <li><span class="mark">◆</span>結婚相談所は「結婚すると決めた人」が行く場所だと思っていた</li>
-        <li><span class="mark">◆</span>このままひとりでいる将来が、ふと不安になることがある</li>
-        <li><span class="mark">◆</span>何から始めればいいのかわからず、考えるほど動けなくなる</li>
+        <li><span class="mark"></span>結婚したい気持ちはあるけれど、心から「したい」と思えているか自信がない</li>
+        <li><span class="mark"></span>周りが結婚・出産していくのを見て焦るけれど、行動には移せない</li>
+        <li><span class="mark"></span>結婚相談所は「結婚すると決めた人」が行く場所だと思っていた</li>
+        <li><span class="mark"></span>このままひとりでいる将来が、ふと不安になることがある</li>
+        <li><span class="mark"></span>何から始めればいいのかわからず、考えるほど動けなくなる</li>
       </ul>
     </div>
   </section>
@@ -433,7 +437,7 @@
   <section id="affinity" class="agitate">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Empathy</span>
+        <span class="en">Empathy <span class="step">2 / 6</span></span>
         <h2>その気持ち、あなただけではありません</h2>
       </div>
       <p>
@@ -453,34 +457,30 @@
   <section id="solution">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Solution</span>
+        <span class="en">Solution <span class="step">3 / 6</span></span>
         <h2>空縁は、「迷っている人」のための相談所です</h2>
       </div>
       <p class="sec-lead">
         空縁の無料相談は、結婚を決めた方だけの場所ではありません。
         「したいのか、したくないのかもわからない」というお話からで大丈夫です。
       </p>
-      <div class="reasons">
+      <div class="reasons" style="margin-top: 2.4rem;">
         <div class="reason">
-          <span class="num">Reason 01</span>
           <span class="icon">🌥️</span>
           <h3>「決めていない」から歓迎</h3>
           <p>初回相談にいらっしゃる方の半数以上が、結婚するかどうか迷っている段階からのスタートです。</p>
         </div>
         <div class="reason">
-          <span class="num">Reason 02</span>
           <span class="icon">🤝</span>
           <h3>専任仲人がじっくり伴走</h3>
           <p>ご相談からご成婚まで同じ仲人が担当。気持ちの整理から一緒に行い、あなたのペースを大切にします。</p>
         </div>
         <div class="reason">
-          <span class="num">Reason 03</span>
           <span class="icon">🔍</span>
           <h3>豊富な出会いのネットワーク</h3>
           <p>結婚相談所連盟に加盟し、全国約9万名の会員データベースからお相手をお探しいただけます。</p>
         </div>
         <div class="reason">
-          <span class="num">Reason 04</span>
           <span class="icon">🙅</span>
           <h3>無理な勧誘は一切なし</h3>
           <p>「今日は話を聞くだけ」で終えていただいて構いません。入会を急かすことはいたしません。</p>
@@ -493,7 +493,7 @@
   <section id="offer">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Offer</span>
+        <span class="en">Offer <span class="step">4 / 6</span></span>
         <h2>空縁がご用意していること</h2>
       </div>
 
@@ -503,24 +503,24 @@
           <h3>ご相談からご成婚までの流れ</h3>
         </div>
         <ol class="flow">
-          <li>
+          <li data-step="1">
             <span class="step-badge">迷っている段階でOK</span>
             <h3>無料相談</h3>
             <p>結婚するかどうか決めていなくてもかまいません。今の気持ちや不安をお伺いするだけの場としてもご利用いただけます（オンライン可）。</p>
           </li>
-          <li>
+          <li data-step="2">
             <h3>ご入会・プロフィール作成</h3>
             <p>「やってみよう」と思えたタイミングでご入会。必要書類をご準備いただき、仲人と一緒にプロフィールを作ります。</p>
           </li>
-          <li>
+          <li data-step="3">
             <h3>お相手探し・お見合い</h3>
             <p>データベース検索と仲人からのご紹介でお相手を探し、お見合いを設定。日程調整はすべて空縁にお任せください。</p>
           </li>
-          <li>
+          <li data-step="4">
             <h3>交際</h3>
             <p>お互いに「また会いたい」と思えたら交際スタート。気持ちの整理も仲人がサポートします。</p>
           </li>
-          <li>
+          <li data-step="5">
             <h3>ご成婚</h3>
             <p>おふたりの気持ちが固まったらご成婚退会。ご両家へのご挨拶のご相談も承ります。</p>
           </li>
@@ -569,7 +569,7 @@
             </ul>
           </div>
         </div>
-        <p class="plans-note">※ 表示はすべて税込です。中途解約時の違約金はありません。無料相談の時点では費用は一切かかりません。</p>
+        <p class="scarcity" style="border-left-color: var(--border);">※ 表示はすべて税込です。中途解約時の違約金はありません。無料相談の時点では費用は一切かかりません。</p>
       </div>
 
       <div class="sub-block">
@@ -595,19 +595,19 @@
   <section id="foryou">
     <div class="container">
       <div class="sec-title">
-        <span class="en">For You</span>
+        <span class="en">For You <span class="step">5 / 6</span></span>
         <h2>こんな方に、無料相談をおすすめしています</h2>
       </div>
       <div class="foryou-grid">
-        <div class="foryou-card"><span class="mark">▸</span>結婚したい気持ちはあるが、自信を持てない方</div>
-        <div class="foryou-card"><span class="mark">▸</span>結婚を意識しているが、何から始めればいいかわからない方</div>
-        <div class="foryou-card"><span class="mark">▸</span>婚活そのものにハードルの高さを感じている方</div>
-        <div class="foryou-card"><span class="mark">▸</span>一人で抱え込まず、誰かに気持ちを聞いてほしい方</div>
-        <div class="foryou-card"><span class="mark">▸</span>他の相談所で「覚悟」を求められて疲れてしまった方</div>
-        <div class="foryou-card"><span class="mark">▸</span>結婚するorしないを、これから一緒に考えたい方</div>
+        <div class="foryou-card"><span class="mark"></span>結婚したい気持ちはあるが、自信を持てない方</div>
+        <div class="foryou-card"><span class="mark"></span>結婚を意識しているが、何から始めればいいかわからない方</div>
+        <div class="foryou-card"><span class="mark"></span>婚活そのものにハードルの高さを感じている方</div>
+        <div class="foryou-card"><span class="mark"></span>一人で抱え込まず、誰かに気持ちを聞いてほしい方</div>
+        <div class="foryou-card"><span class="mark"></span>他の相談所で「覚悟」を求められて疲れてしまった方</div>
+        <div class="foryou-card"><span class="mark"></span>結婚するorしないを、これから一緒に考えたい方</div>
       </div>
       <div class="scarcity">
-        じっくりお話をお伺いするため、無料相談は<strong>1日3組まで</strong>とさせていただいております。<br>
+        じっくりお話をお伺いするため、無料相談は<strong>1日3組</strong>までとさせていただいております。<br>
         ご希望の方はお早めにご予約ください。
       </div>
     </div>
@@ -635,9 +635,14 @@
   <section id="action">
     <div class="container contact-box">
       <div class="sec-title">
-        <span class="en">Action</span>
+        <span class="en">Action <span class="step">6 / 6</span></span>
         <h2>まずは、話すだけから始めてみませんか</h2>
       </div>
+
+      <svg class="thread-knot" viewBox="0 0 220 34" aria-hidden="true">
+        <path d="M0 17 C 30 2, 55 30, 92 17 C 100 9, 112 9, 108 17 C 104 25, 116 25, 124 17 C 161 30, 186 2, 220 17" />
+      </svg>
+
       <p>
         「結婚したいかどうか、まだわからない」——そのままのお気持ちでお越しください。<br>
         メールまたはお電話にてお気軽にご連絡ください。オンライン相談も承ります。
