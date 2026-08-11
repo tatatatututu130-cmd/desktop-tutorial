@@ -44,21 +44,19 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
   .reveal.on{opacity:1;transform:none;}
 
-  /* ===== 汎用アコーディオン(暦のページをめくるイメージ:罫線ベース) ===== */
-  .toggle-item{background:none;border:none;border-bottom:1px solid var(--line);margin-bottom:0;}
-  .toggle-item:first-child{border-top:1px solid var(--line);}
-  .toggle-q{width:100%;text-align:left;background:none;border:none;padding:24px 46px 24px 0;cursor:pointer;position:relative;font-family:var(--sans);display:flex;gap:20px;align-items:baseline;transition:padding-left .25s;}
-  .toggle-item.open .toggle-q{padding-left:6px;}
-  .toggle-q .t-tag{flex:0 0 auto;font-size:11px;letter-spacing:.16em;color:var(--sky-dark);font-weight:700;padding-top:.2em;min-width:74px;}
+  /* ===== 汎用アコーディオン(クリックで開く項目) ===== */
+  .toggle-item{background:var(--white);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 10px rgba(55,52,46,.05);}
+  .toggle-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;cursor:pointer;position:relative;font-family:var(--sans);display:flex;gap:16px;align-items:baseline;}
+  .toggle-q .t-tag{flex:0 0 auto;font-size:11px;letter-spacing:.16em;color:var(--sky-dark);font-weight:700;padding-top:.2em;min-width:70px;}
   .toggle-q .t-body{display:flex;flex-direction:column;}
   .toggle-q .t-title{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);line-height:1.6;}
   .toggle-q .t-teaser{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:4px;font-weight:400;}
-  .toggle-q::after{content:"+";position:absolute;right:4px;top:24px;font-size:20px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
+  .toggle-q::after{content:"+";position:absolute;right:20px;top:22px;font-size:22px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
   .toggle-item.open .toggle-q::after{transform:rotate(45deg);}
   .toggle-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-  .toggle-a div{padding:0 46px 24px 94px;font-size:13.5px;color:var(--ink-soft);line-height:1.95;}
+  .toggle-a div{padding:0 24px 20px 86px;font-size:13.5px;color:var(--ink-soft);line-height:1.95;}
   .toggle-a .badge{display:inline-block;margin-top:12px;font-size:11px;background:var(--sky-light);color:var(--sky-dark);border-radius:999px;padding:3px 12px;font-weight:700;letter-spacing:.05em;}
-  @media(max-width:640px){.toggle-a div{padding-left:0;}}
+  @media(max-width:640px){.toggle-a div{padding-left:24px;}}
 
   /* ===== 写真・動画スペース(実素材に差し替えるまでの枠) ===== */
   .photo-slot{border:1.5px dashed var(--sun);background:var(--sun-light);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--terra-dark);font-size:12px;font-weight:700;letter-spacing:.06em;text-align:center;line-height:1.9;padding:12px;}
@@ -127,7 +125,7 @@
   .facts .conc .gold{color:var(--sun);}
 
   /* ===== checklist(P:悩みの提起)===== */
-  .check-list{max-width:680px;margin:0 auto 36px;display:grid;gap:0;}
+  .check-list{max-width:680px;margin:0 auto 36px;display:grid;gap:12px;}
   .check{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 24px 18px 56px;position:relative;font-size:14.5px;line-height:1.8;}
   .check .ans{display:block;font-size:12.5px;color:var(--sky-dark);font-weight:700;margin-top:5px;}
   .check::before{content:"?";position:absolute;left:20px;top:19px;width:24px;height:24px;border-radius:50%;background:var(--sky-light);color:var(--sky-dark);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;}
@@ -247,14 +245,13 @@
 
   /* ===== faq ===== */
   .faq-sec{background:var(--sky-light);}
-  .faq-item{background:none;border:none;border-bottom:1px solid rgba(36,90,125,.16);margin-bottom:0;}
-  .faq-item:first-child{border-top:1px solid rgba(36,90,125,.16);}
-  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:14.5px;font-weight:700;padding:22px 46px 22px 0;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
+  .faq-item{background:var(--white);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 10px rgba(55,52,46,.05);}
+  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:14.5px;font-weight:700;padding:20px 54px 20px 22px;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
   .faq-q::before{content:"Q.";color:var(--sky-dark);font-family:var(--serif);margin-right:9px;}
-  .faq-q::after{content:"+";position:absolute;right:4px;top:21px;font-size:20px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
+  .faq-q::after{content:"+";position:absolute;right:22px;top:19px;font-size:21px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
   .faq-item.open .faq-q::after{transform:rotate(45deg);}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-  .faq-a div{padding:0 46px 22px 0;font-size:13.5px;color:var(--ink-soft);line-height:2;}
+  .faq-a div{padding:0 22px 22px;font-size:13.5px;color:var(--ink-soft);line-height:2;}
   .faq-a div::before{content:"A.";color:var(--sky-dark);font-family:var(--serif);font-weight:700;margin-right:9px;}
 
   /* ===== CTA(A:行動)ヒーローと対になる、写真の見開きの締めくくり ===== */
@@ -404,6 +401,25 @@
       </div>
     </div>
     <p class="conc reveal">独身も、迷いも、珍しいことではありません。<span class="gold">遅すぎる年齢もありません。</span></p>
+  </div>
+</section>
+
+<!-- ===== P(悩みの提起)よくあるお悩み ===== -->
+<section id="problem">
+  <div class="inner">
+    <span class="sec-label">PROBLEM ― いまの気持ちに、心当たりは</span>
+    <h2 class="sec-title">その悩み、<span class="marker">ひとつずつ解消できます。</span></h2>
+    <p class="sec-lead">いま感じているモヤモヤと、桜暦での解消のしかたを並べてみました。当てはまるものが、ひとつでもあれば。</p>
+    <div class="check-list">
+      <div class="check reveal">結婚したいのか、したくないのか、自分でもよく分からない<span class="ans">→ 決めなくていい状態のまま、気持ちの整理からご一緒します</span></div>
+      <div class="check reveal">恋愛や結婚のことを、気軽に相談できる相手がいない<span class="ans">→ いつでも同じ担当に、何度でもご相談いただけます</span></div>
+      <div class="check reveal">何から始めればいいのか、正直まったく分からない<span class="ans">→ 無料の整理セッションで、最初の一歩から一緒に決めます</span></div>
+      <div class="check reveal">初対面の人と、何を話せばいいのか不安になる<span class="ans">→ 話題を先に用意して、練習してから本番に臨めます</span></div>
+      <div class="check reveal">デートの誘い方も、服装も、お店選びも自信がない<span class="ans">→ 段取り表とチェックリストで、迷いをなくします</span></div>
+      <div class="check reveal">アプリを入れてみたけれど、メッセージが続かなかった<span class="ans">→ やりとりは添削でサポート。面倒な調整はお任せください</span></div>
+      <div class="check reveal">相談所は「慣れた人が行く場所」な気がして、気後れする<span class="ans">→ ここは初めての方だけの相談所です</span></div>
+      <div class="check reveal">仕事には打ち込んできた。気づけば、結婚のことだけが手つかず<span class="ans">→ 手順が決まっているので、忙しくても進められます</span></div>
+    </div>
   </div>
 </section>
 
