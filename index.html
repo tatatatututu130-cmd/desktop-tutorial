@@ -110,6 +110,8 @@
 
   /* ===== facts(A:共感の事実)大小の主従をつけた統計 ===== */
   .facts{background:linear-gradient(135deg,var(--sky) 0%,var(--sky-dark) 100%);color:#fff;padding:76px 0;}
+  .facts .sec-label{color:var(--sun);}
+  .facts .sec-title{color:#fff;margin-bottom:40px;}
   .facts .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;text-align:left;}
   .fact-lead .num-lead{font-family:var(--serif);font-size:clamp(52px,6.4vw,80px);font-weight:600;line-height:1;color:var(--sun);}
   .fact-lead .num-lead span{font-size:.34em;color:#fff;font-weight:600;margin:0 2px;}
@@ -135,7 +137,7 @@
   .quiz-sec{background:linear-gradient(135deg,var(--sky-dark) 0%,#173247 100%);color:#fff;}
   .quiz-sec .sec-label{color:var(--sun);}
   .quiz-sec .sec-title{color:#fff;}
-  .quiz-sec .sec-title .marker{color:var(--ink);}
+  .quiz-sec .sec-title .marker{color:var(--sun);background:none;}
   .quiz-sec .sec-lead{color:rgba(255,255,255,.82);}
   .quiz-box{max-width:640px;margin:0 auto;background:var(--white);border-radius:22px;padding:44px 40px;box-shadow:0 22px 50px rgba(0,0,0,.28);}
   .quiz-progress{font-size:12px;letter-spacing:.15em;color:var(--sky-dark);font-weight:700;margin-bottom:18px;text-align:center;}
@@ -370,6 +372,8 @@
 <!-- ===== 事実:あなただけじゃない(短縮版) ===== -->
 <section class="facts">
   <div class="inner">
+    <span class="sec-label">FACT ― 動いた人から、見えること</span>
+    <h2 class="sec-title">数字で見る、婚活のリアル。</h2>
     <div class="grid">
       <div class="fact-lead reveal">
         <div class="num-lead">2<span>人に</span>1<span>人</span></div>
