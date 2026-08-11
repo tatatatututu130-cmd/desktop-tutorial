@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>結婚相談所 空縁 -そらえん- | 空のように広く、縁のようにあたたかく</title>
-<meta name="description" content="結婚相談所 空縁（そらえん）は、専任仲人がお相手探しから成婚まで丁寧に寄り添う結婚相談所です。無料相談受付中。">
+<title>結婚相談所 空縁 -そらえん- | 結婚したいかどうか、まだわからなくていい。</title>
+<meta name="description" content="結婚相談所 空縁（そらえん）は「結婚したいかどうか、まだわからない」という段階から相談できる結婚相談所です。無料相談受付中、無理な勧誘は一切いたしません。">
 <style>
   :root {
     --bg: #fbf9f6;
@@ -94,8 +94,9 @@
   .hero .yomi { color: var(--muted); font-size: 0.92rem; letter-spacing: 0.3em; }
   .hero .catch {
     margin-top: 2.2rem;
-    font-size: clamp(1.05rem, 3vw, 1.3rem);
-    letter-spacing: 0.15em;
+    font-size: clamp(1.15rem, 3.3vw, 1.5rem);
+    letter-spacing: 0.1em;
+    font-weight: 600;
   }
   .hero .lead { margin-top: 1rem; color: var(--muted); font-size: 0.98rem; }
   .hero .cta {
@@ -126,14 +127,49 @@
     text-transform: uppercase;
     margin-bottom: 0.4rem;
   }
-  .sec-title h2 { font-size: 1.65rem; font-weight: 600; letter-spacing: 0.2em; }
+  .sec-title h2 { font-size: 1.55rem; font-weight: 600; letter-spacing: 0.15em; }
+  .sec-lead { max-width: 640px; margin: -1.4rem auto 2.5rem; text-align: center; color: var(--muted); font-size: 0.92rem; }
 
-  /* コンセプト */
-  .concept p { max-width: 640px; margin: 0 auto 1.4rem; text-align: center; color: var(--muted); }
-  .concept .kotoba { text-align: center; font-size: 1.2rem; color: var(--ink); margin: 2rem auto; letter-spacing: 0.18em; }
+  /* Problem: モヤモヤチェックリスト */
+  .checklist { list-style: none; max-width: 640px; margin: 0 auto; }
+  .checklist li {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    padding: 0.85rem 0.4rem;
+    border-bottom: 1px dashed var(--border);
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .checklist li .mark { color: var(--accent); font-size: 1rem; flex-shrink: 0; margin-top: 0.15em; }
 
-  /* 選ばれる理由 */
-  .reasons {
+  /* Affinity: 共感 */
+  .agitate { text-align: center; max-width: 620px; margin: 0 auto; }
+  .agitate p { color: var(--muted); margin-bottom: 1.3rem; }
+  .agitate .highlight {
+    display: block;
+    color: var(--ink);
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    margin: 2rem 0;
+  }
+
+  /* サブセクション（Offer内の流れ・料金・声） */
+  .sub-block { margin-top: 4rem; }
+  .sub-block:first-of-type { margin-top: 0; }
+  .sub-title { text-align: center; margin-bottom: 2.2rem; }
+  .sub-title .en {
+    display: block;
+    color: var(--gold);
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .sub-title h3 { font-size: 1.3rem; font-weight: 600; letter-spacing: 0.15em; }
+
+  /* 選ばれる理由 / For You カード共通 */
+  .reasons, .foryou-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.25rem;
@@ -149,6 +185,32 @@
   .reason .icon { font-size: 2rem; display: block; margin: 0.4rem 0; }
   .reason h3 { font-size: 1.05rem; letter-spacing: 0.12em; margin-bottom: 0.5rem; }
   .reason p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; text-align: left; }
+
+  .foryou-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.3rem 1.4rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+  .foryou-card .mark { color: var(--accent); font-size: 1.1rem; flex-shrink: 0; }
+
+  .scarcity {
+    max-width: 580px;
+    margin: 2.2rem auto 0;
+    text-align: center;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.2rem 1.6rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .scarcity strong { color: var(--accent-deep); }
 
   /* 流れ */
   .flow { max-width: 640px; margin: 0 auto; list-style: none; counter-reset: step; }
@@ -177,6 +239,15 @@
     left: 1.2rem; top: 2.8rem; bottom: 0.2rem;
     width: 1px;
     background: var(--border);
+  }
+  .flow .step-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    color: var(--accent-deep);
+    background: var(--soft);
+    border-radius: 999px;
+    padding: 0.1rem 0.7rem;
+    margin-bottom: 0.3rem;
   }
   .flow h3 { font-size: 1.05rem; letter-spacing: 0.12em; }
   .flow p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; }
@@ -219,7 +290,7 @@
   .plan ul li::before { content: "◦ "; color: var(--accent); }
   .plans-note { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 1.5rem; }
 
-  /* 成婚者の声 */
+  /* 声 */
   .voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
   .voice {
     background: var(--soft);
@@ -236,6 +307,7 @@
     border-bottom: 1px solid var(--border);
     padding: 0.6rem 0.3rem;
   }
+  .faq details[open] summary { color: var(--accent-deep); }
   .faq summary {
     cursor: pointer;
     font-size: 0.98rem;
@@ -270,7 +342,7 @@
   }
   .info-table th { width: 9em; color: var(--muted); font-weight: 600; white-space: nowrap; }
 
-  /* お問い合わせ */
+  /* お問い合わせ（Action） */
   .contact-box { text-align: center; }
   .contact-box p { color: var(--muted); margin-bottom: 1.6rem; }
   .contact-box a.mail {
@@ -287,6 +359,16 @@
   .contact-box a.mail:hover { transform: translateY(-2px); opacity: 0.9; }
   .contact-box .tel { margin-top: 1.4rem; font-size: 1.05rem; letter-spacing: 0.1em; }
   .contact-box .tel strong { font-size: 1.4rem; color: var(--ink); }
+  .contact-box .assurance {
+    margin-top: 2.2rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px dashed var(--border);
+    padding-top: 1.4rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   footer {
     border-top: 1px solid var(--border);
@@ -305,209 +387,228 @@
     <nav>
       <div class="logo">結婚相談所 空縁<small>-そらえん-</small></div>
       <ul>
-        <li><a href="#concept">想い</a></li>
-        <li><a href="#reasons">選ばれる理由</a></li>
-        <li><a href="#flow">ご成婚までの流れ</a></li>
-        <li><a href="#plans">料金プラン</a></li>
-        <li><a href="#faq">よくあるご質問</a></li>
-        <li><a class="nav-cta" href="#contact">無料相談</a></li>
+        <li><a href="#problem">モヤモヤ</a></li>
+        <li><a href="#solution">空縁の考え方</a></li>
+        <li><a href="#offer">流れ・料金</a></li>
+        <li><a href="#foryou">こんな方へ</a></li>
+        <li><a class="nav-cta" href="#action">無料相談</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main>
+  <!-- Hero -->
   <div class="hero">
     <p class="en">Marriage Agency Sora-En</p>
     <h1>空縁</h1>
     <p class="yomi">— 結婚相談所 そらえん —</p>
-    <p class="catch">空のように広く、縁のようにあたたかく。</p>
+    <p class="catch">結婚したいかどうか、<br>まだわからなくていい。</p>
     <p class="lead">
-      専任の仲人が、お相手探しからご成婚まで<br>
-      あなたの婚活に最後まで寄り添います。
+      その気持ちを言葉にするところから、空縁の無料相談は始まります。<br>
+      「決めていない」ままのご相談、大歓迎です。
     </p>
-    <a class="cta" href="#contact">無料相談を予約する</a>
-    <p class="cta-note">ご入会を無理におすすめすることは一切ありません</p>
+    <a class="cta" href="#action">無料相談を予約する</a>
+    <p class="cta-note">結婚するか迷っている段階でのご相談も歓迎。無理な勧誘は一切ありません。</p>
   </div>
 
-  <section id="concept" class="concept">
+  <!-- P: Problem -->
+  <section id="problem">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Concept</span>
-        <h2>空縁の想い</h2>
+        <span class="en">Problem</span>
+        <h2>こんなモヤモヤ、抱えていませんか？</h2>
       </div>
-      <p class="kotoba">「 一人ひとりのご縁を、丁寧に結ぶ 」</p>
+      <ul class="checklist">
+        <li><span class="mark">◆</span>結婚したい気持ちはあるけれど、心から「したい」と思えているか自信がない</li>
+        <li><span class="mark">◆</span>周りが結婚・出産していくのを見て焦るけれど、行動には移せない</li>
+        <li><span class="mark">◆</span>結婚相談所は「結婚すると決めた人」が行く場所だと思っていた</li>
+        <li><span class="mark">◆</span>このままひとりでいる将来が、ふと不安になることがある</li>
+        <li><span class="mark">◆</span>何から始めればいいのかわからず、考えるほど動けなくなる</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- A: Affinity / Agitation -->
+  <section id="affinity" class="agitate">
+    <div class="container">
+      <div class="sec-title">
+        <span class="en">Empathy</span>
+        <h2>その気持ち、あなただけではありません</h2>
+      </div>
       <p>
-        空縁（そらえん）は、大手にはできない「顔の見える婚活サポート」を大切にする、
-        小さな結婚相談所です。担当仲人がお一人おひとりとじっくり向き合い、
-        プロフィール作りからお見合いの調整、交際中のお悩み相談まで伴走します。
+        「結婚したいかどうか、正直わからない」——それはとても自然な気持ちです。
+        誰かに背中を押されて決めるものでも、無理に結論を出すものでもありません。
       </p>
+      <span class="highlight">ただ、その気持ちに蓋をしたまま時間だけが過ぎていくと、<br>
+      いざ「結婚したい」と思ったときに、出会いの選択肢も、<br>動き出す体力も少なくなってしまうことがあります。</span>
       <p>
-        婚活は、時に不安になったり、落ち込んだりするもの。
-        そんなとき、いつでも頼れる存在でありたい——それが空縁の願いです。
+        大切なのは「今すぐ決める」ことではなく、まず自分の気持ちを誰かに話して、
+        整理してみること。空縁は、そのための場所です。
       </p>
     </div>
   </section>
 
-  <section id="reasons">
+  <!-- SO: Solution -->
+  <section id="solution">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Reasons</span>
-        <h2>空縁が選ばれる理由</h2>
+        <span class="en">Solution</span>
+        <h2>空縁は、「迷っている人」のための相談所です</h2>
       </div>
+      <p class="sec-lead">
+        空縁の無料相談は、結婚を決めた方だけの場所ではありません。
+        「したいのか、したくないのかもわからない」というお話からで大丈夫です。
+      </p>
       <div class="reasons">
         <div class="reason">
           <span class="num">Reason 01</span>
-          <span class="icon">🤝</span>
-          <h3>専任仲人の伴走型サポート</h3>
-          <p>ご入会からご成婚まで同じ仲人が担当。あなたの人柄や希望を深く理解したうえで、お相手をご紹介します。</p>
+          <span class="icon">🌥️</span>
+          <h3>「決めていない」から歓迎</h3>
+          <p>初回相談にいらっしゃる方の半数以上が、結婚するかどうか迷っている段階からのスタートです。</p>
         </div>
         <div class="reason">
           <span class="num">Reason 02</span>
-          <span class="icon">🔍</span>
-          <h3>豊富な出会いのネットワーク</h3>
-          <p>結婚相談所連盟に加盟しており、全国約9万名の会員データベースからお相手をお探しいただけます。</p>
+          <span class="icon">🤝</span>
+          <h3>専任仲人がじっくり伴走</h3>
+          <p>ご相談からご成婚まで同じ仲人が担当。気持ちの整理から一緒に行い、あなたのペースを大切にします。</p>
         </div>
         <div class="reason">
           <span class="num">Reason 03</span>
-          <span class="icon">💬</span>
-          <h3>いつでも相談できる安心感</h3>
-          <p>お見合い後の振り返りや交際中の不安など、LINE・メールでいつでもご相談OK。返信は原則24時間以内です。</p>
+          <span class="icon">🔍</span>
+          <h3>豊富な出会いのネットワーク</h3>
+          <p>結婚相談所連盟に加盟し、全国約9万名の会員データベースからお相手をお探しいただけます。</p>
         </div>
         <div class="reason">
           <span class="num">Reason 04</span>
-          <span class="icon">💰</span>
-          <h3>わかりやすい料金体系</h3>
-          <p>料金はすべてホームページに明示。ご成婚時以外の追加費用はいただきません。</p>
+          <span class="icon">🙅</span>
+          <h3>無理な勧誘は一切なし</h3>
+          <p>「今日は話を聞くだけ」で終えていただいて構いません。入会を急かすことはいたしません。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="flow">
+  <!-- O: Offer（流れ・料金・声） -->
+  <section id="offer">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Flow</span>
-        <h2>ご成婚までの流れ</h2>
+        <span class="en">Offer</span>
+        <h2>空縁がご用意していること</h2>
       </div>
-      <ol class="flow">
-        <li>
-          <h3>無料相談</h3>
-          <p>まずはお気軽にご相談ください。婚活の不安やご希望をお伺いし、サービス内容と料金をご説明します（オンライン可）。</p>
-        </li>
-        <li>
-          <h3>ご入会・プロフィール作成</h3>
-          <p>必要書類（独身証明書など）をご準備いただき、仲人と一緒にあなたの魅力が伝わるプロフィールを作ります。</p>
-        </li>
-        <li>
-          <h3>お相手探し・お見合い</h3>
-          <p>データベース検索と仲人からのご紹介でお相手を探し、お見合いを組みます。日程調整はすべて空縁にお任せください。</p>
-        </li>
-        <li>
-          <h3>交際</h3>
-          <p>お互いに「また会いたい」と思えたら交際スタート。デートの相談や気持ちの整理も仲人がサポートします。</p>
-        </li>
-        <li>
-          <h3>ご成婚</h3>
-          <p>おふたりの気持ちが固まったらご成婚退会。プロポーズの演出や、ご両家へのご挨拶のご相談も承ります。</p>
-        </li>
-      </ol>
+
+      <div class="sub-block">
+        <div class="sub-title">
+          <span class="en">Flow</span>
+          <h3>ご相談からご成婚までの流れ</h3>
+        </div>
+        <ol class="flow">
+          <li>
+            <span class="step-badge">迷っている段階でOK</span>
+            <h3>無料相談</h3>
+            <p>結婚するかどうか決めていなくてもかまいません。今の気持ちや不安をお伺いするだけの場としてもご利用いただけます（オンライン可）。</p>
+          </li>
+          <li>
+            <h3>ご入会・プロフィール作成</h3>
+            <p>「やってみよう」と思えたタイミングでご入会。必要書類をご準備いただき、仲人と一緒にプロフィールを作ります。</p>
+          </li>
+          <li>
+            <h3>お相手探し・お見合い</h3>
+            <p>データベース検索と仲人からのご紹介でお相手を探し、お見合いを設定。日程調整はすべて空縁にお任せください。</p>
+          </li>
+          <li>
+            <h3>交際</h3>
+            <p>お互いに「また会いたい」と思えたら交際スタート。気持ちの整理も仲人がサポートします。</p>
+          </li>
+          <li>
+            <h3>ご成婚</h3>
+            <p>おふたりの気持ちが固まったらご成婚退会。ご両家へのご挨拶のご相談も承ります。</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-title">
+          <span class="en">Price</span>
+          <h3>料金プラン</h3>
+        </div>
+        <div class="plans">
+          <div class="plan">
+            <h3>ライト</h3>
+            <p class="price">9,800円<small> / 月（税込）</small></p>
+            <p class="setup">入会金 33,000円／成婚料 110,000円</p>
+            <ul>
+              <li>会員データベース検索（申込 月10名まで）</li>
+              <li>お見合い調整</li>
+              <li>メール相談</li>
+            </ul>
+          </div>
+          <div class="plan featured">
+            <span class="badge">いちばん人気</span>
+            <h3>スタンダード</h3>
+            <p class="price">15,800円<small> / 月（税込）</small></p>
+            <p class="setup">入会金 55,000円／成婚料 165,000円</p>
+            <ul>
+              <li>会員データベース検索（申込 月30名まで）</li>
+              <li>仲人からのご紹介 月2名</li>
+              <li>お見合い調整・同席（初回）</li>
+              <li>LINE・メール相談 無制限</li>
+              <li>定期面談（月1回）</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <h3>プレミアム</h3>
+            <p class="price">25,800円<small> / 月（税込）</small></p>
+            <p class="setup">入会金 88,000円／成婚料 220,000円</p>
+            <ul>
+              <li>スタンダードの全内容</li>
+              <li>仲人からのご紹介 月4名</li>
+              <li>プロによるプロフィール撮影</li>
+              <li>ファッション・デート同行アドバイス</li>
+              <li>定期面談（月2回）</li>
+            </ul>
+          </div>
+        </div>
+        <p class="plans-note">※ 表示はすべて税込です。中途解約時の違約金はありません。無料相談の時点では費用は一切かかりません。</p>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-title">
+          <span class="en">Voices</span>
+          <h3>ご利用者の声</h3>
+        </div>
+        <div class="voices">
+          <div class="voice">
+            <p>「結婚したいのかどうかも分からないまま、藁にもすがる思いで相談に行きました。仲人さんに気持ちを整理してもらえて、半年後には自然と『結婚したい』と思えるようになっていました。」</p>
+            <p class="who">20代後半・女性（相談から成婚まで約1年）</p>
+          </div>
+          <div class="voice">
+            <p>「仕事が忙しく出会いがないまま30代後半に。半ばあきらめていましたが、仲人さんが私以上に私の幸せを考えてくれて、活動10ヶ月で成婚できました。」</p>
+            <p class="who">30代後半・女性（活動期間10ヶ月）</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="plans">
+  <!-- N: Narrowing down -->
+  <section id="foryou">
     <div class="container">
       <div class="sec-title">
-        <span class="en">Price</span>
-        <h2>料金プラン</h2>
+        <span class="en">For You</span>
+        <h2>こんな方に、無料相談をおすすめしています</h2>
       </div>
-      <div class="plans">
-        <div class="plan">
-          <h3>ライト</h3>
-          <p class="price">9,800円<small> / 月（税込）</small></p>
-          <p class="setup">入会金 33,000円／成婚料 110,000円</p>
-          <ul>
-            <li>会員データベース検索（申込 月10名まで）</li>
-            <li>お見合い調整</li>
-            <li>メール相談</li>
-          </ul>
-        </div>
-        <div class="plan featured">
-          <span class="badge">いちばん人気</span>
-          <h3>スタンダード</h3>
-          <p class="price">15,800円<small> / 月（税込）</small></p>
-          <p class="setup">入会金 55,000円／成婚料 165,000円</p>
-          <ul>
-            <li>会員データベース検索（申込 月30名まで）</li>
-            <li>仲人からのご紹介 月2名</li>
-            <li>お見合い調整・同席（初回）</li>
-            <li>LINE・メール相談 無制限</li>
-            <li>定期面談（月1回）</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>プレミアム</h3>
-          <p class="price">25,800円<small> / 月（税込）</small></p>
-          <p class="setup">入会金 88,000円／成婚料 220,000円</p>
-          <ul>
-            <li>スタンダードの全内容</li>
-            <li>仲人からのご紹介 月4名</li>
-            <li>プロによるプロフィール撮影</li>
-            <li>ファッション・デート同行アドバイス</li>
-            <li>定期面談（月2回）</li>
-          </ul>
-        </div>
+      <div class="foryou-grid">
+        <div class="foryou-card"><span class="mark">▸</span>結婚したい気持ちはあるが、自信を持てない方</div>
+        <div class="foryou-card"><span class="mark">▸</span>結婚を意識しているが、何から始めればいいかわからない方</div>
+        <div class="foryou-card"><span class="mark">▸</span>婚活そのものにハードルの高さを感じている方</div>
+        <div class="foryou-card"><span class="mark">▸</span>一人で抱え込まず、誰かに気持ちを聞いてほしい方</div>
+        <div class="foryou-card"><span class="mark">▸</span>他の相談所で「覚悟」を求められて疲れてしまった方</div>
+        <div class="foryou-card"><span class="mark">▸</span>結婚するorしないを、これから一緒に考えたい方</div>
       </div>
-      <p class="plans-note">※ 表示はすべて税込です。中途解約時の違約金はありません。詳細は無料相談にてご説明します。</p>
-    </div>
-  </section>
-
-  <section id="voices">
-    <div class="container">
-      <div class="sec-title">
-        <span class="en">Voices</span>
-        <h2>ご成婚者の声</h2>
-      </div>
-      <div class="voices">
-        <div class="voice">
-          <p>「仕事が忙しく出会いがないまま30代後半に。半ばあきらめていましたが、仲人さんが私以上に私の幸せを考えてくれて、活動10ヶ月で成婚できました。」</p>
-          <p class="who">30代後半・女性（活動期間10ヶ月）</p>
-        </div>
-        <div class="voice">
-          <p>「お見合いのたびに丁寧なフィードバックをもらえたのが大きかったです。自分では気づけない癖を直せて、3人目のお見合い相手と結婚しました。」</p>
-          <p class="who">40代前半・男性（活動期間8ヶ月）</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container">
-      <div class="sec-title">
-        <span class="en">FAQ</span>
-        <h2>よくあるご質問</h2>
-      </div>
-      <div class="faq">
-        <details>
-          <summary>入会に必要なものはありますか？</summary>
-          <p>独身証明書・住民票・本人確認書類・収入証明（男性および希望者）・最終学歴証明書（短大卒以上の方）をご用意いただきます。取得方法もご案内しますのでご安心ください。</p>
-        </details>
-        <details>
-          <summary>仕事が忙しくても活動できますか？</summary>
-          <p>はい。お相手検索はスマホから24時間可能で、面談やご相談はオンラインでも承っています。お見合いの日程調整はすべて空縁が代行します。</p>
-        </details>
-        <details>
-          <summary>途中で退会できますか？違約金はかかりますか？</summary>
-          <p>いつでも退会いただけます。違約金はなく、月会費は退会月までのお支払いのみです。</p>
-        </details>
-        <details>
-          <summary>どのくらいの期間で成婚できますか？</summary>
-          <p>個人差はありますが、1年以内のご成婚を目標にサポートしています。当所の成婚者の平均活動期間は約11ヶ月です。</p>
-        </details>
-        <details>
-          <summary>無料相談に行くと入会をすすめられませんか？</summary>
-          <p>無理な勧誘は一切いたしません。婚活の進め方のご相談だけでも歓迎です。他社サービスとの比較のご質問にも正直にお答えします。</p>
-        </details>
+      <div class="scarcity">
+        じっくりお話をお伺いするため、無料相談は<strong>1日3組まで</strong>とさせていただいております。<br>
+        ご希望の方はお早めにご予約ください。
       </div>
     </div>
   </section>
@@ -530,18 +631,47 @@
     </div>
   </section>
 
-  <section id="contact">
+  <!-- A: Action -->
+  <section id="action">
     <div class="container contact-box">
       <div class="sec-title">
-        <span class="en">Contact</span>
-        <h2>無料相談のご予約</h2>
+        <span class="en">Action</span>
+        <h2>まずは、話すだけから始めてみませんか</h2>
       </div>
       <p>
-        「まず話だけ聞いてみたい」も大歓迎です。<br>
+        「結婚したいかどうか、まだわからない」——そのままのお気持ちでお越しください。<br>
         メールまたはお電話にてお気軽にご連絡ください。オンライン相談も承ります。
       </p>
       <a class="mail" href="mailto:info@example.com">メールで無料相談を予約する</a>
       <p class="tel">お電話でのご予約：<strong>00-0000-0000</strong>（10:00〜19:00 水曜定休）</p>
+
+      <div class="faq">
+        <details open>
+          <summary>結婚するかどうか決めていなくても相談していいですか？</summary>
+          <p>もちろんです。半数以上の方が「迷っている」状態でお越しになります。まずは今のお気持ちをお伺いするだけでも構いません。</p>
+        </details>
+        <details>
+          <summary>無料相談に行くと入会をすすめられませんか？</summary>
+          <p>無理な勧誘は一切いたしません。婚活の進め方のご相談だけでも歓迎です。他社サービスとの比較のご質問にも正直にお答えします。</p>
+        </details>
+        <details>
+          <summary>入会に必要なものはありますか？</summary>
+          <p>独身証明書・住民票・本人確認書類・収入証明（男性および希望者）・最終学歴証明書（短大卒以上の方）をご用意いただきます。取得方法もご案内しますのでご安心ください。</p>
+        </details>
+        <details>
+          <summary>仕事が忙しくても活動できますか？</summary>
+          <p>はい。お相手検索はスマホから24時間可能で、面談やご相談はオンラインでも承っています。お見合いの日程調整はすべて空縁が代行します。</p>
+        </details>
+        <details>
+          <summary>途中で退会できますか？違約金はかかりますか？</summary>
+          <p>いつでも退会いただけます。違約金はなく、月会費は退会月までのお支払いのみです。</p>
+        </details>
+      </div>
+
+      <p class="assurance">
+        空縁の無料相談は、あなたの気持ちに結論を求める場ではありません。<br>
+        「わからない」というお気持ちのまま、どうぞお越しください。
+      </p>
     </div>
   </section>
 </main>
