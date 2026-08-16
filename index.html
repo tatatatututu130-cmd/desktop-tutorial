@@ -59,7 +59,7 @@
   @media(max-width:640px){.toggle-a div{padding-left:24px;}}
 
   /* ===== 写真・動画スペース(実素材に差し替えるまでの枠) ===== */
-  .photo-slot{border:1.5px dashed var(--sun);background:var(--sun-light);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--terra-dark);font-size:12px;font-weight:700;letter-spacing:.06em;text-align:center;line-height:1.9;padding:12px;}
+  .photo-slot{border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 10px 26px rgba(55,52,46,.1);}
   .photo-slot img,.photo-slot iframe{width:100%;height:100%;object-fit:cover;border-radius:inherit;border:none;}
   .slot-portrait{aspect-ratio:3/4;max-width:230px;margin:0 auto 26px;}
   .slot-card{aspect-ratio:16/10;margin-bottom:16px;}
@@ -422,8 +422,7 @@
     <span class="sec-label">AFFINITY ― 桜暦の考え方</span>
     <h2 class="sec-title">はじめまして。</h2>
     <div class="letter-box reveal">
-      <!-- イラスト差し替え例: <div class="photo-slot slot-portrait"><img src="images/daihyo-illust.png" alt="代表カウンセラーのイラスト"></div> -->
-      <div class="photo-slot slot-portrait">イラストスペース<br>(似顔絵イラスト・<br>AI作成でもOK)</div>
+      <div class="photo-slot slot-portrait"><img src="images/portrait-illust.svg" alt="代表カウンセラーのイラスト"></div>
       <h3>動けない理由に、良い悪いはありません。<br>ただ、それぞれに合った解き方があります。</h3>
       <p>代表カウンセラーの瀧口博子です。<strong>診断結果は、当てはまりましたか。</strong>恋愛の優先順位が少し後ろになっただけで、あなたに魅力がないわけではありません。「結婚したいかどうか、まだ分からない」という気持ちも、そのままお持ちください。</p>
       <p>気持ちの整理セッションの60分が、入会に至らなくても「考える、いい時間だった」と思えるように。不安なまま、お越しください。それで大丈夫です。</p>
