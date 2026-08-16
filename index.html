@@ -80,10 +80,10 @@
 
   /* ===== hero:テキストと写真の非対称な見開き構成 ===== */
   .hero{background:var(--cream);position:relative;overflow:hidden;padding-top:96px;}
-  .hero-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:8px;}
-  .hero-copy{padding:100px 40px 100px max(24px, calc((100vw - 1060px) / 2 + 24px));display:flex;flex-direction:column;justify-content:center;text-align:left;position:relative;z-index:2;max-width:560px;}
-  .hero-photo-wrap{display:flex;align-items:center;justify-content:center;padding:40px 40px 40px 8px;}
-  .hero-photo{position:relative;width:100%;max-width:480px;aspect-ratio:1366/768;border-radius:3px;overflow:hidden;box-shadow:0 34px 64px -22px rgba(40,34,26,.4),0 12px 26px rgba(40,34,26,.14);transform:rotate(-2deg);border:12px solid #fff;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;align-items:start;gap:8px;}
+  .hero-copy{padding:110px 40px 80px max(24px, calc((100vw - 1060px) / 2 + 24px));display:flex;flex-direction:column;justify-content:center;text-align:left;position:relative;z-index:2;max-width:560px;min-height:560px;}
+  .hero-photo-wrap{display:flex;align-items:flex-start;justify-content:center;padding:118px 40px 0 8px;}
+  .hero-photo{position:relative;width:100%;max-width:540px;aspect-ratio:1366/768;border-radius:3px;overflow:hidden;box-shadow:0 34px 64px -22px rgba(40,34,26,.4),0 12px 26px rgba(40,34,26,.14);transform:rotate(-2deg);border:12px solid #fff;}
   .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;}
   .hero .petal{position:absolute;top:-40px;width:20px;height:20px;border-radius:65% 0 65% 0;opacity:.7;pointer-events:none;animation:petalfall linear infinite;z-index:3;}
   .hero .petal.pink{background:radial-gradient(circle at 30% 30%,#ffd9e4,#f6a9be);}
@@ -410,7 +410,7 @@
       <div class="check reveal">初対面の人と、何を話せばいいのか不安になる<span class="ans">→ 話題を先に用意して、練習してから本番に臨めます</span></div>
       <div class="check reveal">デートの誘い方も、服装も、お店選びも自信がない<span class="ans">→ 段取り表とチェックリストで、迷いをなくします</span></div>
       <div class="check reveal">アプリを入れてみたけれど、メッセージが続かなかった<span class="ans">→ やりとりは添削でサポート。面倒な調整はお任せください</span></div>
-      <div class="check reveal">相談所は「慣れた人が行く場所」な気がして、気後れする<span class="ans">→ ここは初めての方だけの相談所です</span></div>
+      <div class="check reveal">相談所は「慣れた人が行く場所」な気がして、気後れする<span class="ans">→ 初めての方に、特に手厚く寄り添う相談所です</span></div>
       <div class="check reveal">仕事には打ち込んできた。気づけば、結婚のことだけが手つかず<span class="ans">→ 手順が決まっているので、忙しくても進められます</span></div>
     </div>
   </div>
@@ -445,12 +445,12 @@
   </div>
 </section>
 
-<!-- ===== O(提案)初めて専用の7つのサポート:クリックで開く ===== -->
+<!-- ===== O(提案)初めての方に選ばれる7つのサポート:クリックで開く ===== -->
 <section id="support">
   <div class="inner">
-    <span class="sec-label">OFFER ― 初めて専用の7つのサポート</span>
+    <span class="sec-label">OFFER ― 初めての方に選ばれる7つのサポート</span>
     <h2 class="sec-title">「初めて」に必要なものを、<br><span class="marker">ひとつずつ、ご用意しています。</span></h2>
-    <p class="sec-lead">看板だけの「初心者歓迎」ではありません。TMS(全国結婚相談事業者連盟)の全国ネットワークによる出会いに加えて、初めての方のためだけに設計した桜暦のオリジナルサポートです。タップすると詳しくご覧いただけます。</p>
+    <p class="sec-lead">看板だけの「初心者歓迎」ではありません。TMS(全国結婚相談事業者連盟)の全国ネットワークによる出会いに加えて、初めての方に寄り添うことを軸に設計した桜暦のオリジナルサポートです。タップすると詳しくご覧いただけます。</p>
     <div class="check-list">
       <div class="toggle-item">
         <button class="toggle-q"><span class="t-tag">SUPPORT 01</span><span class="t-body"><span class="t-title">気持ちの整理セッション</span><span class="t-teaser">婚活を始めるかどうか迷っている段階から、無料でご参加いただけます</span></span></button>
@@ -458,7 +458,7 @@
       </div>
       <div class="toggle-item">
         <button class="toggle-q"><span class="t-tag">SUPPORT 02</span><span class="t-body"><span class="t-title">実践型の会話練習(模擬お見合い)</span><span class="t-teaser">本番の前に、初対面の会話を練習できます</span></span></button>
-        <div class="toggle-a"><div>本番の前に、初対面の3分会話をロールプレイで練習。第一印象・声のトーン・表情・距離感を、研修講師の経験を持つカウンセラーがその場で微調整します。練習してから本番へ。<span class="badge">初めての方専用</span></div></div>
+        <div class="toggle-a"><div>本番の前に、初対面の3分会話をロールプレイで練習。第一印象・声のトーン・表情・距離感を、研修講師の経験を持つカウンセラーがその場で微調整します。練習してから本番へ。<span class="badge">初めての方に特におすすめ</span></div></div>
       </div>
       <div class="toggle-item">
         <button class="toggle-q"><span class="t-tag">SUPPORT 03</span><span class="t-body"><span class="t-title">会話もメッセージも、毎回一緒に準備</span><span class="t-teaser">お見合い前も交際中も、話題づくりをサポートします</span></span></button>
@@ -563,12 +563,12 @@
           <tr><th>コース</th><th>①婚活準備コース</th><th class="reco">②婚活サポートコース</th><th>③成婚を目指す本格コース</th></tr>
         </thead>
         <tbody>
-          <tr><th>主な内容</th><td>恋愛相談・プロフィール相談・コミュニケーション相談<br><span class="dur">※お見合いシステム(お相手検索)は含みません</span></td><td class="reco">お見合いサポート・定期面談・LINE相談<br><span class="dur">※お見合いシステム(お相手検索)もご利用いただけます</span></td><td>お見合い〜成婚までの本格伴走</td></tr>
+          <tr><th>主な内容</th><td>恋愛相談・プロフィール相談・コミュニケーション相談<br><span class="dur">※お見合いシステム(お相手検索)は含みません</span></td><td class="reco">お見合いサポート・定期面談・LINE相談<br><span class="dur">※AIマッチング・TMSスクールを含むお見合いシステムをご利用いただけます</span></td><td>プロフィール代筆・身だしなみ相談・日程調整代行を含む、お見合い〜成婚までの本格伴走<br><span class="dur">※AIマッチング・TMSスクールもご利用いただけます</span></td></tr>
           <tr><th>契約期間</th><td>縛りなし(いつでも解約可)</td><td class="reco">縛りなし(いつでも解約可)</td><td>6ヶ月(お試し)/12ヶ月(お得)から選択</td></tr>
           <tr><th>入会金/初期費用</th><td>11,000円</td><td class="reco">55,000円</td><td><span class="dual">110,000円<span class="dur">6ヶ月</span></span><span class="dual">88,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
           <tr><th>月額</th><td class="big">5,500円</td><td class="reco big best">11,000円</td><td class="big"><span class="dual">16,500円<span class="dur">6ヶ月</span></span><span class="dual">11,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
-          <tr><th>成婚料</th><td>なし</td><td class="reco">なし</td><td><span class="dual">220,000円<span class="dur">6ヶ月</span></span><span class="dual">165,000円<span class="dur">12ヶ月</span><span class="save">お得</span></span></td></tr>
-          <tr><th>おすすめの方</th><td>結婚相談所はまだ早い、まず話すことから始めたい方</td><td class="reco">出会いの場は欲しいが、じっくり関係を築きたい方</td><td>本気で成婚を目指したい方</td></tr>
+          <tr><th>成婚料</th><td>なし</td><td class="reco">165,000円</td><td>165,000円</td></tr>
+          <tr><th>おすすめの方</th><td>結婚相談所はまだ早い、まず話すことから始めたい方</td><td class="reco">出会いの場は欲しいが、じっくり関係を築きたい方</td><td>お任せで本気で成婚を目指したい方</td></tr>
         </tbody>
       </table>
     </div>
@@ -590,10 +590,10 @@
         <h3>②婚活サポートコース</h3>
         <div class="pc-price">11,000<span>円/月</span></div>
         <ul>
-          <li>内容:お見合いサポート・定期面談・LINE相談(お見合いシステムも利用可)</li>
+          <li>内容:お見合いサポート・定期面談・LINE相談(AIマッチング・TMSスクールを含むお見合いシステムも利用可)</li>
           <li>契約:縛りなし(いつでも解約可)</li>
           <li>初期費用:55,000円(初回のみ)</li>
-          <li>成婚料:なし</li>
+          <li>成婚料:165,000円</li>
           <li>おすすめ:出会いの場は欲しいが、じっくり関係を築きたい方</li>
         </ul>
       </div>
@@ -601,11 +601,11 @@
         <h3>③成婚を目指す本格コース</h3>
         <div class="pc-price">11,000<span>〜16,500円/月</span></div>
         <ul>
-          <li>内容:お見合い〜成婚までの本格伴走</li>
+          <li>内容:プロフィール代筆・身だしなみ相談・日程調整代行を含む、お見合い〜成婚までの本格伴走(AIマッチング・TMSスクールも利用可)</li>
           <li>契約:6ヶ月(お試し)16,500円/月・初期費用110,000円</li>
           <li>契約:12ヶ月(お得)11,000円/月・初期費用88,000円</li>
-          <li>成婚料:6ヶ月=220,000円/12ヶ月=165,000円</li>
-          <li>おすすめ:本気で成婚を目指したい方</li>
+          <li>成婚料:165,000円</li>
+          <li>おすすめ:お任せで本気で成婚を目指したい方</li>
         </ul>
       </div>
     </div>
@@ -718,7 +718,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-q">恋愛にあまり自信がなく、周りは経験豊富な人ばかりでは、と気後れします。</button>
-      <div class="faq-a"><div>ご安心ください。桜暦は「初めての婚活」の方だけを対象にした専門の相談所です。会話のロールプレイで練習してから本番に臨め、メッセージの添削や身だしなみのご相談も毎回ご一緒します。これまでのことは、何も問われません。</div></div>
+      <div class="faq-a"><div>ご安心ください。桜暦は「初めての婚活」の方に、特に手厚く寄り添う相談所です。会話のロールプレイで練習してから本番に臨め、メッセージの添削や身だしなみのご相談も毎回ご一緒します。これまでのことは、何も問われません。</div></div>
     </div>
     <div class="faq-item">
       <button class="faq-q">無料セッションに行くと、入会を強く勧められませんか。</button>
