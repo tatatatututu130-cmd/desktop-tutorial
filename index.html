@@ -153,6 +153,9 @@
   .quiz-result p{font-size:14px;color:var(--ink-soft);line-height:2;text-align:left;margin-bottom:24px;}
   .quiz-result .btn{margin-bottom:14px;}
   .quiz-retry{display:block;font-size:12.5px;color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none;border:none;margin:0 auto;}
+  .quiz-more{margin-top:28px;padding-top:24px;border-top:1px dashed var(--line);}
+  .quiz-more p{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .quiz-more .btn{font-size:13px;padding:12px 22px;margin:0 6px 8px;}
 
   /* ===== affinity greeting(A:共感)===== */
   .letter{background:linear-gradient(180deg,var(--sky-light) 0%,var(--cream) 55%);}
@@ -203,17 +206,10 @@
   /* ===== narrowing:mimamori/vs ===== */
   .mimamori{background:var(--white);}
   /* 暦(こよみ)の一枚をイメージした、破り取りカレンダー風カード */
-  .milestones{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;counter-reset:leaf;}
-  .milestone{background:var(--cream);border:1px solid var(--line);border-radius:5px 5px 12px 12px;text-align:center;overflow:hidden;box-shadow:0 8px 20px rgba(51,47,42,.09);position:relative;}
-  .milestone .m-when{counter-increment:leaf;display:block;background:var(--sky-dark);color:#fff;font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.04em;padding:14px 0 16px;margin-bottom:18px;position:relative;}
-  .milestone .m-when::before{content:"leaf." counter(leaf);position:absolute;top:5px;left:0;right:0;font-family:var(--sans);font-size:8.5px;letter-spacing:.24em;color:rgba(255,255,255,.55);font-weight:700;}
-  .milestone .m-when::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:9px;background-image:radial-gradient(circle,var(--cream) 3.6px,transparent 4px);background-size:15px 9px;background-position:7.5px 0;background-repeat:repeat-x;}
-  .milestone p{font-size:12px;color:var(--ink-soft);line-height:1.85;text-align:left;padding:0 16px 20px;}
   .mimamori-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:22px;max-width:680px;}
   .mimamori-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
   .mimamori-card h3{font-family:var(--sans);font-weight:700;font-size:15.5px;color:var(--sky-dark);margin-bottom:9px;line-height:1.6;}
   .mimamori-card p{font-size:13px;color:var(--ink-soft);}
-  .mimamori-note{font-size:12px;color:var(--ink-soft);}
 
   .vs-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px;}
   .vs-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px 24px;box-shadow:0 4px 16px rgba(55,52,46,.06);}
@@ -264,7 +260,6 @@
 
   /* ===== responsive ===== */
   @media(max-width:900px){
-    .milestones{grid-template-columns:1fr 1fr;}
     .vs-cards{grid-template-columns:1fr;}
     .flow-steps{grid-template-columns:1fr 1fr;}
     .facts .grid{grid-template-columns:1fr;gap:36px;}
@@ -282,7 +277,7 @@
     nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:22px;gap:16px;border-bottom:1px solid var(--line);align-items:flex-start;}
     nav.open ul{display:flex;}
     .menu-btn{display:block;}
-    .flow-steps,.foot-grid,.milestones,.mimamori-grid{grid-template-columns:1fr;}
+    .flow-steps,.foot-grid,.mimamori-grid{grid-template-columns:1fr;}
     .letter-box{padding:38px 26px;}
     .price-table-wrap{display:none;}
     .price-cards{display:block;}
@@ -359,6 +354,11 @@
         <p id="rDesc"></p>
         <a href="#contact" class="btn btn-primary">無料「気持ちの整理セッション」を予約する</a>
         <button class="quiz-retry" id="qRetry">もう一度、診断してみる</button>
+        <div class="quiz-more">
+          <p>さらに詳しく知りたい方は、こちらの本格的な診断もご利用いただけます。</p>
+          <a href="https://www.netcomace.com/netcom/marketing_tool/personality_test/?p=VEstMjYw" target="_blank" rel="noopener" class="btn btn-ghost">性格診断テスト</a>
+          <a href="https://www.netcomace.com/netcom/marketing_tool/mq_test/?p=VEstMjYw" target="_blank" rel="noopener" class="btn btn-ghost">MQテスト</a>
+        </div>
       </div>
     </div>
   </div>
@@ -671,37 +671,8 @@
 <section class="mimamori" id="mimamori">
   <div class="inner">
     <span class="sec-label">NARROWING ― 桜暦だけの、卒業後見守り</span>
-    <h2 class="sec-title">成婚は、ゴールではなく<br><span class="marker">あなたの暦の、最初のページ</span>です。</h2>
-    <p class="sec-lead">多くの相談所とのお付き合いは、成婚退会の日に終わります。桜暦は違います。桜の季節が過ぎても暦が続くように、卒業後もあなたの新しい季節を見守り続けます。初めての婚活を任せてくれたあなたと、その先の人生までお付き合いさせてください。</p>
-    <div class="milestones">
-      <div class="milestone reveal">
-        <div class="m-when">1ヶ月</div>
-        <p>新生活のスタートをお祝い。環境の変化で出てきた小さな戸惑いも、お聞かせください。</p>
-      </div>
-      <div class="milestone reveal">
-        <div class="m-when">3ヶ月</div>
-        <p>暮らしが落ち着いてくる頃。ふたりの生活リズムづくりの近況をお伺いします。</p>
-      </div>
-      <div class="milestone reveal">
-        <div class="m-when">半年</div>
-        <p>節目のご機嫌伺い。パートナーとの関係で気になることがあれば、いつでもご相談を。</p>
-      </div>
-      <div class="milestone reveal">
-        <div class="m-when">1年</div>
-        <p>ご成婚1年のお祝いをお届けします。あなたの暦が、良い季節を重ねていますように。</p>
-      </div>
-    </div>
-    <div class="mimamori-grid">
-      <div class="mimamori-card reveal">
-        <h3>結婚後のご相談窓口</h3>
-        <p>ふたりの暮らしのこと、ご両家のこと。婚活中と同じように、カウンセラーがお話を伺います。卒業しても、頼っていい場所であり続けます。</p>
-      </div>
-      <div class="mimamori-card reveal">
-        <h3>ご紹介特典</h3>
-        <p>「あの人にも、この経験をしてほしい」と思える大切な方がいたら、ぜひご紹介ください。ご紹介の特典をご用意しています(詳細は面談でご案内します)。</p>
-      </div>
-    </div>
-    <p class="mimamori-note">※卒業後のご連絡は、ご希望を伺ったうえで行います。ご不要な方には一切お送りしませんので、ご安心ください。</p>
+    <h2 class="sec-title">成婚してからも、<br><span class="marker">簡単な見守りを続けます。</span></h2>
+    <p class="sec-lead" style="margin-bottom:0;">多くの相談所とのお付き合いは、成婚退会の日に終わりますが、桜暦では卒業後も簡単なご様子伺いを続けます。住まい探しやその他のご相談にも対応できますので、卒業後も気軽にご連絡ください。</p>
   </div>
 </section>
 
