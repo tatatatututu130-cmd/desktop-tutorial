@@ -51,8 +51,8 @@
   .toggle-q .t-body{display:flex;flex-direction:column;}
   .toggle-q .t-title{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink);line-height:1.6;}
   .toggle-q .t-teaser{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:4px;font-weight:400;}
-  .toggle-q::after{content:"+";position:absolute;right:20px;top:22px;font-size:22px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
-  .toggle-item.open .toggle-q::after{transform:rotate(45deg);}
+  .toggle-q::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
+  .toggle-item.open .toggle-q::after{transform:translateY(-50%) rotate(45deg);}
   .toggle-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
   .toggle-a div{padding:0 24px 20px 86px;font-size:13.5px;color:var(--ink-soft);line-height:1.95;}
   .toggle-a .badge{display:inline-block;margin-top:12px;font-size:11px;background:var(--sky-light);color:var(--sky-dark);border-radius:999px;padding:3px 12px;font-weight:700;letter-spacing:.05em;}
@@ -215,6 +215,8 @@
   .vs-card.us li::before{color:var(--sky-dark);}
   .vs-note{background:var(--sun-light);border-radius:16px;padding:26px 30px;font-size:14px;line-height:2;}
   .vs-note strong{color:var(--sky-dark);}
+  .vs-note .toggle-q .t-title{color:var(--sky-dark);}
+  .vs-note.open .toggle-q::after{transform:translateY(-50%) rotate(45deg);}
 
 
   /* ===== faq ===== */
@@ -222,8 +224,8 @@
   .faq-item{background:var(--white);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 10px rgba(55,52,46,.05);}
   .faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--sans);font-size:15.5px;font-weight:700;padding:22px 54px 22px 24px;cursor:pointer;position:relative;color:var(--ink);line-height:1.7;}
   .faq-q::before{content:"Q.";color:var(--sky-dark);font-family:var(--serif);margin-right:9px;}
-  .faq-q::after{content:"+";position:absolute;right:22px;top:19px;font-size:21px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
-  .faq-item.open .faq-q::after{transform:rotate(45deg);}
+  .faq-q::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:21px;color:var(--sky-dark);transition:transform .3s;line-height:1;}
+  .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
   .faq-a div{padding:0 24px 24px;font-size:14.5px;color:var(--ink-soft);line-height:2;}
   .faq-a div::before{content:"A.";color:var(--sky-dark);font-family:var(--serif);font-weight:700;margin-right:9px;}
@@ -405,9 +407,9 @@
     <h2 class="sec-title">はじめまして。</h2>
     <div class="letter-box reveal">
       <h3>動けない理由に、良い悪いはありません。<br>ただ、それぞれに合った解き方があります。</h3>
-      <p>代表カウンセラーのさくら蓮子です。<strong>診断結果は、当てはまりましたか。</strong>恋愛の優先順位が少し後ろになっただけで、あなたに魅力がないわけではありません。「結婚したいかどうか、まだ分からない」という気持ちも、そのままお持ちください。</p>
+      <p>代表カウンセラーの瀧口博子です。<strong>診断結果は、当てはまりましたか。</strong>恋愛の優先順位が少し後ろになっただけで、あなたに魅力がないわけではありません。「結婚したいかどうか、まだ分からない」という気持ちも、そのままお持ちください。</p>
       <p>気持ちの整理セッションの60分が、入会に至らなくても「考える、いい時間だった」と思えるように。不安なまま、お越しください。それで大丈夫です。</p>
-      <p class="sign">結婚相談所 桜暦(さくらごよみ) 代表カウンセラー さくら蓮子</p>
+      <p class="sign">結婚相談所 桜暦(さくらごよみ) 代表カウンセラー 瀧口博子</p>
     </div>
   </div>
 </section>
@@ -531,15 +533,30 @@
   <div class="inner">
     <span class="sec-label">OFFER ― ご入会にあたって</span>
     <h2 class="sec-title">ご入会に必要な書類は、<span class="marker">この5点だけ</span>です。</h2>
-    <p class="sec-lead">初めてだと身構えてしまう書類集めも、要点はシンプルです。取り方が分からないものは、こちらでご案内しますのでご安心ください。</p>
+    <p class="sec-lead">初めてだと身構えてしまう書類集めも、要点はシンプルです。タップすると詳しくご覧いただけます。</p>
     <div class="check-list">
-      <div class="check reveal">本人確認書類<span class="ans">運転免許証・マイナンバーカードなど、顔写真付きのもの</span></div>
-      <div class="check reveal">独身証明書<span class="ans">本籍地の市区町村役場で取得できます。取り方は個別にご案内します</span></div>
-      <div class="check reveal">収入を証明する書類<span class="ans">源泉徴収票・課税証明書など</span></div>
-      <div class="check reveal">学歴を証明する書類<span class="ans">プロフィールに学歴を記載する場合にご用意ください</span></div>
-      <div class="check reveal">資格を証明する書類<span class="ans">プロフィールに資格を記載する場合のみ必要です</span></div>
+      <div class="toggle-item">
+        <button class="toggle-q"><span class="t-tag">書類01</span><span class="t-body"><span class="t-title">本人確認書類</span></span></button>
+        <div class="toggle-a"><div>運転免許証・マイナンバーカードなど、顔写真付きのもの。</div></div>
+      </div>
+      <div class="toggle-item">
+        <button class="toggle-q"><span class="t-tag">書類02</span><span class="t-body"><span class="t-title">独身証明書</span></span></button>
+        <div class="toggle-a"><div>本籍地の市区町村役場で取得できます。取り方は個別にご案内します。</div></div>
+      </div>
+      <div class="toggle-item">
+        <button class="toggle-q"><span class="t-tag">書類03</span><span class="t-body"><span class="t-title">収入を証明する書類</span></span></button>
+        <div class="toggle-a"><div>源泉徴収票・課税証明書など。</div></div>
+      </div>
+      <div class="toggle-item">
+        <button class="toggle-q"><span class="t-tag">書類04</span><span class="t-body"><span class="t-title">学歴を証明する書類</span></span></button>
+        <div class="toggle-a"><div>プロフィールに学歴を記載する場合にご用意ください。</div></div>
+      </div>
+      <div class="toggle-item">
+        <button class="toggle-q"><span class="t-tag">書類05</span><span class="t-body"><span class="t-title">資格を証明する書類</span></span></button>
+        <div class="toggle-a"><div>プロフィールに資格を記載する場合のみ必要です。</div></div>
+      </div>
     </div>
-    <p class="price-note">※取り方が分からない書類は、無料相談・ご入会時に個別にご案内します。※これらの書類は、<span class="emphasis">会員同士が安心して活動するための信頼の土台</span>になるものです。</p>
+    <p class="price-note">※取り方が分からない書類は、無料相談・ご入会時に個別にご案内します。<span class="emphasis">会員同士が安心して活動するための信頼の土台</span>になるものです。</p>
   </div>
 </section>
 
@@ -648,8 +665,9 @@
         </ul>
       </div>
     </div>
-    <div class="vs-note reveal">
-      <strong>正直な気持ちをお伝えすると</strong>――アプリにも大手にも、それぞれ素晴らしい良さがあります。ただ、どちらも「自分で進められること」がある程度前提の場所。写真選びもメッセージも誘い方も独学・自力――それは初めての方にとって、いちばん難易度の高い戦い方です。桜暦は、その最初の一歩に専門特化した相談所です。気持ちの整理セッションでお話を伺った結果、アプリや大手のほうが合いそうな方には、正直にそうお伝えします。
+    <div class="vs-note reveal" style="padding:0;">
+      <button class="toggle-q" style="padding:26px 30px;"><span class="t-body"><span class="t-title">正直な気持ちをお伝えすると</span><span class="t-teaser">タップして本音をご覧いただけます</span></span></button>
+      <div class="toggle-a"><div style="padding:0 30px 26px;">アプリにも大手にも、それぞれ素晴らしい良さがあります。ただ、どちらも<strong>「自分で進められること」</strong>がある程度前提の場所。写真選びもメッセージも誘い方も独学・自力――それは初めての方にとって、いちばん難易度の高い戦い方です。<br><br>桜暦は、その最初の一歩に専門特化した相談所です。気持ちの整理セッションでお話を伺った結果、<strong>アプリや大手のほうが合いそうな方には、正直にそうお伝えします。</strong></div></div>
     </div>
   </div>
 </section>
@@ -658,8 +676,8 @@
 <section class="mimamori" id="mimamori">
   <div class="inner">
     <span class="sec-label">NARROWING ― 桜暦だけの、卒業後見守り</span>
-    <h2 class="sec-title">成婚してからも、<br><span class="marker">簡単な見守りを続けます。</span></h2>
-    <p class="sec-lead" style="margin-bottom:0;">多くの相談所とのお付き合いは、成婚退会の日に終わりますが、桜暦では卒業後も簡単なご様子伺いを続けます。住まい探しやその他のご相談にも対応できますので、卒業後も気軽にご連絡ください。</p>
+    <h2 class="sec-title">成婚してからも、<br><span class="marker">見守りを続けます。</span></h2>
+    <p class="sec-lead" style="margin-bottom:0;">多くの相談所とのお付き合いは、成婚退会の日に終わりますが、<strong>桜暦では卒業後もご様子伺いを続けます。</strong>住まい探しやその他のご相談にも対応できますので、卒業後も気軽にご連絡ください。</p>
   </div>
 </section>
 
@@ -686,7 +704,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-q">記載の料金以外に、かかる費用はありますか。年齢制限はありますか。</button>
-      <div class="faq-a"><div>コースごとの入会金(初期費用)・月額以外に、追加費用はありません。成婚料がかかるのは③本格コースのみで、ご成婚が決まったときの成果報酬です。年齢の上限もなく、独身の成人の方であればご相談いただけます。国勢調査では50歳時点で結婚したことのない方は男性の約4人に1人。大切なのは年齢ではなく、まじめに結婚を考えているかどうかです。</div></div>
+      <div class="faq-a"><div>コースごとの入会金(初期費用)・月額以外に、追加費用はありません。成婚料は②・③のコースに設定しており、ご成婚が決まったときのみの成果報酬です。年齢の上限もなく、独身の成人の方であればご相談いただけます。国勢調査では50歳時点で結婚したことのない方は男性の約4人に1人。大切なのは年齢ではなく、まじめに結婚を考えているかどうかです。</div></div>
     </div>
     <div class="faq-item">
       <button class="faq-q">入会の手続きや、契約にあたっての注意点を教えてください。</button>
@@ -735,7 +753,7 @@
         <h4>お問い合わせ</h4>
         <ul>
           <li>〒812-0895 福岡市博多区(自宅サロンのため詳細住所は面談時にご案内)</li>
-          <li>代表:さくら蓮子</li>
+          <li>代表:瀧口博子</li>
           <li>面談:福岡近郊のカフェ(お近くまでお伺いします)/オンライン</li>
           <li>受付時間:応相談(個別相談制)/定休日:不定休</li>
           <li>オンライン対応で全国からご相談いただけます</li>
